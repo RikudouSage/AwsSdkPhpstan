@@ -101,25 +101,23 @@ final class KendraRankingClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -132,14 +130,12 @@ final class KendraRankingClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -152,14 +148,12 @@ final class KendraRankingClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ResultItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Score'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Score'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
                 ])),
             ]),
         ]);

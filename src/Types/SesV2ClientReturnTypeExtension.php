@@ -223,34 +223,26 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('Results'),
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ObjectType('DateTimeInterface')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -343,9 +335,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_SES'),
                         new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
@@ -539,10 +529,8 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('SuppressedReasons'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -563,9 +551,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('JA'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('CaseId'),
@@ -614,16 +600,14 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('BlacklistReport'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RblName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ListingTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RblName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ListingTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ]))),
             ]),
         ]);
@@ -678,23 +662,19 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 ], [
                     new \PHPStan\Type\BooleanType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SuppressedReasons'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -732,74 +712,68 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('EventDestinations'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventBridgeDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PinpointDestination'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_DELAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventBridgeDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PinpointDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_DELAY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TAG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL_HEADER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LINK_TAG'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TAG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_HEADER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LINK_TAG'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EventBusArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EventBusArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -820,28 +794,24 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
                     ]),
                 ])),
                 new \PHPStan\Type\BooleanType(),
@@ -863,33 +833,29 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultSubscriptionStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultSubscriptionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -963,21 +929,19 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('DedicatedIps'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ip'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmupStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WarmupPercentage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DONE'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Ip'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WarmupStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WarmupPercentage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DONE'),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1000,42 +964,34 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING_EXPIRATION'),
                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxPlacementTrackingOption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Global'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Global'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TrackedIsps'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                 ])),
             ]),
@@ -1082,36 +1038,32 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlacementStatistics'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlacementStatistics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpfPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DkimPercentage'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MissingPercentage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SpfPercentage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DkimPercentage'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1142,9 +1094,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\IntegerType(),
@@ -1153,9 +1103,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -1184,56 +1132,50 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\FloatType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
                     ])),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeStatistics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DomainIspPlacements'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeStatistics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainIspPlacements'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedInbox'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedSpam'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectedInbox'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProjectedSpam'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IspName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IspName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamRawCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InboxPercentage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SpamPercentage'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1277,9 +1219,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_SES'),
                         new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
@@ -1334,14 +1274,12 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     ]),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -1465,31 +1403,27 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('EMAIL_IDENTITY'),
                             new \PHPStan\Type\Constant\ConstantStringType('CONFIGURATION_SET'),
                             new \PHPStan\Type\Constant\ConstantStringType('ISP'),
-                        ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
+                        ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         new \PHPStan\Type\Constant\ConstantStringType('VDM'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Aggregation'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_OPEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_CLICK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_COMPLAINT'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Aggregation'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_OPEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_CLICK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_COMPLAINT'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
                             ]),
                         ])),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1512,33 +1446,21 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('LastDeliveryEvent'),
                             new \PHPStan\Type\Constant\ConstantStringType('LastEngagementEvent'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
                             ])),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1549,33 +1471,21 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('LastDeliveryEvent'),
                             new \PHPStan\Type\Constant\ConstantStringType('LastEngagementEvent'),
                         ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED_BOUNCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
                             ])),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PERMANENT_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED_BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
                             ])),
                         ]),
                         new \PHPStan\Type\IntegerType(),
@@ -1682,70 +1592,64 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Isp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Isp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Details'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SEND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_DELAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bounce'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Complaint'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BounceType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BounceSubType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DiagnosticCode'),
                             ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REJECT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLICK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RENDERING_FAILURE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_DELAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSCRIPTION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMANENT'),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Bounce'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Complaint'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BounceType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BounceSubType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DiagnosticCode'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('UNDETERMINED'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PERMANENT'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComplaintSubType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComplaintFeedbackType'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                        ])),
-                    ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ComplaintSubType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ComplaintFeedbackType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1763,12 +1667,10 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -1817,9 +1719,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1831,14 +1731,12 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('ContactLists'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ContactListName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ContactListName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1851,42 +1749,36 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('Contacts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicPreferences'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicDefaultPreferences'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnsubscribeAll'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicPreferences'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicDefaultPreferences'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UnsubscribeAll'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubscriptionStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_IN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPT_OUT'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1899,20 +1791,18 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('CustomVerificationEmailTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateSubject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SuccessRedirectionURL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureRedirectionURL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateSubject'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SuccessRedirectionURL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureRedirectionURL'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1925,9 +1815,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('DedicatedIpPools'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1939,24 +1827,22 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestReports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReportId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ReportId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Subject'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeliverabilityTestStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1970,42 +1856,36 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('DomainDeliverabilityCampaigns'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CampaignId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FromAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SendingIps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FirstSeenDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSeenDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InboxCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SpamCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadRate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteRate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadDeleteRate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProjectedVolume'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Esps'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CampaignId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImageUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Subject'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FromAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SendingIps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FirstSeenDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSeenDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InboxCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SpamCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeleteRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadDeleteRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProjectedVolume'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Esps'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2018,27 +1898,25 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('EmailIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentityType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentityName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SendingEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VerificationStatus'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOMAIN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANAGED_DOMAIN'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentityType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentityName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SendingEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VerificationStatus'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL_ADDRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DOMAIN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MANAGED_DOMAIN'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2052,14 +1930,12 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('TemplatesMetadata'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2072,29 +1948,27 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('ExportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportSourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompletedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('METRICS_DATA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_INSIGHTS'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportSourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompletedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('METRICS_DATA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_INSIGHTS'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2107,50 +1981,48 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('ImportJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImportDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProcessedRecordsCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailedRecordsCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImportDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JobStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProcessedRecordsCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailedRecordsCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SuppressionListDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContactListDestination'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SuppressionListDestination'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ContactListDestination'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SuppressionListImportAction'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SuppressionListImportAction'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PUT'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ContactListName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ContactListImportAction'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PUT'),
-                                ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PUT'),
                             ]),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ContactListName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ContactListImportAction'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PUT'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2163,29 +2035,25 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('MultiRegionEndpoints'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EndpointName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndpointId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2198,35 +2066,33 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Impact'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DKIM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DMARC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SPF'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIMI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FIXED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Impact'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DKIM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DMARC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SPF'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BIMI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FIXED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2240,19 +2106,17 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('SuppressedDestinationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BOUNCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLAINT'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2264,14 +2128,12 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2398,9 +2260,7 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('TEMPORARY_FAILURE'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -2428,31 +2288,29 @@ final class SesV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('BulkEmailEntryResults'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAIL_FROM_DOMAIN_NOT_VERIFIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFIGURATION_SET_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SUSPENDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_THROTTLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_DAILY_QUOTA_EXCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_SENDING_POOL_NAME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SENDING_PAUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFIGURATION_SET_SENDING_PAUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAIL_FROM_DOMAIN_NOT_VERIFIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONFIGURATION_SET_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SUSPENDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_THROTTLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_DAILY_QUOTA_EXCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_SENDING_POOL_NAME'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_SENDING_PAUSED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONFIGURATION_SET_SENDING_PAUSED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TRANSIENT_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

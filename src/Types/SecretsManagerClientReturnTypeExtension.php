@@ -76,42 +76,36 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretBinary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretString'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionStages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                    ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretBinary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretString'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionStages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -142,24 +136,22 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InSync'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InSync'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -233,39 +225,33 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ]))),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InSync'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InSync'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -315,9 +301,7 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -331,24 +315,18 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ARN'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionStages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyIds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionStages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyIds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -363,62 +341,56 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('SecretList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RotationEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RotationLambdaARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RotationRules'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastRotatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastChangedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeletedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextRotationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretVersionsToStages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwningService'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrimaryRegion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RotationEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RotationLambdaARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RotationRules'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastRotatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastChangedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeletedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NextRotationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretVersionsToStages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwningService'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrimaryRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutomaticallyAfterDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AutomaticallyAfterDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -448,9 +420,7 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -462,24 +432,22 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InSync'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InSync'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -492,24 +460,22 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InSync'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InSync'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -596,14 +562,12 @@ final class SecretsManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ValidationErrors'),
             ], [
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CheckName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CheckName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

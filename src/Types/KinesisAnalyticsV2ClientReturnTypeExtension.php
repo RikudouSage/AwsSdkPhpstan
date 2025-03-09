@@ -99,16 +99,14 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -124,105 +122,99 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                         ], [
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                         ]),
                     ]),
                 ])),
@@ -265,45 +257,43 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                            ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                         ]),
                     ]),
                 ])),
@@ -320,68 +310,64 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ])),
             ]),
@@ -406,12 +392,8 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -493,212 +475,200 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OutputDescriptions'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReferenceDataSourceDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
                                         new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
-                                        ]),
                                     ]),
                                 ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                                             new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                         ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                                     ]),
                                 ]),
                             ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                     ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                                         ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ])),
                         ]),
@@ -814,14 +784,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -834,22 +802,16 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoringConfigurationDescription'),
@@ -887,48 +849,44 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UDF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UDF'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationMaintenanceWindowStartTime'),
@@ -983,16 +941,14 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1130,212 +1086,200 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OutputDescriptions'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReferenceDataSourceDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
                                         new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
-                                        ]),
                                     ]),
                                 ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                                             new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                         ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                                     ]),
                                 ]),
                             ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                     ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                                         ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ])),
                         ]),
@@ -1451,14 +1395,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1471,22 +1413,16 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoringConfigurationDescription'),
@@ -1524,48 +1460,44 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UDF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UDF'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationMaintenanceWindowStartTime'),
@@ -1748,212 +1680,200 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OutputDescriptions'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReferenceDataSourceDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
                                         new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
-                                        ]),
                                     ]),
                                 ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                                             new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                         ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                                     ]),
                                 ]),
                             ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                     ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                                         ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ])),
                         ]),
@@ -2069,14 +1989,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2089,22 +2007,16 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoringConfigurationDescription'),
@@ -2142,48 +2054,44 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UDF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UDF'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationMaintenanceWindowStartTime'),
@@ -2246,29 +2154,19 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -2279,24 +2177,22 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationOperationInfoList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Operation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESSFUL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Operation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESSFUL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2310,37 +2206,35 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('SnapshotSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotCreationTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SQL-1_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-1_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_13'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-2_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_15'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-3_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_18'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_19'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_20'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapshotName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapshotStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapshotCreationTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL-1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_13'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-2_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_15'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-3_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_18'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_19'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_20'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2354,25 +2248,23 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORCE_STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAINTENANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FORCE_STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAINTENANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2386,49 +2278,47 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationMode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FORCE_STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAINTENANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SQL-1_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-1_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_13'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-2_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_15'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-3_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_18'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_19'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_20'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STREAMING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERACTIVE'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationMode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FORCE_STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLING_BACK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAINTENANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLED_BACK'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL-1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_13'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-2_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_15'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZEPPELIN-FLINK-3_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_18'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_19'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLINK-1_20'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STREAMING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERACTIVE'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2441,14 +2331,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2530,212 +2418,200 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OutputDescriptions'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReferenceDataSourceDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
                                         new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
-                                        ]),
                                     ]),
                                 ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                                             new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                         ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                                     ]),
                                 ]),
                             ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                     ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                                         ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ])),
                         ]),
@@ -2851,14 +2727,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2871,22 +2745,16 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoringConfigurationDescription'),
@@ -2924,48 +2792,44 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UDF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UDF'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationMaintenanceWindowStartTime'),
@@ -3097,212 +2961,200 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OutputDescriptions'),
                             new \PHPStan\Type\Constant\ConstantStringType('ReferenceDataSourceDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NamePrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InAppStreamNames'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputProcessingConfigurationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseInputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputSchema'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputParallelism'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPositionConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputLambdaProcessorDescription'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
                                         new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                     ], [
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOW'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
-                                        ]),
                                     ]),
                                 ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                                             new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                         ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('InputStartingPosition'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NOW'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LAST_STOPPED_POINT'),
                                     ]),
                                 ]),
                             ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OutputId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisStreamsOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaOutputDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
                                     ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ReferenceDataSourceDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceSchema'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceRoleARN'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormat'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordEncoding'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RecordColumns'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
                                     ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                        ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('RecordFormatType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
                                         ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('JSONMappingParameters'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('CSVMappingParameters'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowPath'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordRowDelimiter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('RecordColumnDelimiter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Mapping'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SqlType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
                                 ]),
                             ])),
                         ]),
@@ -3418,14 +3270,12 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupDescriptions'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyGroupId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PropertyMap'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3438,22 +3288,16 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcConfigurationId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoringConfigurationDescription'),
@@ -3491,48 +3335,44 @@ final class KinesisAnalyticsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UDF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3ContentLocationDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MavenReferenceDescription'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UDF'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DEPENDENCY_JAR'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketARN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FileKey'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ObjectVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLoggingOptionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ApplicationMaintenanceWindowStartTime'),

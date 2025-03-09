@@ -161,9 +161,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('cluster'),
                             new \PHPStan\Type\Constant\ConstantStringType('namespace'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -207,82 +205,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -325,82 +317,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -426,9 +412,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -478,29 +462,25 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -518,9 +498,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -574,19 +552,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('endpointPrivateAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('publicAccessCidrs'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('serviceIpv4Cidr'),
@@ -609,22 +581,18 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clusterLogging'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('types'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('api'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audit'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('types'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('api'),
+                                new \PHPStan\Type\Constant\ConstantStringType('audit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -652,19 +620,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('resources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -684,38 +648,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -723,9 +683,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlaneInstanceType'),
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlanePlacement'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupName'),
@@ -761,23 +719,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('remoteNodeNetworks'),
                         new \PHPStan\Type\Constant\ConstantStringType('remotePodNetworks'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -786,9 +736,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('nodeRoleArn'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -841,17 +789,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('token'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ]),
@@ -881,17 +825,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('labels'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                            new \PHPStan\Type\Constant\ConstantStringType('labels'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -904,23 +844,19 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                 ]),
@@ -989,20 +925,14 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ec2SshKey'),
                         new \PHPStan\Type\Constant\ConstantStringType('sourceSecurityGroups'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AL2_x86_64'),
@@ -1024,31 +954,27 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('effect'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('effect'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
                         new \PHPStan\Type\Constant\ConstantStringType('remoteAccessSecurityGroup'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -1056,55 +982,51 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1215,29 +1137,25 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -1255,9 +1173,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -1311,19 +1227,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('endpointPrivateAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('publicAccessCidrs'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('serviceIpv4Cidr'),
@@ -1346,22 +1256,18 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clusterLogging'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('types'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('api'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audit'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('types'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('api'),
+                                new \PHPStan\Type\Constant\ConstantStringType('audit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1389,19 +1295,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('resources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1421,38 +1323,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1460,9 +1358,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlaneInstanceType'),
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlanePlacement'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupName'),
@@ -1498,23 +1394,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('remoteNodeNetworks'),
                         new \PHPStan\Type\Constant\ConstantStringType('remotePodNetworks'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1523,9 +1411,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('nodeRoleArn'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1578,17 +1464,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('token'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ]),
@@ -1618,17 +1500,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('labels'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                            new \PHPStan\Type\Constant\ConstantStringType('labels'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -1641,23 +1519,19 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                 ]),
@@ -1726,20 +1600,14 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ec2SshKey'),
                         new \PHPStan\Type\Constant\ConstantStringType('sourceSecurityGroups'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AL2_x86_64'),
@@ -1761,31 +1629,27 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('effect'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('effect'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
                         new \PHPStan\Type\Constant\ConstantStringType('remoteAccessSecurityGroup'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -1793,55 +1657,51 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1956,19 +1816,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('endpointPrivateAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('publicAccessCidrs'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('serviceIpv4Cidr'),
@@ -1991,22 +1845,18 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clusterLogging'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('types'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('api'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audit'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('types'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('api'),
+                                new \PHPStan\Type\Constant\ConstantStringType('audit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2034,19 +1884,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('resources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2066,38 +1912,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2105,9 +1947,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlaneInstanceType'),
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlanePlacement'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupName'),
@@ -2143,23 +1983,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('remoteNodeNetworks'),
                         new \PHPStan\Type\Constant\ConstantStringType('remotePodNetworks'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2168,9 +2000,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('nodeRoleArn'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2205,9 +2035,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2257,29 +2085,25 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonSubscriptionNeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AddonPermissionFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -2297,9 +2121,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -2316,16 +2138,12 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendedManagedPolicies'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendedManagedPolicies'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -2337,59 +2155,47 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('addons'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('addonName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('addonVersions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('publisher'),
+                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('marketplaceInformation'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('addonVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('architecture'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('compatibilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requiresConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requiresIamPermissions'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('clusterVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('platformVersions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultVersion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\BooleanType(),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('addonName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('addonVersions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('publisher'),
-                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('marketplaceInformation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('productId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('productUrl'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('addonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('architecture'),
-                                new \PHPStan\Type\Constant\ConstantStringType('computeTypes'),
-                                new \PHPStan\Type\Constant\ConstantStringType('compatibilities'),
-                                new \PHPStan\Type\Constant\ConstantStringType('requiresConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('requiresIamPermissions'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('clusterVersion'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('platformVersions'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('defaultVersion'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\BooleanType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('productId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('productUrl'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2445,19 +2251,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('endpointPrivateAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('publicAccessCidrs'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('serviceIpv4Cidr'),
@@ -2480,22 +2280,18 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clusterLogging'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('types'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('api'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audit'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('types'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('api'),
+                                new \PHPStan\Type\Constant\ConstantStringType('audit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2523,19 +2319,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('resources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2555,38 +2347,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2594,9 +2382,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlaneInstanceType'),
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlanePlacement'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupName'),
@@ -2632,23 +2418,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('remoteNodeNetworks'),
                         new \PHPStan\Type\Constant\ConstantStringType('remotePodNetworks'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2657,9 +2435,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('nodeRoleArn'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2683,38 +2459,36 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('clusterVersions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clusterVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('clusterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultPlatformVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('releaseDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endOfStandardSupportDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endOfExtendedSupportDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kubernetesPatchVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('unsupported'),
-                            new \PHPStan\Type\Constant\ConstantStringType('standard-support'),
-                            new \PHPStan\Type\Constant\ConstantStringType('extended-support'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_SUPPORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTENDED_SUPPORT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clusterVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('clusterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultPlatformVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('releaseDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endOfStandardSupportDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endOfExtendedSupportDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kubernetesPatchVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('unsupported'),
+                        new \PHPStan\Type\Constant\ConstantStringType('standard-support'),
+                        new \PHPStan\Type\Constant\ConstantStringType('extended-support'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD_SUPPORT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXTENDED_SUPPORT'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2756,17 +2530,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('token'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ]),
@@ -2796,17 +2566,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('labels'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                            new \PHPStan\Type\Constant\ConstantStringType('labels'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -2819,23 +2585,19 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PodExecutionRoleAlreadyInUse'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                 ]),
@@ -2927,67 +2689,57 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('insightStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('kubernetesResourceUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('insightStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('kubernetesResourceUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PASSING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('deprecationDetails'),
                         new \PHPStan\Type\Constant\ConstantStringType('addonCompatibilityDetails'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('usage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('replacedWith'),
-                                new \PHPStan\Type\Constant\ConstantStringType('stopServingVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startServingReplacementVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientStats'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('usage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('replacedWith'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stopServingVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startServingReplacementVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('clientStats'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('userAgent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('numberOfRequestsLast30Days'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lastRequestTime'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('userAgent'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('numberOfRequestsLast30Days'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('lastRequestTime'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    ]),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ])),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('compatibleVersions'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('compatibleVersions'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                 ]),
@@ -3056,20 +2808,14 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ec2SshKey'),
                         new \PHPStan\Type\Constant\ConstantStringType('sourceSecurityGroups'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('AL2_x86_64'),
@@ -3091,31 +2837,27 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('effect'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('effect'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SCHEDULE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_EXECUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PREFER_NO_SCHEDULE'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
                         new \PHPStan\Type\Constant\ConstantStringType('remoteAccessSecurityGroup'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -3123,55 +2865,51 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMismatch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamInstanceProfileNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetMissingIpv6Assignment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamNodeRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AsgInstanceLaunchFailures'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InstanceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmiIdNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupOptInRequired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupRateLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateDeletionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateInvalidConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetListTooLong'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamThrottling'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NodeTerminationFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceEc2LaunchTemplateNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AutoScalingGroupInstanceRefreshActive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesLabelInvalid'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2LaunchTemplateVersionMaxLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceTypeDoesNotExist'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3273,82 +3011,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -3396,82 +3128,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -3484,9 +3210,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('accessEntries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3498,14 +3222,12 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('accessPolicies'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3518,9 +3240,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('addons'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3537,29 +3257,25 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('accessScope'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accessScope'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('namespaces'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('namespaces'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cluster'),
-                                new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cluster'),
+                            new \PHPStan\Type\Constant\ConstantStringType('namespace'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -3571,9 +3287,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('clusters'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3585,52 +3299,46 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('subscriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('effectiveDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('expirationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('licenseQuantity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('licenseType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('term'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoRenew'),
+                    new \PHPStan\Type\Constant\ConstantStringType('licenseArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('licenses'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('Cluster'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('effectiveDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('expirationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('licenseQuantity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('licenseType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('term'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoRenew'),
-                        new \PHPStan\Type\Constant\ConstantStringType('licenseArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('licenses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cluster'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('duration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('token'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3643,9 +3351,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('fargateProfileNames'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3657,14 +3363,12 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('identityProviderConfigs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3677,36 +3381,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('insights'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('category'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kubernetesVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastRefreshTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastTransitionTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('insightStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('UPGRADE_READINESS'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kubernetesVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastRefreshTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastTransitionTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('insightStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPGRADE_READINESS'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PASSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PASSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3720,9 +3422,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('nodegroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3734,22 +3434,20 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('associations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ownerArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ownerArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3772,9 +3470,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('updateIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3828,19 +3524,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('endpointPrivateAccess'),
                         new \PHPStan\Type\Constant\ConstantStringType('publicAccessCidrs'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('serviceIpv4Cidr'),
@@ -3863,22 +3553,18 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clusterLogging'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('types'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('api'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audit'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('types'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('api'),
+                                new \PHPStan\Type\Constant\ConstantStringType('audit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('authenticator'),
+                                new \PHPStan\Type\Constant\ConstantStringType('controllerManager'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scheduler'),
+                            ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3906,19 +3592,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('resources'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('keyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3938,38 +3620,34 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('issues'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InternalFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceLimitExceeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2ServiceNotSubscribed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SubnetNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ec2SecurityGroupNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsGrantRevoked'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyNotFound'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyMarkedForDeletion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StsRegionalEndpointDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedVersion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3977,9 +3655,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlaneInstanceType'),
                         new \PHPStan\Type\Constant\ConstantStringType('controlPlanePlacement'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupName'),
@@ -4015,23 +3691,15 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('remoteNodeNetworks'),
                         new \PHPStan\Type\Constant\ConstantStringType('remotePodNetworks'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cidrs'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4040,9 +3708,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('nodeRoleArn'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4089,9 +3755,7 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -4138,82 +3802,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -4255,82 +3913,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -4372,82 +4024,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -4490,17 +4136,13 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('token'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('token'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ]),
@@ -4543,82 +4185,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -4660,82 +4296,76 @@ final class EKSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfigUpdate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AutoModeUpdate'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPrivateAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndpointPublicAccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterLogging'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DesiredSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LabelsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TaintsToRemove'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PublicAccessCidrs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LaunchTemplateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AddonVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ServiceAccountRoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResolveConflicts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxUnavailablePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeRepairEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodIdentityAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpgradePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZonalShiftConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputeConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KubernetesNetworkConfig'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
-                                new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SubnetNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitReached'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpNotAvailable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OperationNotPermitted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcIdNotFound'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreationFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PodEvictionFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientFreeAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUnreachable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientNumberOfReplicas'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationConflict'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AdmissionRequestDenied'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnsupportedAddonModification'),
+                            new \PHPStan\Type\Constant\ConstantStringType('K8sResourceNotFound'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),

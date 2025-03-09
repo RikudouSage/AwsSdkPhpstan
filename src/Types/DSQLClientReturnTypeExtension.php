@@ -73,9 +73,7 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('linkedClusterArns'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -135,9 +133,7 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -149,14 +145,12 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                 new \PHPStan\Type\Constant\ConstantStringType('clusters'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -208,9 +202,7 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }

@@ -82,9 +82,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('namespace'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -149,9 +147,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
                 new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -183,9 +179,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('aws'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -356,20 +350,16 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('namespaces'),
                 new \PHPStan\Type\Constant\ConstantStringType('continuationToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -382,18 +372,16 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('tableBuckets'),
                 new \PHPStan\Type\Constant\ConstantStringType('continuationToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -406,27 +394,23 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('tables'),
                 new \PHPStan\Type\Constant\ConstantStringType('continuationToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('namespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tableARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('customer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aws'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tableARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('customer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -474,9 +458,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),

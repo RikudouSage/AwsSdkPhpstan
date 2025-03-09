@@ -730,9 +730,7 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -748,26 +746,24 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Period'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INBOX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED_ITEMS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SENT_ITEMS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DRAFTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JUNK_EMAIL'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PERMANENTLY_DELETE'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Period'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INBOX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED_ITEMS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SENT_ITEMS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DRAFTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JUNK_EMAIL'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PERMANENTLY_DELETE'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -791,29 +787,23 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRuleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Effect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetUsers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotTargetUsers'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRuleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Effect'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetUsers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotTargetUsers'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -836,14 +826,12 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRuleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRuleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -858,16 +846,14 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('OwnershipVerificationStatus'),
                 new \PHPStan\Type\Constant\ConstantStringType('DkimVerificationStatus'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Hostname'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Hostname'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
@@ -907,14 +893,12 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileDeviceAccessRuleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MobileDeviceAccessRuleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -960,9 +944,7 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -972,55 +954,37 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Rules'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Effect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IpRanges'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotIpRanges'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Actions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotActions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotUserIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRoleIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotImpersonationRoleIds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Effect'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpRanges'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotIpRanges'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotActions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotUserIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRoleIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotImpersonationRoleIds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1032,9 +996,7 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1046,35 +1008,33 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('AvailabilityConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EwsProvider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LambdaProvider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EWS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProviderType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EwsProvider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaProvider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EwsEndpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EwsUsername'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EWS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EwsEndpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EwsUsername'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1087,29 +1047,27 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Members'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1122,26 +1080,24 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1154,14 +1110,12 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1174,23 +1128,21 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Roles'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRoleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_ACCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpersonationRoleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_ACCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1203,14 +1155,12 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('MailDomains'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultDomain'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultDomain'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1223,33 +1173,31 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Jobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EstimatedProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntityId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EstimatedProgress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1262,25 +1210,21 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Permissions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GranteeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GranteeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionValues'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_ACCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SEND_AS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SEND_ON_BEHALF'),
-                            ]),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GranteeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GranteeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionValues'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_ACCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEND_AS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEND_ON_BEHALF'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1293,25 +1237,23 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Overrides'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Effect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Effect'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1323,57 +1265,39 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Rules'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MobileDeviceAccessRuleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Effect'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotDeviceTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceModels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotDeviceModels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceOperatingSystems'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotDeviceOperatingSystems'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceUserAgents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotDeviceUserAgents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MobileDeviceAccessRuleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Effect'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotDeviceTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceModels'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotDeviceModels'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceOperatingSystems'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotDeviceOperatingSystems'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceUserAgents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotDeviceUserAgents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1385,20 +1309,18 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('OrganizationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Alias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultMailDomain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Alias'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultMailDomain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1412,26 +1334,22 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('PersonalAccessTokenSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PersonalAccessTokenId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DateLastUsed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpiresTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PersonalAccessTokenId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateCreated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DateLastUsed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpiresTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Scopes'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1443,16 +1361,14 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Delegates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1466,33 +1382,31 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ROOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EQUIPMENT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ROOM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EQUIPMENT'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1504,14 +1418,12 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1523,39 +1435,37 @@ final class WorkMailClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Users'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderIdentityStoreId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_USER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOTE_USER'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Email'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisabledDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentityProviderIdentityStoreId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM_USER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOTE_USER'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

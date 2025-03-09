@@ -165,33 +165,29 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('NamedQueries'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedNamedQueryIds'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Database'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryString'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NamedQueryId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Database'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryString'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NamedQueryId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NamedQueryId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('NamedQueryId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -203,31 +199,27 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('PreparedStatements'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedPreparedStatementNames'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryStatement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryStatement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -239,159 +231,153 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('QueryExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedQueryExecutionIds'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Query'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatementType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResultReuseConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Statistics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubstatementType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryResultsS3AccessGrantsConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DDL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DML'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UTILITY'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Query'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatementType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResultConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResultReuseConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionContext'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Statistics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionParameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubstatementType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryResultsS3AccessGrantsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpectedBucketOwner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AclConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DDL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UTILITY'),
-                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExpectedBucketOwner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AclConfiguration'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionOption'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KmsKey'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSE_KMS'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3AclOption'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('BUCKET_OWNER_FULL_CONTROL'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResultReuseByAgeConfiguration'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxAgeInMinutes'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Database'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Catalog'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubmissionDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletionDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AthenaError'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionOption'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKey'),
                         ], [
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CSE_KMS'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCategory'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Retryable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EngineExecutionTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DataScannedInBytes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DataManifestLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalExecutionTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QueryQueueTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServicePreProcessingTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QueryPlanningTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceProcessingTimeInMillis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResultReuseInformation'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ReusedPreviousResult'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3AclOption'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EnableS3AccessGrants'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreateUserLevelPrefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AuthenticationType'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_IDENTITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUCKET_OWNER_FULL_CONTROL'),
                         ]),
                     ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResultReuseByAgeConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxAgeInMinutes'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Database'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Catalog'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubmissionDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AthenaError'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCategory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Retryable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EngineExecutionTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataScannedInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataManifestLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalExecutionTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QueryQueueTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServicePreProcessingTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QueryPlanningTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceProcessingTimeInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResultReuseInformation'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ReusedPreviousResult'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EnableS3AccessGrants'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateUserLevelPrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationType'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_IDENTITY'),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -749,14 +735,10 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('CapacityAssignments'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkGroupNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkGroupNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -1092,9 +1074,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('EnableS3AccessGrants'),
@@ -1122,50 +1102,44 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('Rows'),
                     new \PHPStan\Type\Constant\ConstantStringType('ResultSetMetadata'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VarCharValue'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VarCharValue'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ColumnInfo'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CatalogName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SchemaName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Label'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Precision'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Scale'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Nullable'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CaseSensitive'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_NULL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NULLABLE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                ]),
-                                new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CatalogName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SchemaName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Label'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Precision'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Scale'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Nullable'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CaseSensitive'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_NULL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NULLABLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                 ]),
@@ -1236,16 +1210,10 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\MixedType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\MixedType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
                     ]),
                 ]),
             ]),
@@ -1390,27 +1358,23 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ]),
@@ -1535,16 +1499,12 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationDPUSizes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationRuntimeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SupportedDPUSizes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationRuntimeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedDPUSizes'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1558,34 +1518,32 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Calculations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CalculationExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CalculationExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubmissionDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletionDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SubmissionDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletionDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CANCELING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -1599,45 +1557,43 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('CapacityReservations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetDpus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedDpus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAllocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAllocationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_PENDING'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetDpus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedDpus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAllocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAllocationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestCompletionTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                             new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_PENDING'),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestCompletionTime'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1649,56 +1605,54 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('DataCatalogsSummary'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CatalogName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FEDERATED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMODB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MYSQL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POSTGRESQL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORACLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SYNAPSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SQLSERVER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DB2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BIGQUERY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GOOGLECLOUDSTORAGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HBASE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOCUMENTDB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CMDB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TPCDS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAPHANA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOWFLAKE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DATALAKEGEN2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DB2AS400'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CatalogName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FEDERATED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED_CLEANUP_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DYNAMODB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MYSQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('POSTGRESQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORACLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYNAPSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SQLSERVER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DB2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BIGQUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GOOGLECLOUDSTORAGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HBASE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DOCUMENTDB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CMDB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TPCDS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTREAM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAPHANA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOWFLAKE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DATALAKEGEN2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DB2AS400'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1711,16 +1665,14 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('DatabaseList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1733,14 +1685,12 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('EngineVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1756,33 +1706,31 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutorType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TerminationDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutorState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutorSize'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COORDINATOR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORKER'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGISTERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutorType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TerminationDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutorState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutorSize'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COORDINATOR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WORKER'),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGISTERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1794,9 +1742,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('NamedQueryIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1809,22 +1755,20 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('NotebookMetadataList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NotebookId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPYNB'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('NotebookId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IPYNB'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1836,14 +1780,12 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('NotebookSessionsList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1856,14 +1798,12 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('PreparedStatements'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StatementName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1876,9 +1816,7 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('QueryExecutionIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1891,48 +1829,46 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Sessions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotebookVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotebookVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IdleSinceDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEGRADED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IdleSinceDateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateChangeReason'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEGRADED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
             ]),
@@ -1945,44 +1881,38 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('TableMetadataList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAccessTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Columns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PartitionKeys'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Columns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PartitionKeys'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1995,14 +1925,12 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2015,31 +1943,29 @@ final class AthenaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('WorkGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentityCenterApplicationArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentityCenterApplicationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SelectedEngineVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EffectiveEngineVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

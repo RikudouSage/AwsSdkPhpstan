@@ -92,35 +92,31 @@ final class CodeStarNotificationsClientReturnTypeExtension implements \PHPStan\T
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventTypeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventTypeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EventTypeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventTypeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNREACHABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNREACHABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([
@@ -145,18 +141,16 @@ final class CodeStarNotificationsClientReturnTypeExtension implements \PHPStan\T
                 new \PHPStan\Type\Constant\ConstantStringType('EventTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventTypeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventTypeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EventTypeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventTypeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -170,14 +164,12 @@ final class CodeStarNotificationsClientReturnTypeExtension implements \PHPStan\T
                 new \PHPStan\Type\Constant\ConstantStringType('NotificationRules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -199,21 +191,19 @@ final class CodeStarNotificationsClientReturnTypeExtension implements \PHPStan\T
                 new \PHPStan\Type\Constant\ConstantStringType('Targets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNREACHABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNREACHABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),

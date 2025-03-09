@@ -78,28 +78,26 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Locations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
                     ]),
                 ])),
             ]),
@@ -112,9 +110,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('Arn'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -139,29 +135,23 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -206,9 +196,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StreamClass'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Arn'),
@@ -220,28 +208,26 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([
@@ -296,9 +282,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ApplicationArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('Arn'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -329,29 +313,23 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -396,9 +374,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StreamClass'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Arn'),
@@ -410,28 +386,26 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([
@@ -483,9 +457,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WebSdkProtocolUrl'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
@@ -540,39 +512,37 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeEnvironment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PROTON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROTON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -586,45 +556,43 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultApplication'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamClass'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultApplication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamClass'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING_LOCATIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_WITH_ERRORS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('gen4n_high'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gen4n_ultra'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gen4n_win2022'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gen5n_high'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gen5n_ultra'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gen5n_win2022'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING_LOCATIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_WITH_ERRORS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('gen4n_high'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gen4n_ultra'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gen4n_win2022'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gen5n_high'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gen5n_ultra'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gen5n_win2022'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -638,49 +606,47 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportFilesMetadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportFilesMetadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputUri'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('WebRTC'),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLIENT_RECONNECTION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('WebRTC'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLIENT_RECONNECTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -693,49 +659,47 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Items'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportFilesMetadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportFilesMetadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputUri'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('WebRTC'),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLIENT_RECONNECTION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         ]),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('WebRTC'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONNECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CLIENT_RECONNECTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RECONNECTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -783,9 +747,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WebSdkProtocolUrl'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
@@ -871,29 +833,23 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -938,9 +894,7 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('StreamClass'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Arn'),
@@ -952,28 +906,26 @@ final class GameLiftStreamsClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlwaysOnCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdleCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnDemandCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedCapacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVING'),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([

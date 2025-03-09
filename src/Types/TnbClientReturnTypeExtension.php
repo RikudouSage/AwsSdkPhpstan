@@ -217,19 +217,17 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cluster'),
+                            new \PHPStan\Type\Constant\ConstantStringType('helmChart'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodeGroup'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cluster'),
-                                new \PHPStan\Type\Constant\ConstantStringType('helmChart'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodeGroup'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                 ]),
@@ -282,14 +280,12 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -465,35 +461,33 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('taskContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskErrorDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskStatus'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('taskContext'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskErrorDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cause'),
+                        new \PHPStan\Type\Constant\ConstantStringType('details'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('cause'),
-                            new \PHPStan\Type\Constant\ConstantStringType('details'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SCHEDULED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([
@@ -531,14 +525,12 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -559,9 +551,7 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -616,42 +606,40 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('functionInstances'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instantiatedVnfInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instantiationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsInstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfPkgId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfPkgName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instantiatedVnfInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instantiationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsInstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfPkgId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfPkgName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vnfState'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('vnfState'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            ]),
-                        ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_INSTANTIATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_INSTANTIATED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -664,46 +652,44 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('functionPackages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('onboardingState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('operationalState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('usageState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfProductName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfProvider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfdId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfdVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('onboardingState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('operationalState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('usageState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfProductName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfProvider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfdId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfdVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_IN_USE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_IN_USE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -716,44 +702,42 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('networkInstances'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsInstanceDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsInstanceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdInfoId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsInstanceDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsInstanceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdInfoId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_INSTANTIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTENT_TO_UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATE_IN_PROGRESS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_INSTANTIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IMPAIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTENT_TO_UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATE_IN_PROGRESS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -766,54 +750,52 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('networkOperations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lcmOperationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsInstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('operationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updateType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lcmOperationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsInstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('operationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updateType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('detail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('detail'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nsdInfoId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vnfInstanceId'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANTIATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nsdInfoId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vnfInstanceId'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MODIFY_VNF_INFORMATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_NS'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MODIFY_VNF_INFORMATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_NS'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -827,52 +809,48 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('networkPackages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdDesigner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdInvariantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdOnboardingState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdOperationalState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdUsageState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nsdVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vnfPkgIds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdDesigner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdInvariantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdOnboardingState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdOperationalState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdUsageState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nsdVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vnfPkgIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_IN_USE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_IN_USE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -906,14 +884,12 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -944,23 +920,19 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1044,14 +1016,12 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -1082,23 +1052,19 @@ final class TnbClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('overrides'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }

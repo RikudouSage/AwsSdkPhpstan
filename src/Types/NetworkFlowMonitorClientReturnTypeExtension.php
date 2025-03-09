@@ -94,32 +94,28 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -181,32 +177,28 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -251,33 +243,75 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('Count/Second'),
                     new \PHPStan\Type\Constant\ConstantStringType('None'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('localIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('snatIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localInstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localVpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localAz'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localSubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetPort'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationCategory'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteVpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteAz'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteSubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteInstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dnatIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('traversedConstructs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kubernetesMetadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localInstanceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localSubnetArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localVpcArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteInstanceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteSubnetArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteVpcArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INTRA_AZ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTER_AZ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTER_VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNCLASSIFIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_S3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_DYNAMODB'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('componentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('componentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('componentArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('localIp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('snatIp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localInstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localVpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localAz'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localSubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetPort'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destinationCategory'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteVpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteAz'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteSubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteInstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteIp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dnatIp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('traversedConstructs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kubernetesMetadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localInstanceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localSubnetArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localVpcArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteInstanceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteSubnetArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteVpcArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('localServiceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('localPodName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('localPodNamespace'),
+                        new \PHPStan\Type\Constant\ConstantStringType('remoteServiceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('remotePodName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('remotePodNamespace'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -285,59 +319,13 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INTRA_AZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTER_AZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTER_VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNCLASSIFIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_DYNAMODB'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('componentId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('componentType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('componentArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('localServiceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('localPodName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('localPodNamespace'),
-                            new \PHPStan\Type\Constant\ConstantStringType('remoteServiceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('remotePodName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('remotePodNamespace'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -350,28 +338,26 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('topContributors'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localSubnetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localAz'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localVpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('remoteIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localSubnetArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('localVpcArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localSubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localAz'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localVpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('remoteIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localSubnetArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('localVpcArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -414,20 +400,14 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('Count/Second'),
                     new \PHPStan\Type\Constant\ConstantStringType('None'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('timestamps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('values'),
-                        new \PHPStan\Type\Constant\ConstantStringType('label'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('timestamps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('values'),
+                    new \PHPStan\Type\Constant\ConstantStringType('label'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ObjectType('DateTimeInterface')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -498,24 +478,22 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('targetIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('region'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('targetIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetType'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('targetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accountId'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
@@ -528,21 +506,19 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('monitors'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('monitorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('monitorName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('monitorStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('monitorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('monitorName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('monitorStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -556,20 +532,18 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('scopes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('scopeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scopeArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('scopeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scopeArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -667,32 +641,28 @@ final class NetworkFlowMonitorClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Subnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::AWSService'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),

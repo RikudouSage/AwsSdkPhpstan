@@ -132,24 +132,20 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('SINGLE_REGION'),
                     new \PHPStan\Type\Constant\ConstantStringType('MULTI_REGION'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('keyspaceStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tablesReplicationProgress'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('keyspaceStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tablesReplicationProgress'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -192,40 +188,32 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('clusteringKeys'),
                     new \PHPStan\Type\Constant\ConstantStringType('staticColumns'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('orderBy'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ASC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DESC'),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('orderBy'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ASC'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DESC'),
-                            ]),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -278,36 +266,34 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 ], [
                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('capacitySpecification'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('capacitySpecification'),
+                        new \PHPStan\Type\Constant\ConstantStringType('throughputMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('readCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('writeCapacityUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateToPayPerRequestTimestamp'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESTORING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_CREDENTIALS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('throughputMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('readCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('writeCapacityUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdateToPayPerRequestTimestamp'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PAY_PER_REQUEST'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
             ]),
@@ -381,64 +367,62 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         ]),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoScalingSpecification'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingSpecification'),
+                        new \PHPStan\Type\Constant\ConstantStringType('writeCapacityAutoScaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('readCapacityAutoScaling'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('writeCapacityAutoScaling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('readCapacityAutoScaling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('autoScalingDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('minimumUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maximumUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scalingPolicy'),
                         ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('autoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('minimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('maximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scalingPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('targetTrackingScalingPolicyConfiguration'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetTrackingScalingPolicyConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('disableScaleIn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('scaleInCooldown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('scaleOutCooldown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('targetValue'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('disableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('targetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('autoScalingDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('minimumUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maximumUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scalingPolicy'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('autoScalingDisabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('minimumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('maximumUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scalingPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('targetTrackingScalingPolicyConfiguration'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetTrackingScalingPolicyConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('disableScaleIn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('scaleInCooldown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('scaleOutCooldown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('targetValue'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('disableScaleIn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scaleInCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scaleOutCooldown'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('targetValue'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                             ]),
                         ]),
@@ -463,14 +447,12 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
@@ -479,12 +461,8 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     new \PHPStan\Type\Constant\ConstantStringType('RESTORING'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -498,23 +476,19 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('keyspaces'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('keyspaceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('replicationStrategy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('replicationRegions'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SINGLE_REGION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MULTI_REGION'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('keyspaceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationStrategy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('replicationRegions'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE_REGION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTI_REGION'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -527,16 +501,14 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('tables'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('keyspaceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('keyspaceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tableName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -549,14 +521,12 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -569,9 +539,7 @@ final class KeyspacesClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('types'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }

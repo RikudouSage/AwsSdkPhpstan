@@ -551,32 +551,28 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('RequestCharged'),
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteMarker'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeleteMarkerVersionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeleteMarker'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeleteMarkerVersionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('requester'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -616,35 +612,33 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
                     ]),
                 ])),
             ]),
@@ -680,14 +674,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
                     ]),
@@ -726,30 +718,20 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('CORSRules'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedHeaders'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedMethods'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedOrigins'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExposeHeaders'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxAgeSeconds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedHeaders'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedMethods'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedOrigins'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExposeHeaders'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxAgeSeconds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -763,24 +745,22 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplyServerSideEncryptionByDefault'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BucketKeyEnabled'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplyServerSideEncryptionByDefault'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketKeyEnabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SSEAlgorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyID'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SSEAlgorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KMSMasterKeyID'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AES256'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aws:kms:dsse'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AES256'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aws:kms:dsse'),
                             ]),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
             ]),
@@ -817,14 +797,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
                     ]),
@@ -832,16 +810,14 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                         new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessTier'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHIVE_ACCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE_ACCESS'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessTier'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHIVE_ACCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE_ACCESS'),
                         ]),
                     ])),
                 ]),
@@ -906,23 +882,21 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                         new \PHPStan\Type\Constant\ConstantStringType('Current'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IsMultipartUploaded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectLockRetainUntilDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectLockMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectLockLegalHoldStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IntelligentTieringAccessTier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketKeyStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectAccessControlList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectOwner'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsMultipartUploaded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockRetainUntilDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockLegalHoldStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IntelligentTieringAccessTier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BucketKeyStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectAccessControlList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectOwner'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Frequency'),
@@ -942,76 +916,74 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Rules'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Transition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionTransition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionExpiration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AbortIncompleteMultipartUpload'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Transition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionTransition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionExpiration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AbortIncompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpiredObjectDeleteMarker'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExpiredObjectDeleteMarker'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                            ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DaysAfterInitiation'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DaysAfterInitiation'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                 ])),
             ]),
@@ -1024,118 +996,110 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                 new \PHPStan\Type\Constant\ConstantStringType('TransitionDefaultMinimumObjectSize'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionTransitions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionExpiration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AbortIncompleteMultipartUpload'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Transitions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionTransitions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentVersionExpiration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AbortIncompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExpiredObjectDeleteMarker'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExpiredObjectDeleteMarker'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeGreaterThan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeLessThan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('And'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeGreaterThan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeLessThan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('And'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeGreaterThan'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeLessThan'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeGreaterThan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectSizeLessThan'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
                         ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DaysAfterInitiation'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NoncurrentDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NewerNoncurrentVersions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DaysAfterInitiation'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                 ])),
                 new \PHPStan\Type\UnionType([
@@ -1202,33 +1166,31 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('TargetObjectKeyFormat'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
@@ -1320,14 +1282,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                             new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -1352,35 +1312,33 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
@@ -1450,35 +1408,33 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                         new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1520,35 +1476,33 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                         new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1565,189 +1519,171 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('EventBridgeConfiguration'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                            ]),
-                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueueArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueueArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                            ]),
-                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ReducedRedundancyLostObject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:Copy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectCreated:CompleteMultipartUpload'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRemoved:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Post'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Completed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationFailedReplication'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationNotTracked'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationMissedThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:Replication:OperationReplicatedAfterThreshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectRestore:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleTransition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:IntelligentTiering'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectAcl:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:Delete'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:LifecycleExpiration:DeleteMarkerCreated'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:*'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Put'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3:ObjectTagging:Delete'),
-                            ]),
-                        ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FilterRules'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
                     ]),
                 ])),
@@ -1764,15 +1700,13 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ObjectOwnership'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BucketOwnerPreferred'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectWriter'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BucketOwnerEnforced'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectOwnership'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BucketOwnerPreferred'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectWriter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BucketOwnerEnforced'),
                         ]),
                     ])),
                 ]),
@@ -1814,153 +1748,149 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceSelectionCriteria'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExistingObjectReplication'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeleteMarkerReplication'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
                             new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceSelectionCriteria'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExistingObjectReplication'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeleteMarkerReplication'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tag'),
+                            new \PHPStan\Type\Constant\ConstantStringType('And'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tag'),
-                                new \PHPStan\Type\Constant\ConstantStringType('And'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Value'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
+                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SseKmsEncryptedObjects'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicaModifications'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Account'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessControlTranslation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReplicationTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SseKmsEncryptedObjects'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReplicaModifications'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ReplicaKmsKeyID'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Time'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Account'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessControlTranslation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReplicationTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
-                                ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Minutes'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReplicaKmsKeyID'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Time'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Minutes'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EventThreshold'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Minutes'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EventThreshold'),
                             ], [
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Minutes'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                             ]),
                         ]),
                     ])),
@@ -1987,14 +1917,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('TagSet'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2046,34 +1974,32 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 ], [
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Condition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Redirect'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Condition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Redirect'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HttpErrorCodeReturnedEquals'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeyPrefixEquals'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HttpErrorCodeReturnedEquals'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyPrefixEquals'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HostName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HttpRedirectCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplaceKeyPrefixWith'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplaceKeyWith'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('http'),
+                            new \PHPStan\Type\Constant\ConstantStringType('https'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HostName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HttpRedirectCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReplaceKeyPrefixWith'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReplaceKeyWith'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                new \PHPStan\Type\Constant\ConstantStringType('https'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -2213,35 +2139,33 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Permission'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EmailAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CanonicalUser'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AmazonCustomerByEmail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_CONTROL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WRITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WRITE_ACP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READ_ACP'),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('requester'),
@@ -2298,24 +2222,22 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PartNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32C'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC64NVME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA256'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PartNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32C'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC64NVME'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA256'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -2410,14 +2332,12 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('TagSet'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2605,64 +2525,60 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClassAnalysis'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClassAnalysis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('And'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('And'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                            ])),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataExport'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataExport'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputSchemaVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
                         ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('V_1'),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputSchemaVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3BucketDestination'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('V_1'),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3BucketDestination'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Format'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BucketAccountId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BucketAccountId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
                         ]),
@@ -2683,60 +2599,54 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tierings'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tierings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('And'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('And'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                            ])),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Days'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessTier'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHIVE_ACCESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE_ACCESS'),
-                                ]),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Days'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessTier'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHIVE_ACCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE_ACCESS'),
+                        ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -2751,84 +2661,80 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('NextContinuationToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncludedObjectVersions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OptionalFields'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IncludedObjectVersions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OptionalFields'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3BucketDestination'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3BucketDestination'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Format'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CSV'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ORC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Parquet'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SSES3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SSEKMS'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Format'),
                             new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ORC'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Parquet'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SSES3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SSEKMS'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
                         ]),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                    ], [
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('All'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Current'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsMultipartUploaded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockRetainUntilDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectLockLegalHoldStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IntelligentTieringAccessTier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BucketKeyStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectAccessControlList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ObjectOwner'),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Frequency'),
+                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('All'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Current'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IsMultipartUploaded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReplicationStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectLockRetainUntilDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectLockMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectLockLegalHoldStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IntelligentTieringAccessTier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BucketKeyStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectAccessControlList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectOwner'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Frequency'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Daily'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Weekly'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Daily'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Weekly'),
                         ]),
                     ]),
                 ])),
@@ -2849,44 +2755,40 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('And'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('And'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
                     ]),
                 ])),
@@ -2902,16 +2804,14 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('ContinuationToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
@@ -2932,16 +2832,14 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('Buckets'),
                 new \PHPStan\Type\Constant\ConstantStringType('ContinuationToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2974,66 +2872,62 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UploadId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Initiated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Initiator'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UploadId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Initiated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Initiator'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('url'),
                 new \PHPStan\Type\Constant\ConstantStringType('requester'),
@@ -3064,87 +2958,79 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsLatest'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsLatest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
+                    ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsLatest'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsLatest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('url'),
                 new \PHPStan\Type\Constant\ConstantStringType('requester'),
@@ -3170,74 +3056,68 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('url'),
                 new \PHPStan\Type\Constant\ConstantStringType('requester'),
@@ -3263,74 +3143,68 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('RequestCharged'),
             ], [
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumAlgorithm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RestoreStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ID'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC32C'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SHA256'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CRC64NVME'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPOSITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_OBJECT'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDUCED_REDUNDANCY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ONEZONE_IA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTELLIGENT_TIERING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OUTPOSTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER_IR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPRESS_ONEZONE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ID'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IsRestoreInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RestoreExpiryDate'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('url'),
                 new \PHPStan\Type\IntegerType(),
@@ -3371,28 +3245,26 @@ final class S3ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PartNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32C'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC64NVME'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA256'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PartNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC32C'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumCRC64NVME'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChecksumSHA256'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ID'),

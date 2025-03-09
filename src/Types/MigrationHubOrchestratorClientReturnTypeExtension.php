@@ -128,14 +128,10 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
@@ -190,21 +186,15 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -277,30 +267,26 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('inputName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('required'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('required'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -343,27 +329,21 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                     new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('required'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('required'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('scriptLocationS3Bucket'),
@@ -431,21 +411,15 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -503,14 +477,12 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
@@ -522,9 +494,7 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -603,43 +573,33 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('required'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STRING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('integerValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('listOfStringValue'),
                     ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGLIST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STRINGMAP'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('integerValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('listOfStringValue'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AWAITING_DEPENDENCIES'),
                     new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
@@ -699,21 +659,15 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -725,25 +679,23 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('plugins'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hostname'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('registeredTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('pluginId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hostname'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('registeredTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -766,22 +718,16 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('templateStepGroupSummary'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('previous'),
-                        new \PHPStan\Type\Constant\ConstantStringType('next'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('previous'),
+                    new \PHPStan\Type\Constant\ConstantStringType('next'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -794,42 +740,36 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('templateStepSummaryList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepActionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('previous'),
-                        new \PHPStan\Type\Constant\ConstantStringType('next'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('templateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepActionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('previous'),
+                    new \PHPStan\Type\Constant\ConstantStringType('next'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -842,18 +782,16 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('templateSummary'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -866,38 +804,32 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('workflowStepGroupsSummary'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('previous'),
-                        new \PHPStan\Type\Constant\ConstantStringType('next'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWAITING_DEPENDENCIES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('previous'),
+                    new \PHPStan\Type\Constant\ConstantStringType('next'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWAITING_DEPENDENCIES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -910,55 +842,49 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('workflowStepsSummary'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('stepId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepActionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('previous'),
-                        new \PHPStan\Type\Constant\ConstantStringType('next'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('noOfSrvCompleted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('noOfSrvFailed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('totalNoOfSrv'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scriptLocation'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWAITING_DEPENDENCIES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('stepId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepActionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('previous'),
+                    new \PHPStan\Type\Constant\ConstantStringType('next'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('noOfSrvCompleted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('noOfSrvFailed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalNoOfSrv'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptLocation'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_MANAGED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWAITING_DEPENDENCIES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SKIPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -971,45 +897,43 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('migrationWorkflowSummary'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('templateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('adsApplicationConfigurationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('completedSteps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('totalSteps'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WORKFLOW_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PAUSING_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('templateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('adsApplicationConfigurationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('completedSteps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalSteps'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WORKFLOW_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PAUSING_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('USER_ATTENTION_REQUIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETION_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1162,14 +1086,10 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                     new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
@@ -1225,21 +1145,15 @@ final class MigrationHubOrchestratorClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);

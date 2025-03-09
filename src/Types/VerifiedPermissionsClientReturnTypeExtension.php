@@ -83,73 +83,69 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_LINKED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('static'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateLinked'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_LINKED'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statement'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('static'),
-                            new \PHPStan\Type\Constant\ConstantStringType('templateLinked'),
+                            new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('principal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('statement'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('POLICY_STORE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POLICY_NOT_FOUND'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('POLICY_STORE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('POLICY_NOT_FOUND'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -160,93 +156,85 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('request'),
+                    new \PHPStan\Type\Constant\ConstantStringType('decision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('determiningPolicies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('request'),
-                        new \PHPStan\Type\Constant\ConstantStringType('decision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('determiningPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('principal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('context'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                            new \PHPStan\Type\Constant\ConstantStringType('action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contextMap'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cedarJson'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('boolean'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('long'),
+                                new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                new \PHPStan\Type\Constant\ConstantStringType('set'),
+                                new \PHPStan\Type\Constant\ConstantStringType('record'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipaddr'),
+                                new \PHPStan\Type\Constant\ConstantStringType('decimal'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('actionId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contextMap'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cedarJson'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('boolean'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityIdentifier'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('long'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('set'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('record'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ipaddr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('decimal'),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\MixedType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                ])),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -265,85 +253,77 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('request'),
+                    new \PHPStan\Type\Constant\ConstantStringType('decision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('determiningPolicies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('request'),
-                        new \PHPStan\Type\Constant\ConstantStringType('decision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('determiningPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('context'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('actionId'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contextMap'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cedarJson'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('boolean'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('long'),
+                                new \PHPStan\Type\Constant\ConstantStringType('string'),
+                                new \PHPStan\Type\Constant\ConstantStringType('set'),
+                                new \PHPStan\Type\Constant\ConstantStringType('record'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ipaddr'),
+                                new \PHPStan\Type\Constant\ConstantStringType('decimal'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contextMap'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cedarJson'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('boolean'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityIdentifier'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('long'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('set'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('record'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ipaddr'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('decimal'),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\MixedType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
-                                ])),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\MixedType()),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DENY'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -398,14 +378,12 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('actionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -491,9 +469,7 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('discoveryUrl'),
                     new \PHPStan\Type\Constant\ConstantStringType('openIdIssuer'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantStringType('COGNITO'),
@@ -513,9 +489,7 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('groupConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('groupEntityType'),
@@ -547,18 +521,14 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\Constant\ConstantStringType('audiences'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('principalIdClaim'),
                                 new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
                         ]),
                     ]),
@@ -601,14 +571,12 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('actionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('static'),
@@ -713,9 +681,7 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -731,19 +697,15 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -761,19 +723,15 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('errorDescription'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('entityType'),
@@ -793,92 +751,82 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('identitySources'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('details'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identitySourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('principalEntityType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('details'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identitySourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('principalEntityType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('userPoolArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('discoveryUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('openIdIssuer'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('COGNITO'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cognitoUserPoolConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('openIdConnectConfiguration'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
                             new \PHPStan\Type\Constant\ConstantStringType('userPoolArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('discoveryUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIdIssuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupConfiguration'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('COGNITO'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('cognitoUserPoolConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('openIdConnectConfiguration'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('userPoolArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('groupConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupEntityType'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('entityIdPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tokenSelection'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('groupClaim'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupEntityType'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('groupEntityType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('entityIdPrefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('groupConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tokenSelection'),
+                                new \PHPStan\Type\Constant\ConstantStringType('accessTokenOnly'),
+                                new \PHPStan\Type\Constant\ConstantStringType('identityTokenOnly'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('groupClaim'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('groupEntityType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('principalIdClaim'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('audiences'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('accessTokenOnly'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('identityTokenOnly'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('principalIdClaim'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('principalIdClaim'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('audiences'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('principalIdClaim'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('clientIds'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 ]),
                             ]),
                         ]),
@@ -895,85 +843,81 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('policies'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('principal'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('effect'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_LINKED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('actions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('effect'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE_LINKED'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('static'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateLinked'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('entityId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('principal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('static'),
-                            new \PHPStan\Type\Constant\ConstantStringType('templateLinked'),
-                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('entityId'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('principal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                            ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('entityId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Permit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Forbid'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Permit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Forbid'),
                     ]),
                 ])),
             ]),
@@ -987,20 +931,18 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('policyStores'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1013,20 +955,18 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('policyTemplates'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyStoreId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyTemplateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1041,9 +981,7 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
@@ -1099,14 +1037,12 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('actionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('actionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),

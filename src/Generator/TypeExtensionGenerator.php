@@ -385,18 +385,18 @@ final class TypeExtensionGenerator
             $values->items[] = $this->transformValueShape($valueShape, $childShape['shape'], $apiDoc, $callStack);
         }
 
-//        if (count($values->items) === 1) {
-//            return $values->items[0];
-//        }
-
-        $result->args[] = new Arg(
-            new New_(
-                new FullyQualified(UnionType::class),
-                [
-                    new Arg($values),
-                ],
-            ),
-        );
+        if (count($values->items) === 1) {
+            $result->args[] = new Arg($values->items[0]);
+        } else {
+            $result->args[] = new Arg(
+                new New_(
+                    new FullyQualified(UnionType::class),
+                    [
+                        new Arg($values),
+                    ],
+                ),
+            );
+        }
 
         return $result;
     }

@@ -91,29 +91,21 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('blockingAlarms'),
                     new \PHPStan\Type\Constant\ConstantStringType('outcomeAlarms'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -167,19 +159,17 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -188,63 +178,53 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('blockingAlarms'),
                     new \PHPStan\Type\Constant\ConstantStringType('outcomeAlarms'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                        new \PHPStan\Type\Constant\ConstantStringType('comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                    new \PHPStan\Type\Constant\ConstantStringType('comment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -256,20 +236,18 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -283,75 +261,67 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('appliedWeights'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoshifts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('availabilityZones'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('practiceRunStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('zonalAutoshiftStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('zonalShifts'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('appliedWeights'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoshifts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('availabilityZones'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('practiceRunStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('zonalAutoshiftStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('zonalShifts'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                                new \PHPStan\Type\Constant\ConstantStringType('comment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('appliedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                        new \PHPStan\Type\Constant\ConstantStringType('comment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLIED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLIED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -364,35 +334,33 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
-                        new \PHPStan\Type\Constant\ConstantStringType('comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('awayFrom'),
+                    new \PHPStan\Type\Constant\ConstantStringType('comment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERRUPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -454,29 +422,21 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('blockingAlarms'),
                     new \PHPStan\Type\Constant\ConstantStringType('outcomeAlarms'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('alarmIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDWATCH'),
                     ])),
                 ]),
                 new \PHPStan\Type\UnionType([

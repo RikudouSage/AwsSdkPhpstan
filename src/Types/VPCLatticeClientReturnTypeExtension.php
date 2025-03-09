@@ -167,99 +167,91 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('unsuccessful'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isDefault'),
+                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isDefault'),
-                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fixedResponse'),
+                        new \PHPStan\Type\Constant\ConstantStringType('forward'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fixedResponse'),
-                            new \PHPStan\Type\Constant\ConstantStringType('forward'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('httpMatch'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('headerMatches'),
-                                new \PHPStan\Type\Constant\ConstantStringType('method'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pathMatch'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contains'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('httpMatch'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('headerMatches'),
+                            new \PHPStan\Type\Constant\ConstantStringType('method'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pathMatch'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('contains'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleIdentifier'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleIdentifier'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -313,14 +305,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -361,9 +351,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantStringType('TCP'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('arnResource'),
@@ -433,9 +421,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
@@ -445,9 +431,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -475,14 +459,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -496,24 +478,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('method'),
                         new \PHPStan\Type\Constant\ConstantStringType('pathMatch'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('match'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contains'),
+                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('contains'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -668,9 +648,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -973,27 +951,23 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('unsuccessful'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1073,14 +1047,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -1128,9 +1100,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantStringType('TCP'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('arnResource'),
@@ -1204,9 +1174,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
@@ -1216,9 +1184,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1259,14 +1225,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -1283,24 +1247,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('method'),
                         new \PHPStan\Type\Constant\ConstantStringType('pathMatch'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('match'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contains'),
+                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('contains'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1539,9 +1501,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1645,9 +1605,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -1671,28 +1629,26 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkLogType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkLogType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1706,27 +1662,25 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS_PASSTHROUGH'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TLS_PASSTHROUGH'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1740,42 +1694,40 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('amazonManaged'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceGatewayId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('amazonManaged'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1789,28 +1741,26 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointOwner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointOwner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1823,46 +1773,40 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcIdentifier'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcIdentifier'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1875,24 +1819,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isDefault'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('priority'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isDefault'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('priority'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1905,58 +1847,56 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isManagedAssociation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('privateDnsEntry'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isManagedAssociation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('privateDnsEntry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceConfigurationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1970,47 +1910,45 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2024,38 +1962,36 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2068,24 +2004,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointOwnerId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointOwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2098,26 +2032,24 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedResourceConfigurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedServices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedVPCs'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedResourceConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedServices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('numberOfAssociatedVPCs'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2130,37 +2062,35 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customDomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dnsEntry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2184,59 +2114,55 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaEventStructureVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcIdentifier'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('V1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('V2'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TCP'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ALB'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lambdaEventStructureVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcIdentifier'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('V1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('V2'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TCP'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALB'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2249,24 +2175,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reasonCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DRAINING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INITIAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNUSED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reasonCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DRAINING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNUSED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2301,27 +2225,23 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('unsuccessful'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -2382,14 +2302,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -2426,9 +2344,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantStringType('TCP'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('arnResource'),
@@ -2497,9 +2413,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
@@ -2509,9 +2423,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2540,14 +2452,12 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                 ]),
@@ -2562,24 +2472,22 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('method'),
                         new \PHPStan\Type\Constant\ConstantStringType('pathMatch'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('match'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('caseSensitive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('contains'),
+                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                             ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('contains'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2657,9 +2565,7 @@ final class VPCLatticeClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),

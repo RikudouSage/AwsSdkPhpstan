@@ -46,42 +46,40 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReceiverName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReceiverAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReceiverEmail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaxRegistrationNumber'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReceiverName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReceiverAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReceiverEmail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaxRegistrationNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressLine1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressLine2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressLine3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DistrictOrCounty'),
+                        new \PHPStan\Type\Constant\ConstantStringType('City'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StateOrRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompanyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AddressLine1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AddressLine2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AddressLine3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DistrictOrCounty'),
-                            new \PHPStan\Type\Constant\ConstantStringType('City'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StateOrRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CountryCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompanyName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PostalCode'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -126,9 +124,7 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('LinkedAccounts'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
@@ -141,30 +137,26 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('InvoiceUnits'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InvoiceUnitArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvoiceReceiver'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaxInheritanceDisabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Rule'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InvoiceUnitArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvoiceReceiver'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaxInheritanceDisabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Rule'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LinkedAccounts'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LinkedAccounts'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -176,14 +168,12 @@ final class InvoicingClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

@@ -134,8 +134,589 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                            new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function addBridgeSources(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                            new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function addFlowMediaStreams(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('MediaStreams'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Par'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Range'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BT601'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BT709'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('progressive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('interlace'),
+                                new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SDR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PQ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HLG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('video'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audio'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function addFlowOutputs(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                            new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                            new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pcm'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('main'),
+                                new \PHPStan\Type\Constant\ConstantStringType('high'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                            new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function addFlowSources(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                            new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                            new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pcm'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                            new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                            new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function addFlowVpcInterfaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaces'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ena'),
+                        new \PHPStan\Type\Constant\ConstantStringType('efa'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function createBridge(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Bridge'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeMessages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EgressGatewayBridge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IngressGatewayBridge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlacementArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceFailoverConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxOutputs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
                         new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
                     ], [
@@ -175,21 +756,30 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ]),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function addBridgeSources(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FailoverMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecoveryWindow'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePriority'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MERGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILOVER'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PrimarySource'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
                         new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
                     ], [
@@ -239,21 +829,87 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                         ]),
-                    ]),
-                ])),
+                    ])),
+                ]),
             ]),
         ]);
     }
-    private function addFlowMediaStreams(): ?\PHPStan\Type\Type
+    private function createFlow(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('MediaStreams'),
+                new \PHPStan\Type\Constant\ConstantStringType('Flow'),
             ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EgressIp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Entitlements'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreams'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceFailoverConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaces'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Maintenance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceMonitoringConfig'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
                         new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
@@ -323,21 +979,9 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function addFlowOutputs(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
                         new \PHPStan\Type\Constant\ConstantStringType('Destination'),
@@ -390,795 +1034,99 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
-                                ], [
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('main'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('high'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function addFlowSources(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function addFlowVpcInterfaces(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaces'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ena'),
-                            new \PHPStan\Type\Constant\ConstantStringType('efa'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function createBridge(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Bridge'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BridgeMessages'),
-                    new \PHPStan\Type\Constant\ConstantStringType('BridgeState'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EgressGatewayBridge'),
-                    new \PHPStan\Type\Constant\ConstantStringType('IngressGatewayBridge'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                    new \PHPStan\Type\Constant\ConstantStringType('PlacementArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceFailoverConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('START_PENDING'),
-                        new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxOutputs'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FailoverMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecoveryWindow'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourcePriority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MERGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILOVER'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PrimarySource'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                            ]),
-                        ]),
-                    ])),
-                ]),
-            ]),
-        ]);
-    }
-    private function createFlow(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Flow'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('EgressIp'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Entitlements'),
-                    new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreams'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceFailoverConfig'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Sources'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaces'),
-                    new \PHPStan\Type\Constant\ConstantStringType('Maintenance'),
-                    new \PHPStan\Type\Constant\ConstantStringType('SourceMonitoringConfig'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
                             new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Par'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Range'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT601'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT709'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('interlace'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SDR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('HLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
-                                    ]),
                                 ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('video'),
-                                new \PHPStan\Type\Constant\ConstantStringType('audio'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('main'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('high'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('main'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('high'),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\IntegerType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1232,35 +1180,31 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
@@ -1281,9 +1225,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
                             new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -1344,147 +1286,139 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ]),
-                                    ])),
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ]),
                     ])),
@@ -1497,29 +1431,23 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ena'),
-                                new \PHPStan\Type\Constant\ConstantStringType('efa'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ena'),
+                            new \PHPStan\Type\Constant\ConstantStringType('efa'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDay'),
@@ -1550,51 +1478,47 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                     ]),
@@ -1616,20 +1540,16 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Networks'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -1640,14 +1560,12 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CidrBlock'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CidrBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1731,16 +1649,14 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('Sources'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -1773,47 +1689,45 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
@@ -1838,56 +1752,54 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                         ]),
                     ])),
@@ -1922,289 +1834,273 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Par'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Range'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT601'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT709'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('progressive'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('interlace'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SDR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PQ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HLG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('video'),
+                            new \PHPStan\Type\Constant\ConstantStringType('audio'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
                             new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Par'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Range'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT601'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT709'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('interlace'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SDR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('HLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
-                                    ]),
                                 ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('video'),
-                                new \PHPStan\Type\Constant\ConstantStringType('audio'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('main'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('high'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('main'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('high'),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\IntegerType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2258,35 +2154,31 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
@@ -2307,9 +2199,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
                             new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2370,147 +2260,139 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ]),
-                                    ])),
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ]),
                     ])),
@@ -2523,29 +2405,23 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ena'),
-                                new \PHPStan\Type\Constant\ConstantStringType('efa'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ena'),
+                            new \PHPStan\Type\Constant\ConstantStringType('efa'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDay'),
@@ -2576,51 +2452,47 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                     ]),
@@ -2628,9 +2500,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Errors'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -2645,61 +2515,55 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('TransportMediaInfo'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Programs'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PcrPid'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProgramName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProgramNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProgramPid'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Streams'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PcrPid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProgramPid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Streams'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Channels'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Codec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FrameResolution'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pid'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SampleRate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SampleSize'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Channels'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Codec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FrameRate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FrameResolution'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pid'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SampleRate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SampleSize'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StreamType'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('FrameHeight'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FrameWidth'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                 ]),
             ]),
@@ -2720,16 +2584,14 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2751,20 +2613,16 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Networks'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -2775,14 +2633,12 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CidrBlock'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CidrBlock'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2815,16 +2671,14 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('REGISTERING'),
@@ -2929,57 +2783,53 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Entitlements'),
                 new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aes256'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                            new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2992,33 +2842,31 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Bridges'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BridgeState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BridgeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlacementArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('START_PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BridgeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlacementArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3031,16 +2879,14 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Entitlements'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementName'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntitlementName'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3053,52 +2899,50 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Flows'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Maintenance'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OWNED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ENTITLED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Maintenance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDay'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDeadline'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaintenanceScheduledDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaintenanceStartHour'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OWNED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ENTITLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Monday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tuesday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Wednesday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Thursday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Friday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Saturday'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sunday'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDBY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDay'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDeadline'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaintenanceScheduledDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaintenanceStartHour'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Monday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tuesday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Wednesday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Thursday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Friday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Saturday'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Sunday'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3112,24 +2956,22 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Instances'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayInstanceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceState'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGISTERING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_ERROR'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayInstanceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('REGISTERING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGISTRATION_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_ERROR'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3143,23 +2985,21 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Gateways'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3173,31 +3013,29 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Offerings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationUnits'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OfferingArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OfferingDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PricePerUnit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PriceUnits'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecification'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('HOURLY'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DurationUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OfferingArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OfferingDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PricePerUnit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PriceUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecification'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReservedBitrate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('HOURLY'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReservedBitrate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('Mbps_Outbound_Bandwidth'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mbps_Outbound_Bandwidth'),
                     ]),
                 ])),
             ]),
@@ -3211,47 +3049,45 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('Reservations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DurationUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('End'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OfferingArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OfferingDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PricePerUnit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PriceUnits'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReservationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReservationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReservationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Start'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('HOURLY'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReservedBitrate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('Mbps_Outbound_Bandwidth'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrencyCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DurationUnits'),
+                    new \PHPStan\Type\Constant\ConstantStringType('End'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OfferingArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OfferingDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PricePerUnit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PriceUnits'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReservationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReservationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReservationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecification'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Start'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('HOURLY'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReservedBitrate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('Mbps_Outbound_Bandwidth'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -3384,9 +3220,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3474,16 +3308,14 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('Sources'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
@@ -3516,47 +3348,45 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowOutput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkOutput'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowSourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ttl'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
@@ -3581,56 +3411,54 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FlowSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FlowVpcInterfaceAttachment'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastIp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceSettings'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MulticastSourceIp'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                         ]),
                     ])),
@@ -3794,289 +3622,273 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Subscribers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClockRate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Fmt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Par'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Range'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT601'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT709'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('progressive'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('interlace'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SDR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PQ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HLG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('video'),
+                            new \PHPStan\Type\Constant\ConstantStringType('audio'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
                             new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VideoFormat'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Fmtp'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Lang'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChannelOrder'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Colorimetry'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExactFramerate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Par'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Range'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScanMode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Tcs'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT601'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT709'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2020'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-3'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('XYZ'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NARROW'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('FULLPROTECT'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('interlace'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('progressive-segmented-frame'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SDR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('HLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LINEAR'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINPQ'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('BT2100LINHLG'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST2065-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ST428-1'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DENSITY'),
-                                    ]),
                                 ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('video'),
-                                new \PHPStan\Type\Constant\ConstantStringType('audio'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ancillary-data'),
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                            ], [
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('main'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('high'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Encryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ListenerAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaLiveInputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamOutputConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BridgePorts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
-                                    ], [
-                                        new \PHPStan\Type\FloatType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('main'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('high'),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\IntegerType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4130,35 +3942,31 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                             ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
@@ -4179,9 +3987,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
                             new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -4242,147 +4048,139 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Transport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DataTransferSubscriberFeePercent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Decryption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EntitlementArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestIp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IngestPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamSourceConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Transport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WhitelistCidr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayBridgeSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Algorithm'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConstantInitializationVector'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KeyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes128'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes192'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aes256'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('speke'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('static-key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aes128'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes192'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aes256'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('speke'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-password'),
                             ]),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ]),
-                                    ])),
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ])),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CidrAllowList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSyncBuffer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RemoteId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderControlPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SenderIpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmoothingLatency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rtp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rist'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('cdi'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('udp'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-push'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp-fec'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rtp'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zixi-pull'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('st2110-jpegxs'),
+                                new \PHPStan\Type\Constant\ConstantStringType('cdi'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-listener'),
+                                new \PHPStan\Type\Constant\ConstantStringType('srt-caller'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fujitsu-qos'),
+                                new \PHPStan\Type\Constant\ConstantStringType('udp'),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BridgeArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceAttachment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VpcInterfaceName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ]),
                     ])),
@@ -4395,29 +4193,23 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ena'),
-                                new \PHPStan\Type\Constant\ConstantStringType('efa'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ena'),
+                            new \PHPStan\Type\Constant\ConstantStringType('efa'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('MaintenanceDay'),
@@ -4448,51 +4240,47 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SilentAudio'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BlackFrames'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FrozenFrames'),
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ThresholdSeconds'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
                     ]),
@@ -4553,9 +4341,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4704,48 +4490,44 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationIp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutboundIp'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('main'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('high'),
-                                ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                            new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CompressionFactor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EncoderProfile'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('main'),
+                                new \PHPStan\Type\Constant\ConstantStringType('high'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -4765,9 +4547,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
@@ -4799,9 +4579,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\IntegerType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -4869,35 +4647,31 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
-                                new \PHPStan\Type\Constant\ConstantStringType('raw'),
-                                new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pcm'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interface'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EncodingName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MediaStreamName'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('jxsv'),
+                            new \PHPStan\Type\Constant\ConstantStringType('raw'),
+                            new \PHPStan\Type\Constant\ConstantStringType('smpte291'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pcm'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InputIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InputPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Interface'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
@@ -4918,9 +4692,7 @@ final class MediaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('SourceListenerPort'),
                         new \PHPStan\Type\Constant\ConstantStringType('StreamId'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),

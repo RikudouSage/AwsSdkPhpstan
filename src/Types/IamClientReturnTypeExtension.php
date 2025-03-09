@@ -465,61 +465,55 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
                         ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Key'),
                             new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -551,14 +545,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -594,14 +586,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -661,14 +651,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
@@ -689,14 +677,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -735,14 +721,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
@@ -813,14 +797,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -874,25 +856,21 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Key'),
                             new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                        ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1073,10 +1051,8 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
                 ])),
             ]),
         ]);
@@ -1090,10 +1066,8 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
                 ])),
             ]),
         ]);
@@ -1113,10 +1087,8 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
                 ])),
             ]),
         ]);
@@ -1130,10 +1102,8 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
                 ])),
             ]),
         ]);
@@ -1205,17 +1175,109 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserPolicyList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupPolicyList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RolePolicyList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Arn'),
                         new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserPolicyList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Roles'),
                         new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
@@ -1223,257 +1285,129 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupPolicyList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RolePolicyList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachedManagedPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Roles'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                        ], [
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryUsageCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsAttachable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyVersionList'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Document'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                            ], [
                                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyDocument'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachmentCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryUsageCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsAttachable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyVersionList'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Document'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -1556,9 +1490,7 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ContextKeyNames'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1568,9 +1500,7 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ContextKeyNames'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1614,40 +1544,36 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PasswordLastUsed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PasswordLastUsed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -1688,61 +1614,55 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
                         ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Key'),
                             new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1793,21 +1713,15 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1835,22 +1749,20 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EntityPath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TotalAuthenticatedEntities'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EntityPath'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TotalAuthenticatedEntities'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -1895,14 +1807,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1962,14 +1872,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
@@ -2012,27 +1920,23 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Required'),
                     new \PHPStan\Type\Constant\ConstantStringType('Allowed'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -2093,14 +1997,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2129,36 +2031,32 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ACTION_LEVEL'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedEntity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TotalAuthenticatedEntities'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TrackedActionsLastAccessed'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedEntity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticatedRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TotalAuthenticatedEntities'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TrackedActionsLastAccessed'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedEntity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastAccessedRegion'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ActionName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastAccessedEntity'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastAccessedTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastAccessedRegion'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\BooleanType(),
@@ -2192,30 +2090,28 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EntityInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticated'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EntityInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAuthenticated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ROLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2247,16 +2143,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('RoleUsageList'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
             ]),
@@ -2291,14 +2183,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2326,21 +2216,19 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2355,9 +2243,7 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2371,14 +2257,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2393,14 +2277,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2415,14 +2297,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2439,32 +2319,26 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2479,9 +2353,7 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2495,20 +2367,18 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2523,20 +2393,18 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2551,14 +2419,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -2573,460 +2439,21 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Roles'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                ], [
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listInstanceProfilesForRole(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('InstanceProfiles'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Roles'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                                ], [
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listMFADeviceTags(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listMFADevices(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('MFADevices'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnableDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listOpenIDConnectProviderTags(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listOpenIDConnectProviders(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('OpenIDConnectProviderList'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function listOrganizationsFeatures(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('OrganizationId'),
-                new \PHPStan\Type\Constant\ConstantStringType('EnabledFeatures'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function listPolicies(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Policies'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryUsageCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsAttachable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listPoliciesGrantingServiceAccess(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PoliciesGrantingServiceAccess'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Policies'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EntityType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EntityName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INLINE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MANAGED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('USER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROLE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listPolicyTags(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listPolicyVersions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Versions'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Document'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listRolePolicies(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Roles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listRoleTags(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listRoles(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Roles'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Path'),
                         new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
                         new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
@@ -3054,14 +2481,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
@@ -3070,6 +2495,401 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
                         ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listInstanceProfilesForRole(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('InstanceProfiles'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceProfileId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Roles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listMFADeviceTags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listMFADevices(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('MFADevices'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnableDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listOpenIDConnectProviderTags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listOpenIDConnectProviders(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('OpenIDConnectProviderList'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listOrganizationsFeatures(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('OrganizationId'),
+                new \PHPStan\Type\Constant\ConstantStringType('EnabledFeatures'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RootCredentialsManagement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RootSessions'),
+                ])),
+            ]),
+        ]);
+    }
+    private function listPolicies(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Policies'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachmentCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryUsageCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsAttachable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listPoliciesGrantingServiceAccess(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PoliciesGrantingServiceAccess'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceNamespace'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Policies'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EntityName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INLINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANAGED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('USER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GROUP'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listPolicyTags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listPolicyVersions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Versions'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Document'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRolePolicies(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRoleTags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listRoles(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Roles'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssumeRolePolicyDocument'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleLastUsed'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\BooleanType(),
@@ -3085,14 +2905,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3105,16 +2923,14 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('SAMLProviderList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValidUntil'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidUntil'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -3127,21 +2943,19 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSHPublicKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SSHPublicKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3156,14 +2970,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3178,22 +2990,20 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerCertificateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerCertificateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServerCertificateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServerCertificateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Expiration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3206,25 +3016,23 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ServiceSpecificCredentials'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceSpecificCredentialId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceUserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceSpecificCredentialId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -3237,23 +3045,21 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CertificateBody'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CertificateBody'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UploadDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3268,9 +3074,7 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3284,14 +3088,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3306,7 +3108,69 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PasswordLastUsed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listVirtualMFADevices(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('VirtualMFADevices'),
+                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Base32StringSeed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QRCodePNG'),
+                    new \PHPStan\Type\Constant\ConstantStringType('User'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EnableDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Path'),
                         new \PHPStan\Type\Constant\ConstantStringType('UserName'),
@@ -3330,94 +3194,22 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listVirtualMFADevices(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('VirtualMFADevices'),
-                new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
-                new \PHPStan\Type\Constant\ConstantStringType('Marker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Base32StringSeed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QRCodePNG'),
-                        new \PHPStan\Type\Constant\ConstantStringType('User'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EnableDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UserName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UserId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreateDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PasswordLastUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundary'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryArn'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ])),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3527,140 +3319,128 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationsDecisionDetail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecificResults'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalActionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalDecision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationsDecisionDetail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecificResults'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('allowed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
+                        new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            new \PHPStan\Type\Constant\ConstantStringType('group'),
+                            new \PHPStan\Type\Constant\ConstantStringType('role'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('none'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedByOrganizations'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('allowed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
+                        new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceDecision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('allowed'),
                             new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
                             new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('user'),
+                                new \PHPStan\Type\Constant\ConstantStringType('group'),
+                                new \PHPStan\Type\Constant\ConstantStringType('role'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Column'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('user'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('group'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('role'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByOrganizations'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('allowed'),
                             new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
                             new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalResourceDecision'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('allowed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('user'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('group'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('role'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('allowed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3675,140 +3455,128 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalActionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationsDecisionDetail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecificResults'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalActionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalDecision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationsDecisionDetail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceSpecificResults'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('allowed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
+                        new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('user'),
+                            new \PHPStan\Type\Constant\ConstantStringType('group'),
+                            new \PHPStan\Type\Constant\ConstantStringType('role'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('none'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedByOrganizations'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('allowed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
+                        new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalResourceDecision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('allowed'),
                             new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
                             new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('user'),
+                                new \PHPStan\Type\Constant\ConstantStringType('group'),
+                                new \PHPStan\Type\Constant\ConstantStringType('role'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Column'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('user'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('group'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('role'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Line'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Column'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByOrganizations'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('allowed'),
                             new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
                             new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalResourceName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalResourceDecision'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MatchedStatements'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingContextValues'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EvalDecisionDetails'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryDecisionDetail'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('allowed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourcePolicyType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('StartPosition'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EndPosition'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('user'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('group'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('role'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('aws-managed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('user-managed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('none'),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Line'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Column'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('allowed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('explicitDeny'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('implicitDeny'),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowedByPermissionsBoundary'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
@@ -3987,14 +3755,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsBoundaryPolicy'),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('LastUsedDate'),
@@ -4096,14 +3862,12 @@ final class IamClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

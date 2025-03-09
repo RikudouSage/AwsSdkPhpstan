@@ -59,26 +59,24 @@ final class ResourceGroupsTaggingAPIClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('PaginationToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetIdType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NonCompliantResources'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OU'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetIdType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NonCompliantResources'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OU'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROOT'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -92,35 +90,27 @@ final class ResourceGroupsTaggingAPIClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceTagMappingList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceDetails'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceDetails'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NoncompliantKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KeysWithNoncompliantValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComplianceStatus'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NoncompliantKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KeysWithNoncompliantValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceStatus'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                 ])),
             ]),
@@ -134,9 +124,7 @@ final class ResourceGroupsTaggingAPIClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('TagKeys'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -148,9 +136,7 @@ final class ResourceGroupsTaggingAPIClientReturnTypeExtension implements \PHPSta
                 new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }

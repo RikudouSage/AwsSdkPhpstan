@@ -68,47 +68,43 @@ final class PinpointSMSVoiceClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('EventDestinations'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogsDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnsDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogGroupArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INITIATED_CALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RINGING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_CALL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_ANSWER'),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIATED_CALL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RINGING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_CALL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BUSY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NO_ANSWER'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -121,9 +117,7 @@ final class PinpointSMSVoiceClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

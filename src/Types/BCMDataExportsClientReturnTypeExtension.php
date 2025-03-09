@@ -259,16 +259,14 @@ final class BCMDataExportsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TableProperties'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -282,36 +280,34 @@ final class BCMDataExportsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Executions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INITIATION_IN_PROCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_QUEUED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_IN_PROCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_IN_PROCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_SUCCESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_FAILURE'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BILL_OWNER_CHANGED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                            ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INITIATION_IN_PROCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUERY_QUEUED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUERY_IN_PROCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUERY_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_IN_PROCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_SUCCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELIVERY_FAILURE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BILL_OWNER_CHANGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
                         ]),
                     ]),
                 ])),
@@ -326,33 +322,31 @@ final class BCMDataExportsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Exports'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExportStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExportStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastRefreshedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastRefreshedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BILL_OWNER_CHANGED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                            ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BILL_OWNER_CHANGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
                         ]),
                     ]),
                 ])),
@@ -368,30 +362,24 @@ final class BCMDataExportsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Tables'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableProperties'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableProperties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValidValues'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ValidValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
                 ])),
             ]),
         ]);
@@ -404,14 +392,12 @@ final class BCMDataExportsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

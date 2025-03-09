@@ -244,27 +244,25 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedServiceActionAssociations'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceActionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DUPLICATE_RESOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LIMIT_EXCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceActionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DUPLICATE_RESOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMIT_EXCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -275,27 +273,25 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FailedServiceActionAssociations'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceActionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DUPLICATE_RESOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LIMIT_EXCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceActionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DUPLICATE_RESOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIMIT_EXCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_PARAMETER'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -364,14 +360,12 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -507,14 +501,12 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -762,36 +754,30 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -820,21 +806,15 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('SuccessfulShares'),
                     new \PHPStan\Type\Constant\ConstantStringType('ShareErrors'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -848,25 +828,23 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('PortfolioShareDetails'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Accepted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareTagOptions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharePrincipals'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_MEMBER_ACCOUNT'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Accepted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareTagOptions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharePrincipals'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION_MEMBER_ACCOUNT'),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -911,39 +889,33 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1042,51 +1014,43 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactMetadata'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactMetadata'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1129,22 +1093,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
                     ]),
                 ])),
             ]),
@@ -1194,12 +1156,10 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1247,55 +1207,65 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('EXECUTE_FAILED'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UsePreviousValue'),
+                    ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UsePreviousValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogicalResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhysicalResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Replacement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Scope'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogicalResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PhysicalResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Replacement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ADD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROPERTIES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATIONPOLICY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATEPOLICY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETIONPOLICY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TAGS'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Evaluation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CausingEntity'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequiresRecreation'),
+                        ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('PROPERTIES'),
                                 new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
@@ -1304,41 +1274,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETIONPOLICY'),
                                 new \PHPStan\Type\Constant\ConstantStringType('TAGS'),
                             ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Evaluation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CausingEntity'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RequiresRecreation'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('PROPERTIES'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('METADATA'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CREATIONPOLICY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UPDATEPOLICY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DELETIONPOLICY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TAGS'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NEVER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONDITIONALLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ALWAYS'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NEVER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONDITIONALLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ALWAYS'),
                             ]),
-                        ])),
-                    ]),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1388,39 +1336,35 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsNoEcho'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterConstraints'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsNoEcho'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterConstraints'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConstraintDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConstraintDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -1438,98 +1382,78 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactOutputs'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactOutputKeys'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsNoEcho'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterConstraints'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsNoEcho'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterConstraints'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConstraintDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConstraintDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinLength'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinValue'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('StackSetAccounts'),
                     new \PHPStan\Type\Constant\ConstantStringType('StackSetRegions'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1575,36 +1499,30 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputValue'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1647,18 +1565,14 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ServiceActionParameters'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValues'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultValues'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1766,23 +1680,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1828,23 +1738,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1872,16 +1778,14 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1926,23 +1830,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1956,22 +1856,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('PortfolioDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1984,12 +1882,10 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Budgets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BudgetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2002,22 +1898,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ConstraintDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConstraintId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PortfolioId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConstraintId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PortfolioId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2030,34 +1924,28 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('LaunchPathSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConstraintSummaries'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConstraintSummaries'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2070,18 +1958,16 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('OrganizationNodes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORGANIZATIONAL_UNIT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2094,9 +1980,7 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('AccountIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -2108,22 +1992,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('PortfolioDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2136,22 +2018,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('PortfolioDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProviderName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2164,16 +2044,14 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Principals'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IAM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IAM_PATTERN'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrincipalType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IAM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAM_PATTERN'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2187,22 +2065,20 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductPlans'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PlanName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlanId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionProductName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlanType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PlanName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlanId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionProductName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlanType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2215,36 +2091,34 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceRevision'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_AMI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_CAR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceRevision'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_AMI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE_CAR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2257,57 +2131,55 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactViews'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductViewSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifact'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductViewSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifact'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ShortDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Distributor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HasDefaultPath'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportEmail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportUrl'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ShortDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Distributor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HasDefaultPath'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportEmail'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportUrl'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                            ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Guidance'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
                         ]),
                     ]),
                 ])),
@@ -2322,60 +2194,54 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('RecordDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PathId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordErrors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordTags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LaunchRoleArn'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RecordType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PathId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RecordErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RecordTags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LaunchRoleArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_IN_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS_IN_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2388,20 +2254,18 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('PageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2414,18 +2278,16 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ServiceActionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefinitionType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSM_AUTOMATION'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefinitionType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('SSM_AUTOMATION'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2438,18 +2300,16 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ServiceActionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefinitionType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSM_AUTOMATION'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefinitionType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('SSM_AUTOMATION'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2462,19 +2322,17 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('StackInstances'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Account'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StackInstanceStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OUTDATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INOPERABLE'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Account'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StackInstanceStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OUTDATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INOPERABLE'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2488,20 +2346,18 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TagOptionDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('PageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2564,23 +2420,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -2600,44 +2452,42 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProvisionedProducts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdempotencyToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastProvisioningRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulProvisioningRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LaunchRoleArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNDER_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAINTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PLAN_IN_PROGRESS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdempotencyToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastProvisioningRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulProvisioningRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LaunchRoleArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNDER_CHANGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TAINTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PLAN_IN_PROGRESS'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2651,7 +2501,62 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ProductViewAggregations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ShortDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Distributor'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HasDefaultPath'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportEmail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportUrl'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApproximateCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                ]))),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function searchProductsAsAdmin(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProductViewDetails'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductViewSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceConnection'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
@@ -2683,110 +2588,49 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateCount'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
-                ]))),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function searchProductsAsAdmin(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProductViewDetails'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductViewSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceConnection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSync'),
                     ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('CODESTAR'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ShortDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Distributor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HasDefaultPath'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportEmail'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SupportUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CodeStar'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Repository'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Branch'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ArtifactPath'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LastSyncTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatusMessage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncProvisioningArtifactId'),
+                        ], [
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FORMATION_TEMPLATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MARKETPLACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_OPEN_SOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TERRAFORM_CLOUD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectionParameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastSync'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('CODESTAR'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CodeStar'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Repository'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Branch'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ArtifactPath'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LastSyncTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatusMessage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncProvisioningArtifactId'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
                     ]),
                 ])),
@@ -2802,62 +2646,58 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TotalResultsCount'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdempotencyToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastProvisioningRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulProvisioningRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PhysicalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UserArnSession'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdempotencyToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastProvisioningRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulProvisioningRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PhysicalId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisioningArtifactName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UserArnSession'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNDER_CHANGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TAINTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PLAN_IN_PROGRESS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNDER_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TAINTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PLAN_IN_PROGRESS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
@@ -2903,23 +2743,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -2980,14 +2816,12 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -3101,14 +2935,12 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -3152,23 +2984,19 @@ final class ServiceCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),

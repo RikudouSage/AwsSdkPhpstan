@@ -247,35 +247,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -285,44 +279,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -488,35 +478,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -526,44 +510,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -617,56 +597,48 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('GRE'),
                             new \PHPStan\Type\Constant\ConstantStringType('NO_ENCAP'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -706,14 +678,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -748,65 +718,45 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Segments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Segments'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -866,14 +816,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -932,35 +880,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -970,44 +912,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -1039,14 +977,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1092,14 +1028,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1141,14 +1075,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1207,35 +1139,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -1245,44 +1171,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -1327,40 +1249,36 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
-                                ]),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ])),
                     ]),
@@ -1424,35 +1342,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -1462,44 +1374,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -1562,35 +1470,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -1600,49 +1502,43 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),
@@ -1703,35 +1599,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -1741,44 +1631,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1822,56 +1708,48 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('GRE'),
                             new \PHPStan\Type\Constant\ConstantStringType('NO_ENCAP'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1911,14 +1789,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1953,65 +1829,45 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Segments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Segments'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2049,16 +1905,14 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -2119,14 +1973,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2156,14 +2008,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2209,14 +2059,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2254,40 +2102,36 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
-                            ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ]),
                     ])),
                 ]),
@@ -2336,14 +2180,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2386,35 +2228,31 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworks'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2586,35 +2424,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -2624,44 +2456,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -2715,56 +2543,48 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('GRE'),
                             new \PHPStan\Type\Constant\ConstantStringType('NO_ENCAP'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_NO_FREE_IPS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IP_OUTSIDE_SUBNET_CIDR_RANGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_INSIDE_CIDR_BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_ASSOCIATED_CIDR_BLOCK'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2777,24 +2597,22 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2808,45 +2626,41 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Connections'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectedDeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectedLinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectedDeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectedLinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2881,65 +2695,45 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Segments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Segments'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -2952,53 +2746,51 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkChangeEvents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentifierPath'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_SEGMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NETWORK_FUNCTION_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_MAPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_PROPAGATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_STATIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENT_ACTIONS_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_POLICIES_CONFIGURATION'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ADD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifierPath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_SEGMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_FUNCTION_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_MAPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_PROPAGATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_STATIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SEGMENT_ACTIONS_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_POLICIES_CONFIGURATION'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3012,185 +2804,147 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkChanges'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreviousValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NewValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifierPath'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_SEGMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_FUNCTION_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_MAPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_PROPAGATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_STATIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SEGMENT_ACTIONS_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_POLICIES_CONFIGURATION'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ADD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WhenSentTo'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Via'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('send-via'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('send-to'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('dual-hop'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('single-hop'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('WhenSentToSegmentsList'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroups'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WithEdgeOverrides'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('EdgeSets'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('UseEdge'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\StringType(),
-                                                    ])),
-                                                ])),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WhenSentTo'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Via'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('send-via'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('send-to'),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('dual-hop'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('single-hop'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('WhenSentToSegmentsList'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroups'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WithEdgeOverrides'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('EdgeSets'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('UseEdge'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\StringType(),
-                                                    ])),
-                                                ])),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PreviousValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NewValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentifierPath'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_SEGMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NETWORK_FUNCTION_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_MAPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_PROPAGATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_ROUTE_STATIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CORE_NETWORK_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENTS_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SEGMENT_ACTIONS_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT_POLICIES_CONFIGURATION'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ADD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MODIFY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REMOVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WhenSentTo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Via'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('send-via'),
+                                new \PHPStan\Type\Constant\ConstantStringType('send-to'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dual-hop'),
+                                new \PHPStan\Type\Constant\ConstantStringType('single-hop'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WhenSentToSegmentsList'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroups'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WithEdgeOverrides'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('EdgeSets'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UseEdge'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceInsertionActions'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WhenSentTo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Via'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('send-via'),
+                                new \PHPStan\Type\Constant\ConstantStringType('send-to'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dual-hop'),
+                                new \PHPStan\Type\Constant\ConstantStringType('single-hop'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WhenSentToSegmentsList'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroups'),
+                                new \PHPStan\Type\Constant\ConstantStringType('WithEdgeOverrides'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('EdgeSets'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UseEdge'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3228,16 +2982,14 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -3251,24 +3003,22 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CustomerGatewayAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomerGatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CustomerGatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3282,65 +3032,61 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AWSLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Model'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AWSLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Model'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SerialNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Zone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Zone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3399,35 +3145,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -3437,44 +3177,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -3489,22 +3225,20 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('LinkAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkAssociationState'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkAssociationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3518,51 +3252,47 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Links'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Bandwidth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Provider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bandwidth'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Provider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UploadSpeed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DownloadSpeed'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UploadSpeed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DownloadSpeed'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3575,14 +3305,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('NetworkResourceCounts'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3595,14 +3323,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Relationships'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('From'),
-                        new \PHPStan\Type\Constant\ConstantStringType('To'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('From'),
+                    new \PHPStan\Type\Constant\ConstantStringType('To'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3615,40 +3341,36 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('NetworkResources'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Definition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefinitionTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefinitionTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Metadata'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3680,43 +3402,39 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('NETWORK_FUNCTION_GROUP'),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrefixListId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Destinations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrefixListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkAttachmentId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayAttachmentId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BLACKHOLE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROPAGATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BLACKHOLE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROPAGATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
                     ]),
                 ])),
             ]),
@@ -3729,41 +3447,39 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('NetworkTelemetry'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Health'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AwsRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Health'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('BGP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IPSEC'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DOWN'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BGP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPSEC'),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DOWN'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3856,30 +3572,28 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Resource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Definition'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3910,30 +3624,28 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Resource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Definition'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -3993,35 +3705,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -4031,44 +3737,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -4083,47 +3785,43 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Sites'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SiteArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SiteId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SiteArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Latitude'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Longitude'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4136,24 +3834,22 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayConnectPeerAssociations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayConnectPeerArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayConnectPeerArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LinkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -4197,40 +3893,36 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
-                                ]),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ])),
                     ]),
@@ -4247,27 +3939,25 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayRegistrations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TransitGatewayArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -4328,35 +4018,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -4366,44 +4050,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -4466,35 +4146,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -4504,49 +4178,43 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),
@@ -4565,128 +4233,116 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Attachments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProposedSegmentChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProposedNetworkFunctionGroupChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationErrors'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachmentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProposedSegmentChange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProposedNetworkFunctionGroupChange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationErrors'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CONNECT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SITE_TO_SITE_VPN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_ROUTE_TABLE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_ATTACHMENT_ACCEPTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_NETWORK_UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_TAG_ACCEPTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONNECT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SITE_TO_SITE_VPN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_ROUTE_TABLE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_ATTACHMENT_ACCEPTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_NETWORK_UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_TAG_ACCEPTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4699,39 +4355,35 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ConnectPeers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectAttachmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetArn'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectAttachmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectPeerState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4744,31 +4396,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkPolicyVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyVersionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Alias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeSetState'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_GENERATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_GENERATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY_TO_EXECUTE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXECUTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyVersionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Alias'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChangeSetState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_GENERATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_GENERATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY_TO_EXECUTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXECUTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -4782,37 +4432,33 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CoreNetworks'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GlobalNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4834,14 +4480,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SLRDeploymentStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SLRDeploymentStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -4855,70 +4499,64 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Peerings'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PeeringId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PeeringType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationErrors'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CoreNetworkArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeeringId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeeringType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationErrors'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY'),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
+                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MissingPermissionsContext'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TRANSIT_GATEWAY_PEERS_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EDGE_LOCATION_PEER_DUPLICATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVALID_TRANSIT_GATEWAY_STATE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MissingPermission'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4930,14 +4568,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('TagList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -4974,16 +4610,14 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -5075,35 +4709,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -5113,44 +4741,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                         new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5188,16 +4812,14 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('EXECUTION_SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_DATE'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -5219,14 +4841,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SLRDeploymentStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SLRDeploymentStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5308,30 +4928,28 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Resource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Definition'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5362,30 +4980,28 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Resource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sequence'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Resource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationCidrBlock'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RegisteredGatewayArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Definition'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NameTag'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IsMiddlebox'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -5438,14 +5054,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5480,65 +5094,45 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Segments'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SharedSegments'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Segments'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendVia'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SendTo'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Asn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EdgeLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Asn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsideCidrBlocks'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5598,14 +5192,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5664,35 +5256,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -5702,44 +5288,40 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -5771,14 +5353,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5824,14 +5404,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5885,14 +5463,12 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -5952,35 +5528,29 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('SegmentName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
@@ -5990,49 +5560,43 @@ final class NetworkManagerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('AttachmentPolicyRuleNumber'),
                             new \PHPStan\Type\Constant\ConstantStringType('NetworkFunctionGroupName'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Code'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Code'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RequestId'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_DUPLICATED_IN_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_FREE_ADDRESSES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_UNSUPPORTED_AVAILABILITY_ZONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUBNET_NO_IPV6_CIDRS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPN_CONNECTION_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NO_ENCAP_LIMIT_EXCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NOT_FOUND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_EXISTING_ATTACHMENTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT_CONNECT_GATEWAY_NO_PRIVATE_VIF'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6Support'),
                         new \PHPStan\Type\Constant\ConstantStringType('ApplianceModeSupport'),

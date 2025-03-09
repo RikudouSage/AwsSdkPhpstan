@@ -105,39 +105,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -163,23 +155,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -228,39 +218,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -322,39 +304,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -380,23 +354,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -477,39 +449,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -535,23 +499,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -632,39 +594,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -690,23 +644,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -787,39 +739,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -844,34 +788,30 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                            new \PHPStan\Type\Constant\ConstantStringType('seenAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('serialNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('x509CertificateData'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                        new \PHPStan\Type\Constant\ConstantStringType('seenAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('serialNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('x509CertificateData'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('properties'),
-                            new \PHPStan\Type\Constant\ConstantStringType('seenAt'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('properties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('seenAt'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -901,23 +841,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -982,30 +920,28 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('crls'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('crlArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('crlData'),
-                        new \PHPStan\Type\Constant\ConstantStringType('crlId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trustAnchorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('crlArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('crlData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('crlId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('trustAnchorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1019,60 +955,50 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('profiles'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('acceptRoleSessionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('attributeMappings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('durationSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('managedPolicyArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('profileArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('profileId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('requireInstanceProperties'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sessionPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('acceptRoleSessionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('attributeMappings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('durationSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('managedPolicyArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('profileArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('profileId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('requireInstanceProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('roleArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sessionPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
                     ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1085,24 +1011,22 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('subjects'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastSeenAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subjectArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subjectId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastSeenAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('subjectArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('subjectId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1113,14 +1037,12 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1133,59 +1055,55 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('trustAnchors'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('trustAnchorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('trustAnchorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trustAnchorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trustAnchorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                                new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sourceType'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('acmPcaArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509CertificateData'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AWS_ACM_PCA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_BUNDLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_SIGNED_REPOSITORY'),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceType'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('acmPcaArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509CertificateData'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AWS_ACM_PCA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_BUNDLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SELF_SIGNED_REPOSITORY'),
+                        ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -1213,39 +1131,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1271,23 +1181,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -1332,23 +1240,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),
@@ -1441,39 +1347,31 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('specifier'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('certificateField'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mappingRules'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Subject'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509Issuer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('x509SAN'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('specifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1499,23 +1397,21 @@ final class RolesAnywhereClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('channel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('event'),
-                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('channel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuredBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_EXPIRY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('END_ENTITY_CERTIFICATE_EXPIRY'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('sourceData'),

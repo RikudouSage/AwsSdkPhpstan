@@ -52,22 +52,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('requestId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -78,22 +76,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('batchDeleteDetectorErrorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messageId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -104,22 +100,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('requestId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -130,22 +124,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('requestId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -156,22 +148,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('BatchPutMessageErrorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messageId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -182,22 +172,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('requestId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -208,22 +196,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('requestId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -234,22 +220,20 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('batchUpdateDetectorErrorEntries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messageId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFoundException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRequestException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalFailureException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceUnavailableException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ThrottlingException'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -391,23 +375,19 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('timers'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -423,29 +403,27 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('alarmSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('alarmModelName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('alarmModelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('keyValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACKNOWLEDGED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOOZE_DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LATCHED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('alarmModelName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('alarmModelVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('keyValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACKNOWLEDGED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOOZE_DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LATCHED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -458,26 +436,24 @@ final class IoTEventsDataClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('detectorSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('detectorModelName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('keyValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('detectorModelVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('detectorModelName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('keyValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('detectorModelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stateName'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('stateName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

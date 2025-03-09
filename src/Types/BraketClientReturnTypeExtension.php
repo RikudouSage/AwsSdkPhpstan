@@ -113,22 +113,20 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('queue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('queuePriority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('queueSize'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QUANTUM_TASKS_QUEUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JOBS_QUEUE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Normal'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('queue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('queuePriority'),
+                    new \PHPStan\Type\Constant\ConstantStringType('queueSize'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUANTUM_TASKS_QUEUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JOBS_QUEUE'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Normal'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
@@ -191,14 +189,12 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESERVATION_TIME_WINDOW_ARN'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('RESERVATION_TIME_WINDOW_ARN'),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -215,47 +211,43 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeOfEvent'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WAITING_FOR_PRIORITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED_FOR_EXECUTION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING_INSTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DOWNLOADING_DATA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRIORITIZED_DUE_TO_INACTIVITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPLOADING_RESULTS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MAX_RUNTIME_EXCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeOfEvent'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WAITING_FOR_PRIORITY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED_FOR_EXECUTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING_INSTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DOWNLOADING_DATA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRIORITIZED_DUE_TO_INACTIVITY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPLOADING_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAX_RUNTIME_EXCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3DataSource'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3DataSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3Uri'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3Uri'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
                 ])),
@@ -367,14 +359,12 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('RESERVATION_TIME_WINDOW_ARN'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('RESERVATION_TIME_WINDOW_ARN'),
                 ])),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -433,27 +423,25 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('devices'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RETIRED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QPU'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SIMULATOR'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('deviceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deviceStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deviceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RETIRED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QPU'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SIMULATOR'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -466,33 +454,31 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('jobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('device'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jobArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jobName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('device'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -506,36 +492,34 @@ final class BraketClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('quantumTasks'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deviceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputS3Bucket'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outputS3Directory'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quantumTaskArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('shots'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deviceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Bucket'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Directory'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quantumTaskArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('shots'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);

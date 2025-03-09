@@ -422,20 +422,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -468,94 +462,70 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                 ]),
@@ -569,24 +539,189 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Successful'),
                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateAssociationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Overview'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomationTargetParameterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncCompliance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplyOnlyAtCronInterval'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CalendarNames'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalInfo'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssociationStatusAggregatedCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Location'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                        ]),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Entry'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Fault'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateAssociationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Overview'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomationTargetParameterName'),
                         new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutomationTargetParameterName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
                         new \PHPStan\Type\Constant\ConstantStringType('Targets'),
                         new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulExecutionDate'),
                         new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
                         new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
                         new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
@@ -599,53 +734,18 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Duration'),
                         new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
                         new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalInfo'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AssociationStatusAggregatedCount'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -661,8 +761,6 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -678,258 +776,68 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Entry'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Fault'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AutomationTargetParameterName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
                             new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComplianceSeverity'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SyncCompliance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplyOnlyAtCronInterval'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CalendarNames'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Location'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ]))),
-                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                             ], [
                                 new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Client'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Server'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Client'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Server'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                     ]),
                 ])),
             ]),
@@ -994,28 +902,24 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -1043,51 +947,43 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1097,12 +993,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -1190,16 +1082,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ], [
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                 ]),
             ]),
@@ -1240,12 +1130,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('DeletedParameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('InvalidParameters'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1320,38 +1206,34 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ActivationList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultInstanceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RegistrationLimit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RegistrationsCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Expired'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultInstanceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RegistrationLimit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RegistrationsCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Expired'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1425,20 +1307,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1471,94 +1347,70 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                 ]),
@@ -1572,33 +1424,31 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('AssociationExecutionTargets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputSource'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputSourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputSourceType'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputSourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OutputSourceType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1612,53 +1462,47 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('AssociationExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCountByStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCountByStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1671,344 +1515,149 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('AutomationExecutionMetadataList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomationExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomationExecutionStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogFile'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParentAutomationExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentStepName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentAction'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetParameterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResolvedTargets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationsURL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomationSubtype'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduledTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Runbooks'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChangeRequestName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Exited'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Auto'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Interactive'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomationExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CrossAccount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Local'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
                         new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomationExecutionStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogFile'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentAutomationExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrentStepName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrentAction'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('TargetParameterName'),
                         new \PHPStan\Type\Constant\ConstantStringType('Targets'),
                         new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResolvedTargets'),
                         new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
                         new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationsURL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomationSubtype'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduledTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Runbooks'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeRequestName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Approved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Exited'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Auto'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Interactive'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterValues'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CrossAccount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Local'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetParameterName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ]))),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ]))),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                        ], [
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                ]),
-                                            ])),
-                                        ]),
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function describeAutomationStepExecutions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('StepExecutions'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StepName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxAttempts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StepStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Response'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OverriddenParameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsEnd'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NextStep'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsCritical'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValidNextSteps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentStepDetails'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Approved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Exited'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FailureStage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FailureType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
                             new \PHPStan\Type\Constant\ConstantStringType('Regions'),
                             new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
@@ -2021,12 +1670,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
                             new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -2035,57 +1680,184 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                             ], [
                                 new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeAutomationStepExecutions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('StepExecutions'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StepName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StepStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Response'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OverriddenParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsEnd'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextStep'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsCritical'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidNextSteps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParentStepDetails'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Exited'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureStage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StepName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Iteration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IteratorValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StepName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Iteration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IteratorValue'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2099,62 +1871,54 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Patches'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ContentUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductFamily'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Product'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Classification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MsrcSeverity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KbNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MsrcNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Language'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AdvisoryIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BugzillaIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Epoch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Release'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Repository'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ContentUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductFamily'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Product'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Classification'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MsrcSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KbNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MsrcNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AdvisoryIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BugzillaIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Epoch'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Release'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arch'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Repository'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2219,28 +1983,24 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -2268,51 +2028,43 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2322,12 +2074,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -2340,17 +2088,13 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('AccountSharingInfoList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedDocumentVersion'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedDocumentVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2363,18 +2107,16 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Associations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2387,87 +2129,79 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('EffectivePatches'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Patch'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PatchStatus'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Patch'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PatchStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContentUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProductFamily'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Product'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Classification'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MsrcSeverity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KbNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MsrcNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Language'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdvisoryIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BugzillaIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Epoch'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Release'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arch'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Repository'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReleaseDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ContentUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Vendor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProductFamily'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Product'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Classification'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MsrcSeverity'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KbNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MsrcNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Language'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdvisoryIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BugzillaIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Epoch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Release'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Arch'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Repository'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApprovalDate'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_APPROVAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPLICIT_APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EXPLICIT_REJECTED'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApprovalDate'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_APPROVAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXPLICIT_APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EXPLICIT_REJECTED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2481,42 +2215,40 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceAssociationStatusInfos'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3OutputUrl'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3OutputUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2529,72 +2261,70 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceInformationList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PingStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastPingDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsLatestVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RegistrationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IPAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAssociationExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAssociationExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationOverview'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Online'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionLost'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ManagedInstance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EC2Instance'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PingStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastPingDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsLatestVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RegistrationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAssociationExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAssociationExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationOverview'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceAssociationStatusAggregatedCount'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Online'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectionLost'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ManagedInstance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EC2Instance'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InstanceAssociationStatusAggregatedCount'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::IoT::Thing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::SSM::ManagedInstance'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::IoT::Thing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::SSM::ManagedInstance'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2608,60 +2338,58 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstancePatchStates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstallOverrideList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledOtherCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledPendingRebootCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledRejectedCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Operation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastNoRebootInstallOperationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RebootOption'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CriticalNonCompliantCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityNonCompliantCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OtherNonCompliantCount'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Scan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Install'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RebootIfNeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NoReboot'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstallOverrideList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledOtherCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledPendingRebootCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledRejectedCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MissingCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Operation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastNoRebootInstallOperationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RebootOption'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CriticalNonCompliantCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityNonCompliantCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OtherNonCompliantCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Scan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Install'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RebootIfNeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NoReboot'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2674,60 +2402,58 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstancePatchStates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstallOverrideList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledOtherCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledPendingRebootCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledRejectedCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MissingCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Operation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastNoRebootInstallOperationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RebootOption'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CriticalNonCompliantCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityNonCompliantCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OtherNonCompliantCount'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Scan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Install'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RebootIfNeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NoReboot'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapshotId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstallOverrideList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledOtherCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledPendingRebootCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledRejectedCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MissingCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Operation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastNoRebootInstallOperationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RebootOption'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CriticalNonCompliantCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityNonCompliantCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OtherNonCompliantCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Scan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Install'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RebootIfNeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NoReboot'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2740,32 +2466,30 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Patches'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KBId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Classification'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstalledTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_OTHER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_PENDING_REBOOT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MISSING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KBId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Classification'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstalledTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CVEIds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTALLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_OTHER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_PENDING_REBOOT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTALLED_REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MISSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2778,79 +2502,77 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstanceProperties'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Architecture'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IPAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LaunchTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PingStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastPingDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RegistrationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastAssociationExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAssociationExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationOverview'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Online'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionLost'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Architecture'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IPAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LaunchTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PingStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastPingDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActivationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IamRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RegistrationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastAssociationExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulAssociationExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationOverview'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceAssociationStatusAggregatedCount'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Online'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectionLost'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InstanceAssociationStatusAggregatedCount'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::IoT::Thing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::SSM::ManagedInstance'),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::IoT::Thing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::SSM::ManagedInstance'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2864,45 +2586,41 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InventoryDeletions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeletionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeletionStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeletionSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStatusUpdateTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DeletionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeletionStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastStatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeletionSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastStatusUpdateTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Complete'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SummaryItems'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RemainingCount'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2915,48 +2633,46 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionTaskInvocationIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowTargetId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvocationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowTargetId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2969,67 +2685,61 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionTaskIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3042,31 +2752,29 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('WindowExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowExecutionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SKIPPED_OVERLAPPING'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3079,16 +2787,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ScheduledWindowExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3101,37 +2807,31 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Targets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowTargetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowTargetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_GROUP'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_GROUP'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3144,83 +2844,73 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Tasks'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowTaskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoggingInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceRoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CutoffBehavior'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowTaskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskParameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoggingInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CutoffBehavior'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Region'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUN_COMMAND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_TASK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCEL_TASK'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3BucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3KeyPrefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3Region'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_TASK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCEL_TASK'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3234,34 +2924,32 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('WindowIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cutoff'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleTimezone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NextExecutionTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Cutoff'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Schedule'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleTimezone'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextExecutionTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3274,14 +2962,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('WindowIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WindowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3295,73 +2981,71 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('OpsItemSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Priority'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperationalData'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActualStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActualEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlannedStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlannedEndTime'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Priority'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperationalData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsItemType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActualStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActualEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlannedStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlannedEndTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Open'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Resolved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Closed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Open'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Resolved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Approved'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Closed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SearchableString'),
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SearchableString'),
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -3373,52 +3057,48 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Policies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Policies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('String'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StringList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Standard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Advanced'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intelligent-Tiering'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyStatus'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Standard'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Advanced'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Intelligent-Tiering'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyStatus'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3431,36 +3111,34 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('BaselineIdentities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OperatingSystem'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultBaseline'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2022'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDHAT_ENTERPRISE_LINUX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CENTOS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ORACLE_LINUX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEBIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MACOS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RASPBIAN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROCKY_LINUX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ALMA_LINUX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2023'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OperatingSystem'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultBaseline'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2022'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDHAT_ENTERPRISE_LINUX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CENTOS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ORACLE_LINUX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEBIAN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MACOS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RASPBIAN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROCKY_LINUX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALMA_LINUX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2023'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3505,41 +3183,39 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Mappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BaselineIdentity'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PatchGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BaselineIdentity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BaselineName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OperatingSystem'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BaselineDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultBaseline'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BaselineId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BaselineName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OperatingSystem'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BaselineDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DefaultBaseline'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2022'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REDHAT_ENTERPRISE_LINUX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUSE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CENTOS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ORACLE_LINUX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBIAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MACOS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RASPBIAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ROCKY_LINUX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALMA_LINUX'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2023'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2022'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UBUNTU'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDHAT_ENTERPRISE_LINUX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUSE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CENTOS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ORACLE_LINUX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEBIAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MACOS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RASPBIAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROCKY_LINUX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALMA_LINUX'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_LINUX_2023'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3553,9 +3229,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Properties'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3567,45 +3241,43 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Sessions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Connected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Connecting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disconnected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Terminated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Terminating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SessionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Details'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxSessionDuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3OutputUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputUrl'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Connected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Connecting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disconnected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terminated'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terminating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3OutputUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputUrl'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3686,226 +3358,87 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('Exited'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StepName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxAttempts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StepStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Response'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OverriddenParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsEnd'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NextStep'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsCritical'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ValidNextSteps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParentStepDetails'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Exited'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StepName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxAttempts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionStartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionEndTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StepStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Outputs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Response'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FailureMessage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FailureDetails'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OverriddenParameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IsEnd'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NextStep'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IsCritical'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ValidNextSteps'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParentStepDetails'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FailureStage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FailureType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Details'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Waiting'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Approved'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Scheduled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RunbookInProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PendingChangeCalendarOverride'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideApproved'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CompletedWithSuccess'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CompletedWithFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Exited'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FailureStage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FailureType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Details'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ]))),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('State'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StepName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Iteration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IteratorValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         ]),
-                    ])),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                    ]))),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
-                    ]))),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Auto'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Interactive'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Key'),
                             new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                    ])),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
                             new \PHPStan\Type\Constant\ConstantStringType('Regions'),
@@ -3919,12 +3452,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
                             new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -3933,32 +3462,119 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                             ], [
                                 new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StepExecutionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StepName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Iteration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IteratorValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Auto'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Interactive'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterValues'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Truncated'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('TotalSteps'),
@@ -3978,128 +3594,96 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetParameterName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetParameterName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
-                            ]))),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ]))),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                    ], [
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 ]),
             ]),
         ]);
@@ -4291,33 +3875,29 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                     new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Hash'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HashType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sha256'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Hash'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HashType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sha256'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
@@ -4361,17 +3941,13 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('NonMutating'),
                             new \PHPStan\Type\Constant\ConstantStringType('Undetermined'),
                         ]), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                     ]),
@@ -4386,28 +3962,24 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Entities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SchemaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContentHash'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SchemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ContentHash'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            ])),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4420,29 +3992,25 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Schemas'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TypeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Attributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('string'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('number'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('string'),
+                            new \PHPStan\Type\Constant\ConstantStringType('number'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -4498,9 +4066,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                     new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
@@ -4547,15 +4113,11 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
                     new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ])),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]))),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -4577,24 +4139,20 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                        ]),
+                    ])),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                     ]),
                 ])),
             ]),
@@ -4669,16 +4227,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -4691,9 +4245,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Values'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RunCommand'),
@@ -4735,14 +4287,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('All'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                             ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -4751,9 +4301,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
@@ -4762,9 +4310,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -4810,12 +4356,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -4857,20 +4401,16 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Open'),
@@ -4943,22 +4483,18 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Entities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            ])),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5005,56 +4541,50 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Labels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Policies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedPattern'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Labels'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Policies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('String'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StringList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Standard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Advanced'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Intelligent-Tiering'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyText'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PolicyStatus'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Standard'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Advanced'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Intelligent-Tiering'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PolicyStatus'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5067,36 +4597,32 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('InvalidParameters'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Selector'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceResult'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Selector'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceResult'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('String'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StringList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
                     ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -5107,32 +4633,30 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Selector'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceResult'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Selector'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceResult'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('String'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StringList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecureString'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5180,101 +4704,89 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PatchRules'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PatchFilterGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproveAfterDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproveUntilDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EnableNonSecurity'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PatchFilterGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApproveAfterDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApproveUntilDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EnableNonSecurity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ])),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
                     new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -5284,31 +4796,23 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
                 ]),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW_AS_DEPENDENCY'),
                     new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Products'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Products'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -5351,16 +4855,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Policies'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyHash'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Policy'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyHash'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Policy'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -5396,9 +4898,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InvalidLabels'),
                 new \PHPStan\Type\Constant\ConstantStringType('ParameterVersion'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
             ]),
         ]);
@@ -5410,143 +4910,115 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('AssociationVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceSeverity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncCompliance'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApplyOnlyAtCronInterval'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CalendarNames'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncCompliance'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApplyOnlyAtCronInterval'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CalendarNames'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Location'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ]))),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3Location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
+                            ])),
                         ]),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5559,58 +5031,48 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Associations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Overview'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastExecutionDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Overview'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScheduleOffset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetMaps'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssociationStatusAggregatedCount'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DetailedStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AssociationStatusAggregatedCount'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\IntegerType()),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5623,111 +5085,105 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('CommandInvocations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CommandId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedDateTime'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CommandId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TraceOutput'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StandardOutputUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StandardErrorUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CommandPlugins'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotificationConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputConfig'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Delayed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TraceOutput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResponseStartDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResponseFinishDateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Output'),
                         new \PHPStan\Type\Constant\ConstantStringType('StandardOutputUrl'),
                         new \PHPStan\Type\Constant\ConstantStringType('StandardErrorUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CommandPlugins'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('Pending'),
                             new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Delayed'),
                             new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
                             new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResponseStartDateTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResponseFinishDateTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Output'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StandardOutputUrl'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StandardErrorUrl'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                         ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Invocation'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputEnabled'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationEvents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Invocation'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputEnabled'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -5741,133 +5197,117 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Commands'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CommandId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpiresAfter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompletedCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryTimedOutCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceRole'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CommandId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpiresAfter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3BucketName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutputS3KeyPrefix'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrency'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxErrors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompletedCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeliveryTimedOutCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotificationConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeoutSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TriggeredAlarms'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('All'),
                             new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
                             new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
                             new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Invocation'),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputEnabled'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationEvents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotificationType'),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Invocation'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchLogGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchOutputEnabled'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                                ]),
-                            ]),
                         ])),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
+                        ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5880,46 +5320,44 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ComplianceItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Details'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionType'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Details'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionType'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5932,54 +5370,52 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ComplianceSummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompliantSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NonCompliantSummary'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompliantSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NonCompliantSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompliantCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
                     ], [
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CompliantCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NonCompliantCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NonCompliantCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                 ])),
@@ -6003,33 +5439,29 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ReviewerResponse'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UpdatedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('Comment'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -6043,44 +5475,42 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('DocumentVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Updating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefaultVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentFormat'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Updating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -6094,91 +5524,83 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('DocumentIdentifiers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PlatformTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SchemaVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Requires'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Author'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PlatformTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SchemaVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentFormat'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Requires'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReviewStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Author'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Policy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Automation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Session'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Package'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfigurationSchema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentStrategy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendar'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Automation.ChangeTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProblemAnalysis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProblemAnalysisTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Policy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Automation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Session'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Package'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationConfigurationSchema'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStrategy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendar'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Automation.ChangeTemplate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProblemAnalysis'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProblemAnalysisTemplate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -6199,9 +5621,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -6213,62 +5633,60 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Nodes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CaptureTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitPath'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Instance'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitPath'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AgentType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ManagedStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Instance'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AgentType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AgentVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ComputerName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InstanceStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ManagedStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PlatformVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Managed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unmanaged'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ManagedInstance'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2Instance'),
-                                ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('All'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Managed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unmanaged'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ManagedInstance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EC2Instance'),
                             ]),
                         ]),
                     ]),
@@ -6284,9 +5702,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Summary'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -6299,28 +5715,26 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Summaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DetailType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Detail'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DetailType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Detail'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -6333,36 +5747,34 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Summaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceUri'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsItemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceUri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -6374,20 +5786,18 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('OpsMetadataList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OpsMetadataArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OpsMetadataArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedUser'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -6400,82 +5810,80 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceComplianceSummaryItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OverallSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompliantSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NonCompliantSummary'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OverallSeverity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompliantSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NonCompliantSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionType'),
                     ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CompliantCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionType'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CompliantCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NonCompliantCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NonCompliantCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SeveritySummary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CriticalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HighCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MediumCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LowCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InformationalCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UnspecifiedCount'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                 ])),
@@ -6490,80 +5898,74 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceDataSyncItems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('S3Destination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSyncTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncLastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SyncCreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatusMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('S3Destination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSyncTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSuccessfulSyncTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncLastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SyncCreatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastSyncStatusMessage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsOrganizationsSource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceRegions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeFutureRegions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EnableAllOpsDataSources'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationSourceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnits'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SyncFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWSKMSKeyARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationDataSharing'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsOrganizationsSource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceRegions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludeFutureRegions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EnableAllOpsDataSources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OrganizationSourceType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnits'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SyncFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWSKMSKeyARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DestinationDataSharing'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('JsonSerDe'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationDataSharingType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Successful'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JsonSerDe'),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationDataSharingType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Successful'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -6575,14 +5977,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('TagList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6768,22 +6168,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ]))),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -6813,14 +6205,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -6840,24 +6230,20 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                 ]),
@@ -6937,12 +6323,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('RemovedLabels'),
                 new \PHPStan\Type\Constant\ConstantStringType('InvalidLabels'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -7014,20 +6396,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7060,94 +6436,70 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                 ]),
@@ -7222,20 +6574,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7268,94 +6614,70 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MANUAL'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Regions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Targets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Accounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Regions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationMaxErrors'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionRoleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetLocationAlarmConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IncludeChildOrganizationUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExcludeAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Targets'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxConcurrency'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetsMaxErrors'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ])),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()))),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('IgnorePollAlarmFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                     ], [
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('State'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
-                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM'),
                         ]),
                     ])),
                 ]),
@@ -7421,28 +6743,24 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StringList'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StringList'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Linux'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Linux'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MacOS'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -7470,51 +6788,43 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequireType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VersionName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ReviewedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reviewer'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_REVIEWED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -7524,12 +6834,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -7603,16 +6909,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -7642,25 +6944,19 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Values'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('RunCommand'),
@@ -7702,14 +6998,12 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('All'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('All'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedOut'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                             ])),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Command'),
@@ -7718,9 +7012,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
@@ -7729,9 +7021,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ]))),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Input'),
@@ -7777,12 +7067,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('Alarms'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -7851,101 +7139,89 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PatchRules'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PatchFilterGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproveAfterDays'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApproveUntilDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EnableNonSecurity'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PatchFilterGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ComplianceLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApproveAfterDays'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApproveUntilDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EnableNonSecurity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PatchFilters'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ARCH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ADVISORY_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BUGZILLA_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PATCH_SET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRODUCT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRODUCT_FAMILY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLASSIFICATION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CVE_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EPOCH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MSRC_SEVERITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PATCH_ID'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECTION'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIORITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REPOSITORY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RELEASE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SEVERITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SECURITY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VERSION'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ])),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
                     new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -7955,9 +7231,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('UNSPECIFIED'),
                 ]),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ALLOW_AS_DEPENDENCY'),
                     new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
@@ -7965,18 +7239,14 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Products'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Products'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Configuration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

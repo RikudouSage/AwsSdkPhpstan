@@ -287,10 +287,8 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ZIP_CODE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AREA_CODE'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('ZIP_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AREA_CODE'),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -308,29 +306,25 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\Constant\ConstantStringType('FRIDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SATURDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUNDAY'),
-                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]))),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('restrictedPeriodList'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('startDate'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endDate'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -349,29 +343,25 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\Constant\ConstantStringType('FRIDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SATURDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUNDAY'),
-                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]))),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('restrictedPeriodList'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('startDate'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endDate'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -390,29 +380,25 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\Constant\ConstantStringType('FRIDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SATURDAY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUNDAY'),
-                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                ]), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ]))),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('restrictedPeriodList'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('startDate'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endDate'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -423,16 +409,14 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('communicationLimitsList'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxCountPerRecipient'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('frequency'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DAY'),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('maxCountPerRecipient'),
+                                new \PHPStan\Type\Constant\ConstantStringType('frequency'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('DAY'),
                             ])),
                         ]),
                     ]),
@@ -465,32 +449,28 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('successfulRequests'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedRequests'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Initialized'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Paused'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Initialized'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Paused'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Completed'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('campaignId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                     ]),
                 ])),
             ]),
@@ -559,38 +539,34 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('campaignSummaryList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectInstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelSubtypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schedule'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectCampaignFlowArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TELEPHONY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectInstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelSubtypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('schedule'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectCampaignFlowArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('refreshFrequency'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TELEPHONY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('refreshFrequency'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -603,28 +579,26 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('integrationSummaryList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('customerProfiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('qConnect'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('customerProfiles'),
-                        new \PHPStan\Type\Constant\ConstantStringType('qConnect'),
+                        new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('objectTypeNames'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('objectTypeNames'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Campaign-Email'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Campaign-SMS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Campaign-Telephony'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Campaign-Orchestration'),
-                            ]), new \PHPStan\Type\StringType()),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Campaign-Email'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Campaign-SMS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Campaign-Telephony'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Campaign-Orchestration'),
+                        ]), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -659,29 +633,25 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('successfulRequests'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedRequests'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BufferLimitExceeded'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BufferLimitExceeded'),
                     ]),
                 ])),
             ]),
@@ -694,30 +664,26 @@ final class ConnectCampaignsV2ClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('successfulRequests'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedRequests'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clientToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Conflict'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestThrottled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidInput'),
                     ]),
                 ])),
             ]),

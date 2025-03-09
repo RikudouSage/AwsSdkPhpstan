@@ -424,9 +424,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('TapeARNs'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -582,26 +580,22 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('BandwidthRateLimitIntervals'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StartHourOfDay'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartMinuteOfHour'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndHourOfDay'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndMinuteOfHour'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DaysOfWeek'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AverageUploadRateLimitInBitsPerSec'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AverageDownloadRateLimitInBitsPerSec'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StartHourOfDay'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartMinuteOfHour'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndHourOfDay'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndMinuteOfHour'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DaysOfWeek'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AverageUploadRateLimitInBitsPerSec'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AverageDownloadRateLimitInBitsPerSec'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -619,9 +613,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CacheMissPercentage'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\FloatType(),
                 new \PHPStan\Type\FloatType(),
@@ -664,43 +656,33 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -712,48 +694,46 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('CachediSCSIVolumes'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeProgress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceSnapshotId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeiSCSIAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeUsedInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceSnapshotId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeiSCSIAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeUsedInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LunNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LunNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -764,18 +744,16 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('ChapCredentials'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretToAuthenticateInitiator'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InitiatorName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecretToAuthenticateTarget'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretToAuthenticateInitiator'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InitiatorName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretToAuthenticateTarget'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -786,52 +764,44 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationInfoList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndpointNetworkConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatusDetails'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointNetworkConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatusDetails'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IpAddresses'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddresses'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -868,30 +838,26 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MacAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6Address'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv4Address'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MacAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6Address'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -912,11 +878,9 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('Large'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Small'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Medium'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Large'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('Small'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Large'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -958,96 +922,90 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('NFSFileShareInfoList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('NFSFileShareDefaults'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSEncrypted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultStorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ObjectACL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClientList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Squash'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadOnly'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GuessMIMETypeEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequesterPays'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotificationPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VPCEndpointDNSName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('NFSFileShareDefaults'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSEncrypted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultStorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ObjectACL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClientList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Squash'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadOnly'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GuessMIMETypeEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequesterPays'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VPCEndpointDNSName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FileMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DirectoryMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FileMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DirectoryMode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GroupId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SseS3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SseKms'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DsseKms'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('private'),
-                            new \PHPStan\Type\Constant\ConstantStringType('public-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SseS3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SseKms'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DsseKms'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('private'),
+                        new \PHPStan\Type\Constant\ConstantStringType('public-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1058,103 +1016,93 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('SMBFileShareInfoList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSEncrypted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultStorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ObjectACL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadOnly'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GuessMIMETypeEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequesterPays'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SMBACLEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccessBasedEnumeration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AdminUserList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ValidUserList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvalidUserList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Authentication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CaseSensitivity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VPCEndpointDNSName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OplocksEnabled'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSEncrypted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultStorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ObjectACL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadOnly'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GuessMIMETypeEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequesterPays'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SMBACLEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessBasedEnumeration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AdminUserList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidUserList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvalidUserList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuditDestinationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Authentication'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CaseSensitivity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CacheAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotificationPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VPCEndpointDNSName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BucketRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OplocksEnabled'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SseS3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SseKms'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DsseKms'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('private'),
+                        new \PHPStan\Type\Constant\ConstantStringType('public-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ClientSpecified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CaseSensitive'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SseS3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SseKms'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DsseKms'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('private'),
-                            new \PHPStan\Type\Constant\ConstantStringType('public-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('public-read-write'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authenticated-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-read'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket-owner-full-control'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aws-exec-read'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ClientSpecified'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CaseSensitive'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CacheStaleTimeoutInSeconds'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -1193,9 +1141,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('GatewayAdmins'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -1216,14 +1162,12 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1234,52 +1178,50 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('StorediSCSIVolumes'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeProgress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeDiskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceSnapshotId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PreservedExistingData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeiSCSIAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeUsedInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TargetName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeProgress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeDiskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceSnapshotId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreservedExistingData'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeiSCSIAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeUsedInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TargetName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LunNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LunNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1291,36 +1233,34 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TapeArchives'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeCreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompletionTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetrievedTo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeUsedInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Worm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeCreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompletionTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetrievedTo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeUsedInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Worm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1335,18 +1275,16 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeRecoveryPointTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeRecoveryPointTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1359,36 +1297,34 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Tapes'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeCreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VTLDevice'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Progress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeUsedInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Worm'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeCreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VTLDevice'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Progress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeUsedInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Worm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1404,9 +1340,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('UploadBufferAllocatedInBytes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
             ]),
@@ -1421,29 +1355,27 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceVendor'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceProductIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeviceiSCSIAttributes'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceVendor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VTLDeviceProductIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeviceiSCSIAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfaceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetworkInterfacePort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ChapEnabled'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1460,9 +1392,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('WorkingStorageAllocatedInBytes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
             ]),
@@ -1534,28 +1464,24 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('AutomaticTapeCreationPolicyInfos'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AutomaticTapeCreationRules'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AutomaticTapeCreationRules'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TapeBarcodePrefix'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinimumNumTapes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Worm'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TapeBarcodePrefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MinimumNumTapes'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Worm'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\BooleanType(),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1567,74 +1493,62 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('CacheReportList'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CacheReportARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CacheReportStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReportCompletionPercent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InclusionFilters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExclusionFilters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CacheReportARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CacheReportStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReportCompletionPercent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InclusionFilters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExclusionFilters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReportName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UploadState'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UploadFailureReason'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1650,23 +1564,21 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NFS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMB'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileShareStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NFS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMB'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1681,18 +1593,16 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemAssociationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1704,39 +1614,37 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Gateways'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayOperationalState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostEnvironment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostEnvironmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeprecationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SoftwareVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VMWARE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HYPER-V'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KVM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNOWBALL'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayOperationalState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ec2InstanceRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HostEnvironment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HostEnvironmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeprecationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SoftwareVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VMWARE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HYPER-V'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KVM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNOWBALL'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1750,28 +1658,24 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Disks'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskPath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskNode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskAllocationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskAllocationResource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DiskAttributeList'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskPath'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskNode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskAllocationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskAllocationResource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DiskAttributeList'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1786,14 +1690,12 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1805,31 +1707,29 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('PoolInfos'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionLockType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionLockTimeInDays'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLIANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GOVERNANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionLockType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionLockTimeInDays'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEEP_ARCHIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GLACIER'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLIANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GOVERNANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1843,26 +1743,24 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TapeInfos'),
                 new \PHPStan\Type\Constant\ConstantStringType('Marker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeBarcode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TapeStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionStartDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PoolEntryDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1874,9 +1772,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Initiators'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1888,18 +1784,16 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('VolumeRecoveryPointInfos'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeUsageInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeRecoveryPointTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeUsageInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeRecoveryPointTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1914,24 +1808,22 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VolumeAttachmentStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

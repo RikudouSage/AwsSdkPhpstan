@@ -627,9 +627,7 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\IntegerType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
@@ -643,20 +641,18 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxAllowedSignature'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FactorySupport'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceTypeId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CertificateId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxAllowedSignature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FactorySupport'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceTypeId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -795,98 +791,86 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
                         new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CUPS_Request'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INFO'),
                             new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CUPS_Request'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Join'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Rejoin'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Uplink_Data'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Downlink_Data'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Registration'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
-                    ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
                         new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Join'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Rejoin'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Uplink_Data'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Downlink_Data'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Registration'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INFO'),
                             new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('Fuota'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                ]),
-                            ]),
-                        ])),
+                    ])),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogLevel'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('Fuota'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -914,101 +898,93 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('SummaryMetricQueryResults'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QueryStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AggregationPeriod'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamps'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Values'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRSSI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceSNR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingRSSI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingSNR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceDownlinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkLostCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkLostRate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceJoinRequestCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceJoinAcceptCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingUplinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingDownlinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayUpTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayDownTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayRSSI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewaySNR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayUplinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayDownlinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayJoinRequestCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayJoinAcceptCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountDownlinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkLostCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkLostRate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountJoinRequestCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountJoinAcceptCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountRoamingUplinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountRoamingDownlinkCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountDeviceCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountGatewayCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountActiveDeviceCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AwsAccountActiveGatewayCount'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OneHour'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OneDay'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OneWeek'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Min'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Max'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Avg'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Std'),
-                                new \PHPStan\Type\Constant\ConstantStringType('P90'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QueryStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AggregationPeriod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamps'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRSSI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceSNR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingRSSI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingSNR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceDownlinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkLostCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceUplinkLostRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceJoinRequestCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceJoinAcceptCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingUplinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRoamingDownlinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayUpTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayDownTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayRSSI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewaySNR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayUplinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayDownlinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayJoinRequestCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayJoinAcceptCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountDownlinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkLostCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountUplinkLostRate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountJoinRequestCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountJoinAcceptCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountRoamingUplinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountRoamingDownlinkCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountDeviceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountGatewayCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountActiveDeviceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AwsAccountActiveGatewayCount'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DeviceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OneHour'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OneDay'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OneWeek'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ObjectType('DateTimeInterface')),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Min'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Max'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Avg'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Std'),
+                        new \PHPStan\Type\Constant\ConstantStringType('P90'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1062,9 +1038,7 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('GatewayList'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransmissionInterval'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\IntegerType(),
                     ]),
                 ]),
@@ -1125,18 +1099,12 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1171,9 +1139,7 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('SolverVersion'),
                 new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\FloatType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('HorizontalAccuracy'),
                     new \PHPStan\Type\Constant\ConstantStringType('VerticalAccuracy'),
@@ -1546,16 +1512,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FPort'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('SemtechGeolocation'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FPort'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('SemtechGeolocation'),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -1572,29 +1536,25 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
-                                new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
+                            new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
-                                new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
+                            new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1635,9 +1595,7 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('DeviceCreationFileList'),
                     new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1682,33 +1640,29 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Snr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Rssi'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Snr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Rssi'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProviderNetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Rssi'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Snr'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RfRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DlAllowed'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProviderNetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Rssi'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Snr'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RfRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DlAllowed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1766,25 +1720,15 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\IntegerType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DataRate'),
                         new \PHPStan\Type\Constant\ConstantStringType('Frequencies'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\IntegerType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                     ]),
                     new \PHPStan\Type\FloatType(),
                 ]),
@@ -1928,25 +1872,23 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('DestinationList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpressionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Expression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RuleName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MqttTopic'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpressionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MqttTopic'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1959,16 +1901,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('DeviceProfileList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1983,26 +1923,24 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SidewalkManufacturingSn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnboardingStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnboardingStatusReason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTime'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SidewalkManufacturingSn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnboardingStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnboardingStatusReason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTime'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ONBOARDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
             ]),
@@ -2016,114 +1954,112 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('EventConfigurationsList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdentifierType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PartnerType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PartnerAccountId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DevEui'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FuotaTaskId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WirelessGatewayId'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IdentifierType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PartnerType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Events'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceRegistrationState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Proximity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Join'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageDeliveryStatus'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PartnerAccountId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DevEui'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FuotaTaskId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WirelessGatewayId'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceRegistrationState'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Proximity'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Join'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectionStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MessageDeliveryStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DevEuiEventTopic'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DevEuiEventTopic'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WirelessGatewayIdEventTopic'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WirelessGatewayIdEventTopic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GatewayEuiEventTopic'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GatewayEuiEventTopic'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
                             ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceIdEventTopic'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AmazonIdEventTopic'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                    ]),
-                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                                 ]),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
                             ]),
                         ]),
                     ]),
@@ -2139,16 +2075,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('FuotaTaskList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2161,16 +2095,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('MulticastGroupList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2183,12 +2115,10 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('MulticastGroupList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2201,14 +2131,12 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('NetworkAnalyzerConfigurationList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2221,16 +2149,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AmazonId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Fingerprint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Fingerprint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2242,41 +2168,39 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('PositionConfigurationList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Solvers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WirelessDevice'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WirelessGateway'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Solvers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SemtechGnss'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WirelessDevice'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WirelessGateway'),
-                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SemtechGnss'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Provider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Fec'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Provider'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Fec'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('Semtech'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GNSS'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROSE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Semtech'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GNSS'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ROSE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             ]),
                         ]),
-                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2290,42 +2214,38 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('DownlinkQueueMessagesList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TransmitMode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReceivedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TransmitMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReceivedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParticipatingGateways'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FPort'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParticipatingGateways'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DownlinkMode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GatewayList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TransmissionInterval'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DownlinkMode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GatewayList'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TransmissionInterval'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONCURRENT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('USING_UPLINK_GATEWAY'),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DownlinkFrequency'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONCURRENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USING_UPLINK_GATEWAY'),
                             ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GatewayId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DownlinkFrequency'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                 ])),
@@ -2340,16 +2260,14 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('ServiceProfileList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2360,14 +2278,12 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2380,47 +2296,43 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceImportTaskList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InitializedImportedDeviceCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PendingImportedDeviceCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OnboardedImportedDeviceCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailedImportedDeviceCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InitializedImportedDeviceCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PendingImportedDeviceCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OnboardedImportedDeviceCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailedImportedDeviceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceCreationFileList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceCreationFileList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -2433,82 +2345,78 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('WirelessDeviceList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUplinkReceivedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUplinkReceivedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FuotaDeviceStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MulticastDeviceStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('McGroupId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FuotaDeviceStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MulticastDeviceStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('McGroupId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DevEui'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AmazonId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SidewalkId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SidewalkManufacturingSn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceCertificates'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Sidewalk'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DevEui'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AmazonId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SidewalkId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SidewalkManufacturingSn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceCertificates'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeviceProfileId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SigningAlg'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REGISTERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVATED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Ed25519'),
+                                new \PHPStan\Type\Constant\ConstantStringType('P256r1'),
                             ]),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Initial'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Package_Not_Supported'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FragAlgo_unsupported'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Not_enough_memory'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FragIndex_unsupported'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Wrong_descriptor'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SessionCnt_replay'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MissingFrag'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MemoryError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MICError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Successful'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Device_exist_in_conflict_fuota_task'),
-                        ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                        ]),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Initial'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Package_Not_Supported'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FragAlgo_unsupported'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Not_enough_memory'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FragIndex_unsupported'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Wrong_descriptor'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SessionCnt_replay'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MissingFrag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemoryError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MICError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Successful'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Device_exist_in_conflict_fuota_task'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -2521,38 +2429,36 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('TaskDefinitions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrentVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdateVersion'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CurrentVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UpdateVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Model'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Station'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Model'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Station'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Model'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Station'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PackageVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Model'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Station'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2565,54 +2471,42 @@ final class IoTWirelessClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('WirelessGatewayList'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUplinkReceivedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoRaWAN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUplinkReceivedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RfRegion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JoinEuiFilters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NetIdFilters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubBands'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Beaconing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxEirp'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('GatewayEui'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RfRegion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JoinEuiFilters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NetIdFilters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubBands'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Beaconing'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxEirp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DataRate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Frequencies'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\IntegerType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DataRate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Frequencies'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\IntegerType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

@@ -205,19 +205,13 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('MetricList'),
                         new \PHPStan\Type\Constant\ConstantStringType('DimensionFilterList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValueList'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValueList'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                 ]),
@@ -231,22 +225,20 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ExecutionList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_SCHEDULE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED_TO_SCHEDULE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -332,19 +324,17 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AggregationFunction'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUM'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AggregationFunction'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ColumnName'),
@@ -353,9 +343,7 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('P1D'),
                     new \PHPStan\Type\Constant\ConstantStringType('PT1H'),
@@ -378,12 +366,8 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('FileFormatDescriptor'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('CsvFormatDescriptor'),
                             new \PHPStan\Type\Constant\ConstantStringType('JsonFormatDescriptor'),
@@ -403,9 +387,7 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -459,12 +441,8 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIdList'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdList'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -488,12 +466,8 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('SubnetIdList'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdList'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -518,22 +492,18 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterList'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterList'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FilterOperation'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FilterOperation'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('EQUALS'),
+                    ])),
                 ])),
             ]),
         ]);
@@ -565,15 +535,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -598,15 +562,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -649,15 +607,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -682,15 +634,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -715,15 +661,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -748,15 +688,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -781,15 +715,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -814,15 +742,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -852,15 +774,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -885,15 +801,9 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -929,35 +839,29 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\FloatType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NumTimeSeries'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ContributionMatrix'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NumTimeSeries'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ContributionMatrix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionContributionList'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionContributionList'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValueContributionList'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DimensionValueContributionList'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ContributionScore'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\FloatType(),
-                                            ]),
-                                        ])),
-                                    ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ContributionScore'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ])),
-                            ]),
+                            ])),
                         ]),
                     ])),
                 ]),
@@ -970,45 +874,39 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorDataQualityMetricList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricSetDataQualityMetricList'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSetDataQualityMetricList'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricSetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DataQualityMetricList'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricSetArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DataQualityMetricList'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MetricDescription'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RelatedColumnName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('COLUMN_COMPLETENESS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('DIMENSION_UNIQUENESS'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TIME_SERIES_COUNT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ROWS_PROCESSED'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ROWS_PARTIAL_COMPLIANCE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_ROWS_COMPLIANCE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_TRAINING_DATA_START_TIME_STAMP'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_TRAINING_DATA_END_TIME_STAMP'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_INFERENCE_DATA_START_TIME_STAMP'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_INFERENCE_DATA_END_TIME_STAMP'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDescription'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RelatedColumnName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('COLUMN_COMPLETENESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIMENSION_UNIQUENESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIME_SERIES_COUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ROWS_PROCESSED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ROWS_PARTIAL_COMPLIANCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_ROWS_COMPLIANCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_TRAINING_DATA_START_TIME_STAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_TRAINING_DATA_END_TIME_STAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_INFERENCE_DATA_START_TIME_STAMP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BACKTEST_INFERENCE_DATA_END_TIME_STAMP'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
                         ])),
-                    ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1020,14 +918,12 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupTimeSeriesFeedback'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsAnomaly'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsAnomaly'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1040,14 +936,8 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('HeaderValues'),
                 new \PHPStan\Type\Constant\ConstantStringType('SampleRows'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
             ]),
         ]);
     }
@@ -1058,34 +948,32 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('AlertSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AlertArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlertName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlertSensitivityThreshold'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlertType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AlertStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AlertArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlertName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlertSensitivityThreshold'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlertType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AlertStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1098,36 +986,34 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LEARNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_ACTIVATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATING'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LEARNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_ACTIVATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BACK_TEST_COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEACTIVATING'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1140,21 +1026,19 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('InterMetricImpactList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RelationshipType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ContributionPercentage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAUSE_OF_INPUT_ANOMALY_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFFECT_OF_INPUT_ANOMALY_GROUP'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RelationshipType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ContributionPercentage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CAUSE_OF_INPUT_ANOMALY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFFECT_OF_INPUT_ANOMALY_GROUP'),
                     ]),
+                    new \PHPStan\Type\FloatType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1168,20 +1052,18 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupStatistics'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupScore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrimaryMetricName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyGroupScore'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrimaryMetricName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EvaluationStartDate'),
@@ -1190,14 +1072,12 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OccurrenceCount'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OccurrenceCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -1216,30 +1096,22 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DimensionList'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricValueList'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeSeriesId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DimensionList'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricValueList'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\FloatType()),
                 ])),
             ]),
         ]);
@@ -1251,24 +1123,22 @@ final class LookoutMetricsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('MetricSetSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricSetArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricSetDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricSetName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSetArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyDetectorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSetDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSetName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModificationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

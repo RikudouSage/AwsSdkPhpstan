@@ -37,50 +37,11 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('Results'),
                 new \PHPStan\Type\Constant\ConstantStringType('UnprocessedRecords'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UsageRecord'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MeteringRecordId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UsageAllocations'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedUsageQuantity'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CustomerNotSubscribed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DuplicateRecord'),
-                        ]),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UsageRecord'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MeteringRecordId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
                         new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
@@ -92,24 +53,51 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AllocatedUsageQuantity'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AllocatedUsageQuantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CustomerNotSubscribed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DuplicateRecord'),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UsageAllocations'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedUsageQuantity'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ])),
                 ])),
             ]),
         ]);

@@ -298,115 +298,109 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TlsPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Recipients'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Actions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScanEnabled'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Require'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Optional'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Sender'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Scope'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Base64'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TlsPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Recipients'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScanEnabled'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Require'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Optional'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sender'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Base64'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -426,60 +420,54 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 ], [
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SNSDestination'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('send'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bounce'),
+                        new \PHPStan\Type\Constant\ConstantStringType('complaint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('delivery'),
+                        new \PHPStan\Type\Constant\ConstantStringType('open'),
+                        new \PHPStan\Type\Constant\ConstantStringType('click'),
+                        new \PHPStan\Type\Constant\ConstantStringType('renderingFailure'),
+                    ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MatchingEventTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KinesisFirehoseDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchDestination'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SNSDestination'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamARN'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('reject'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bounce'),
-                                new \PHPStan\Type\Constant\ConstantStringType('complaint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('delivery'),
-                                new \PHPStan\Type\Constant\ConstantStringType('open'),
-                                new \PHPStan\Type\Constant\ConstantStringType('click'),
-                                new \PHPStan\Type\Constant\ConstantStringType('renderingFailure'),
+                                new \PHPStan\Type\Constant\ConstantStringType('messageTag'),
+                                new \PHPStan\Type\Constant\ConstantStringType('emailHeader'),
+                                new \PHPStan\Type\Constant\ConstantStringType('linkTag'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DeliveryStreamARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DimensionConfigurations'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DimensionValueSource'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultDimensionValue'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('messageTag'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('emailHeader'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('linkTag'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TopicARN'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicARN'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -527,96 +515,92 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('Require'),
                         new \PHPStan\Type\Constant\ConstantStringType('Optional'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sender'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Sender'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Base64'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Scope'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Base64'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\BooleanType(),
@@ -638,115 +622,109 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TlsPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Recipients'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Actions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScanEnabled'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Require'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Optional'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Sender'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Event'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Scope'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Base64'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TlsPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Recipients'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Actions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScanEnabled'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Require'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Optional'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BounceAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkmailAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StopAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AddHeaderAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNSAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectAction'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KmsKeyArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmtpReplyCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sender'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OrganizationArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InvocationType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Event'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RequestResponse'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('RuleSet'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Base64'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAMRoleARN'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -800,9 +778,7 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('TemporaryFailure'),
                         new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -911,20 +887,18 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('SendDataPoints'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeliveryAttempts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Bounces'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Complaints'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Rejects'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeliveryAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Bounces'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Complaints'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Rejects'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -956,12 +930,10 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -974,20 +946,18 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('CustomVerificationEmailTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateSubject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SuccessRedirectionURL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureRedirectionURL'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FromEmailAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateSubject'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SuccessRedirectionURL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureRedirectionURL'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1000,9 +970,7 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Identities'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1013,9 +981,7 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('PolicyNames'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1025,22 +991,20 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Filters'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpFilter'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IpFilter'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Policy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Policy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cidr'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Block'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Allow'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Block'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Allow'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -1053,14 +1017,12 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('RuleSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1073,14 +1035,12 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('TemplatesMetadata'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1092,9 +1052,7 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('VerifiedEmailAddresses'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -1132,31 +1090,29 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MessageRejected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MailFromDomainNotVerified'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSetDoesNotExist'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TemplateDoesNotExist'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountSuspended'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountThrottled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountDailyQuotaExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSendingPoolName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AccountSendingPaused'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSetSendingPaused'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidParameterValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TransientFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MessageId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MessageRejected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MailFromDomainNotVerified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSetDoesNotExist'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TemplateDoesNotExist'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountSuspended'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountThrottled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountDailyQuotaExceeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSendingPoolName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccountSendingPaused'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfigurationSetSendingPaused'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidParameterValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TransientFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1307,9 +1263,7 @@ final class SesClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('DkimTokens'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }

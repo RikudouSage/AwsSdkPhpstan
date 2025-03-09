@@ -238,12 +238,8 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('reason'),
@@ -298,14 +294,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -358,14 +352,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('summarizationDimensions'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -428,14 +420,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -464,14 +454,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -480,9 +468,7 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -491,9 +477,7 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -502,22 +486,16 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -635,20 +613,16 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('detailUrl'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('id'),
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detailUrl'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -660,14 +634,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -697,14 +669,12 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -713,9 +683,7 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -724,9 +692,7 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -735,22 +701,16 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -786,18 +746,16 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         ]), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('mediaId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                            new \PHPStan\Type\Constant\ConstantStringType('caption'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('mediaId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('caption'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -829,9 +787,7 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('channels'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -843,44 +799,38 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('eventRules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('managedRules'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusSummaryByRegion'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventPattern'),
+                    new \PHPStan\Type\Constant\ConstantStringType('regions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('managedRules'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusSummaryByRegion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -893,23 +843,21 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('channelAssociations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('overrideOption'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MOBILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHATBOT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_CONTACT'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('overrideOption'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MOBILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CHATBOT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCOUNT_CONTACT'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                 ])),
             ]),
@@ -923,70 +871,66 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('managedNotificationChildEvents'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('managedNotificationConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('childEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregateManagedNotificationEventArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('organizationalUnitId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('managedNotificationConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('childEvent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregateManagedNotificationEventArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('organizationalUnitId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregationDetail'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
-                            new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregationDetail'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventType'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('source'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('headline'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('summarizationDimensions'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('headline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('summarizationDimensions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                        ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -999,16 +943,14 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('managedNotificationConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1021,130 +963,114 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('managedNotificationEvents'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('managedNotificationConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregationEventType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('organizationalUnitId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregationSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregatedNotificationRegions'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('managedNotificationConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationEvent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregationEventType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('organizationalUnitId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregationSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedNotificationRegions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
-                            new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventType'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('source'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('headline'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('headline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('eventCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedRegions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedOrganizationalUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedRegions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedOrganizationalUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1157,30 +1083,28 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('notificationConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregationDuration'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARTIALLY_ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LONG'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregationDuration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PARTIALLY_ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LONG'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHORT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
                 ])),
             ]),
@@ -1194,125 +1118,111 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('notificationEvents'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregationEventType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregateNotificationEventArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aggregationSummary'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relatedAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationEvent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregationEventType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregateNotificationEventArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('aggregationSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
+                        new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sourceEventMetadata'),
-                            new \PHPStan\Type\Constant\ConstantStringType('messageComponents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('notificationType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventType'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantStringType('v1.0'),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('eventOriginRegion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('source'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('headline'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('headline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AGGREGATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('eventCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedAccounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedRegions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aggregatedOrganizationalUnits'),
-                            new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALERT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANNOUNCEMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFORMATIONAL'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CHILD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('eventCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedAccounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedRegions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aggregatedOrganizationalUnits'),
+                        new \PHPStan\Type\Constant\ConstantStringType('additionalSummarizationDimensions'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('count'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                     ]),
                 ])),
             ]),
@@ -1325,29 +1235,27 @@ final class NotificationsClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('notificationHubs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('notificationHubRegion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastActivationTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('notificationHubRegion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastActivationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REGISTERING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REGISTERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

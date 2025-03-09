@@ -60,30 +60,28 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Policies'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultPolicy'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EBS_SNAPSHOT_MANAGEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IMAGE_MANAGEMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EVENT_BASED_POLICY'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PolicyType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultPolicy'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EBS_SNAPSHOT_MANAGEMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IMAGE_MANAGEMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EVENT_BASED_POLICY'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -142,227 +140,201 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('EVENT_BASED_POLICY'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INSTANCE'),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CLOUD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OUTPOST'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOCAL_ZONE'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OUTPOST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOCAL_ZONE'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CopyTags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagsToAdd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VariableTags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CreateRule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FastRestoreRule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CrossRegionCopyRules'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ShareRules'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeprecateRule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ArchiveRule'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CopyTags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TagsToAdd'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VariableTags'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CreateRule'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FastRestoreRule'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CrossRegionCopyRules'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ShareRules'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DeprecateRule'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ArchiveRule'),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Times'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CronExpression'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Scripts'),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Times'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CronExpression'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Scripts'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OUTPOST_LOCAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LOCAL_ZONE'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Stages'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionHandlerService'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionHandler'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ExecuteOperationOnScriptFailure'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ExecutionTimeout'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryCount'),
                                 ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CLOUD'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('OUTPOST_LOCAL'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LOCAL_ZONE'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HOURS'),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PRE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('POST'),
                                     ])),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SYSTEMS_MANAGER'),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Stages'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionHandlerService'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionHandler'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ExecuteOperationOnScriptFailure'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ExecutionTimeout'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryCount'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('PRE'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('POST'),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\Constant\ConstantStringType('AWS_SYSTEMS_MANAGER'),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetRegion'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Encrypted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CmkArn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CopyTags'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeprecateRule'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\BooleanType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                            ]),
-                                        ]),
-                                    ]),
                                 ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetRegion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Encrypted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CmkArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CopyTags'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DeprecateRule'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetAccounts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnshareInterval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnshareIntervalUnit'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('RetentionArchiveTier'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetAccounts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnshareInterval'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnshareIntervalUnit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
                                             new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                        ]),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('RetentionArchiveTier'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -375,14 +347,12 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ], [
                             new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -396,47 +366,41 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('DescriptionRegex'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantStringType('shareSnapshot'),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CrossRegionCopy'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CrossRegionCopy'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionConfiguration'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RetainRule'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Encrypted'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('CmkArn'),
-                                        ], [
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Interval'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
-                                            ]),
-                                        ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Encrypted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CmkArn'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Interval'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IntervalUnit'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DAYS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WEEKS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MONTHS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('YEARS'),
                                     ]),
-                                ])),
-                            ]),
+                                ]),
+                            ])),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('SIMPLIFIED'),
@@ -449,12 +413,10 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TargetRegion'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetRegion'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -463,17 +425,13 @@ final class DLMClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('ExcludeTags'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
                             ])),
                         ]),
                     ]),

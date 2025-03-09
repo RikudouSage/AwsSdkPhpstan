@@ -84,14 +84,12 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -177,9 +175,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -216,9 +212,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
@@ -239,9 +233,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -286,14 +278,12 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -379,9 +369,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -418,9 +406,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
@@ -441,9 +427,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -467,9 +451,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('HealthCheckIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -481,32 +463,28 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('Clusters'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterEndpoints'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterEndpoints'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Region'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -519,28 +497,26 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('ControlPanels'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DefaultControlPanel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoutingControlCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DefaultControlPanel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingControlCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -554,24 +530,22 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('RoutingControls'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoutingControlArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingControlArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -584,89 +558,81 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                 new \PHPStan\Type\Constant\ConstantStringType('SafetyRules'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ASSERTION'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GATING'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ASSERTION'),
-                        new \PHPStan\Type\Constant\ConstantStringType('GATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AssertedControls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SafetyRuleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AssertedControls'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RuleConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SafetyRuleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ATLEAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                            ]),
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ATLEAST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GatingControls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RuleConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SafetyRuleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetControls'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ControlPanelArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GatingControls'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RuleConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SafetyRuleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetControls'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ATLEAST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ATLEAST'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                            ]),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -767,9 +733,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('WaitPeriodMs'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -806,9 +770,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Inverted'),
@@ -829,9 +791,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ]),

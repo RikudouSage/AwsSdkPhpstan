@@ -34,42 +34,38 @@ final class SagemakerEdgeManagerClientReturnTypeExtension implements \PHPStan\Ty
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Deployments'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FailureHandlingPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureHandlingPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Definitions'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('Model'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_ON_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DO_NOTHING'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ModelHandle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3Url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Checksum'),
+                        new \PHPStan\Type\Constant\ConstantStringType('State'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('Model'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_ON_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DO_NOTHING'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ModelHandle'),
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Url'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Checksum'),
-                                new \PHPStan\Type\Constant\ConstantStringType('State'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantStringType('SHA1'),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNDEPLOY'),
-                                ]),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNDEPLOY'),
+                        ]),
+                    ])),
                 ])),
             ]),
         ]);

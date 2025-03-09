@@ -99,86 +99,82 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('channels'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authorized'),
+                    new \PHPStan\Type\Constant\ConstantStringType('containerFormat'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ingestEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('insecureIngest'),
+                    new \PHPStan\Type\Constant\ConstantStringType('latencyMode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('multitrackInputConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('playbackRestrictionPolicyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('playbackUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('preset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recordingConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('srt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FRAGMENTED_MP4'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('containerFormat'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ingestEndpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('insecureIngest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('latencyMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('multitrackInputConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('playbackRestrictionPolicyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('playbackUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('preset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordingConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('srt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maximumResolution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REQUIRE'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGHER_BANDWIDTH_DELIVERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONSTRAINED_BANDWIDTH_DELIVERY'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('passphrase'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FRAGMENTED_MP4'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maximumResolution'),
-                            new \PHPStan\Type\Constant\ConstantStringType('policy'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRE'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGHER_BANDWIDTH_DELIVERY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONSTRAINED_BANDWIDTH_DELIVERY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('passphrase'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_SD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_HD'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_SD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_HD'),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -190,29 +186,25 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('streamKeys'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -223,18 +215,16 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('viewerId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('viewerId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -342,12 +332,8 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -394,12 +380,10 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('SD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -425,10 +409,8 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                     ]),
@@ -597,12 +579,8 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -649,12 +627,10 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('SD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -680,10 +656,8 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
                         ])),
                         new \PHPStan\Type\IntegerType(),
                     ]),
@@ -876,47 +850,43 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('audioConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('videoConfigurations'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('channels'),
-                                new \PHPStan\Type\Constant\ConstantStringType('codec'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sampleRate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('track'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('channels'),
+                            new \PHPStan\Type\Constant\ConstantStringType('codec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sampleRate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('track'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('avcLevel'),
-                                new \PHPStan\Type\Constant\ConstantStringType('avcProfile'),
-                                new \PHPStan\Type\Constant\ConstantStringType('codec'),
-                                new \PHPStan\Type\Constant\ConstantStringType('encoder'),
-                                new \PHPStan\Type\Constant\ConstantStringType('level'),
-                                new \PHPStan\Type\Constant\ConstantStringType('profile'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetBitrate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetFramerate'),
-                                new \PHPStan\Type\Constant\ConstantStringType('track'),
-                                new \PHPStan\Type\Constant\ConstantStringType('videoHeight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('videoWidth'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('avcLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('avcProfile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('codec'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encoder'),
+                            new \PHPStan\Type\Constant\ConstantStringType('level'),
+                            new \PHPStan\Type\Constant\ConstantStringType('profile'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetBitrate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetFramerate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('track'),
+                            new \PHPStan\Type\Constant\ConstantStringType('videoHeight'),
+                            new \PHPStan\Type\Constant\ConstantStringType('videoWidth'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -951,12 +921,10 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('SD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL_HD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                             ])),
                         ]),
                         new \PHPStan\Type\UnionType([
@@ -982,28 +950,24 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('LOWEST_RESOLUTION'),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
                             ])),
                             new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1036,40 +1000,38 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('channels'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorized'),
-                        new \PHPStan\Type\Constant\ConstantStringType('insecureIngest'),
-                        new \PHPStan\Type\Constant\ConstantStringType('latencyMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('playbackRestrictionPolicyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('preset'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordingConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGHER_BANDWIDTH_DELIVERY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONSTRAINED_BANDWIDTH_DELIVERY'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_SD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_HD'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authorized'),
+                    new \PHPStan\Type\Constant\ConstantStringType('insecureIngest'),
+                    new \PHPStan\Type\Constant\ConstantStringType('latencyMode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('playbackRestrictionPolicyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('preset'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recordingConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NORMAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGHER_BANDWIDTH_DELIVERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONSTRAINED_BANDWIDTH_DELIVERY'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_SD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ADVANCED_HD'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1083,16 +1045,14 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('keyPairs'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1106,26 +1066,20 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('playbackRestrictionPolicies'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('allowedCountries'),
-                        new \PHPStan\Type\Constant\ConstantStringType('allowedOrigins'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enableStrictOriginEnforcement'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('allowedCountries'),
+                    new \PHPStan\Type\Constant\ConstantStringType('allowedOrigins'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enableStrictOriginEnforcement'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1138,32 +1092,30 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('recordingConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('destinationConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('destinationConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucketName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1176,16 +1128,14 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('streamKeys'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1198,18 +1148,16 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('streamSessions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hasErrorEvent'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('streamId'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hasErrorEvent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('streamId'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1222,29 +1170,27 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('streams'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('health'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('streamId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('viewerCount'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARVING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('health'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    new \PHPStan\Type\Constant\ConstantStringType('streamId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('viewerCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARVING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1380,12 +1326,8 @@ final class IVSClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),

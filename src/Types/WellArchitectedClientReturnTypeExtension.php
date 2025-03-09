@@ -390,79 +390,69 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\UnionType([
@@ -499,18 +489,69 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('Base64String'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensesAppliedCount'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]), new \PHPStan\Type\IntegerType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pillars'),
                         new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensesAppliedCount'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Questions'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            ]), new \PHPStan\Type\IntegerType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Risk'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BestPractices'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ])),
+                        ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
                             new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
@@ -518,69 +559,8 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                         ]), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Pillars'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Questions'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                        ]), new \PHPStan\Type\IntegerType()),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Risk'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('BestPractices'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                                ]),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                ]), new \PHPStan\Type\IntegerType()),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -692,46 +672,40 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SelectedPillars'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SelectedQuestionIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SelectedQuestionIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -744,14 +718,12 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                     ]), new \PHPStan\Type\IntegerType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -805,12 +777,23 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('PillarDifferences'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DifferenceStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionDifferences'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NEW'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
                             new \PHPStan\Type\Constant\ConstantStringType('DifferenceStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionDifferences'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -819,22 +802,7 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                                 new \PHPStan\Type\Constant\ConstantStringType('NEW'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DifferenceStatus'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('UPDATED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NEW'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                                    ]),
-                                ]),
-                            ])),
-                        ]),
+                        ])),
                     ])),
                 ]),
             ]),
@@ -896,15 +864,9 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('PREPRODUCTION'),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -926,12 +888,8 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                         ]), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -944,23 +902,17 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                                 new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
-                                ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
+                                new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
                             ])),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -1014,36 +966,30 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SelectedChoiceIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectedChoiceIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1067,32 +1013,28 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1120,9 +1062,7 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('ShareInvitationId'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -1175,79 +1115,69 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\UnionType([
@@ -1297,21 +1227,19 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionCounts'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionCounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
+                        ]), new \PHPStan\Type\IntegerType()),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -1369,15 +1297,9 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('PREPRODUCTION'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1399,12 +1321,8 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                     ]), new \PHPStan\Type\IntegerType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -1417,23 +1335,17 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -1495,102 +1407,75 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Choices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SelectedChoices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceAnswerSummaries'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsApplicable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Risk'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JiraConfiguration'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Choices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SelectedChoices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceAnswerSummaries'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsApplicable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Risk'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JiraConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                ]),
-                            ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
-                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
                             new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
@@ -1599,17 +1484,32 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
                             new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITIZED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NON_PRIORITIZED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('JiraIssueUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastSyncedTime'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIORITIZED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NON_PRIORITIZED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JiraIssueUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSyncedTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1623,47 +1523,45 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('CheckDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Provider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FlaggedResources'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRUSTED_ADVISOR'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSUME_ROLE_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PREMIUM_SUPPORT_REQUIRED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Provider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlaggedResources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('TRUSTED_ADVISOR'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSUME_ROLE_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PREMIUM_SUPPORT_REQUIRED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1676,44 +1574,42 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('CheckSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Provider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountSummary'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('TRUSTED_ADVISOR'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
-                        ]), new \PHPStan\Type\IntegerType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Provider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountSummary'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('TRUSTED_ADVISOR'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OKAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FETCH_FAILED'),
+                    ]), new \PHPStan\Type\IntegerType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1734,45 +1630,41 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Risk'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Risk'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlanUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlans'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JiraConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
                         new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlanUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlans'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JiraConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JiraIssueUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastSyncedTime'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlanUrl'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('JiraIssueUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LastSyncedTime'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1790,54 +1682,50 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]), new \PHPStan\Type\IntegerType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]), new \PHPStan\Type\IntegerType()),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]), new \PHPStan\Type\IntegerType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1850,27 +1738,25 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('LensShareSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1883,39 +1769,37 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('LensSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_OFFICIAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_SHARED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_SELF'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_OFFICIAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_SHARED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_SELF'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPRECATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1931,67 +1815,61 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MilestoneNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MilestoneName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RecordedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadSummary'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MilestoneNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MilestoneName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RecordedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
                     ], [
-                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImprovementStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RISK_ACKNOWLEDGED'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RISK_ACKNOWLEDGED'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2005,34 +1883,32 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NotificationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensUpgradeSummary'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LENS_VERSION_UPGRADED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LENS_VERSION_DEPRECATED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensUpgradeSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CurrentLensVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LatestLensVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LENS_VERSION_UPGRADED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LENS_VERSION_DEPRECATED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LensAlias'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CurrentLensVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LatestLensVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2046,27 +1922,25 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NotificationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrentProfileVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LatestProfileVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PROFILE_ANSWERS_UPDATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROFILE_DELETED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentProfileVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LatestProfileVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE_ANSWERS_UPDATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE_DELETED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2079,27 +1953,25 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ProfileShareSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2112,24 +1984,22 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ProfileSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2146,98 +2016,74 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Choices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SelectedChoices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceAnswerSummaries'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsApplicable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnswerStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('QuestionType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Choices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SelectedChoices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceAnswerSummaries'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsApplicable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnswerStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('QuestionType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                ]),
-                            ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                         ])),
-                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
@@ -2246,10 +2092,22 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
                             new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIORITIZED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NON_PRIORITIZED'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIORITIZED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NON_PRIORITIZED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2263,28 +2121,24 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ReviewTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LENS_NOT_CURRENT'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdateStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CURRENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LENS_NOT_CURRENT'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2298,44 +2152,42 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('ShareInvitationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareInvitationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TemplateArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTRIBUTOR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LENS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareInvitationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LensArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TemplateArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('READONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONTRIBUTOR'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LENS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TEMPLATE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2360,27 +2212,25 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2395,32 +2245,30 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PermissionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('READONLY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTRIBUTOR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShareId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SharedWith'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PermissionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('READONLY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONTRIBUTOR'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REVOKED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ASSOCIATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2433,58 +2281,52 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('WorkloadSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Owner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WorkloadName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Lenses'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImprovementStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Profiles'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]), new \PHPStan\Type\IntegerType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RISK_ACKNOWLEDGED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]), new \PHPStan\Type\IntegerType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_STARTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RISK_ACKNOWLEDGED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                        ]), new \PHPStan\Type\IntegerType()),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                    ]), new \PHPStan\Type\IntegerType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2538,79 +2380,69 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\UnionType([
@@ -2685,46 +2517,40 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RiskCounts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PrioritizedRiskCounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                        ]), new \PHPStan\Type\IntegerType()),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SelectedPillars'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SelectedQuestionIds'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SelectedQuestionIds'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2737,14 +2563,12 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                     ]), new \PHPStan\Type\IntegerType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -2779,36 +2603,30 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SelectedChoiceIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SelectedChoiceIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MinSelectedChoices'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxSelectedChoices'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceTitle'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ChoiceDescription'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2839,9 +2657,7 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantStringType('ShareInvitationId'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
@@ -2894,79 +2710,69 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HelpfulResource'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImprovementPlan'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalResources'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            ]),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HELPFUL_RESOURCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IMPROVEMENT_PLAN'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DisplayText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Url'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChoiceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SELECTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UNSELECTED'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('OUT_OF_SCOPE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUSINESS_PRIORITIES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARCHITECTURE_CONSTRAINTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\UnionType([
@@ -3016,21 +2822,19 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
                         new \PHPStan\Type\Constant\ConstantStringType('UNSHARED'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Notes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QuestionCounts'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
-                            ]), new \PHPStan\Type\IntegerType()),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PillarName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Notes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QuestionCounts'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANSWERED'),
+                        ]), new \PHPStan\Type\IntegerType()),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -3119,15 +2923,9 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('PREPRODUCTION'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -3149,12 +2947,8 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                     ]), new \PHPStan\Type\IntegerType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -3167,23 +2961,17 @@ final class WellArchitectedClientReturnTypeExtension implements \PHPStan\Type\Dy
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
-                                new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('WORKLOAD_METADATA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APP_REGISTRY'),
                         ])),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ProfileVersion'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('UNANSWERED'),

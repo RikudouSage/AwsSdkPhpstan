@@ -184,27 +184,60 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentRuns'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assessmentTemplateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                        new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userAttributesForFindings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('completedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stateChangedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataCollected'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stateChanges'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notifications'),
-                        new \PHPStan\Type\Constant\ConstantStringType('findingCounts'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assessmentTemplateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userAttributesForFindings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('completedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stateChangedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataCollected'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stateChanges'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notifications'),
+                    new \PHPStan\Type\Constant\ConstantStringType('findingCounts'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_DATA_COLLECTION_PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_DATA_COLLECTION_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COLLECTING_DATA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOP_DATA_COLLECTION_PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DATA_COLLECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_EVALUATING_RULES_PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EVALUATING_RULES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('stateChangedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('state'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
                             new \PHPStan\Type\Constant\ConstantStringType('START_DATA_COLLECTION_PENDING'),
@@ -220,83 +253,40 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
                             new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
                         ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('date'),
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('error'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('snsPublishStatusCode'),
+                    ], [
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STATE_CHANGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FINDING_REPORTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('stateChangedAt'),
-                                new \PHPStan\Type\Constant\ConstantStringType('state'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('START_DATA_COLLECTION_PENDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('START_DATA_COLLECTION_IN_PROGRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COLLECTING_DATA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STOP_DATA_COLLECTION_PENDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DATA_COLLECTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('START_EVALUATING_RULES_PENDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EVALUATING_RULES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CANCELED'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('date'),
-                                new \PHPStan\Type\Constant\ConstantStringType('event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('error'),
-                                new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('snsPublishStatusCode'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STARTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_COMPLETED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STATE_CHANGED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FINDING_REPORTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TOPIC_DOES_NOT_EXIST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Medium'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Informational'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Undefined'),
-                        ]), new \PHPStan\Type\IntegerType()),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TOPIC_DOES_NOT_EXIST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('High'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Informational'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Undefined'),
+                    ]), new \PHPStan\Type\IntegerType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -322,20 +312,18 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentTargets'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceGroupArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceGroupArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -361,38 +349,32 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentTemplates'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assessmentTargetArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userAttributesForFindings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastAssessmentRunArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assessmentRunCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assessmentTargetArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userAttributesForFindings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastAssessmentRunArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assessmentRunCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -444,26 +426,22 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('INSTANCE_ID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RULES_PACKAGE_ARN'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSTANCE_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RULES_PACKAGE_ARN'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -490,146 +468,128 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('findings'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('service'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assetAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('numericSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('confidence'),
+                    new \PHPStan\Type\Constant\ConstantStringType('indicatorOfCompromise'),
+                    new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userAttributes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
                         new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('service'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assetAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('numericSeverity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('confidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('indicatorOfCompromise'),
-                        new \PHPStan\Type\Constant\ConstantStringType('attributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userAttributes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assessmentRunArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArn'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('ec2-instance'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('amiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hostname'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4Addresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('privateDnsName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('publicDnsName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('publicIp'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv6Addresses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('privateDnsName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Low'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Medium'),
+                        new \PHPStan\Type\Constant\ConstantStringType('High'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Informational'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Undefined'),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assessmentRunArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArn'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('ec2-instance'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('schemaVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('agentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('amiId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hostname'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv4Addresses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaces'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('privateDnsName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('privateIpAddresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('publicDnsName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('publicIp'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ipv6Addresses'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateDnsName'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateIpAddress'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('groupId'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Low'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Medium'),
-                            new \PHPStan\Type\Constant\ConstantStringType('High'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Informational'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Undefined'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -655,24 +615,20 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('resourceGroups'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -698,20 +654,18 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('rulesPackages'),
                 new \PHPStan\Type\Constant\ConstantStringType('failedItems'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provider'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provider'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('failureCode'),
@@ -758,39 +712,33 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('WORK_IN_PROGRESS'),
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scopes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scopes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('attributes'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('INSTANCE_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RULES_PACKAGE_ARN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INSTANCE_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RULES_PACKAGE_ARN'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -802,16 +750,14 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('telemetryMetadata'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messageType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('count'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSize'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messageType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('count'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataSize'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -823,45 +769,41 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentRunAgents'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('agentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assessmentRunArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentHealth'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentHealthCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentHealthDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('telemetryMetadata'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assessmentRunArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentHealth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentHealthCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentHealthDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('telemetryMetadata'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SHUTDOWN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('messageType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('count'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSize'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SHUTDOWN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('messageType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('count'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dataSize'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -874,9 +816,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentRunArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -888,9 +828,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentTargetArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -902,9 +840,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('assessmentTemplateArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -916,30 +852,26 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('subscriptions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('topicArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventSubscriptions'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('topicArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventSubscriptions'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('event'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subscribedAt'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('event'),
-                                new \PHPStan\Type\Constant\ConstantStringType('subscribedAt'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STARTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_COMPLETED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STATE_CHANGED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FINDING_REPORTED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STARTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ASSESSMENT_RUN_STATE_CHANGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FINDING_REPORTED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -952,9 +884,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('exclusionArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -966,9 +896,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('findingArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -980,9 +908,7 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('rulesPackageArns'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -993,14 +919,12 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1012,30 +936,28 @@ final class InspectorClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('agentPreviews'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('hostname'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentHealth'),
-                        new \PHPStan\Type\Constant\ConstantStringType('agentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('operatingSystem'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kernelVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipv4Address'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('hostname'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentHealth'),
+                    new \PHPStan\Type\Constant\ConstantStringType('agentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('operatingSystem'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kernelVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4Address'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

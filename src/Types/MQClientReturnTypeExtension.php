@@ -183,14 +183,12 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('PendingDataReplicationMetadata'),
                 new \PHPStan\Type\Constant\ConstantStringType('PendingDataReplicationMode'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionRequiredCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActionRequiredInfo'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ActionRequiredCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActionRequiredInfo'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('SIMPLE'),
@@ -199,18 +197,14 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConsoleURL'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsoleURL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpAddress'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -234,14 +228,12 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Revision'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Revision'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
@@ -282,9 +274,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchMatching'),
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchSubtree'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -349,9 +339,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchMatching'),
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchSubtree'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -362,33 +350,25 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('EBS'),
                     new \PHPStan\Type\Constant\ConstantStringType('EFS'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PendingChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PendingChange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DataReplicationCounterpart'),
@@ -435,23 +415,19 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('MaxResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineVersions'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersions'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
@@ -466,42 +442,34 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('MaxResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostInstanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SupportedDeploymentModes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SupportedEngineVersions'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZones'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HostInstanceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedDeploymentModes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedEngineVersions'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EBS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFS'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SINGLE_INSTANCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_STANDBY_MULTI_AZ'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CLUSTER_MULTI_AZ'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EBS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE_INSTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_STANDBY_MULTI_AZ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLUSTER_MULTI_AZ'),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
@@ -579,18 +547,14 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsoleAccess'),
                     new \PHPStan\Type\Constant\ConstantStringType('Groups'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingChange'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CREATE'),
                         new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
@@ -609,41 +573,39 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('BrokerSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('BrokerArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BrokerId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BrokerName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BrokerState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentMode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HostInstanceType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETION_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REBOOT_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CRITICAL_ACTION_REQUIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REPLICA'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SINGLE_INSTANCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_STANDBY_MULTI_AZ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLUSTER_MULTI_AZ'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('BrokerArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BrokerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BrokerName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BrokerState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentMode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HostInstanceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATION_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETION_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REBOOT_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL_ACTION_REQUIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REPLICA'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE_INSTANCE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE_STANDBY_MULTI_AZ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLUSTER_MULTI_AZ'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -661,16 +623,14 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Revision'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Revision'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -683,44 +643,42 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\Constant\ConstantStringType('MaxResults'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuthenticationStrategy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LatestRevision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SIMPLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LDAP'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AuthenticationStrategy'),
                         new \PHPStan\Type\Constant\ConstantStringType('Created'),
                         new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EngineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LatestRevision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Revision'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SIMPLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LDAP'),
-                        ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVEMQ'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RABBITMQ'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Revision'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
@@ -749,18 +707,16 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PendingChange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Username'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PendingChange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Username'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -827,9 +783,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchMatching'),
                     new \PHPStan\Type\Constant\ConstantStringType('UserSearchSubtree'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -864,9 +818,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('DataReplicationCounterpart'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataReplicationRole'),
@@ -928,19 +880,17 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
                     new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ElementName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DISALLOWED_ELEMENT_REMOVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DISALLOWED_ATTRIBUTE_REMOVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_ATTRIBUTE_VALUE_REMOVED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AttributeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ElementName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DISALLOWED_ELEMENT_REMOVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISALLOWED_ATTRIBUTE_REMOVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_ATTRIBUTE_VALUE_REMOVED'),
                     ]),
                 ])),
             ]),

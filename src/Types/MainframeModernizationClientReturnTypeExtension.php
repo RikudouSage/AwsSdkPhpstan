@@ -223,21 +223,15 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                     ]),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\IntegerType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('logType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('logGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -256,9 +250,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -449,18 +441,16 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                         new \PHPStan\Type\Constant\ConstantStringType('primaryKey'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordFormat'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('allowDuplicates'),
-                                new \PHPStan\Type\Constant\ConstantStringType('length'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('offset'),
-                            ], [
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('allowDuplicates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('length'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('offset'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
@@ -609,9 +599,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\BooleanType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Creating'),
                     new \PHPStan\Type\Constant\ConstantStringType('Available'),
@@ -621,30 +609,26 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                     new \PHPStan\Type\Constant\ConstantStringType('UnHealthy'),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('efs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fsx'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('efs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fsx'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fileSystemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileSystemId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileSystemId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fileSystemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -667,22 +651,20 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('applicationVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -695,57 +677,55 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('applications'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('engineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Deploying'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deployed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('microfocus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bluage'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Starting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deleting From Environment'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('engineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Deploying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Deployed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('microfocus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bluage'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Starting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Deleting From Environment'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -759,23 +739,21 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('batchJobDefinitions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('fileBatchJobDefinition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('scriptBatchJobDefinition'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('fileBatchJobDefinition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('scriptBatchJobDefinition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('folderPath'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('folderPath'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -789,94 +767,92 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('batchJobExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('batchJobIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('executionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('returnCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('batchJobIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('executionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jobName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('jobType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('returnCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fileBatchJobIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('restartBatchJobIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3BatchJobIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('scriptBatchJobIdentifier'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('fileBatchJobIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('restartBatchJobIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3BatchJobIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('scriptBatchJobIdentifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fileName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('folderPath'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('executionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('jobStepRestartMarker'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('fromProcStep'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fromStep'),
+                                new \PHPStan\Type\Constant\ConstantStringType('toProcStep'),
+                                new \PHPStan\Type\Constant\ConstantStringType('toStep'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                            new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('fileName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('folderPath'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('executionId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('jobStepRestartMarker'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fromProcStep'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fromStep'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('toProcStep'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('toStep'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('fileName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JES2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('JES3'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Submitting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Holding'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Dispatching'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Purged'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded With Warning'),
-                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JES2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('JES3'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Submitting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Holding'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Dispatching'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Cancelled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Purged'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded With Warning'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -889,22 +865,20 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('batchJobSteps'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('procStepName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('procStepNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepCondCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepRestartable'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('procStepName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('procStepNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepCondCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepRestartable'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -916,35 +890,33 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('dataSetImportTasks'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('summary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Running'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('inProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('total'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('summary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('total'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -957,22 +929,20 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('dataSets'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSetName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSetOrg'),
-                        new \PHPStan\Type\Constant\ConstantStringType('format'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastReferencedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataSetName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataSetOrg'),
+                    new \PHPStan\Type\Constant\ConstantStringType('format'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastReferencedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedTime'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -985,29 +955,27 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('deployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Deploying'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Updating Deployment'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Deploying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Updating Deployment'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1020,14 +988,12 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('engineVersions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('engineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('engineVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('engineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('engineVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1040,40 +1006,38 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantStringType('environments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('engineType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('engineVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('environmentArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('networkType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('microfocus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bluage'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dual'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Available'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Updating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UnHealthy'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('engineType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('engineVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environmentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('networkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('microfocus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bluage'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Updating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UnHealthy'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),

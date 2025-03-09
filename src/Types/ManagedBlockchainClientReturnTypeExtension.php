@@ -465,19 +465,15 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                         new \PHPStan\Type\Constant\ConstantStringType('Invitations'),
                         new \PHPStan\Type\Constant\ConstantStringType('Removals'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Principal'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Principal'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -507,31 +503,29 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Accessors'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('BILLING_TOKEN'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_GOERLI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET_AND_GOERLI'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POLYGON_MAINNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('POLYGON_MUMBAI'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('BILLING_TOKEN'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_GOERLI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM_MAINNET_AND_GOERLI'),
+                        new \PHPStan\Type\Constant\ConstantStringType('POLYGON_MAINNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('POLYGON_MUMBAI'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -545,106 +539,24 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Invitations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('InvitationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NetworkSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCEPTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Framework'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FrameworkVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('HYPERLEDGER_FABRIC'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('InvitationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCEPTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
                     ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listMembers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Members'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsOwned'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_KEY'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listNetworks(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Networks'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -673,6 +585,82 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listMembers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Members'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsOwned'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_KEY'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listNetworks(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Networks'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Framework'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FrameworkVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HYPERLEDGER_FABRIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETHEREUM'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -685,32 +673,30 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Nodes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_KEY'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNHEALTHY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACCESSIBLE_ENCRYPTION_KEY'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -723,19 +709,17 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('ProposalVotes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Vote'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MemberName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('YES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NO'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Vote'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MemberName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MemberId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('YES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NO'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -748,32 +732,30 @@ final class ManagedBlockchainClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('Proposals'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ProposalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProposedByMemberId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProposedByMemberName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTION_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProposalId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProposedByMemberId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProposedByMemberName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REJECTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTION_FAILED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

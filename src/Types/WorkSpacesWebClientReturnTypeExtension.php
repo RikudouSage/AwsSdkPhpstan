@@ -450,9 +450,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('customerManagedKey'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -477,9 +475,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('inlineRedactionConfiguration'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -492,47 +488,37 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('inlineRedactionPatterns'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('builtInPatternId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('confidenceLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enforcedUrls'),
+                            new \PHPStan\Type\Constant\ConstantStringType('exemptUrls'),
+                            new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolder'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('builtInPatternId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('confidenceLevel'),
-                                new \PHPStan\Type\Constant\ConstantStringType('customPattern'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enforcedUrls'),
-                                new \PHPStan\Type\Constant\ConstantStringType('exemptUrls'),
-                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keywordRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('keywordRegex'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CustomText'),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomText'),
                             ]),
                         ])),
                     ]),
@@ -584,22 +570,18 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ipRules'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipRange'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipRange'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -618,16 +600,10 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -723,9 +699,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('username'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -749,9 +723,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('associatedPortalArns'),
                     new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -798,9 +770,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('kinesisStreamArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -830,34 +800,28 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowlist'),
                         new \PHPStan\Type\Constant\ConstantStringType('blocklist'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('path'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('path'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -890,13 +854,11 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('visualMode'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('size4096X2160'),
@@ -933,12 +895,10 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('browserSettings'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('browserSettingsArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('browserSettingsArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -951,18 +911,16 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('dataProtectionSettings'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataProtectionSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataProtectionSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -975,22 +933,20 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('identityProviders'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('identityProviderArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identityProviderName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identityProviderType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SAML'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Google'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LoginWithAmazon'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SignInWithApple'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OIDC'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('identityProviderArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identityProviderName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identityProviderType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAML'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Facebook'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Google'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LoginWithAmazon'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SignInWithApple'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OIDC'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1004,18 +960,16 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('ipAccessSettings'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipAccessSettingsArn'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAccessSettingsArn'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1028,14 +982,12 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('networkSettings'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('networkSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('networkSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1049,55 +1001,53 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('portals'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('browserSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('browserType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataProtectionSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ipAccessSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('maxConcurrentSessions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('networkSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('portalArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('portalEndpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('portalStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rendererType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Standard'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IAM_Identity_Center'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('Chrome'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('standard.regular'),
-                            new \PHPStan\Type\Constant\ConstantStringType('standard.large'),
-                            new \PHPStan\Type\Constant\ConstantStringType('standard.xlarge'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Incomplete'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('AppStream'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('browserSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('browserType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataProtectionSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAccessSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('maxConcurrentSessions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('networkSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('portalArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('portalEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('portalStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('rendererType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Standard'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAM_Identity_Center'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('Chrome'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('standard.regular'),
+                        new \PHPStan\Type\Constant\ConstantStringType('standard.large'),
+                        new \PHPStan\Type\Constant\ConstantStringType('standard.xlarge'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Incomplete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('AppStream'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1110,25 +1060,23 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('sessions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('portalArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('username'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Terminated'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('portalArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('username'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Terminated'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1139,14 +1087,12 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1159,20 +1105,18 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('issuer'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notValidAfter'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notValidBefore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subject'),
-                        new \PHPStan\Type\Constant\ConstantStringType('thumbprint'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('issuer'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notValidAfter'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notValidBefore'),
+                    new \PHPStan\Type\Constant\ConstantStringType('subject'),
+                    new \PHPStan\Type\Constant\ConstantStringType('thumbprint'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1187,12 +1131,10 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('trustStores'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('trustStoreArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1205,14 +1147,12 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('kinesisStreamArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('kinesisStreamArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1225,109 +1165,101 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                 new \PHPStan\Type\Constant\ConstantStringType('userSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('cookieSynchronizationConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('copyAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deepLinkAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('disconnectTimeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('downloadAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('idleDisconnectTimeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('pasteAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('printAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('toolbarConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('uploadAllowed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('cookieSynchronizationConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('copyAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deepLinkAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('disconnectTimeoutInMinutes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('downloadAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('idleDisconnectTimeoutInMinutes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('pasteAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('printAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('toolbarConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('uploadAllowed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('allowlist'),
+                        new \PHPStan\Type\Constant\ConstantStringType('blocklist'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('allowlist'),
-                            new \PHPStan\Type\Constant\ConstantStringType('blocklist'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('hiddenToolbarItems'),
-                            new \PHPStan\Type\Constant\ConstantStringType('maxDisplayResolution'),
-                            new \PHPStan\Type\Constant\ConstantStringType('toolbarType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('visualMode'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('size4096X2160'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size3840X2160'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size3440X1440'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size2560X1440'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size1920X1080'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size1280X720'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size1024X768'),
-                                new \PHPStan\Type\Constant\ConstantStringType('size800X600'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Floating'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Docked'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Dark'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Light'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('hiddenToolbarItems'),
+                        new \PHPStan\Type\Constant\ConstantStringType('maxDisplayResolution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('toolbarType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('visualMode'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('size4096X2160'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size3840X2160'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size3440X1440'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size2560X1440'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size1920X1080'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size1280X720'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size1024X768'),
+                            new \PHPStan\Type\Constant\ConstantStringType('size800X600'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Floating'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Docked'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Dark'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Light'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1358,9 +1290,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('customerManagedKey'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1385,9 +1315,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('inlineRedactionConfiguration'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1400,47 +1328,37 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('inlineRedactionPatterns'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('builtInPatternId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('confidenceLevel'),
+                            new \PHPStan\Type\Constant\ConstantStringType('customPattern'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enforcedUrls'),
+                            new \PHPStan\Type\Constant\ConstantStringType('exemptUrls'),
+                            new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolder'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('builtInPatternId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('confidenceLevel'),
-                                new \PHPStan\Type\Constant\ConstantStringType('customPattern'),
-                                new \PHPStan\Type\Constant\ConstantStringType('enforcedUrls'),
-                                new \PHPStan\Type\Constant\ConstantStringType('exemptUrls'),
-                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolder'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keywordRegex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternDescription'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('keywordRegex'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternDescription'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('patternRegex'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderText'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CustomText'),
-                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderText'),
+                                new \PHPStan\Type\Constant\ConstantStringType('redactionPlaceHolderType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomText'),
                             ]),
                         ])),
                     ]),
@@ -1492,22 +1410,18 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ipRules'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ipRange'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipRange'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -1526,16 +1440,10 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('subnetIds'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1625,9 +1533,7 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('kinesisStreamArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('userAccessLoggingSettingsArn'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -1657,34 +1563,28 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('userSettingsArn'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('allowlist'),
                         new \PHPStan\Type\Constant\ConstantStringType('blocklist'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('path'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('domain'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('path'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domain'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1717,13 +1617,11 @@ final class WorkSpacesWebClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('visualMode'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Windows'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('Windows'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DualMonitor'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FullScreen'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Webcam'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Microphone'),
                         ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('size4096X2160'),

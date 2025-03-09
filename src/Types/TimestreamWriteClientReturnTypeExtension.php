@@ -155,21 +155,19 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CompositePartitionKey'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
                             ]),
                         ])),
                     ]),
@@ -291,75 +289,67 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                                 new \PHPStan\Type\Constant\ConstantStringType('MICROSECONDS'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NANOSECONDS'),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DestinationColumn'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DestinationColumn'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('TargetMultiMeasureName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeMappings'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('TargetMultiMeasureAttributeName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                                        ]),
-                                    ]),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MeasureName'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TargetMeasureName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetMultiMeasureAttributeName'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeMappings'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
                                         new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MULTI'),
                                     ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TargetMultiMeasureAttributeName'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                                            ]),
-                                        ]),
-                                    ])),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MeasureName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetMeasureName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeMappings'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MULTI'),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SourceColumn'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TargetMultiMeasureAttributeName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                                    ]),
+                                ])),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -419,14 +409,12 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CachePeriodInMinutes'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CachePeriodInMinutes'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -492,21 +480,19 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CompositePartitionKey'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
                             ]),
                         ])),
                     ]),
@@ -522,31 +508,29 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('BatchLoadTasks'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResumableUntil'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PROGRESS_STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_RESUME'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResumableUntil'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROGRESS_STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_RESUME'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -558,22 +542,20 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Databases'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -586,80 +568,76 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('Tables'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TableStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RetentionProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreWriteProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Schema'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORING'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TableStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RetentionProperties'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreWriteProperties'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Schema'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MemoryStoreRetentionPeriodInHours'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreRetentionPeriodInDays'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESTORING'),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EnableMagneticStoreWrites'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreRejectedDataLocation'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MemoryStoreRetentionPeriodInHours'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreRetentionPeriodInDays'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EnableMagneticStoreWrites'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MagneticStoreRejectedDataLocation'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3Configuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EncryptionOption'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BucketName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ObjectKeyPrefix'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionOption'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_S3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSE_KMS'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CompositePartitionKey'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CompositePartitionKey'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
-                                    ]),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
+                            ]),
+                        ])),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -672,14 +650,12 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -787,21 +763,19 @@ final class TimestreamWriteClientReturnTypeExtension implements \PHPStan\Type\Dy
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CompositePartitionKey'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EnforcementInRecord'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DIMENSION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEASURE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OPTIONAL'),
                             ]),
                         ])),
                     ]),

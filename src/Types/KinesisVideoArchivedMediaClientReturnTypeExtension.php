@@ -77,19 +77,17 @@ final class KinesisVideoArchivedMediaClientReturnTypeExtension implements \PHPSt
                 new \PHPStan\Type\Constant\ConstantStringType('Images'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TimeStamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageContent'),
-                    ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NO_MEDIA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIA_ERROR'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TimeStamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImageContent'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NO_MEDIA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIA_ERROR'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -118,20 +116,18 @@ final class KinesisVideoArchivedMediaClientReturnTypeExtension implements \PHPSt
                 new \PHPStan\Type\Constant\ConstantStringType('Fragments'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FragmentNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FragmentSizeInBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProducerTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServerTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FragmentLengthInMilliseconds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FragmentNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FragmentSizeInBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProducerTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServerTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FragmentLengthInMilliseconds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

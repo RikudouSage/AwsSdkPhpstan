@@ -84,30 +84,28 @@ final class SupportAppClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('slackChannelConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notifyOnAddCorrespondenceToCase'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notifyOnCaseSeverity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notifyOnCreateOrReopenCase'),
-                        new \PHPStan\Type\Constant\ConstantStringType('notifyOnResolveCase'),
-                        new \PHPStan\Type\Constant\ConstantStringType('teamId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('none'),
-                            new \PHPStan\Type\Constant\ConstantStringType('all'),
-                            new \PHPStan\Type\Constant\ConstantStringType('high'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelRoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notifyOnAddCorrespondenceToCase'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notifyOnCaseSeverity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notifyOnCreateOrReopenCase'),
+                    new \PHPStan\Type\Constant\ConstantStringType('notifyOnResolveCase'),
+                    new \PHPStan\Type\Constant\ConstantStringType('teamId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('none'),
+                        new \PHPStan\Type\Constant\ConstantStringType('all'),
+                        new \PHPStan\Type\Constant\ConstantStringType('high'),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -120,16 +118,14 @@ final class SupportAppClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('slackWorkspaceConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('allowOrganizationMemberAccount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('teamId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('teamName'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('allowOrganizationMemberAccount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('teamId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('teamName'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

@@ -80,44 +80,42 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('userAccessResultsList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('app'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tenantDisplayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resultStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('email'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userFullName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userFirstName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userLastName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskError'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('app'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tenantDisplayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resultStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('email'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userFullName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userFirstName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userLastName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
             ]),
@@ -523,33 +521,31 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('appAuthorizationSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('appAuthorizationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('appBundleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('app'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tenant'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('appAuthorizationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('appBundleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('app'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tenant'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tenantIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tenantDisplayName'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('tenantIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tenantDisplayName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PendingConnect'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Connected'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConnectionValidationFailed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TokenAutoRotationFailed'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PendingConnect'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Connected'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionValidationFailed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TokenAutoRotationFailed'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -562,12 +558,10 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('appBundleSummaryList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -580,12 +574,10 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('ingestionDestinations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -598,20 +590,18 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('ingestions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('app'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('state'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('disabled'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('app'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('state'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabled'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -624,14 +614,12 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -648,23 +636,21 @@ final class AppFabricClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('userAccessTasksList'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('app'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('app'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tenantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('taskId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
             ]),

@@ -58,38 +58,36 @@ final class LexRuntimeServiceClientReturnTypeExtension implements \PHPStan\Type\
                 new \PHPStan\Type\Constant\ConstantStringType('dialogAction'),
                 new \PHPStan\Type\Constant\ConstantStringType('activeContexts'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('checkpointLabel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('slots'),
-                        new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dialogActionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fulfillmentState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('slotToElicit'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Denied'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ElicitIntent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ConfirmIntent'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ElicitSlot'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Close'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Delegate'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('intentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('checkpointLabel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('slots'),
+                    new \PHPStan\Type\Constant\ConstantStringType('confirmationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dialogActionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fulfillmentState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('slotToElicit'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Confirmed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Denied'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ElicitIntent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConfirmIntent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ElicitSlot'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Close'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Delegate'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Fulfilled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ReadyForFulfillment'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
@@ -125,22 +123,20 @@ final class LexRuntimeServiceClientReturnTypeExtension implements \PHPStan\Type\
                         new \PHPStan\Type\Constant\ConstantStringType('Composite'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -230,20 +226,18 @@ final class LexRuntimeServiceClientReturnTypeExtension implements \PHPStan\Type\
                 ], [
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('intentName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nluIntentConfidence'),
+                    new \PHPStan\Type\Constant\ConstantStringType('slots'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intentName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nluIntentConfidence'),
-                        new \PHPStan\Type\Constant\ConstantStringType('slots'),
+                        new \PHPStan\Type\Constant\ConstantStringType('score'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('score'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\FloatType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -277,48 +271,42 @@ final class LexRuntimeServiceClientReturnTypeExtension implements \PHPStan\Type\
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantStringType('application/vnd.amazonaws.card.generic'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
-                            new \PHPStan\Type\Constant\ConstantStringType('subTitle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('attachmentLinkUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('buttons'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subTitle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attachmentLinkUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imageUrl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buttons'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
+                        ])),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timeToLive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('timeToLiveInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('turnsToLive'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);

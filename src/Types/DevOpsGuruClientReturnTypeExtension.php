@@ -191,150 +191,132 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
                         new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Stat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Period'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Period'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p99'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p90'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p50'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                                ], [
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\FloatType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p99'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p90'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p50'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                                        ], [
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
                                 ]),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Limit'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                                    ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Filter'),
                                         ], [
+                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Limit'),
                                             ], [
-                                                new \PHPStan\Type\FloatType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                new \PHPStan\Type\IntegerType(),
                                             ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                        new \PHPStan\Type\IntegerType(),
-                                                    ]),
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                                ]),
-                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                         ]),
                                     ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ])),
-                            ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -345,20 +327,14 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\FloatType(),
@@ -371,14 +347,12 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -425,150 +399,132 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
                         new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Stat'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Period'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Period'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p99'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p90'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p50'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                                ], [
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\FloatType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p99'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p90'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('p50'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                                        ], [
-                                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
                                 ]),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
-                                new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Limit'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                                     ], [
-                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                                    ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Filter'),
                                         ], [
+                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Limit'),
                                             ], [
-                                                new \PHPStan\Type\FloatType(),
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                new \PHPStan\Type\IntegerType(),
                                             ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                                ], [
-                                                    new \PHPStan\Type\StringType(),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                        new \PHPStan\Type\IntegerType(),
-                                                    ]),
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                                ]),
-                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                         ]),
                                     ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                ])),
-                            ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -579,20 +535,14 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -602,14 +552,12 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -708,20 +656,14 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -762,20 +704,14 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -822,104 +758,96 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StackName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StackName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -933,89 +861,83 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StackName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StackName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
                     ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Insight'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Insight'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnalyzedResourceCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenProactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenReactiveInsights'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MeanTimeToRecoverInMilliseconds'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1084,43 +1006,35 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
                     new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Count'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UnitCost'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cost'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\FloatType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Count'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UnitCost'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Cost'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\FloatType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
@@ -1148,20 +1062,14 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -1176,482 +1084,426 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ReactiveAnomalies'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyReportedTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedInsightId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceMetadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyResources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('UpdateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyReportedTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedInsightId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceMetadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyResources'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloseTime'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Stat'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Period'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p99'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p90'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p50'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                                            ], [
-                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                                new \PHPStan\Type\FloatType(),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
-                                        ]),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                                ], [
-                                                    new \PHPStan\Type\FloatType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                new \PHPStan\Type\StringType(),
-                                                            ])),
-                                                            new \PHPStan\Type\IntegerType(),
-                                                        ]),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                                    ]),
-                                                ]),
-                                            ]),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceResourceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SourceResourceType'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloseTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Period'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p99'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p90'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p50'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                                ], [
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
+                                ]),
                             ]),
                         ])),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                        ])),
                     ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyReportedTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedInsightId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CausalAnomalyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyResources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceResourceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceResourceType'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OpenTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloseTime'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Stat'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Period'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Sum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Average'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p99'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p90'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('p50'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
-                                            ], [
-                                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                                new \PHPStan\Type\FloatType(),
-                                            ]),
-                                        ])),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Complete'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
-                                        ]),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\StringType(),
-                                            ])),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                                ], [
-                                                    new \PHPStan\Type\FloatType(),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Metric'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('Filter'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Group'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('Limit'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                new \PHPStan\Type\StringType(),
-                                                            ])),
-                                                            new \PHPStan\Type\IntegerType(),
-                                                        ]),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                                    ]),
-                                                ]),
-                                            ]),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\FloatType(),
-                                        ]),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CAUSAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONTEXTUAL'),
-                        ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyReportedTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedInsightId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CausalAnomalyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnomalyResources'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OpenTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloseTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PerformanceInsightsMetrics'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stat'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Period'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDataSummary'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Sum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Average'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SampleCount'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Minimum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Maximum'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p99'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p90'),
+                                new \PHPStan\Type\Constant\ConstantStringType('p50'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TimestampMetricValuePairList'),
+                                new \PHPStan\Type\Constant\ConstantStringType('StatusCode'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MetricValue'),
+                                ], [
+                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Complete'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PartialData'),
+                                ]),
                             ]),
                         ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricDisplayName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unit'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReferenceData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtAnomaly'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StatsAtBaseline'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ComparisonValues'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceScalar'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ReferenceMetric'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                    ], [
+                                        new \PHPStan\Type\FloatType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('MetricQuery'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Metric'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('GroupBy'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Filter'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('Group'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Dimensions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('Limit'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                new \PHPStan\Type\IntegerType(),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
+                        ])),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CAUSAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONTEXTUAL'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1666,53 +1518,47 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LogGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpactStartTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImpactEndTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfLogLinesScanned'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyShowcases'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LogGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpactStartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImpactEndTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NumberOfLogLinesScanned'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyShowcases'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyClasses'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyClasses'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LogStreamName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyToken'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LogEventId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Explanation'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NumberOfLogLinesOccurrences'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('LogEventTimestamp'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEYWORD'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEYWORD_TOKEN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('FORMAT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('HTTP_CODE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK_FORMAT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_POINT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_NAN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('NEW_FIELD_NAME'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    ]),
-                                ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('LogStreamName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogAnomalyToken'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogEventId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Explanation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NumberOfLogLinesOccurrences'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LogEventTimestamp'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEYWORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEYWORD_TOKEN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FORMAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK_FORMAT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_POINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NUMERICAL_NAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_FIELD_NAME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ])),
-                    ]),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1725,67 +1571,57 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Events'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Time'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventClass'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Time'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventClass'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_CLOUD_TRAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_CODE_DEPLOY'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INFRASTRUCTURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SECURITY_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFIG_CHANGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SCHEMA_CHANGE'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_CLOUD_TRAIL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_CODE_DEPLOY'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INFRASTRUCTURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SECURITY_CHANGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONFIG_CHANGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SCHEMA_CHANGE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1799,193 +1635,169 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ReactiveInsights'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1998,44 +1810,36 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('MonitoredResourceIdentifiers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MonitoredResourceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourcePermission'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL_PERMISSION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSION'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('MonitoredResourceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourcePermission'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('FULL_PERMISSION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_PERMISSION'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2049,42 +1853,36 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Channels'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Config'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Config'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                     ], [
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Sns'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Filters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Severities'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MessageTypes'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('NEW_INSIGHT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED_INSIGHT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NEW_ASSOCIATION'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SEVERITY_UPGRADED'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('NEW_RECOMMENDATION'),
-                                    ]),
-                                ])),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Severities'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MessageTypes'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_INSIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CLOSED_INSIGHT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_ASSOCIATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEVERITY_UPGRADED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NEW_RECOMMENDATION'),
+                            ])),
                         ]),
                     ]),
                 ])),
@@ -2100,192 +1898,172 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ReactiveInsights'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OrganizationalUnitId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2299,72 +2077,58 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Link'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Link'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RelatedEvents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RelatedAnomalies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Reason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RelatedEvents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RelatedAnomalies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Category'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Resources'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AnomalyId'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Resources'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SourceDetails'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AnomalyId'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetrics'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('MetricName'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('Namespace'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ])),
                                 new \PHPStan\Type\StringType(),
-                            ]),
+                            ])),
                         ])),
                         new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2390,193 +2154,169 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ReactiveInsights'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2590,193 +2330,169 @@ final class DevOpsGuruClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ReactiveInsights'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PredictionTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                    ], [
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Severity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InsightTimeRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ServiceCollection'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AssociatedResourceArns'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONGOING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLOSED'),
-                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
                         ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StackNames'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('AppBoundaryKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('TagValues'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EC2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EKS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ES'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RDS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SNS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SQS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWF'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceNames'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUD_FRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DYNAMO_DB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EKS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_BEANSTALK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTI_CACHE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KINESIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LAMBDA'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NAT_GATEWAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ELB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RDS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REDSHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ROUTE_53'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SAGE_MAKER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SQS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('STEP_FUNCTIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SWF'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

@@ -293,9 +293,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -322,9 +320,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('REQUEST'),
                     new \PHPStan\Type\Constant\ConstantStringType('COGNITO_USER_POOLS'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -466,15 +462,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
@@ -496,9 +488,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -643,9 +633,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -668,9 +656,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -699,12 +685,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
@@ -715,15 +697,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -847,22 +825,20 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
@@ -920,9 +896,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -1115,9 +1089,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1145,9 +1117,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -1160,36 +1130,30 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('position'),
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customerId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stageKeys'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stageKeys'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1216,9 +1180,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('REQUEST'),
                     new \PHPStan\Type\Constant\ConstantStringType('COGNITO_USER_POOLS'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1236,36 +1198,32 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerARNs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizerCredentials'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identitySource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
-                        new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TOKEN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REQUEST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COGNITO_USER_POOLS'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerARNs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authorizerUri'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authorizerCredentials'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identitySource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identityValidationExpression'),
+                    new \PHPStan\Type\Constant\ConstantStringType('authorizerResultTtlInSeconds'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TOKEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COGNITO_USER_POOLS'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -1292,16 +1250,14 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('basePath'),
-                        new \PHPStan\Type\Constant\ConstantStringType('restApiId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('basePath'),
+                    new \PHPStan\Type\Constant\ConstantStringType('restApiId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1334,22 +1290,20 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('clientCertificateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('pemEncodedCertificate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('expirationDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('clientCertificateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('pemEncodedCertificate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('expirationDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1384,24 +1338,22 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('apiSummary'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('apiSummary'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiKeyRequired'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('apiKeyRequired'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]))),
-                    ]),
+                        new \PHPStan\Type\BooleanType(),
+                    ]))),
                 ])),
             ]),
         ]);
@@ -1453,41 +1405,39 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('properties'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('properties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('path'),
+                        new \PHPStan\Type\Constant\ConstantStringType('method'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('path'),
-                            new \PHPStan\Type\Constant\ConstantStringType('method'),
-                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('API'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('METHOD'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PATH_PARAMETER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_PARAMETER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUEST_HEADER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REQUEST_BODY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESPONSE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_HEADER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_BODY'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('API'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MODEL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METHOD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PATH_PARAMETER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('QUERY_PARAMETER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REQUEST_HEADER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REQUEST_BODY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESPONSE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_HEADER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_BODY'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1514,16 +1464,14 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1571,15 +1519,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
@@ -1601,9 +1545,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1619,20 +1561,18 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameAccessAssociationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accessAssociationSourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accessAssociationSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('VPCE'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameAccessAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('accessAssociationSourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('accessAssociationSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('VPCE'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -1645,85 +1585,77 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('domainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('certificateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('certificateUploadDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('regionalDomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('regionalHostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('regionalCertificateName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('regionalCertificateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('distributionDomainName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('distributionHostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endpointConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameStatusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('securityPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('mutualTlsAuthentication'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('domainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('certificateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('certificateUploadDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regionalDomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regionalHostedZoneId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regionalCertificateName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('regionalCertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('distributionDomainName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('distributionHostedZoneId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endpointConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('domainNameStatusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('securityPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('mutualTlsAuthentication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ownershipVerificationCertificateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('managementPolicy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('types'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_CERTIFICATE_REIMPORT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_OWNERSHIP_VERIFICATION'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('truststoreUri'),
+                        new \PHPStan\Type\Constant\ConstantStringType('truststoreVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('truststoreWarnings'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('types'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_CERTIFICATE_REIMPORT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING_OWNERSHIP_VERIFICATION'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('truststoreUri'),
-                            new \PHPStan\Type\Constant\ConstantStringType('truststoreVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('truststoreWarnings'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1794,42 +1726,40 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('responseType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('responseParameters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('responseTemplates'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultResponse'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_4XX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_5XX'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNAUTHORIZED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_API_KEY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER_CONFIGURATION_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_SIGNATURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EXPIRED_TOKEN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_AUTHENTICATION_TOKEN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_FAILURE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_TIMEOUT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('API_CONFIGURATION_ERROR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_MEDIA_TYPE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST_PARAMETERS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST_BODY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REQUEST_TOO_LARGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WAF_FILTERED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('responseType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('responseTemplates'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultResponse'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_4XX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT_5XX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_NOT_FOUND'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNAUTHORIZED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_API_KEY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACCESS_DENIED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER_CONFIGURATION_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_SIGNATURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EXPIRED_TOKEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MISSING_AUTHENTICATION_TOKEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTEGRATION_TIMEOUT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('API_CONFIGURATION_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNSUPPORTED_MEDIA_TYPE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST_PARAMETERS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BAD_REQUEST_BODY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_TOO_LARGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUOTA_EXCEEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WAF_FILTERED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -1878,9 +1808,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                     new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -2000,9 +1928,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                         new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -2025,9 +1951,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\BooleanType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -2081,20 +2005,18 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('schema'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schema'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2123,18 +2045,16 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('validateRequestBody'),
-                        new \PHPStan\Type\Constant\ConstantStringType('validateRequestParameters'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\BooleanType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('validateRequestBody'),
+                    new \PHPStan\Type\Constant\ConstantStringType('validateRequestParameters'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
             ]),
         ]);
@@ -2224,9 +2144,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -2249,9 +2167,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -2264,119 +2180,113 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('parentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('pathPart'),
-                        new \PHPStan\Type\Constant\ConstantStringType('path'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceMethods'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('parentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('pathPart'),
+                    new \PHPStan\Type\Constant\ConstantStringType('path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceMethods'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('httpMethod'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authorizerId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('apiKeyRequired'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestValidatorId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('operationName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requestModels'),
+                        new \PHPStan\Type\Constant\ConstantStringType('methodResponses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('methodIntegration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('authorizationScopes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\BooleanType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('httpMethod'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizationType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizerId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('apiKeyRequired'),
-                            new \PHPStan\Type\Constant\ConstantStringType('requestValidatorId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('operationName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('requestParameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('requestModels'),
-                            new \PHPStan\Type\Constant\ConstantStringType('methodResponses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('methodIntegration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('authorizationScopes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('responseParameters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('responseModels'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\BooleanType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('httpMethod'),
+                            new \PHPStan\Type\Constant\ConstantStringType('uri'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('credentials'),
+                            new \PHPStan\Type\Constant\ConstantStringType('requestParameters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('requestTemplates'),
+                            new \PHPStan\Type\Constant\ConstantStringType('passthroughBehavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentHandling'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeoutInMillis'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cacheKeyParameters'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integrationResponses'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tlsConfig'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP_PROXY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_PROXY'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNET'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VPC_LINK'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_BINARY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_TEXT'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
                                 new \PHPStan\Type\Constant\ConstantStringType('responseParameters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('responseModels'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\BooleanType()),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('httpMethod'),
-                                new \PHPStan\Type\Constant\ConstantStringType('uri'),
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('credentials'),
-                                new \PHPStan\Type\Constant\ConstantStringType('requestParameters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('requestTemplates'),
-                                new \PHPStan\Type\Constant\ConstantStringType('passthroughBehavior'),
+                                new \PHPStan\Type\Constant\ConstantStringType('responseTemplates'),
                                 new \PHPStan\Type\Constant\ConstantStringType('contentHandling'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timeoutInMillis'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
-                                new \PHPStan\Type\Constant\ConstantStringType('cacheKeyParameters'),
-                                new \PHPStan\Type\Constant\ConstantStringType('integrationResponses'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tlsConfig'),
                             ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HTTP_PROXY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_PROXY'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNET'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_LINK'),
-                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_BINARY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_TEXT'),
                                 ]),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('responseParameters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('responseTemplates'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('contentHandling'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_BINARY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('CONVERT_TO_TEXT'),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('insecureSkipVerification'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
                             ])),
-                        ])),
-                    ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('insecureSkipVerification'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
                 ])),
             ]),
         ]);
@@ -2405,12 +2315,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
@@ -2421,15 +2327,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -2446,59 +2348,49 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('warnings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('binaryMediaTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('minimumCompressionSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('apiKeySource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endpointConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('disableExecuteApiEndpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rootResourceId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('types'),
-                            new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('warnings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('binaryMediaTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('minimumCompressionSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('apiKeySource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endpointConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('disableExecuteApiEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('rootResourceId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUTHORIZER'),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('types'),
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2533,20 +2425,18 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('friendlyName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('required'),
-                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('friendlyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('required'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2559,32 +2449,28 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('friendlyName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('configurationProperties'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
                         new \PHPStan\Type\Constant\ConstantStringType('friendlyName'),
                         new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configurationProperties'),
+                        new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('friendlyName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('required'),
-                                new \PHPStan\Type\Constant\ConstantStringType('defaultValue'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\BooleanType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -2694,101 +2580,99 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('item'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('clientCertificateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stageName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cacheClusterEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cacheClusterSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cacheClusterStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('methodSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('variables'),
+                    new \PHPStan\Type\Constant\ConstantStringType('documentationVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('accessLogSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('canarySettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tracingEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('webAclArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('0.5'),
+                        new \PHPStan\Type\Constant\ConstantStringType('1.6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('6.1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('13.5'),
+                        new \PHPStan\Type\Constant\ConstantStringType('28.4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('58.2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('118'),
+                        new \PHPStan\Type\Constant\ConstantStringType('237'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLUSH_IN_PROGRESS'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('metricsEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('loggingLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataTraceEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('throttlingBurstLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('throttlingRateLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cachingEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheTtlInSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheDataEncrypted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('requireAuthorizationForCacheControl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('unauthorizedCacheControlHeaderStrategy'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FAIL_WITH_403'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEED_WITH_RESPONSE_HEADER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SUCCEED_WITHOUT_RESPONSE_HEADER'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('clientCertificateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stageName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cacheClusterEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cacheClusterSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cacheClusterStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('methodSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('variables'),
-                        new \PHPStan\Type\Constant\ConstantStringType('documentationVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('accessLogSettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('canarySettings'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tracingEnabled'),
-                        new \PHPStan\Type\Constant\ConstantStringType('webAclArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('format'),
+                        new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('0.5'),
-                            new \PHPStan\Type\Constant\ConstantStringType('1.6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('6.1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('13.5'),
-                            new \PHPStan\Type\Constant\ConstantStringType('28.4'),
-                            new \PHPStan\Type\Constant\ConstantStringType('58.2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('118'),
-                            new \PHPStan\Type\Constant\ConstantStringType('237'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NOT_AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FLUSH_IN_PROGRESS'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('metricsEnabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('loggingLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dataTraceEnabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('throttlingBurstLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('throttlingRateLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cachingEnabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cacheTtlInSeconds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('cacheDataEncrypted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('requireAuthorizationForCacheControl'),
-                            new \PHPStan\Type\Constant\ConstantStringType('unauthorizedCacheControlHeaderStrategy'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('FAIL_WITH_403'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEED_WITH_RESPONSE_HEADER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEED_WITHOUT_RESPONSE_HEADER'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('format'),
-                            new \PHPStan\Type\Constant\ConstantStringType('destinationArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('percentTraffic'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('stageVariableOverrides'),
-                            new \PHPStan\Type\Constant\ConstantStringType('useStageCache'),
-                        ], [
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('percentTraffic'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stageVariableOverrides'),
+                        new \PHPStan\Type\Constant\ConstantStringType('useStageCache'),
+                    ], [
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -2817,11 +2701,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\IntegerType(),
-                    ])),
-                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()))),
             ]),
         ]);
     }
@@ -2841,22 +2721,20 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
@@ -2907,18 +2785,16 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2931,60 +2807,56 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('apiStages'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('apiStages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quota'),
+                    new \PHPStan\Type\Constant\ConstantStringType('productCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stage'),
                         new \PHPStan\Type\Constant\ConstantStringType('throttle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quota'),
-                        new \PHPStan\Type\Constant\ConstantStringType('productCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('stage'),
-                                new \PHPStan\Type\Constant\ConstantStringType('throttle'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\FloatType(),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
                             new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('limit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('offset'),
-                            new \PHPStan\Type\Constant\ConstantStringType('period'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DAY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WEEK'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MONTH'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('limit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offset'),
+                        new \PHPStan\Type\Constant\ConstantStringType('period'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WEEK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MONTH'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -3004,9 +2876,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
@@ -3026,31 +2896,27 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('items'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetArns'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetArns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -3062,12 +2928,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
                 new \PHPStan\Type\Constant\ConstantStringType('warnings'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -3078,12 +2940,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('ids'),
                 new \PHPStan\Type\Constant\ConstantStringType('warnings'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -3111,12 +2969,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
@@ -3127,15 +2981,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -3228,9 +3078,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                     new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -3350,9 +3198,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                         new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -3375,9 +3221,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\BooleanType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -3419,12 +3263,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
@@ -3435,15 +3275,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -3481,9 +3317,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -3502,9 +3336,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
             ]),
@@ -3533,9 +3365,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\FloatType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3563,9 +3393,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
@@ -3592,9 +3420,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('REQUEST'),
                     new \PHPStan\Type\Constant\ConstantStringType('COGNITO_USER_POOLS'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -3756,15 +3582,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
@@ -3786,9 +3608,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -3880,9 +3700,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                     new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -4002,9 +3820,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                         new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -4027,9 +3843,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\BooleanType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -4166,9 +3980,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         ]),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('selectionPattern'),
@@ -4191,9 +4003,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -4222,12 +4032,8 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('HEADER'),
@@ -4238,15 +4044,11 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('REGIONAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -4368,11 +4170,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\IntegerType(),
-                    ])),
-                ]))),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()))),
             ]),
         ]);
     }
@@ -4392,22 +4190,20 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('apiId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('apiId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('throttle'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                        ])),
-                    ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('burstLimit'),
@@ -4449,9 +4245,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
                     new \PHPStan\Type\Constant\ConstantStringType('PENDING'),

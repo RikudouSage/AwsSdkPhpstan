@@ -224,9 +224,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArns'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('UntrustedArtifactOnDeployment'),
@@ -292,12 +290,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -320,44 +316,34 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures'),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
                 ], [
@@ -397,9 +383,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventCount'),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('EventCount')),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
@@ -511,12 +495,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -549,18 +529,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -624,14 +602,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                     new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -646,12 +622,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
                         new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -665,10 +637,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -755,18 +725,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('MaxAge'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -840,12 +802,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -868,44 +828,34 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures'),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
                 ], [
@@ -945,9 +895,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventCount'),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('EventCount')),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
@@ -1075,9 +1023,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArns'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('UntrustedArtifactOnDeployment'),
@@ -1143,12 +1089,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -1171,44 +1115,34 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures'),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
                 ], [
@@ -1248,9 +1182,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventCount'),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('EventCount')),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
@@ -1369,12 +1301,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -1407,18 +1335,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -1482,14 +1408,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                         new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -1504,12 +1428,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                             new \PHPStan\Type\Constant\ConstantStringType('Command'),
                             new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1523,10 +1443,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                            new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -1736,12 +1654,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -1774,18 +1688,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -1849,14 +1761,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                     new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -1871,12 +1781,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
                         new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1890,10 +1796,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -2026,18 +1930,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('MaxAge'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -2082,55 +1978,51 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                        new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
             ]),
         ]);
@@ -2168,55 +2060,51 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                        new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                        new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                        new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                        new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
             ]),
         ]);
@@ -2365,26 +2253,24 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AliasArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AliasArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RoutingConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdditionalVersionWeights'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AdditionalVersionWeights'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\FloatType()),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2397,35 +2283,31 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('CodeSigningConfigs'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSigningConfigId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSigningConfigArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedPublishers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSigningPolicies'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSigningConfigId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSigningConfigArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedPublishers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSigningPolicies'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArns'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArns'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UntrustedArtifactOnDeployment'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Warn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Enforce'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UntrustedArtifactOnDeployment'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Warn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Enforce'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -2438,171 +2320,155 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('EventSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('UUID'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartingPosition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartingPositionTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BatchSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaximumBatchingWindowInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParallelizationFactor'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventSourceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterCriteria'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastProcessingResult'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateTransitionReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Topics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Queues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceAccessConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SelfManagedEventSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaximumRecordAgeInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BisectBatchOnFunctionError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TumblingWindowInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionResponseTypes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonManagedKafkaEventSourceConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SelfManagedKafkaEventSourceConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScalingConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DocumentDBEventSourceConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterCriteriaError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EventSourceMappingArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricsConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ProvisionedPollerConfig'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AT_TIMESTAMP'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('UUID'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartingPosition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StartingPositionTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BatchSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumBatchingWindowInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParallelizationFactor'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventSourceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterCriteria'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastProcessingResult'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateTransitionReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Topics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Queues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceAccessConfigurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SelfManagedEventSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumRecordAgeInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('BisectBatchOnFunctionError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryAttempts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TumblingWindowInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionResponseTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AmazonManagedKafkaEventSourceConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SelfManagedKafkaEventSourceConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ScalingConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DocumentDBEventSourceConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterCriteriaError'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EventSourceMappingArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MetricsConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ProvisionedPollerConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Filters'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OnSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CollectionName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FullDocument'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AT_TIMESTAMP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UpdateLookup'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Default'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('EventCount')),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaximumPollers'),
+                    ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Filters'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OnSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures'),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumConcurrency'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DatabaseName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CollectionName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FullDocument'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('UpdateLookup'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Default'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EventCount'),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaximumPollers'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
                     ]),
                 ])),
             ]),
@@ -2615,32 +2481,30 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('FunctionEventInvokeConfigs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryAttempts'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaximumEventAgeInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationConfig'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumRetryAttempts'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MaximumEventAgeInSeconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DestinationConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OnSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OnFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Destination'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Destination'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
                 ])),
@@ -2655,51 +2519,41 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('FunctionUrlConfigs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionUrl'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Cors'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AuthType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvokeMode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionUrl'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Cors'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AuthType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('InvokeMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowCredentials'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowHeaders'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowMethods'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AllowOrigins'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ExposeHeaders'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxAge'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowCredentials'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowHeaders'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowMethods'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AllowOrigins'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ExposeHeaders'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxAge'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BUFFERED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_STREAM'),
-                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BUFFERED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_STREAM'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -2714,905 +2568,46 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantStringType('Functions'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Runtime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Handler'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeadLetterConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Environment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TracingConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MasterArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Layers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReasonCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemConfigs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PackageType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageConfigResponse'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Architectures'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapStart'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoggingConfig'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                            new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Variables'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PassThrough'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Idle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Restoring'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Successful'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Zip'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Image'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EntryPoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                                new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplyOn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OptimizationStatus'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PublishedVersions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('On'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Off'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LogFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationLogLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SystemLogLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogGroup'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARN'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function listFunctionsByCodeSigningConfig(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
-                new \PHPStan\Type\Constant\ConstantStringType('FunctionArns'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-            ]),
-        ]);
-    }
-    private function listLayerVersions(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
-                new \PHPStan\Type\Constant\ConstantStringType('LayerVersions'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                                new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                                new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                                new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                                new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                                new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                                new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                                new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                                new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                                new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                                new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                                new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                                new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                            ]),
-                        ])),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function listLayers(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
-                new \PHPStan\Type\Constant\ConstantStringType('Layers'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LayerName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LayerArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LatestMatchingVersion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                                ]),
-                            ])),
-                        ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function listProvisionedConcurrencyConfigs(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedConcurrencyConfigs'),
-                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RequestedProvisionedConcurrentExecutions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AvailableProvisionedConcurrentExecutions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllocatedProvisionedConcurrentExecutions'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('READY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listTags(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-            ]),
-        ]);
-    }
-    private function listVersionsByFunction(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
-                new \PHPStan\Type\Constant\ConstantStringType('Versions'),
-            ], [
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Runtime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Role'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Handler'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DeadLetterConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Environment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TracingConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MasterArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Layers'),
-                        new \PHPStan\Type\Constant\ConstantStringType('State'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReasonCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('FileSystemConfigs'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PackageType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ImageConfigResponse'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Architectures'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SnapStart'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionConfig'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LoggingConfig'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
-                            new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java17'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
-                            new \PHPStan\Type\Constant\ConstantStringType('java21'),
-                            new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
-                            new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\BooleanType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TargetArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Variables'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Mode'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PassThrough'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Idle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Creating'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Restoring'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Successful'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Zip'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Image'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ImageConfig'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('EntryPoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                                new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Size'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplyOn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OptimizationStatus'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PublishedVersions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('On'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Off'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Error'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('LogFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ApplicationLogLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SystemLogLevel'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogGroup'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Text'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('TRACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INFO'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WARN'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                    ]),
-                ])),
-            ]),
-        ]);
-    }
-    private function publishLayerVersion(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                new \PHPStan\Type\Constant\ConstantStringType('LayerArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
-                new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
-                new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
-                new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
-            ], [
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
-                    new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Runtime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Handler'),
                     new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeadLetterConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Environment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TracingConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Layers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReasonCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemConfigs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PackageType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImageConfigResponse'),
                     new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Architectures'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapStart'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoggingConfig'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
                         new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
@@ -3655,13 +2650,820 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
                         new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Variables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PassThrough'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Idle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Restoring'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Successful'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Zip'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Image'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EntryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplyOn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OptimizationStatus'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PublishedVersions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('On'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Off'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LogFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationLogLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SystemLogLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogGroup'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TRACE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listFunctionsByCodeSigningConfig(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('FunctionArns'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listLayerVersions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayerVersions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
+                    ])),
+                ])),
+            ]),
+        ]);
+    }
+    private function listLayers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('Layers'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LayerName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LayerArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LatestMatchingVersion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                            new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                            new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                            new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                            new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                            new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                            new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                            new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                            new \PHPStan\Type\Constant\ConstantStringType('arm64'),
+                        ])),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function listProvisionedConcurrencyConfigs(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ProvisionedConcurrencyConfigs'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RequestedProvisionedConcurrentExecutions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailableProvisionedConcurrentExecutions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllocatedProvisionedConcurrentExecutions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StatusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listTags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listVersionsByFunction(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('Versions'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FunctionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Runtime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Role'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Handler'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Timeout'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MemorySize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeadLetterConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Environment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSKeyArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TracingConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RevisionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Layers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateReasonCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateStatusReasonCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FileSystemConfigs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PackageType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ImageConfigResponse'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Architectures'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EphemeralStorage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnapStart'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LoggingConfig'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                        new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                        new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                        new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TargetArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Variables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PassThrough'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Inactive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Idle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Restoring'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Successful'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EniLimitExceeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InsufficientRolePermissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InternalError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetOutOfIPAddresses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSubnet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidSecurityGroup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageDeleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidImage'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyAccessDenied'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMSKeyNotFound'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidStateKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DisabledKMSKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSIOError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountConnectivityError'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EFSMountTimeout'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidRuntime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Zip'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Image'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ImageConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('EntryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Size'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplyOn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OptimizationStatus'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PublishedVersions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('On'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Off'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RuntimeVersionArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Error'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LogFormat'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ApplicationLogLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SystemLogLevel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogGroup'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Text'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TRACE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FATAL'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEBUG'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INFO'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WARN'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function publishLayerVersion(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Content'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayerArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('LayerVersionArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreatedDate'),
+                new \PHPStan\Type\Constant\ConstantStringType('Version'),
+                new \PHPStan\Type\Constant\ConstantStringType('CompatibleRuntimes'),
+                new \PHPStan\Type\Constant\ConstantStringType('LicenseInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('CompatibleArchitectures'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSha256'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs6.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs8.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs10.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs12.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs14.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs16.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java8.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.9'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore1.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.0'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore2.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnetcore3.1'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet6'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dotnet8'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs4.3-edge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('go1.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.5'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby2.7'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs18.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.10'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java17'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruby3.3'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.11'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs20.x'),
+                    new \PHPStan\Type\Constant\ConstantStringType('provided.al2023'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.12'),
+                    new \PHPStan\Type\Constant\ConstantStringType('java21'),
+                    new \PHPStan\Type\Constant\ConstantStringType('python3.13'),
+                    new \PHPStan\Type\Constant\ConstantStringType('nodejs22.x'),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
             ]),
         ]);
@@ -3766,12 +3568,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -3804,18 +3602,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -3879,14 +3675,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                     new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -3901,12 +3695,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
                         new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3920,10 +3710,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -4161,9 +3949,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArns'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('UntrustedArtifactOnDeployment'),
@@ -4229,12 +4015,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -4257,44 +4041,34 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        new \PHPStan\Type\Constant\ConstantStringType('URI'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('URI'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SUBNET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC_SECURITY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_512_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SASL_SCRAM_256_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VIRTUAL_HOST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLIENT_CERTIFICATE_TLS_AUTH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVER_ROOT_CA_CERTIFICATE'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Endpoints'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ]))),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\Constant\ConstantStringType('KAFKA_BOOTSTRAP_SERVERS'), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
                 ]),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures'),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ReportBatchItemFailures')),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ConsumerGroupId'),
                 ], [
@@ -4334,9 +4108,7 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EventCount'),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('EventCount')),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('MinimumPollers'),
@@ -4448,12 +4220,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -4486,18 +4254,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -4561,14 +4327,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                     new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -4583,12 +4347,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
                         new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4602,10 +4362,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -4766,12 +4524,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Ipv6AllowedForDualStack'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -4804,18 +4558,16 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CodeSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningProfileVersionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SigningJobArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Pending'),
@@ -4879,14 +4631,12 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('InvalidZipFileException'),
                     new \PHPStan\Type\Constant\ConstantStringType('FunctionError'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalMountPath'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('Zip'),
@@ -4901,12 +4651,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                         new \PHPStan\Type\Constant\ConstantStringType('Command'),
                         new \PHPStan\Type\Constant\ConstantStringType('WorkingDirectory'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4920,10 +4666,8 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
-                        new \PHPStan\Type\Constant\ConstantStringType('arm64'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('x86_64'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arm64'),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Size'),
@@ -5043,18 +4787,10 @@ final class LambdaClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     new \PHPStan\Type\Constant\ConstantStringType('MaxAge'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\StringType(),

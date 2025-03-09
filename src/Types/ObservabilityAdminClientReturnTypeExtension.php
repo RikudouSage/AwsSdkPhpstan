@@ -85,34 +85,32 @@ final class ObservabilityAdminClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTimeStamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Logs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Traces'),
-                        ]), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotApplicable'),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::Lambda::Function'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTimeStamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Logs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Traces'),
+                    ]), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotApplicable'),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::Lambda::Function'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -125,34 +123,32 @@ final class ObservabilityAdminClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AccountIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTimeStamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Logs'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Traces'),
-                        ]), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NotApplicable'),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AWS::Lambda::Function'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TelemetryConfigurationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceTags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastUpdateTimeStamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Logs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Traces'),
+                    ]), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NotApplicable'),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::Instance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::EC2::VPC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AWS::Lambda::Function'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

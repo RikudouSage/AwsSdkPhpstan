@@ -258,56 +258,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -316,17 +301,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -340,56 +332,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -398,17 +375,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -418,56 +402,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
                             new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -476,17 +445,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -563,56 +539,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -621,17 +582,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -645,56 +613,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -703,17 +656,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -723,56 +683,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
                             new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -781,17 +726,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -862,48 +814,44 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
                             ]),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
                             ]),
                         ])),
                     ]),
@@ -914,65 +862,61 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('piiEntitiesConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('regexesConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PIN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -987,20 +931,16 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('topicsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('examples'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('examples'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1011,19 +951,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('managedWordListsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('wordsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -1065,48 +1001,44 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
                             ]),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
                             ]),
                         ])),
                     ]),
@@ -1117,65 +1049,61 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('piiEntitiesConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('regexesConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PIN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1190,20 +1118,16 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('topicsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('examples'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('examples'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -1214,19 +1138,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('managedWordListsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('wordsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -1593,9 +1513,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('vectorIngestionConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYNC_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SYNCING_IN_PROGRESS'),
@@ -1632,9 +1550,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('webCrawlerConfiguration'),
@@ -1651,12 +1567,8 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
@@ -1664,12 +1576,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('seedUrls'),
                                 ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
                                     ])),
                                 ]),
                             ]),
@@ -1711,12 +1621,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantStringType('levelConfigurations'),
                                 new \PHPStan\Type\Constant\ConstantStringType('overlapTokens'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
@@ -1778,12 +1686,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
@@ -1813,14 +1719,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -1996,9 +1900,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2066,30 +1968,26 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                            new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
@@ -2119,14 +2017,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -2302,9 +2198,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -2348,9 +2242,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -2374,9 +2266,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -2442,36 +2332,30 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                         new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2632,56 +2516,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -2690,17 +2559,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -2714,56 +2590,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -2772,17 +2633,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -2792,56 +2660,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
                             new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -2850,17 +2703,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -2932,48 +2792,44 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
                             ]),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
                             ]),
                         ])),
                     ]),
@@ -2984,65 +2840,61 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('piiEntitiesConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('regexesConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PIN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -3057,20 +2909,16 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('topicsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('examples'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('examples'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -3081,19 +2929,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('managedWordListsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('wordsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -3487,9 +3331,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('vectorIngestionConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYNC_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SYNCING_IN_PROGRESS'),
@@ -3526,9 +3368,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('webCrawlerConfiguration'),
@@ -3545,12 +3385,8 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
@@ -3558,12 +3394,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('seedUrls'),
                                 ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
                                     ])),
                                 ]),
                             ]),
@@ -3605,12 +3439,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantStringType('levelConfigurations'),
                                 new \PHPStan\Type\Constant\ConstantStringType('overlapTokens'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
@@ -3674,30 +3506,26 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                     new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                            new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                        new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
@@ -3727,14 +3555,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -3910,9 +3736,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -3941,17 +3765,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('response'),
                 new \PHPStan\Type\Constant\ConstantStringType('type'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4024,9 +3846,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -4050,9 +3870,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -4086,203 +3904,160 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('recommendations'),
                 new \PHPStan\Type\Constant\ConstantStringType('triggers'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('data'),
+                    new \PHPStan\Type\Constant\ConstantStringType('document'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('data'),
-                        new \PHPStan\Type\Constant\ConstantStringType('document'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('details'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reference'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('details'),
-                            new \PHPStan\Type\Constant\ConstantStringType('reference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generativeData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('intentDetectedData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceContentData'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contentData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('generativeData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('intentDetectedData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sourceContentData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textData'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('textData'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('completion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('references'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\MixedType(),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('intent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intentId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('citationSpan'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('textData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
                                         ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                                new \PHPStan\Type\Constant\ConstantStringType('generativeReference'),
+                                new \PHPStan\Type\Constant\ConstantStringType('completion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('references'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('intent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intentId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('citationSpan'),
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('referenceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('sourceURL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                                ], [
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('WEB_CRAWLER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('generationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                            new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generativeReference'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
@@ -4303,81 +4078,104 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelId'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                        ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_RESPONSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_ANSWER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DETECTED_INTENT'),
                         ]),
                     ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('data'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
+                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('query'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('referenceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceURL'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ISSUE_DETECTION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RULE_EVALUATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WEB_CRAWLER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_RESPONSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_ANSWER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DETECTED_INTENT'),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('data'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('query'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ISSUE_DETECTION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RULE_EVALUATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE'),
                     ]),
                 ])),
             ]),
@@ -4422,36 +4220,30 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                         new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4474,321 +4266,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('aiAgentVersionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('aiAgentSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aiAgentArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aiAgentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('configuration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('origin'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('answerRecommendationAIAgentConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('manualSearchAIAgentConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('selfServiceAIAgentConfiguration'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIGuardrailId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIPromptId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intentLabelingGenerationAIPromptId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('locale'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('queryReformulationAIPromptId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                            ], [
-                                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                    ], [
-                                                                        new \PHPStan\Type\StringType(),
-                                                                        new \PHPStan\Type\StringType(),
-                                                                    ]),
-                                                                ])),
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
-                                                    ]),
-                                                ]),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIGuardrailId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIPromptId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('locale'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                            ], [
-                                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                    ], [
-                                                                        new \PHPStan\Type\StringType(),
-                                                                        new \PHPStan\Type\StringType(),
-                                                                    ]),
-                                                                ])),
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
-                                                    ]),
-                                                ]),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('selfServiceAIGuardrailId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                            ], [
-                                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                    ], [
-                                                                        new \PHPStan\Type\StringType(),
-                                                                        new \PHPStan\Type\StringType(),
-                                                                    ]),
-                                                                ])),
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
-                                                    ]),
-                                                ]),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MANUAL_SEARCH'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANSWER_RECOMMENDATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listAIAgents(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('aiAgentSummaries'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiAgentSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('aiAgentArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('aiAgentId'),
@@ -4823,56 +4304,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                                 ], [
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ])),
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                        ], [
-                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ])),
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ]),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                    ], [
+                                                        new \PHPStan\Type\StringType(),
+                                                        new \PHPStan\Type\StringType(),
                                                     ])),
                                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                                         new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -4881,17 +4347,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\StringType(),
                                                     ]),
-                                                ]),
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -4905,56 +4378,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                                 ], [
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ])),
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                        ], [
-                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ])),
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ]),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                    ], [
+                                                        new \PHPStan\Type\StringType(),
+                                                        new \PHPStan\Type\StringType(),
                                                     ])),
                                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                                         new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -4963,17 +4421,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\StringType(),
                                                     ]),
-                                                ]),
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                             ]),
@@ -4983,56 +4448,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                                 ], [
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ])),
-                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                        ], [
-                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                                ], [
-                                                                    new \PHPStan\Type\StringType(),
-                                                                    new \PHPStan\Type\StringType(),
-                                                                ]),
-                                                            ])),
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ]),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                    ], [
+                                                        new \PHPStan\Type\StringType(),
+                                                        new \PHPStan\Type\StringType(),
                                                     ])),
                                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                                         new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -5041,17 +4491,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\StringType(),
                                                     ]),
-                                                ]),
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ]),
                                         ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -5084,6 +4541,289 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listAIAgents(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('aiAgentSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiAgentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aiAgentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('origin'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('answerRecommendationAIAgentConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('manualSearchAIAgentConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('selfServiceAIAgentConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIGuardrailId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIPromptId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('intentLabelingGenerationAIPromptId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('locale'),
+                            new \PHPStan\Type\Constant\ConstantStringType('queryReformulationAIPromptId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIGuardrailId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('answerGenerationAIPromptId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('locale'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('associationConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('selfServiceAIGuardrailId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                                            ], [
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ])),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
+                                                ]),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL_SEARCH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANSWER_RECOMMENDATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5096,59 +4836,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailVersionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listAIGuardrails(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailSummaries'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailId'),
@@ -5182,6 +4873,51 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listAIGuardrails(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aiGuardrailId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5194,81 +4930,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('aiPromptVersionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('aiPromptSummary'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aiPromptArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('aiPromptId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('apiFormat'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modelId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('origin'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                            new \PHPStan\Type\Constant\ConstantStringType('templateType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ANTHROPIC_CLAUDE_MESSAGES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ANTHROPIC_CLAUDE_TEXT_COMPLETIONS'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ANSWER_GENERATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTENT_LABELING_GENERATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_REFORMULATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE_PRE_PROCESSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE_ANSWER_GENERATION'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\StringType(),
-            ]),
-        ]);
-    }
-    private function listAIPrompts(): ?\PHPStan\Type\Type
-    {
-        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
-            new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('aiPromptSummaries'),
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
-            ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiPromptSummary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('aiPromptArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('aiPromptId'),
@@ -5324,6 +4989,73 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
                         ]),
                     ]),
+                    new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listAIPrompts(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('aiPromptSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiPromptArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('aiPromptId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('apiFormat'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('modifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('origin'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('templateType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('visibilityStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ANTHROPIC_CLAUDE_MESSAGES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANTHROPIC_CLAUDE_TEXT_COMPLETIONS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ANSWER_GENERATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTENT_LABELING_GENERATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUERY_REFORMULATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE_PRE_PROCESSING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE_ANSWER_GENERATION'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SAVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PUBLISHED'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5336,34 +5068,32 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associationData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantAssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associationData'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociation'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5376,62 +5106,60 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('assistantSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('aiAgentConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('capabilityConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('integrationConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('MANUAL_SEARCH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANSWER_RECOMMENDATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE'),
+                    ]), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('aiAgentId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('aiAgentConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('capabilityConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('integrationConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('MANUAL_SEARCH'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ANSWER_RECOMMENDATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SELF_SERVICE'),
-                        ]), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('aiAgentId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('V1'),
-                                new \PHPStan\Type\Constant\ConstantStringType('V2'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('topicIntegrationArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('V1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('V2'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('topicIntegrationArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5444,36 +5172,34 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('contentAssociationSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('associationData'),
+                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentAssociationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentAssociationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('associationData'),
-                        new \PHPStan\Type\Constant\ConstantStringType('associationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentAssociationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentAssociationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('amazonConnectGuideAssociation'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('amazonConnectGuideAssociation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('flowId'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('flowId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT_GUIDE'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT_GUIDE'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5486,40 +5212,38 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('contentSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5532,51 +5256,49 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('importJobSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('externalSourceConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('importJobId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('importJobType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('uploadId'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('importJobId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('importJobType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('uploadId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('configuration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('source'),
+                            new \PHPStan\Type\Constant\ConstantStringType('connectConfiguration'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('START_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantStringType('AMAZON_CONNECT'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('START_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5589,165 +5311,153 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('renderingConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vectorIngestionConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TEMPLATES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MANAGED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('renderingConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serverSideEncryptionConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vectorIngestionConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('templateUri'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EXTERNAL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QUICK_RESPONSES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MESSAGE_TEMPLATES'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANAGED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('appIntegrations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('managedSourceConfiguration'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('templateUri'),
+                            new \PHPStan\Type\Constant\ConstantStringType('appIntegrationArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('kmsKeyId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('appIntegrations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('managedSourceConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('webCrawlerConfiguration'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('appIntegrationArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
+                                new \PHPStan\Type\Constant\ConstantStringType('crawlerLimits'),
+                                new \PHPStan\Type\Constant\ConstantStringType('exclusionFilters'),
+                                new \PHPStan\Type\Constant\ConstantStringType('inclusionFilters'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scope'),
+                                new \PHPStan\Type\Constant\ConstantStringType('urlConfiguration'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('seedUrls'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('chunkingConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parsingConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('chunkingStrategy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fixedSizeChunkingConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('hierarchicalChunkingConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('semanticChunkingConfiguration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('FIXED_SIZE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIERARCHICAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                new \PHPStan\Type\Constant\ConstantStringType('overlapPercentage'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('levelConfigurations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('overlapTokens'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ])),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('breakpointPercentileThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('bufferSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bedrockFoundationModelConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parsingStrategy'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('parsingPrompt'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('webCrawlerConfiguration'),
-                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('crawlerLimits'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('exclusionFilters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('inclusionFilters'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scope'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('urlConfiguration'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('rateLimit'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('seedUrls'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('url'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                        ])),
-                                    ]),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('chunkingConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('parsingConfiguration'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('chunkingStrategy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fixedSizeChunkingConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('hierarchicalChunkingConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('semanticChunkingConfiguration'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('FIXED_SIZE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIERARCHICAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('overlapPercentage'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('levelConfigurations'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('overlapTokens'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                        ], [
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('breakpointPercentileThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('bufferSize'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bedrockFoundationModelConfiguration'),
-                                new \PHPStan\Type\Constant\ConstantStringType('parsingStrategy'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('modelArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('parsingPrompt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('parsingPromptText'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('parsingPromptText'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_FOUNDATION_MODEL'),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('BEDROCK_FOUNDATION_MODEL'),
                         ]),
                     ]),
                 ])),
@@ -5762,29 +5472,27 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('messageTemplateVersionSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5797,37 +5505,35 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('messageTemplateSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('activeVersionNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('activeVersionNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5840,28 +5546,26 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('messages'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('messageId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('participant'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BOT'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('messageId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('participant'),
-                        new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('text'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BOT'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
                 ])),
@@ -5877,49 +5581,45 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('quickResponseSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                    ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channels'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -5941,18 +5641,14 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('recommendationIds'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -5996,202 +5692,159 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('data'),
+                    new \PHPStan\Type\Constant\ConstantStringType('document'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resultId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('data'),
-                        new \PHPStan\Type\Constant\ConstantStringType('document'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resultId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('details'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reference'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('details'),
-                            new \PHPStan\Type\Constant\ConstantStringType('reference'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generativeData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('intentDetectedData'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceContentData'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contentData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('generativeData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('intentDetectedData'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sourceContentData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textData'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('textData'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
                                 ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('completion'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('references'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\MixedType(),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('intent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intentId'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('citationSpan'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('textData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                        ]),
-                                        new \PHPStan\Type\FloatType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
                                         ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('text'),
-                                        ], [
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                                ], [
-                                                    new \PHPStan\Type\IntegerType(),
-                                                    new \PHPStan\Type\IntegerType(),
-                                                ]),
-                                            ])),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                                new \PHPStan\Type\Constant\ConstantStringType('generativeReference'),
+                                new \PHPStan\Type\Constant\ConstantStringType('completion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('references'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                    ]),
+                                    new \PHPStan\Type\FloatType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\MixedType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('intent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intentId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('citationSpan'),
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('rankingData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('referenceType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('sourceURL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceLevel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('relevanceScore'),
+                                ], [
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('WEB_CRAWLER'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('generationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('modelId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('title'),
                                 ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    ], [
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                        ])),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
                                 ]),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
                             ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
-                            new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('title'),
+                            new \PHPStan\Type\Constant\ConstantStringType('generativeReference'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
@@ -6212,43 +5865,70 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                new \PHPStan\Type\Constant\ConstantStringType('generationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('modelId'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('highlights'),
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                ])),
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('INTENT_ANSWER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_ANSWER'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('contentReference'),
+                        new \PHPStan\Type\Constant\ConstantStringType('excerpt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('referenceType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sourceURL'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('WEB_CRAWLER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('highlights'),
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('beginOffsetInclusive'),
+                                new \PHPStan\Type\Constant\ConstantStringType('endOffsetExclusive'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_CONTENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTENT_ANSWER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GENERATIVE_ANSWER'),
                     ]),
                 ])),
             ]),
@@ -6274,26 +5954,22 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('attributesNotInterpolated'),
                 new \PHPStan\Type\Constant\ConstantStringType('content'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('url'),
-                        new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('attachmentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentDisposition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('uploadedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('url'),
+                    new \PHPStan\Type\Constant\ConstantStringType('urlExpiry'),
+                ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('email'),
                     new \PHPStan\Type\Constant\ConstantStringType('sms'),
@@ -6318,14 +5994,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\StringType(),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -6353,40 +6027,38 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('contentSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('contentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -6400,51 +6072,47 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('language'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                        new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SMS'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('criteria'),
-                            new \PHPStan\Type\Constant\ConstantStringType('values'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('channelSubtype'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('language'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('messageTemplateId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionNumber'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMS'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('criteria'),
+                        new \PHPStan\Type\Constant\ConstantStringType('values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
             ]),
         ]);
@@ -6457,87 +6125,77 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('results'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('attributesInterpolated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('attributesNotInterpolated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('channels'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('isActive'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('language'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('shortcutKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attributesInterpolated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('attributesNotInterpolated'),
-                        new \PHPStan\Type\Constant\ConstantStringType('channels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('groupingConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('isActive'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('language'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedBy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('quickResponseId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('shortcutKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                        new \PHPStan\Type\Constant\ConstantStringType('markdown'),
+                        new \PHPStan\Type\Constant\ConstantStringType('plainText'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('markdown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('plainText'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('criteria'),
-                            new \PHPStan\Type\Constant\ConstantStringType('values'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('criteria'),
+                        new \PHPStan\Type\Constant\ConstantStringType('values'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
             ]),
         ]);
@@ -6550,18 +6208,16 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('sessionSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sessionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('assistantId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sessionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6705,56 +6361,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -6763,17 +6404,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -6787,56 +6435,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -6845,17 +6478,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -6865,56 +6505,41 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('selfServiceAnswerGenerationAIPromptId'),
                             new \PHPStan\Type\Constant\ConstantStringType('selfServicePreProcessingAIPromptId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationConfigurationData'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationId'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('associationType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseAssociationConfigurationData'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('contentTagFilter'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('maxResults'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('overrideKnowledgeBaseSearchType'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                         ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ])),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ])),
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                                        new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                            ], [
-                                                                new \PHPStan\Type\StringType(),
-                                                                new \PHPStan\Type\StringType(),
-                                                            ]),
-                                                        ])),
-                                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                                        ], [
-                                                            new \PHPStan\Type\StringType(),
-                                                            new \PHPStan\Type\StringType(),
-                                                        ]),
-                                                    ]),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                                ], [
+                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\StringType(),
                                                 ])),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('key'),
@@ -6923,17 +6548,24 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                                     new \PHPStan\Type\StringType(),
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                            ])),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('HYBRID'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('SEMANTIC'),
+                                        ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('KNOWLEDGE_BASE'),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -7003,48 +6635,44 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('HATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIOLENCE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MISCONDUCT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROMPT_ATTACK'),
                             ]),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('filtersConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('threshold'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
                             ]),
                         ])),
                     ]),
@@ -7055,65 +6683,61 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('piiEntitiesConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('regexesConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AGE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('NAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('PIN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_ACCESS_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AWS_SECRET_KEY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_HEALTH_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CA_SOCIAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_CVV'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_EXPIRY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CREDIT_DEBIT_CARD_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DRIVER_ID'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INTERNATIONAL_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IP_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LICENSE_PLATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MAC_ADDRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PASSWORD'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PHONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PIN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SWIFT_CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_HEALTH_SERVICE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_NATIONAL_INSURANCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('USERNAME'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ACCOUNT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_BANK_ROUTING_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_PASSPORT_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('US_SOCIAL_SECURITY_NUMBER'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VEHICLE_IDENTIFICATION_NUMBER'),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pattern'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('description'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pattern'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -7128,20 +6752,16 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('topicsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('definition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('examples'),
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('examples'),
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('DENY'),
                         ])),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -7152,19 +6772,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('managedWordListsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('wordsConfig'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('text'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -7380,9 +6996,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('vectorIngestionConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SYNC_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SYNCING_IN_PROGRESS'),
@@ -7419,9 +7033,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('objectFields'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('webCrawlerConfiguration'),
@@ -7438,12 +7050,8 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HOST_ONLY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SUBDOMAINS'),
@@ -7451,12 +7059,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('seedUrls'),
                                 ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('url'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('url'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
                                     ])),
                                 ]),
                             ]),
@@ -7498,12 +7104,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 new \PHPStan\Type\Constant\ConstantStringType('levelConfigurations'),
                                 new \PHPStan\Type\Constant\ConstantStringType('overlapTokens'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxTokens'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                             ]),
@@ -7565,12 +7169,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
@@ -7600,14 +7202,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -7783,9 +7383,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -7827,12 +7425,10 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
-                        ]),
+                        new \PHPStan\Type\Constant\ConstantStringType('SYSTEM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AGENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_PROFILE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
@@ -7862,14 +7458,12 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                     new \PHPStan\Type\StringType(),
                                 ]),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -8045,9 +7639,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -8089,9 +7681,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('markdown'),
@@ -8115,9 +7705,7 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('values'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
@@ -8183,36 +7771,30 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('orConditions'),
                         new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('andConditions'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tagCondition'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
                             ]),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8237,17 +7819,15 @@ final class QConnectClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('sessionArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantStringType('Custom'),

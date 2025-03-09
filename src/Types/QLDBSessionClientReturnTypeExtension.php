@@ -110,18 +110,16 @@ final class QLDBSessionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IonBinary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IonText'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ResourceType(),
-                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IonBinary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IonText'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -147,18 +145,16 @@ final class QLDBSessionClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         new \PHPStan\Type\Constant\ConstantStringType('NextPageToken'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IonBinary'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IonText'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ResourceType(),
-                                    new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                                ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IonBinary'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IonText'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ResourceType(),
+                                new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\StringType(),
                     ]),

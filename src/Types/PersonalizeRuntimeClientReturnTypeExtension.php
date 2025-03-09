@@ -35,14 +35,12 @@ final class PersonalizeRuntimeClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('actionList'),
                 new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('actionId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('actionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('score'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -55,22 +53,18 @@ final class PersonalizeRuntimeClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('personalizedRanking'),
                 new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('itemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                        new \PHPStan\Type\Constant\ConstantStringType('promotionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('itemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('score'),
+                    new \PHPStan\Type\Constant\ConstantStringType('promotionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -83,22 +77,18 @@ final class PersonalizeRuntimeClientReturnTypeExtension implements \PHPStan\Type
                 new \PHPStan\Type\Constant\ConstantStringType('itemList'),
                 new \PHPStan\Type\Constant\ConstantStringType('recommendationId'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('itemId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('score'),
-                        new \PHPStan\Type\Constant\ConstantStringType('promotionName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('metadata'),
-                        new \PHPStan\Type\Constant\ConstantStringType('reason'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\FloatType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('itemId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('score'),
+                    new \PHPStan\Type\Constant\ConstantStringType('promotionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

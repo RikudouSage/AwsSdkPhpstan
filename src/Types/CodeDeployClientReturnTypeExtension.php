@@ -132,80 +132,76 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('revisionLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('genericRevisionInfo'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('revisionLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('genericRevisionInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eTag'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('tar'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tgz'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zip'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('repository'),
-                                new \PHPStan\Type\Constant\ConstantStringType('commitId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentGroups'),
-                            new \PHPStan\Type\Constant\ConstantStringType('firstUsedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUsedTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('registerTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eTag'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('tar'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tgz'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repository'),
+                            new \PHPStan\Type\Constant\ConstantStringType('commitId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('description'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentGroups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('firstUsedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUsedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registerTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
                 ])),
             ]),
@@ -217,25 +213,23 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('applicationsInfo'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('linkedToGitHub'),
-                        new \PHPStan\Type\Constant\ConstantStringType('gitHubAccountName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Server'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('linkedToGitHub'),
+                    new \PHPStan\Type\Constant\ConstantStringType('gitHubAccountName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Server'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECS'),
                     ]),
                 ])),
             ]),
@@ -248,382 +242,344 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupsInfo'),
                 new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentConfigName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ec2TagFilters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('onPremisesInstanceTagFilters'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('triggerConfigurations'),
-                        new \PHPStan\Type\Constant\ConstantStringType('alarmConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoRollbackConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStyle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('outdatedInstancesStrategy'),
-                        new \PHPStan\Type\Constant\ConstantStringType('blueGreenDeploymentConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('loadBalancerInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastSuccessfulDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeployment'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ec2TagSet'),
-                        new \PHPStan\Type\Constant\ConstantStringType('onPremisesTagSet'),
-                        new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ecsServices'),
-                        new \PHPStan\Type\Constant\ConstantStringType('terminationHookEnabled'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentConfigName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ec2TagFilters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('onPremisesInstanceTagFilters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceRoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetRevision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('triggerConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('alarmConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoRollbackConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStyle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outdatedInstancesStrategy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('blueGreenDeploymentConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('loadBalancerInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastSuccessfulDeployment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastAttemptedDeployment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ec2TagSet'),
+                    new \PHPStan\Type\Constant\ConstantStringType('onPremisesTagSet'),
+                    new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ecsServices'),
+                    new \PHPStan\Type\Constant\ConstantStringType('terminationHookEnabled'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hook'),
+                        new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('hook'),
-                                new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eTag'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('tar'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tgz'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zip'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('repository'),
-                                new \PHPStan\Type\Constant\ConstantStringType('commitId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('triggerName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('triggerTargetArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('triggerEvents'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentStart'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentSuccess'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentFailure'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentStop'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentRollback'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DeploymentReady'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InstanceStart'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InstanceSuccess'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InstanceFailure'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InstanceReady'),
-                                    ]),
-                                ])),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ignorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('alarms'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('events'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentOption'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PLACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLUE_GREEN'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('WITH_TRAFFIC_CONTROL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WITHOUT_TRAFFIC_CONTROL'),
-                            ]),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
+                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('terminateBlueInstancesOnDeploymentSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentReadyOption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('greenFleetProvisioningOption'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('terminationWaitTimeInMinutes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEEP_ALIVE'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('actionOnTimeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('waitTimeInMinutes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_DEPLOYMENT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STOP_DEPLOYMENT'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISCOVER_EXISTING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COPY_AUTO_SCALING_GROUP'),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('elbInfoList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eTag'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Queued'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Baking'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                        ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Queued'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Baking'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tar'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tgz'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                             ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('repository'),
+                            new \PHPStan\Type\Constant\ConstantStringType('commitId'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                        ]),
-                                    ]),
-                                ])),
-                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('onPremisesTagSetList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                        ]),
-                                    ]),
-                                ])),
-                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Server'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerTargetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerEvents'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStart'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentSuccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentRollback'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentReady'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceStart'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceSuccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceReady'),
+                        ])),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ignorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('events'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentOption'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PLACE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BLUE_GREEN'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WITH_TRAFFIC_CONTROL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WITHOUT_TRAFFIC_CONTROL'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IGNORE'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('terminateBlueInstancesOnDeploymentSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentReadyOption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('greenFleetProvisioningOption'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('terminationWaitTimeInMinutes'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEEP_ALIVE'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('actionOnTimeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('waitTimeInMinutes'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_DEPLOYMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOP_DEPLOYMENT'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DISCOVER_EXISTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COPY_AUTO_SCALING_GROUP'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('elbInfoList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Queued'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Baking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Queued'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Baking'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                            ]),
+                        ]))),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('onPremisesTagSetList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                            ]),
+                        ]))),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Server'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -636,17 +592,54 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('instancesSummary'),
                 new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('logTail'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('Pending'),
                             new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
@@ -654,52 +647,11 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                             new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
                             new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Green'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -712,213 +664,69 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('deploymentTargets'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentTargetType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceTarget'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lambdaTarget'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ecsTarget'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cloudFormationTarget'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('InstanceTarget'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LambdaTarget'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECSTarget'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormationTarget'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentTargetType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceTarget'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lambdaTarget'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ecsTarget'),
-                        new \PHPStan\Type\Constant\ConstantStringType('cloudFormationTarget'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instanceLabel'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('InstanceTarget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LambdaTarget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECSTarget'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormationTarget'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                             new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('instanceLabel'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionInfo'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    ]),
-                                ]),
-                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('functionName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('functionAlias'),
-                                new \PHPStan\Type\Constant\ConstantStringType('currentVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetVersion'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetVersionWeight'),
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('taskSetsInfo'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
-                            ])),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Pending'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
@@ -926,88 +734,127 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                             ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('identifer'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('desiredCount'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('pendingCount'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('runningCount'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('trafficWeight'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetGroup'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('taskSetLabel'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\FloatType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                                    ]),
-                                ]),
-                            ])),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Green'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lambdaFunctionInfo'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                             new \PHPStan\Type\Constant\ConstantStringType('status'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('functionName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('functionAlias'),
+                            new \PHPStan\Type\Constant\ConstantStringType('currentVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetVersion'),
                             new \PHPStan\Type\Constant\ConstantStringType('targetVersionWeight'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                    ], [
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                    ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('taskSetsInfo'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
-                            ])),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Pending'),
                                 new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
@@ -1015,11 +862,104 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                 new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                             ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('identifer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('desiredCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pendingCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('runningCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('trafficWeight'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroup'),
+                            new \PHPStan\Type\Constant\ConstantStringType('taskSetLabel'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEvents'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetVersionWeight'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\FloatType(),
                     ]),
                 ])),
             ]),
@@ -1031,437 +971,407 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('deploymentsInfo'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentConfigName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('previousRevision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('revision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorInformation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('completeTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentOverview'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creator'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ignoreApplicationStopFailures'),
+                    new \PHPStan\Type\Constant\ConstantStringType('autoRollbackConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updateOutdatedInstancesOnly'),
+                    new \PHPStan\Type\Constant\ConstantStringType('rollbackInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStyle'),
+                    new \PHPStan\Type\Constant\ConstantStringType('targetInstances'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceTerminationWaitTimeStarted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('blueGreenDeploymentConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('loadBalancerInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('additionalDeploymentStatusInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fileExistsBehavior'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessages'),
+                    new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
+                    new \PHPStan\Type\Constant\ConstantStringType('externalId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('relatedDeployments'),
+                    new \PHPStan\Type\Constant\ConstantStringType('overrideAlarmConfiguration'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('applicationName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentConfigName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('previousRevision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('errorInformation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('completeTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentOverview'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creator'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ignoreApplicationStopFailures'),
-                        new \PHPStan\Type\Constant\ConstantStringType('autoRollbackConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('updateOutdatedInstancesOnly'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rollbackInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStyle'),
-                        new \PHPStan\Type\Constant\ConstantStringType('targetInstances'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceTerminationWaitTimeStarted'),
-                        new \PHPStan\Type\Constant\ConstantStringType('blueGreenDeploymentConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('loadBalancerInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('additionalDeploymentStatusInfo'),
-                        new \PHPStan\Type\Constant\ConstantStringType('fileExistsBehavior'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deploymentStatusMessages'),
-                        new \PHPStan\Type\Constant\ConstantStringType('computePlatform'),
-                        new \PHPStan\Type\Constant\ConstantStringType('externalId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('relatedDeployments'),
-                        new \PHPStan\Type\Constant\ConstantStringType('overrideAlarmConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eTag'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('tar'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tgz'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repository'),
+                            new \PHPStan\Type\Constant\ConstantStringType('commitId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('string'),
+                        new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                            new \PHPStan\Type\Constant\ConstantStringType('String'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('version'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eTag'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('tar'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tgz'),
+                                new \PHPStan\Type\Constant\ConstantStringType('zip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('repository'),
+                            new \PHPStan\Type\Constant\ConstantStringType('commitId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('content'),
+                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Created'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Queued'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Baking'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AGENT_ISSUE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALARM_ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_MISSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING_VALIDATION_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_CONFIGURATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_IAM_ROLE_PERMISSIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_APPLICATION_UNHEALTHY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_GROUP_MISSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ECS_UPDATE_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_LOAD_BALANCING_INVALID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ELB_INVALID_INSTANCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTH_CONSTRAINTS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HEALTH_CONSTRAINTS_INVALID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOOK_EXECUTION_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAM_ROLE_MISSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAM_ROLE_PERMISSIONS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_ECS_SERVICE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_LAMBDA_CONFIGURATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_LAMBDA_FUNCTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVALID_REVISION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANUAL_STOP'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_BLUE_GREEN_DEPLOYMENT_CONFIGURATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_ELB_INFORMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MISSING_GITHUB_TOKEN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_EC2_SUBSCRIPTION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_INSTANCES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OVER_MAX_INSTANCES'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_LIMIT_EXCEEDED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('REVISION_MISSING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION_STACK_FAILURE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('user'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoscaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('codeDeployRollback'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CodeDeploy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CodeDeployAutoUpdate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudFormationRollback'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoscalingTermination'),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('events'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rollbackDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rollbackTriggeringDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rollbackMessage'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eTag'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('tar'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tgz'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zip'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('repository'),
-                                new \PHPStan\Type\Constant\ConstantStringType('commitId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                            new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('string'),
-                            new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                                new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                                new \PHPStan\Type\Constant\ConstantStringType('String'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('version'),
-                                new \PHPStan\Type\Constant\ConstantStringType('eTag'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('tar'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tgz'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('zip'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('repository'),
-                                new \PHPStan\Type\Constant\ConstantStringType('commitId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('content'),
-                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentOption'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PLACE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BLUE_GREEN'),
                         ]),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Created'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Queued'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Baking'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WITH_TRAFFIC_CONTROL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WITHOUT_TRAFFIC_CONTROL'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('code'),
-                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('tagFilters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ec2TagSet'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
                         ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('AGENT_ISSUE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ALARM_ACTIVE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('APPLICATION_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTOSCALING_VALIDATION_ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_CONFIGURATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTO_SCALING_IAM_ROLE_PERMISSIONS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CODEDEPLOY_RESOURCE_CANNOT_BE_FOUND'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CUSTOMER_APPLICATION_UNHEALTHY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_GROUP_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ECS_UPDATE_ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ELASTIC_LOAD_BALANCING_INVALID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ELB_INVALID_INSTANCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTH_CONSTRAINTS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HEALTH_CONSTRAINTS_INVALID'),
-                                new \PHPStan\Type\Constant\ConstantStringType('HOOK_EXECUTION_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IAM_ROLE_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IAM_ROLE_PERMISSIONS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_ECS_SERVICE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_LAMBDA_CONFIGURATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_LAMBDA_FUNCTION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVALID_REVISION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MANUAL_STOP'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_BLUE_GREEN_DEPLOYMENT_CONFIGURATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_ELB_INFORMATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MISSING_GITHUB_TOKEN'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_EC2_SUBSCRIPTION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NO_INSTANCES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OVER_MAX_INSTANCES'),
-                                new \PHPStan\Type\Constant\ConstantStringType('RESOURCE_LIMIT_EXCEEDED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('REVISION_MISSING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('THROTTLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION_STACK_FAILURE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
                             ]),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Ready'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('user'),
-                            new \PHPStan\Type\Constant\ConstantStringType('autoscaling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('codeDeployRollback'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CodeDeploy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CodeDeployAutoUpdate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CloudFormationRollback'),
-                            new \PHPStan\Type\Constant\ConstantStringType('autoscalingTermination'),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('events'),
-                        ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('rollbackDeploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rollbackTriggeringDeploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('rollbackMessage'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentOption'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PLACE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('BLUE_GREEN'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('WITH_TRAFFIC_CONTROL'),
-                                new \PHPStan\Type\Constant\ConstantStringType('WITHOUT_TRAFFIC_CONTROL'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('tagFilters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ec2TagSet'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                    ]),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
-                            ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                            ]),
-                                        ]),
-                                    ])),
-                                ])),
-                            ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                                ]),
+                            ]))),
                         ]),
-                        new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('terminateBlueInstancesOnDeploymentSuccess'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deploymentReadyOption'),
+                        new \PHPStan\Type\Constant\ConstantStringType('greenFleetProvisioningOption'),
+                    ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('terminateBlueInstancesOnDeploymentSuccess'),
-                            new \PHPStan\Type\Constant\ConstantStringType('deploymentReadyOption'),
-                            new \PHPStan\Type\Constant\ConstantStringType('greenFleetProvisioningOption'),
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('terminationWaitTimeInMinutes'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                                new \PHPStan\Type\Constant\ConstantStringType('terminationWaitTimeInMinutes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('KEEP_ALIVE'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('TERMINATE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEEP_ALIVE'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('actionOnTimeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('waitTimeInMinutes'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_DEPLOYMENT'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('STOP_DEPLOYMENT'),
-                                ]),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('action'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DISCOVER_EXISTING'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('COPY_AUTO_SCALING_GROUP'),
-                                ]),
-                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('elbInfoList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('actionOnTimeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('waitTimeInMinutes'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                    ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\StringType(),
-                                        ])),
-                                    ]),
-                                ]),
-                            ])),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTINUE_DEPLOYMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOP_DEPLOYMENT'),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DISALLOW'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OVERWRITE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RETAIN'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DISCOVER_EXISTING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('COPY_AUTO_SCALING_GROUP'),
+                            ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('elbInfoList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
                             new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Server'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ECS'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('autoUpdateOutdatedInstancesRootDeploymentId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('autoUpdateOutdatedInstancesDeploymentIds'),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            ], [
                                 new \PHPStan\Type\StringType(),
                             ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ignorePollAlarmFailure'),
-                            new \PHPStan\Type\Constant\ConstantStringType('alarms'),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DISALLOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OVERWRITE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RETAIN'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Server'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ECS'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('autoUpdateOutdatedInstancesRootDeploymentId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoUpdateOutdatedInstancesDeploymentIds'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ignorePollAlarmFailure'),
+                        new \PHPStan\Type\Constant\ConstantStringType('alarms'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
                         ], [
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
                     ]),
                 ])),
             ]),
@@ -1473,32 +1383,28 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('instanceInfos'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iamSessionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('iamUserArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('instanceArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('registerTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deregisterTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('iamSessionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('iamUserArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('instanceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('registerTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deregisterTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1567,16 +1473,14 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('hooksNotCleanedUp'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hook'),
-                        new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hook'),
+                    new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1702,9 +1606,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('registerTime'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1950,11 +1852,9 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
                         ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),
@@ -1985,8 +1885,24 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('autoScalingGroups'),
                         new \PHPStan\Type\Constant\ConstantStringType('ec2TagSet'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Key'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Value'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
@@ -1998,31 +1914,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                     new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
                                     new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
                                 ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                        ]),
-                                    ]),
-                                ])),
-                            ])),
+                            ]))),
                         ]),
                     ]),
                     new \PHPStan\Type\BooleanType(),
@@ -2065,47 +1957,35 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
-                                new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
                         ])),
                     ]),
@@ -2115,9 +1995,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('OVERWRITE'),
                         new \PHPStan\Type\Constant\ConstantStringType('RETAIN'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Server'),
                         new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
@@ -2129,9 +2007,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('autoUpdateOutdatedInstancesDeploymentIds'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -2140,12 +2016,10 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                 ]),
@@ -2267,46 +2141,40 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                            ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
                         ]),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('hook'),
-                            new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hook'),
+                        new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2363,29 +2231,25 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('triggerName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('triggerTargetArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('triggerEvents'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentStart'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentSuccess'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentStop'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentRollback'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('DeploymentReady'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceStart'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceSuccess'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceFailure'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InstanceReady'),
-                                ]),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerTargetArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('triggerEvents'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStart'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentSuccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentStop'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentRollback'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DeploymentReady'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceStart'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceSuccess'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceFailure'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InstanceReady'),
+                        ])),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('enabled'),
@@ -2394,12 +2258,10 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2408,11 +2270,9 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
-                            ]),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_FAILURE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_ALARM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DEPLOYMENT_STOP_ON_REQUEST'),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2471,47 +2331,35 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroupInfoList'),
                         new \PHPStan\Type\Constant\ConstantStringType('targetGroupPairInfoList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
+                            new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            ])),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
                             ], [
-                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroups'),
-                                new \PHPStan\Type\Constant\ConstantStringType('prodTrafficRoute'),
-                                new \PHPStan\Type\Constant\ConstantStringType('testTrafficRoute'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('listenerArns'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
                         ])),
                     ]),
@@ -2558,58 +2406,48 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('ec2TagSetList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                    ]),
-                                ]),
-                            ])),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                            ]),
+                        ]))),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('onPremisesTagSetList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
-                                    ]),
-                                ]),
-                            ])),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VALUE_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('KEY_AND_VALUE'),
+                            ]),
+                        ]))),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Server'),
                         new \PHPStan\Type\Constant\ConstantStringType('Lambda'),
                         new \PHPStan\Type\Constant\ConstantStringType('ECS'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('clusterName'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -2642,43 +2480,41 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                             ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                         ]),
                     ])),
                     new \PHPStan\Type\UnionType([
@@ -2730,43 +2566,41 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -2796,43 +2630,41 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                             ]),
                         ])),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2862,43 +2694,41 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -2910,32 +2740,30 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                             new \PHPStan\Type\Constant\ConstantStringType('Ready'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('identifer'),
+                            new \PHPStan\Type\Constant\ConstantStringType('desiredCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pendingCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('runningCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('trafficWeight'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetGroup'),
+                            new \PHPStan\Type\Constant\ConstantStringType('taskSetLabel'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('identifer'),
-                                new \PHPStan\Type\Constant\ConstantStringType('desiredCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pendingCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('runningCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
-                                new \PHPStan\Type\Constant\ConstantStringType('trafficWeight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('targetGroup'),
-                                new \PHPStan\Type\Constant\ConstantStringType('taskSetLabel'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
                             ], [
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Blue'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Green'),
-                                ]),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Blue'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Green'),
                             ]),
                         ])),
                     ]),
@@ -2951,43 +2779,41 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('lifecycleEventName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('diagnostics'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logTail'),
                             ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('errorCode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('scriptName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('message'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logTail'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('Success'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Success'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptMissing'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptNotExecutable'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptTimedOut'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ScriptFailed'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UnknownError'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Succeeded'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Skipped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Unknown'),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -3027,14 +2853,12 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -3047,60 +2871,58 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('revisions'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                    new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('string'),
+                    new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
+                        new \PHPStan\Type\Constant\ConstantStringType('String'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('revisionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                        new \PHPStan\Type\Constant\ConstantStringType('gitHubLocation'),
-                        new \PHPStan\Type\Constant\ConstantStringType('string'),
-                        new \PHPStan\Type\Constant\ConstantStringType('appSpecContent'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('version'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eTag'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
-                            new \PHPStan\Type\Constant\ConstantStringType('GitHub'),
-                            new \PHPStan\Type\Constant\ConstantStringType('String'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AppSpecContent'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tar'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tgz'),
+                            new \PHPStan\Type\Constant\ConstantStringType('zip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('YAML'),
+                            new \PHPStan\Type\Constant\ConstantStringType('JSON'),
                         ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                            new \PHPStan\Type\Constant\ConstantStringType('key'),
-                            new \PHPStan\Type\Constant\ConstantStringType('bundleType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('version'),
-                            new \PHPStan\Type\Constant\ConstantStringType('eTag'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('tar'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tgz'),
-                                new \PHPStan\Type\Constant\ConstantStringType('zip'),
-                                new \PHPStan\Type\Constant\ConstantStringType('YAML'),
-                                new \PHPStan\Type\Constant\ConstantStringType('JSON'),
-                            ]),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('repository'),
-                            new \PHPStan\Type\Constant\ConstantStringType('commitId'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('content'),
-                            new \PHPStan\Type\Constant\ConstantStringType('sha256'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('repository'),
+                        new \PHPStan\Type\Constant\ConstantStringType('commitId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('content'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3114,9 +2936,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('applications'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3128,9 +2948,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('deploymentConfigsList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3144,9 +2962,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3158,9 +2974,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('instancesList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3172,9 +2986,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('targetIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3186,9 +2998,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('deployments'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3200,9 +3010,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('tokenNameList'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3214,9 +3022,7 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('instanceNames'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3228,14 +3034,12 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3314,16 +3118,14 @@ final class CodeDeployClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('hooksNotCleanedUp'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hook'),
-                        new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hook'),
+                    new \PHPStan\Type\Constant\ConstantStringType('terminationHook'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

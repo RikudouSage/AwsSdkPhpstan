@@ -262,12 +262,8 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
                             new \PHPStan\Type\Constant\ConstantStringType('subnets'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ]),
                 ]),
@@ -321,17 +317,15 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         ]),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('customPlugin'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('customPlugin'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -386,25 +380,23 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('ISOLATE_CONNECTOR'),
                     new \PHPStan\Type\Constant\ConstantStringType('RESTORE_CONNECTOR'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('stepType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('stepState'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('INITIALIZE_UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FINALIZE_UPDATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_WORKER_SETTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_CONNECTOR_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VALIDATE_UPDATE'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('stepType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepState'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INITIALIZE_UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FINALIZE_UPDATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_WORKER_SETTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_CONNECTOR_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATE_UPDATE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
                     ]),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -605,33 +597,31 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('connectorOperations'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorOperationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorOperationType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorOperationState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_WORKER_SETTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_CONNECTOR_CONFIGURATION'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ISOLATE_CONNECTOR'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESTORE_CONNECTOR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_IN_PROGRESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETE'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorOperationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorOperationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorOperationState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_WORKER_SETTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_CONNECTOR_CONFIGURATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ISOLATE_CONNECTOR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESTORE_CONNECTOR'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_COMPLETE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_COMPLETE'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -644,161 +634,153 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('connectors'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('capacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('connectorState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('currentVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kafkaCluster'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kafkaClusterClientAuthentication'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kafkaClusterEncryptionInTransit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kafkaConnectVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logDelivery'),
+                    new \PHPStan\Type\Constant\ConstantStringType('plugins'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceExecutionRoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workerConfiguration'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('capacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('connectorState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('currentVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kafkaCluster'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kafkaClusterClientAuthentication'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kafkaClusterEncryptionInTransit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('kafkaConnectVersion'),
-                        new \PHPStan\Type\Constant\ConstantStringType('logDelivery'),
-                        new \PHPStan\Type\Constant\ConstantStringType('plugins'),
-                        new \PHPStan\Type\Constant\ConstantStringType('serviceExecutionRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('workerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('autoScaling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('provisionedCapacity'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('autoScaling'),
-                            new \PHPStan\Type\Constant\ConstantStringType('provisionedCapacity'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('maxWorkerCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('mcuCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('minWorkerCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scaleInPolicy'),
-                                new \PHPStan\Type\Constant\ConstantStringType('scaleOutPolicy'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('cpuUtilizationPercentage'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('cpuUtilizationPercentage'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('mcuCount'),
-                                new \PHPStan\Type\Constant\ConstantStringType('workerCount'),
-                            ], [
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('apacheKafkaCluster'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('bootstrapServers'),
-                                new \PHPStan\Type\Constant\ConstantStringType('vpc'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('subnets'),
-                                ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IAM'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('encryptionType'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TLS'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('workerLogDelivery'),
-                        ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
-                                new \PHPStan\Type\Constant\ConstantStringType('firehose'),
-                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('logGroup'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('deliveryStream'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('customPlugin'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                ]),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                            new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('maxWorkerCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('mcuCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('minWorkerCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scaleInPolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('scaleOutPolicy'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('cpuUtilizationPercentage'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('cpuUtilizationPercentage'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('mcuCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('workerCount'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('apacheKafkaCluster'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bootstrapServers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vpc'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('securityGroups'),
+                                new \PHPStan\Type\Constant\ConstantStringType('subnets'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('authenticationType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAM'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('encryptionType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('workerLogDelivery'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('firehose'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('logGroup'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('deliveryStream'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('customPlugin'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('revision'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
+                        new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationArn'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -812,64 +794,62 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('customPlugins'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customPluginState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('latestRevision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('contentType'),
                         new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customPluginArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('customPluginState'),
                         new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('latestRevision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fileDescription'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JAR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZIP'),
+                        ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('contentType'),
-                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('fileDescription'),
-                            new \PHPStan\Type\Constant\ConstantStringType('location'),
-                            new \PHPStan\Type\Constant\ConstantStringType('revision'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fileMd5'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fileSize'),
                         ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('JAR'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ZIP'),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('fileMd5'),
-                                new \PHPStan\Type\Constant\ConstantStringType('fileSize'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
-                            ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('fileKey'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('objectVersion'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ]),
                             new \PHPStan\Type\IntegerType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fileKey'),
+                                new \PHPStan\Type\Constant\ConstantStringType('objectVersion'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -893,32 +873,30 @@ final class KafkaConnectClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('workerConfigurations'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('latestRevision'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationState'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('latestRevision'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('workerConfigurationState'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revision'),
                     ], [
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('description'),
-                            new \PHPStan\Type\Constant\ConstantStringType('revision'),
-                        ], [
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
                 ])),
             ]),

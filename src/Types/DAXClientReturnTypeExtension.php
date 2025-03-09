@@ -106,33 +106,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -143,14 +139,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -160,9 +154,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -213,14 +205,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),
@@ -268,33 +258,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -305,14 +291,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -322,9 +306,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -386,33 +368,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -423,14 +401,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -440,9 +416,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -490,33 +464,51 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Clusters'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TotalNodes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ActiveNodes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterDiscoveryEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NodeIdsToRemove'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Nodes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PreferredMaintenanceWindow'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NotificationConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterGroup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SSEDescription'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterEndpointEncryptionType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TotalNodes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ActiveNodes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterDiscoveryEndpoint'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NodeIdsToRemove'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Nodes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PreferredMaintenanceWindow'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NotificationConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IamRoleArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroup'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SSEDescription'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ClusterEndpointEncryptionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                        new \PHPStan\Type\Constant\ConstantStringType('URL'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Address'),
@@ -527,78 +519,50 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TopicStatus'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterApplyStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeIdsToReboot'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                            ]),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TopicStatus'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterApplyStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeIdsToReboot'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
                         new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TLS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TLS'),
                     ]),
                 ])),
             ]),
@@ -612,47 +576,43 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NodeTypeSpecificValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsModifiable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NodeTypeSpecificValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsModifiable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChangeType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NODE_TYPE_SPECIFIC'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NODE_TYPE_SPECIFIC'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REQUIRES_REBOOT'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRES_REBOOT'),
                     ]),
                 ])),
             ]),
@@ -666,22 +626,20 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Events'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Message'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Date'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CLUSTER'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PARAMETER_GROUP'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUBNET_GROUP'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Message'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Date'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CLUSTER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PARAMETER_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBNET_GROUP'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -694,14 +652,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ParameterGroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -714,47 +670,43 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParameterValue'),
-                        new \PHPStan\Type\Constant\ConstantStringType('NodeTypeSpecificValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DataType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IsModifiable'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ChangeType'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParameterValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NodeTypeSpecificValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DataType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsModifiable'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChangeType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NODE_TYPE_SPECIFIC'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('DEFAULT'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NODE_TYPE_SPECIFIC'),
-                        ]),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NodeType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('REQUIRES_REBOOT'),
-                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TRUE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FALSE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CONDITIONAL'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('REQUIRES_REBOOT'),
                     ]),
                 ])),
             ]),
@@ -768,26 +720,22 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('SubnetGroups'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SubnetGroupName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetGroupName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
-                                new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                    ]),
+                    ])),
                 ])),
             ]),
         ]);
@@ -834,33 +782,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -871,14 +815,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -888,9 +830,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -917,14 +857,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -972,33 +910,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1009,14 +943,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1026,9 +958,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -1054,14 +984,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1072,14 +1000,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -1126,33 +1052,29 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeCreateTime'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NodeStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParameterGroupStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Address'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                            new \PHPStan\Type\Constant\ConstantStringType('URL'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Address'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                                new \PHPStan\Type\Constant\ConstantStringType('URL'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1163,14 +1085,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1180,9 +1100,7 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
@@ -1233,14 +1151,12 @@ final class DAXClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SubnetAvailabilityZone'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                 ]),
             ]),

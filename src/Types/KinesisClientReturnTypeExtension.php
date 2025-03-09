@@ -171,53 +171,47 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('ON_DEMAND'),
                         ]),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ParentShardId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AdjacentParentShardId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumberRange'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ParentShardId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('AdjacentParentShardId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SequenceNumberRange'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StartingSequenceNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EndingSequenceNumber'),
+                        ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('StartingSequenceNumber'),
-                                new \PHPStan\Type\Constant\ConstantStringType('EndingSequenceNumber'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ShardLevelMetrics'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                ]),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ShardLevelMetrics'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        ])),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
@@ -291,23 +285,19 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     ]),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ShardLevelMetrics'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                                ]),
-                            ])),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ShardLevelMetrics'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL'),
+                        ])),
                     ])),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
@@ -331,28 +321,24 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -369,28 +355,24 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
-                        new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
-                        new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IncomingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingBytes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutgoingRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WriteProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ReadProvisionedThroughputExceeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IteratorAgeMilliseconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -405,47 +387,41 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('MillisBehindLatest'),
                 new \PHPStan\Type\Constant\ConstantStringType('ChildShards'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ApproximateArrivalTimestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Data'),
-                        new \PHPStan\Type\Constant\ConstantStringType('PartitionKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
-                    ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ApproximateArrivalTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Data'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PartitionKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ResourceType(),
-                            new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('KMS'),
-                        ]),
+                        new \PHPStan\Type\ResourceType(),
+                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KMS'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParentShards'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentShards'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
             ]),
@@ -484,31 +460,29 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('Shards'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ParentShardId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AdjacentParentShardId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SequenceNumberRange'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ParentShardId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AdjacentParentShardId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('HashKeyRange'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumberRange'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StartingSequenceNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EndingSequenceNumber'),
+                    ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartingHashKey'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndingHashKey'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StartingSequenceNumber'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EndingSequenceNumber'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -522,22 +496,20 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('Consumers'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ConsumerCreationTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsumerName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsumerARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsumerStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConsumerCreationTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -552,37 +524,33 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('StreamSummaries'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamModeDetails'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StreamCreationTimestamp'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('StreamMode'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ON_DEMAND'),
-                            ]),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamModeDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StreamCreationTimestamp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('StreamMode'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PROVISIONED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ON_DEMAND'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -594,14 +562,12 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('HasMoreTags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\BooleanType(),
             ]),
@@ -639,18 +605,16 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('EncryptionType'),
             ], [
                 new \PHPStan\Type\IntegerType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SequenceNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ShardId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('NONE'),

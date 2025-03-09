@@ -91,53 +91,49 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('findings'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('code'),
-                        new \PHPStan\Type\Constant\ConstantStringType('findingId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    new \PHPStan\Type\Constant\ConstantStringType('findingId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('details'),
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('details'),
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudFormationStackUpdate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('codeDeployDeployment'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('cloudFormationStackUpdate'),
-                            new \PHPStan\Type\Constant\ConstantStringType('codeDeployDeployment'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stackArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('stackArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            ], [
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupArn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('deploymentGroupArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deploymentId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
             ]),
         ]);
@@ -227,20 +223,16 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('title'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ssmExecutionArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ssmExecutionArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('chatbotSns'),
                         new \PHPStan\Type\Constant\ConstantStringType('empty'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -259,12 +251,10 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
@@ -334,16 +324,14 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('resourcePolicies'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
-                        new \PHPStan\Type\Constant\ConstantStringType('policyId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ramResourceShareRegion'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('policyDocument'),
+                    new \PHPStan\Type\Constant\ConstantStringType('policyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ramResourceShareRegion'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -361,36 +349,32 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('integrations'),
                 new \PHPStan\Type\Constant\ConstantStringType('name'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ssmAutomation'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ssmAutomation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('documentName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('documentVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dynamicParameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('parameters'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('targetAccount'),
                     ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('documentName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('documentVersion'),
-                            new \PHPStan\Type\Constant\ConstantStringType('dynamicParameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('parameters'),
-                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('targetAccount'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('variable'),
                         ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('variable'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('INCIDENT_RECORD_ARN'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('INVOLVED_RESOURCES'),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ]))),
-                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_PLAN_OWNER_ACCOUNT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IMPACTED_ACCOUNT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INCIDENT_RECORD_ARN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('INVOLVED_RESOURCES'),
                             ]),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RESPONSE_PLAN_OWNER_ACCOUNT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IMPACTED_ACCOUNT'),
                         ]),
                     ]),
                 ])),
@@ -399,15 +383,11 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('chatbotSns'),
                     new \PHPStan\Type\Constant\ConstantStringType('empty'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\Constant\ConstantArrayType([], []),
                 ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('dedupeString'),
                     new \PHPStan\Type\Constant\ConstantStringType('impact'),
@@ -419,33 +399,29 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('snsTopicArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('pagerDutyConfiguration'),
+                ], [
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('pagerDutyConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pagerDutyIncidentConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('secretId'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                            new \PHPStan\Type\Constant\ConstantStringType('pagerDutyIncidentConfiguration'),
-                            new \PHPStan\Type\Constant\ConstantStringType('secretId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('serviceId'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('serviceId'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                            new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -469,14 +445,12 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                     ])),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -493,14 +467,12 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('findings'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('id'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -513,37 +485,35 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('incidentRecordSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('impact'),
+                    new \PHPStan\Type\Constant\ConstantStringType('incidentRecordSource'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resolvedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('impact'),
-                        new \PHPStan\Type\Constant\ConstantStringType('incidentRecordSource'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resolvedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('invokedBy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('source'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('invokedBy'),
-                            new \PHPStan\Type\Constant\ConstantStringType('resourceArn'),
-                            new \PHPStan\Type\Constant\ConstantStringType('source'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
-                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('OPEN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RESOLVED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -557,50 +527,48 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('relatedItems'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('generatedId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('title'),
+                ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('generatedId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('title'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INCIDENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('METRIC'),
-                                new \PHPStan\Type\Constant\ConstantStringType('PARENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
-                                new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
-                                new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
-                                new \PHPStan\Type\Constant\ConstantStringType('INVOLVED_RESOURCE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('TASK'),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                                new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
-                                new \PHPStan\Type\Constant\ConstantStringType('pagerDutyIncidentDetail'),
-                                new \PHPStan\Type\Constant\ConstantStringType('url'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('autoResolve'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('id'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('secretId'),
-                                ], [
-                                    new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ANALYSIS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INCIDENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('METRIC'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PARENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTACHMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OTHER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AUTOMATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('INVOLVED_RESOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TASK'),
                         ]),
-                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('metricDefinition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('pagerDutyIncidentDetail'),
+                            new \PHPStan\Type\Constant\ConstantStringType('url'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('autoResolve'),
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('secretId'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -613,9 +581,7 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('replicationSetArns'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -627,16 +593,14 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('responsePlanSummaries'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('displayName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('displayName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -658,30 +622,26 @@ final class SSMIncidentsClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('eventSummaries'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('eventId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventReferences'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('eventUpdatedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('incidentRecordArn'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('eventId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventReferences'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('eventUpdatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('incidentRecordArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('relatedItemId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('resource'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

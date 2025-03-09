@@ -55,19 +55,15 @@ final class RepostspaceClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('addedAccessorIds'),
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('accessorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
                     new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accessorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -79,20 +75,16 @@ final class RepostspaceClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('removedAccessorIds'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('accessorId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('error'),
-                        new \PHPStan\Type\Constant\ConstantStringType('message'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('accessorId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                    new \PHPStan\Type\Constant\ConstantStringType('message'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -155,18 +147,14 @@ final class RepostspaceClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('EXPERT'),
-                        new \PHPStan\Type\Constant\ConstantStringType('MODERATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ADMINISTRATOR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('SUPPORTREQUESTOR'),
-                    ]),
+                    new \PHPStan\Type\Constant\ConstantStringType('EXPERT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MODERATOR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ADMINISTRATOR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SUPPORTREQUESTOR'),
                 ]))),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -175,9 +163,7 @@ final class RepostspaceClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
                     new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -197,51 +183,49 @@ final class RepostspaceClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('spaces'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('configurationStatus'),
-                        new \PHPStan\Type\Constant\ConstantStringType('contentSize'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('deleteDateTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('description'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('randomDomain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('spaceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('storageLimit'),
-                        new \PHPStan\Type\Constant\ConstantStringType('tier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userCount'),
-                        new \PHPStan\Type\Constant\ConstantStringType('userKMSKey'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vanityDomain'),
-                        new \PHPStan\Type\Constant\ConstantStringType('vanityDomainStatus'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNCONFIGURED'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
-                        ]),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNAPPROVED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('configurationStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentSize'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('deleteDateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('randomDomain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('spaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('storageLimit'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('userKMSKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vanityDomain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vanityDomainStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CONFIGURED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNCONFIGURED'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNAPPROVED'),
                     ]),
                 ])),
             ]),

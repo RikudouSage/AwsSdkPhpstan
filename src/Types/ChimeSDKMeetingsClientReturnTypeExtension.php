@@ -61,52 +61,48 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Attendees'),
                 new \PHPStan\Type\Constant\ConstantStringType('Errors'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Audio'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Audio'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -239,9 +235,7 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -328,57 +322,51 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Audio'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Audio'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                     ]),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -517,9 +505,7 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
                         ]),
                     ]),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -532,39 +518,37 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('Attendees'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ExternalUserId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('AttendeeId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('JoinToken'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Capabilities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Audio'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Video'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Content'),
                     ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Audio'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Video'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Content'),
-                        ], [
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Send'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Receive'),
-                                new \PHPStan\Type\Constant\ConstantStringType('None'),
-                            ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SendReceive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Send'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Receive'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                     ]),
                 ])),
@@ -578,14 +562,12 @@ final class ChimeSDKMeetingsClientReturnTypeExtension implements \PHPStan\Type\D
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

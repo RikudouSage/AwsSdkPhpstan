@@ -31,30 +31,28 @@ final class MarketplaceEntitlementServiceClientReturnTypeExtension implements \P
                 new \PHPStan\Type\Constant\ConstantStringType('Entitlements'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ProductCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ProductCode'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IntegerValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DoubleValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('BooleanValue'),
+                        new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
                     ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IntegerValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DoubleValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BooleanValue'),
-                            new \PHPStan\Type\Constant\ConstantStringType('StringValue'),
-                        ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\FloatType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

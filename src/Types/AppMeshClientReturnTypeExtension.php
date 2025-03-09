@@ -182,34 +182,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
@@ -273,34 +271,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -329,18 +325,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -402,34 +396,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -458,18 +450,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -604,16 +594,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -622,34 +610,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('port'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\IntegerType(),
@@ -663,17 +649,13 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('internal'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('internal'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
                                 ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -685,9 +667,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -724,16 +704,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -745,34 +723,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -794,18 +770,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -818,9 +792,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -832,9 +804,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -871,16 +841,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -892,34 +860,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -941,18 +907,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -965,9 +929,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -979,9 +941,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -1018,16 +978,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1131,9 +1089,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -1144,9 +1100,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1157,9 +1111,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -1176,130 +1128,126 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
                                     new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -1319,14 +1267,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -1417,9 +1363,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -1430,9 +1374,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1443,9 +1385,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -1462,32 +1402,67 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tls'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('enforce'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ports'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('validation'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('enforce'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ports'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                            ], [
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                                ], [
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('acm'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('file'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                             ], [
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                                 ], [
-                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                ], [
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1496,120 +1471,121 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\IntegerType(),
-                                            ])),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ]),
-                                            ]),
                                         ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
                                     new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -1631,179 +1607,131 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -1823,14 +1751,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -1848,14 +1774,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('IPv6_PREFERRED'),
@@ -1933,21 +1857,19 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('listeners'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
                             ]),
                         ])),
@@ -2114,34 +2036,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
@@ -2205,34 +2125,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -2261,18 +2179,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -2334,34 +2250,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -2390,18 +2304,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -2536,16 +2448,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2554,34 +2464,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('port'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\IntegerType(),
@@ -2595,17 +2503,13 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('internal'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('internal'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
                                 ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -2617,9 +2521,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -2656,16 +2558,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2677,34 +2577,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -2726,18 +2624,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -2750,9 +2646,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -2764,9 +2658,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -2803,16 +2695,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2824,34 +2714,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -2873,18 +2761,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -2897,9 +2783,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -2911,9 +2795,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -2950,16 +2832,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3063,9 +2943,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -3076,9 +2954,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3089,9 +2965,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -3108,130 +2982,126 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
                                     new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -3251,14 +3121,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -3349,9 +3217,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -3362,9 +3228,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3375,9 +3239,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -3394,32 +3256,67 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tls'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('enforce'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ports'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('validation'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('enforce'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ports'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                            ], [
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                                ], [
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('acm'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('file'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                             ], [
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                                 ], [
-                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                ], [
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3428,120 +3325,121 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\IntegerType(),
-                                            ])),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ]),
-                                            ]),
                                         ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
                                     new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -3563,179 +3461,131 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -3755,14 +3605,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -3780,14 +3628,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('IPv6_PREFERRED'),
@@ -3865,21 +3711,19 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('listeners'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
                             ]),
                         ])),
@@ -4046,34 +3890,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
@@ -4137,34 +3979,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -4193,18 +4033,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -4266,34 +4104,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -4322,18 +4158,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -4468,16 +4302,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4486,34 +4318,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('port'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\IntegerType(),
@@ -4527,17 +4357,13 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('internal'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('internal'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
                                 ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -4549,9 +4375,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -4588,16 +4412,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4609,34 +4431,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -4658,18 +4478,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -4682,9 +4500,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -4696,9 +4512,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -4735,16 +4549,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4756,34 +4568,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -4805,18 +4615,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -4829,9 +4637,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -4843,9 +4649,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -4882,16 +4686,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4995,9 +4797,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -5008,9 +4808,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5021,9 +4819,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -5040,130 +4836,126 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
                                     new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -5183,14 +4975,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -5281,9 +5071,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -5294,9 +5082,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5307,9 +5093,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -5326,32 +5110,67 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tls'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('enforce'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ports'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('validation'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('enforce'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ports'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                            ], [
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                                ], [
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('acm'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('file'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                             ], [
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                                 ], [
-                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                ], [
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5360,120 +5179,121 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\IntegerType(),
-                                            ])),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ]),
-                                            ]),
                                         ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
                                     new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -5495,179 +5315,131 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -5687,14 +5459,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -5712,14 +5482,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('IPv6_PREFERRED'),
@@ -5797,21 +5565,19 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('listeners'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
                             ]),
                         ])),
@@ -5901,28 +5667,26 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('gatewayRoutes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('gatewayRouteName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualGatewayName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('gatewayRouteName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualGatewayName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5935,24 +5699,22 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('meshes'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -5966,28 +5728,26 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('routes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('routeName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualRouterName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('routeName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualRouterName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6000,14 +5760,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6020,26 +5778,24 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('virtualGateways'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualGatewayName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualGatewayName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6052,26 +5808,24 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('virtualNodes'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualNodeName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualNodeName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6084,26 +5838,24 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('virtualRouters'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualRouterName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualRouterName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6116,26 +5868,24 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('virtualServices'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
-                        new \PHPStan\Type\Constant\ConstantStringType('version'),
-                        new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('meshOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resourceOwner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('version'),
+                    new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -6236,34 +5986,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
@@ -6327,34 +6075,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -6383,18 +6129,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -6456,34 +6200,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix'),
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('exact'),
@@ -6512,18 +6254,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
                         ]),
@@ -6658,16 +6398,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6676,34 +6414,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('port'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\IntegerType(),
@@ -6717,17 +6453,13 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('internal'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('cancelled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('deadline-exceeded'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('internal'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('resource-exhausted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unavailable'),
                                 ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -6739,9 +6471,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -6778,16 +6508,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6799,34 +6527,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -6848,18 +6574,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -6872,9 +6596,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -6886,9 +6608,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -6925,16 +6645,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6946,34 +6664,32 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('queryParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('scheme'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invert'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('invert'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('prefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('range'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('regex'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('suffix'),
                                     ], [
-                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('prefix'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('range'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('regex'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('suffix'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('end'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('start'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('end'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('start'),
-                                            ], [
-                                                new \PHPStan\Type\IntegerType(),
-                                                new \PHPStan\Type\IntegerType(),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\IntegerType(),
                                         ]),
                                         new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('GET'),
@@ -6995,18 +6711,16 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
                                         new \PHPStan\Type\StringType(),
                                     ]),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
@@ -7019,9 +6733,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('perRetryTimeout'),
                                 new \PHPStan\Type\Constant\ConstantStringType('tcpRetryEvents'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -7033,9 +6745,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('connection-error'),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('connection-error')),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('idle'),
@@ -7072,16 +6782,14 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('weightedTargets'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('virtualNode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7185,9 +6893,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -7198,9 +6904,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7211,9 +6915,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -7230,130 +6932,126 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
                                     new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                     ], [
-                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -7373,14 +7071,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -7471,9 +7167,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                     ]),
                                     new \PHPStan\Type\BooleanType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\IntegerType(),
-                                    ])),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
                                         new \PHPStan\Type\Constant\ConstantStringType('trust'),
@@ -7484,9 +7178,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('exact'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7497,9 +7189,7 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                             ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
+                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                             ]),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
@@ -7516,32 +7206,67 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('virtualService'),
+                                new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('clientPolicy'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('virtualServiceName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tls'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('enforce'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ports'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('validation'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('enforce'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('ports'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                            ]),
+                                        ]),
+                                        new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                        ], [
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                            ], [
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                                ], [
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('acm'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('file'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                             ], [
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
                                                 ], [
-                                                    new \PHPStan\Type\StringType(),
+                                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                                ]),
+                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                    new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                                ], [
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7550,120 +7275,121 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                                     new \PHPStan\Type\StringType(),
                                                 ]),
                                             ]),
-                                            new \PHPStan\Type\BooleanType(),
-                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\IntegerType(),
-                                            ])),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                            ], [
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                ]),
-                                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                                ], [
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateAuthorityArns'),
-                                                    ], [
-                                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                            new \PHPStan\Type\StringType(),
-                                                        ])),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                                    ], [
-                                                        new \PHPStan\Type\StringType(),
-                                                    ]),
-                                                ]),
-                                            ]),
                                         ]),
                                     ]),
-                                    new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
+                            new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('timeout'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('connectionPool'),
-                                new \PHPStan\Type\Constant\ConstantStringType('healthCheck'),
-                                new \PHPStan\Type\Constant\ConstantStringType('outlierDetection'),
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
-                                new \PHPStan\Type\Constant\ConstantStringType('timeout'),
-                                new \PHPStan\Type\Constant\ConstantStringType('tls'),
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('path'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
                                     new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                ], [
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxPendingRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxRequests'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('maxConnections'),
-                                    ], [
-                                        new \PHPStan\Type\IntegerType(),
-                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('interval'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
+                                new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                            ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('healthyThreshold'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('intervalMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('path'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('timeoutMillis'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('unhealthyThreshold'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
                                 ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('baseEjectionDuration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('interval'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxEjectionPercent'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('maxServerErrors'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('grpc'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('unit'),
@@ -7685,179 +7411,131 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                     ]),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
-                                ]),
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
                                     ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
                                         ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('idle'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('unit'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('s'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('ms'),
-                                            ]),
-                                            new \PHPStan\Type\IntegerType(),
-                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
                                     ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('certificate'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('mode'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('perRequest'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('idle'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('unit'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('s'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('ms'),
+                                        ]),
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                                new \PHPStan\Type\Constant\ConstantStringType('mode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('validation'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('file'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('sds'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('secretName'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('trust'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('match'),
+                                    ], [
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('exact'),
+                                        ], [
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('file'),
                                         new \PHPStan\Type\Constant\ConstantStringType('sds'),
                                     ], [
                                         new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('privateKey'),
                                         ], [
-                                            new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('secretName'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ]),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('STRICT'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('PERMISSIVE'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
-                                    ]),
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('subjectAlternativeNames'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('trust'),
-                                    ], [
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('match'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('exact'),
-                                            ], [
-                                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                                    new \PHPStan\Type\StringType(),
-                                                ])),
-                                            ]),
-                                        ]),
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('file'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('sds'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('certificateChain'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('secretName'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
                                         ]),
                                     ]),
                                 ]),
@@ -7877,14 +7555,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                         new \PHPStan\Type\Constant\ConstantStringType('json'),
                                         new \PHPStan\Type\Constant\ConstantStringType('text'),
                                     ], [
-                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                            ], [
-                                                new \PHPStan\Type\StringType(),
-                                                new \PHPStan\Type\StringType(),
-                                            ]),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\StringType(),
                                     ]),
@@ -7902,14 +7578,12 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 new \PHPStan\Type\Constant\ConstantStringType('namespaceName'),
                                 new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('key'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('IPv6_PREFERRED'),
@@ -7987,21 +7661,19 @@ final class AppMeshClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('listeners'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                        ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('portMapping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('port'),
+                                new \PHPStan\Type\Constant\ConstantStringType('protocol'),
                             ], [
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('port'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('protocol'),
-                                ], [
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('http'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('tcp'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('http2'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('grpc'),
-                                    ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('http'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('tcp'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('grpc'),
                                 ]),
                             ]),
                         ])),

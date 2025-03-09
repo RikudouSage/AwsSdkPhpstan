@@ -184,12 +184,10 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Filters'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Pattern'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -326,9 +324,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('TRIM_HORIZON'),
                             new \PHPStan\Type\Constant\ConstantStringType('LATEST'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\StringType(),
@@ -348,12 +344,8 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                             new \PHPStan\Type\Constant\ConstantStringType('SecurityGroup'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         ]),
                     ]),
                 ]),
@@ -368,9 +360,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('HeaderParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('QueryStringParameters'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
@@ -445,12 +435,8 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\Constant\ConstantStringType('SecurityGroups'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AssignPublicIp'),
                             ], [
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\StringType(),
-                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -459,43 +445,37 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('capacityProvider'),
-                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
-                                new \PHPStan\Type\Constant\ConstantStringType('base'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\IntegerType(),
-                                new \PHPStan\Type\IntegerType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('capacityProvider'),
+                            new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                            new \PHPStan\Type\Constant\ConstantStringType('base'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ])),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('expression'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('distinctInstance'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('memberOf'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('expression'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('distinctInstance'),
+                                new \PHPStan\Type\Constant\ConstantStringType('memberOf'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                new \PHPStan\Type\Constant\ConstantStringType('field'),
-                            ], [
-                                new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('random'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('spread'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('binpack'),
-                                ]),
-                                new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('field'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('random'),
+                                new \PHPStan\Type\Constant\ConstantStringType('spread'),
+                                new \PHPStan\Type\Constant\ConstantStringType('binpack'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ])),
                         new \PHPStan\Type\Constant\ConstantStringType('TASK_DEFINITION'),
                         new \PHPStan\Type\StringType(),
@@ -508,55 +488,45 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('Memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('TaskRoleArn'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Command'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Cpu'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Environment'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EnvironmentFiles'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Memory'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('MemoryReservation'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('ResourceRequirements'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Command'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Cpu'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Environment'),
+                                new \PHPStan\Type\Constant\ConstantStringType('EnvironmentFiles'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Memory'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MemoryReservation'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResourceRequirements'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
                                 ], [
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\StringType(),
-                                    ])),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('name'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                    new \PHPStan\Type\IntegerType(),
-                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantArrayType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('type'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('value'),
-                                        ], [
-                                            new \PHPStan\Type\UnionType([
-                                                new \PHPStan\Type\Constant\ConstantStringType('GPU'),
-                                                new \PHPStan\Type\Constant\ConstantStringType('InferenceAccelerator'),
-                                            ]),
-                                            new \PHPStan\Type\StringType(),
-                                        ]),
-                                    ])),
-                                ]),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GPU'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('InferenceAccelerator'),
+                                    ]),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -565,26 +535,22 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('deviceType'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('deviceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('deviceType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                             ])),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -614,43 +580,35 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('InstanceType'),
                             new \PHPStan\Type\Constant\ConstantStringType('ResourceRequirements'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                                ], [
-                                    new \PHPStan\Type\UnionType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('GPU'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MEMORY'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('VCPU'),
-                                    ]),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('JobId'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                            ], [
                                 new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('N_TO_N'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GPU'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MEMORY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VCPU'),
                                 ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('JobId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('N_TO_N'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SEQUENTIAL'),
                             ]),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
@@ -667,9 +625,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('HeaderParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('QueryStringParameters'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     ]),
@@ -686,21 +642,17 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('PipelineParameterList'),
                     ], [
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -713,9 +665,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -748,22 +698,39 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionValueType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                                new \PHPStan\Type\StringType(),
-                            ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionValueType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DimensionName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                            new \PHPStan\Type\StringType(),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MeasureValue'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MeasureName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeMappings'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('MeasureValue'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MeasureName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeName'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -774,32 +741,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
-                            ]),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureName'),
-                                new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeMappings'),
-                            ], [
-                                new \PHPStan\Type\StringType(),
-                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                    new \PHPStan\Type\Constant\ConstantArrayType([
-                                        new \PHPStan\Type\Constant\ConstantStringType('MeasureValue'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MeasureValueType'),
-                                        new \PHPStan\Type\Constant\ConstantStringType('MultiMeasureAttributeName'),
-                                    ], [
-                                        new \PHPStan\Type\StringType(),
-                                        new \PHPStan\Type\UnionType([
-                                            new \PHPStan\Type\Constant\ConstantStringType('DOUBLE'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BIGINT'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('VARCHAR'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BOOLEAN'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('TIMESTAMP'),
-                                        ]),
-                                        new \PHPStan\Type\StringType(),
-                                    ]),
-                                ])),
-                            ]),
+                            ])),
                         ])),
                     ]),
                 ]),
@@ -845,9 +787,7 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('INFO'),
                         new \PHPStan\Type\Constant\ConstantStringType('TRACE'),
                     ]),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('ALL'),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantStringType('ALL')),
                 ]),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -860,49 +800,47 @@ final class PipesClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('Pipes'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Arn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CurrentState'),
-                        new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
-                        new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Source'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Target'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Enrichment'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATE_ROLLBACK_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('DELETE_ROLLBACK_FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_ROLLBACK_FAILED'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DesiredState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CurrentState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StateReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Target'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enrichment'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('START_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOP_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_ROLLBACK_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETE_ROLLBACK_FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_ROLLBACK_FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

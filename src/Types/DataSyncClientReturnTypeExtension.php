@@ -352,12 +352,8 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Version'),
@@ -416,9 +412,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('COOL'),
                     new \PHPStan\Type\Constant\ConstantStringType('ARCHIVE'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -442,9 +436,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupArns'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -467,9 +459,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -529,9 +519,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -549,9 +537,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('NFS'),
                     new \PHPStan\Type\Constant\ConstantStringType('SMB'),
@@ -609,9 +595,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -637,14 +621,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Hostname'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Port'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\IntegerType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Hostname'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Port'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                 ])),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
@@ -672,9 +654,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -694,9 +674,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('AgentArns'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\StringType(),
-                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Version'),
@@ -733,9 +711,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('HTTPS'),
                     new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\StringType(),
@@ -773,9 +749,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 ], [
                     new \PHPStan\Type\StringType(),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -797,9 +771,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -814,9 +786,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     ]),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('NTLM'),
@@ -849,9 +819,7 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\IntegerType(),
                 ]),
                 new \PHPStan\Type\Constant\ConstantStringType('NetAppONTAP'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -872,69 +840,67 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Metrics'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('P95Metrics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Capacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                ], [
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Timestamp'),
-                        new \PHPStan\Type\Constant\ConstantStringType('P95Metrics'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Capacity'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IOPS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Throughput'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Latency'),
                     ], [
-                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('IOPS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Throughput'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Latency'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Read'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Write'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Other'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Total'),
                         ], [
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Write'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Total'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Write'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Total'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('Read'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Write'),
-                                new \PHPStan\Type\Constant\ConstantStringType('Other'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Used'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Provisioned'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogicalUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterCloudStorageUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Read'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Write'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Other'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Total'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
                         ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SVM'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CLUSTER'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Read'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Write'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Other'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
                         ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Used'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Provisioned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterCloudStorageUsed'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SVM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VOLUME'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLUSTER'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -953,221 +919,207 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('NetAppONTAPVolumes'),
                     new \PHPStan\Type\Constant\ConstantStringType('NetAppONTAPClusters'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterUuid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SvmName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('EnabledProtocols'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalCapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalCapacityProvisioned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalLogicalCapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NfsExportedVolumes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TotalSnapshotCapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterUuid'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SvmName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('EnabledProtocols'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalCapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalCapacityProvisioned'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalLogicalCapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NfsExportedVolumes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TotalSnapshotCapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\StringType(),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VolumeName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecurityStyle'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SvmUuid'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SvmName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CapacityProvisioned'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LogicalCapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NfsExported'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SnapshotCapacityUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('VolumeName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SecurityStyle'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SvmUuid'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SvmName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CapacityProvisioned'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LogicalCapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NfsExported'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SnapshotCapacityUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\BooleanType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NfsExportedVolumes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageSize'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageLogicalUsed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ClusterCloudStorageUsed'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('CifsShareCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('NfsExportedVolumes'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterName'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MaxP95Performance'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageSize'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterBlockStorageLogicalUsed'),
-                            new \PHPStan\Type\Constant\ConstantStringType('Recommendations'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RecommendationStatus'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LunCount'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ClusterCloudStorageUsed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
                         ], [
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantArrayType([
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IopsTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputOther'),
-                                new \PHPStan\Type\Constant\ConstantStringType('ThroughputTotal'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyRead'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyWrite'),
-                                new \PHPStan\Type\Constant\ConstantStringType('LatencyOther'),
-                            ], [
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                                new \PHPStan\Type\FloatType(),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantArrayType([
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
-                                ], [
-                                    new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                                    new \PHPStan\Type\StringType(),
-                                ]),
-                            ])),
-                            new \PHPStan\Type\UnionType([
-                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
-                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
-                                new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            ]),
-                            new \PHPStan\Type\IntegerType(),
-                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
+                            new \PHPStan\Type\FloatType(),
                         ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('StorageConfiguration'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EstimatedMonthlyStorageCost'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -1212,12 +1164,8 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\StringType(),
-                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('VerifyMode'),
                     new \PHPStan\Type\Constant\ConstantStringType('OverwriteMode'),
@@ -1300,14 +1248,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ScheduleExpression'),
@@ -1322,14 +1268,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Action'),
@@ -1567,23 +1511,19 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     ]),
                 ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
+                    new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FilterType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('SIMPLE_PATTERN'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Action'),
@@ -1776,24 +1716,22 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Agents'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AgentArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Platform'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('AgentArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Platform'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Version'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONLINE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('OFFLINE'),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('Version'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1807,21 +1745,19 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('DiscoveryJobs'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('DiscoveryJobArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ISSUES'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('DiscoveryJobArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WARNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TERMINATED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ISSUES'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1835,14 +1771,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Locations'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('LocationUri'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocationUri'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1855,14 +1789,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('StorageSystems'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('StorageSystemArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('StorageSystemArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1875,14 +1807,12 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1895,27 +1825,25 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('TaskExecutions'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskMode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('LAUNCHING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TRANSFERRING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('VERIFYING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ENHANCED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskExecutionArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskMode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LAUNCHING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PREPARING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TRANSFERRING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VERIFYING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ERROR'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ENHANCED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1929,26 +1857,24 @@ final class DataSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('Tasks'),
                 new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
             ], [
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
-                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
-                        new \PHPStan\Type\Constant\ConstantStringType('TaskMode'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
-                            new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
-                            new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
-                        ]),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ENHANCED'),
-                        ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TaskMode'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UNAVAILABLE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('BASIC'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ENHANCED'),
                     ]),
                 ])),
                 new \PHPStan\Type\StringType(),
