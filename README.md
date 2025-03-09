@@ -166,6 +166,10 @@ of composer.json:
     "post-install-cmd": [
       // your other post install scripts
       "generate-aws-phpstan"
+    ],
+    "post-update-cmd": [
+      // your other post update scripts 
+      "generate-aws-phpstan"
     ]
   }
   // your other settings
