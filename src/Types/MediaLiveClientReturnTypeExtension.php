@@ -1841,6 +1841,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                     new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -1852,6 +1854,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -1959,6 +1963,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -6081,6 +6086,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                 new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -6092,6 +6099,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -6199,6 +6208,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -10114,6 +10124,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                 new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -10125,6 +10137,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -10232,6 +10246,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -16265,6 +16280,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                 new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -16276,6 +16293,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -16383,6 +16402,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -20063,6 +20083,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                 new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -20074,6 +20096,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -20181,6 +20205,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -23878,6 +23903,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                     new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -23889,6 +23916,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -23996,6 +24025,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -27612,6 +27642,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                     new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -27623,6 +27655,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                     ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
                                 new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -27730,6 +27764,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                                 new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                             ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),
@@ -31982,6 +32017,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('FillLineGap'),
                                 new \PHPStan\Type\Constant\ConstantStringType('FontFamily'),
                                 new \PHPStan\Type\Constant\ConstantStringType('StyleControl'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultFontSize'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultLineHeight'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\UnionType([
@@ -31993,6 +32030,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('EXCLUDE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
                                 ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -32100,6 +32139,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EPOCH_LOCKING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PIPELINE_LOCKING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('INPUT_CLOCK'),

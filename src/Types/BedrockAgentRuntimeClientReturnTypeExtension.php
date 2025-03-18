@@ -993,8 +993,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\IntegerType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -1018,8 +1039,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -1699,8 +1741,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\IntegerType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -1724,8 +1787,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -3000,8 +3084,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\IntegerType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -3025,8 +3130,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -3706,8 +3832,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\IntegerType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),
@@ -3731,8 +3878,29 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                                         new \PHPStan\Type\StringType(),
                                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('body'),
+                                                            new \PHPStan\Type\Constant\ConstantStringType('images'),
                                                         ], [
                                                             new \PHPStan\Type\StringType(),
+                                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                new \PHPStan\Type\Constant\ConstantStringType('format'),
+                                                                new \PHPStan\Type\Constant\ConstantStringType('source'),
+                                                            ], [
+                                                                new \PHPStan\Type\UnionType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('png'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('gif'),
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('webp'),
+                                                                ]),
+                                                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                                                    new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                                                ], [
+                                                                    new \PHPStan\Type\UnionType([
+                                                                        new \PHPStan\Type\StringType(),
+                                                                        new \PHPStan\Type\ResourceType(),
+                                                                        new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                                                    ]),
+                                                                ]),
+                                                            ])),
                                                         ])),
                                                         new \PHPStan\Type\UnionType([
                                                             new \PHPStan\Type\Constant\ConstantStringType('FAILURE'),

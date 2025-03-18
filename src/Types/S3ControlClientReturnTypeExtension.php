@@ -1674,6 +1674,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('Credentials'),
                 new \PHPStan\Type\Constant\ConstantStringType('MatchedGrantTarget'),
+                new \PHPStan\Type\Constant\ConstantStringType('Grantee'),
             ], [
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('AccessKeyId'),
@@ -1687,6 +1688,17 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('GranteeType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GranteeIdentifier'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_USER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IAM'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }

@@ -3467,9 +3467,11 @@ final class Inspector2ClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('steps'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('componentArn'),
                                 new \PHPStan\Type\Constant\ConstantStringType('componentId'),
                                 new \PHPStan\Type\Constant\ConstantStringType('componentType'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ])),

@@ -173,8 +173,11 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
                     new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_REGISTRATION_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_ACCESS_DENIED'),
                         new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_FREE_ADDRESSES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_SUBNET_IP_PROTOCOL'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATECA_ACCESS_DENIED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATECA_RESOURCE_NOT_FOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('SECURITY_GROUP_NOT_IN_VPC'),
@@ -184,8 +187,13 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                 ]),
@@ -256,6 +264,7 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_NOT_REACHABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_RESOURCE_NOT_FOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('SPN_EXISTS_ON_DIFFERENT_AD_OBJECT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SPN_LIMIT_EXCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1094,8 +1103,11 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     ]),
                     new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CA_CERTIFICATE_REGISTRATION_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_ACCESS_DENIED'),
                         new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_FREE_ADDRESSES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INVALID_SUBNET_IP_PROTOCOL'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATECA_ACCESS_DENIED'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATECA_RESOURCE_NOT_FOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('SECURITY_GROUP_NOT_IN_VPC'),
@@ -1105,8 +1117,13 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecurityGroupIds'),
                     ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                 ])),
@@ -1182,6 +1199,7 @@ final class PcaConnectorAdClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_NOT_REACHABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('DIRECTORY_RESOURCE_NOT_FOUND'),
                         new \PHPStan\Type\Constant\ConstantStringType('SPN_EXISTS_ON_DIFFERENT_AD_OBJECT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SPN_LIMIT_EXCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_FAILURE'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),

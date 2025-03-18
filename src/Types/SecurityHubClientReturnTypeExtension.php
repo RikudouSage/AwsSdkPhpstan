@@ -223,6 +223,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsInput'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StandardsControlsUpdatable'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatusReason'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -235,11 +236,16 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_UPDATES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY_FOR_UPDATES'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StatusReasonCode'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_AVAILABLE_CONFIGURATION_RECORDER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NUMBER_OF_CONFIG_RULES_EXCEEDED'),
                             new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
                         ]),
                     ]),
@@ -258,6 +264,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsInput'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StandardsControlsUpdatable'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatusReason'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -270,11 +277,16 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_UPDATES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY_FOR_UPDATES'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StatusReasonCode'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_AVAILABLE_CONFIGURATION_RECORDER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NUMBER_OF_CONFIG_RULES_EXCEEDED'),
                             new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
                         ]),
                     ]),
@@ -1876,6 +1888,7 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsInput'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StandardsControlsUpdatable'),
                     new \PHPStan\Type\Constant\ConstantStringType('StandardsStatusReason'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -1888,11 +1901,16 @@ final class SecurityHubClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                         new \PHPStan\Type\Constant\ConstantStringType('INCOMPLETE'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('READY_FOR_UPDATES'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NOT_READY_FOR_UPDATES'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('StatusReasonCode'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_AVAILABLE_CONFIGURATION_RECORDER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAXIMUM_NUMBER_OF_CONFIG_RULES_EXCEEDED'),
                             new \PHPStan\Type\Constant\ConstantStringType('INTERNAL_ERROR'),
                         ]),
                     ]),

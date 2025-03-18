@@ -17216,6 +17216,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ZoneType'),
                     new \PHPStan\Type\Constant\ConstantStringType('ParentZoneName'),
                     new \PHPStan\Type\Constant\ConstantStringType('ParentZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('GroupLongName'),
                     new \PHPStan\Type\Constant\ConstantStringType('State'),
                 ], [
                     new \PHPStan\Type\UnionType([
@@ -17228,6 +17229,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),

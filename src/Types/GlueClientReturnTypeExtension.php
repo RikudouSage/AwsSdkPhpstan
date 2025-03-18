@@ -6250,6 +6250,7 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                     new \PHPStan\Type\Constant\ConstantStringType('CatalogProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreateTableDefaultPermissions'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreateDatabaseDefaultPermissions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowFullTableExternalDataAccess'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -6337,6 +6338,10 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             new \PHPStan\Type\Constant\ConstantStringType('DATA_LOCATION_ACCESS'),
                         ])),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('True'),
+                        new \PHPStan\Type\Constant\ConstantStringType('False'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -6379,6 +6384,7 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                     new \PHPStan\Type\Constant\ConstantStringType('CatalogProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreateTableDefaultPermissions'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreateDatabaseDefaultPermissions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AllowFullTableExternalDataAccess'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -6466,6 +6472,10 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             new \PHPStan\Type\Constant\ConstantStringType('DATA_LOCATION_ACCESS'),
                         ])),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('True'),
+                        new \PHPStan\Type\Constant\ConstantStringType('False'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

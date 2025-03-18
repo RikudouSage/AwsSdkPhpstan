@@ -566,6 +566,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -674,6 +675,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                             ]),
@@ -966,6 +975,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -1074,6 +1084,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -1151,6 +1169,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -1259,6 +1278,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -1332,6 +1359,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -1440,6 +1468,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -1511,6 +1547,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -1619,6 +1656,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -2093,6 +2138,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -2201,6 +2247,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -2837,6 +2891,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -2945,6 +3000,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -3401,6 +3464,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -3509,6 +3573,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -3586,6 +3658,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -3694,6 +3767,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -3767,6 +3848,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -3875,6 +3957,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -3946,6 +4036,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -4054,6 +4145,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -4528,6 +4627,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -4636,6 +4736,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -5272,6 +5380,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -5380,6 +5489,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -5685,6 +5802,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -5793,6 +5911,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -5870,6 +5996,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -5978,6 +6105,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -6051,6 +6186,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -6159,6 +6295,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -6230,6 +6374,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -6338,6 +6483,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -6812,6 +6965,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -6920,6 +7074,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -7254,6 +7416,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -7362,6 +7525,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -7908,6 +8079,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -8016,6 +8188,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -8093,6 +8273,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -8201,6 +8382,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -8274,6 +8463,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -8382,6 +8572,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -8453,6 +8651,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -8561,6 +8760,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -9035,6 +9242,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -9143,6 +9351,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -9477,6 +9693,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -9585,6 +9802,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -10243,6 +10468,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -10351,6 +10577,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -10428,6 +10662,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -10536,6 +10771,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -10609,6 +10852,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -10717,6 +10961,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -10788,6 +11040,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -10896,6 +11149,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -11370,6 +11631,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -11478,6 +11740,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -12114,6 +12384,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -12222,6 +12493,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ], [
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                         ]),
@@ -12527,6 +12806,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -12635,6 +12915,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -12712,6 +13000,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -12820,6 +13109,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -12893,6 +13190,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -13001,6 +13299,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -13072,6 +13378,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -13180,6 +13487,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -13654,6 +13969,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -13762,6 +14078,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -14096,6 +14420,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -14204,6 +14529,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -14750,6 +15083,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -14858,6 +15192,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -14935,6 +15277,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -15043,6 +15386,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -15116,6 +15467,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -15224,6 +15576,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -15295,6 +15655,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -15403,6 +15764,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -15877,6 +16246,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -15985,6 +16355,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -16319,6 +16697,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                                             new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                                         ], [
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -16427,6 +16806,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ], [
                                                 new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                                    new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                                                ]),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                                            ], [
+                                                new \PHPStan\Type\UnionType([
                                                     new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                                     new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                                                 ]),
@@ -17080,6 +17467,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -17188,6 +17576,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                             ]),
@@ -17446,6 +17842,7 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('HeaderOrder'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA3Fingerprint'),
                         new \PHPStan\Type\Constant\ConstantStringType('JA4Fingerprint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UriFragment'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -17554,6 +17951,14 @@ final class WAFV2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('FallbackBehavior'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NO_MATCH'),
                             ]),

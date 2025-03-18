@@ -170,9 +170,11 @@ final class ACMPCAClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('RSA_2048'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RSA_3072'),
                             new \PHPStan\Type\Constant\ConstantStringType('RSA_4096'),
                             new \PHPStan\Type\Constant\ConstantStringType('EC_prime256v1'),
                             new \PHPStan\Type\Constant\ConstantStringType('EC_secp384r1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC_secp521r1'),
                             new \PHPStan\Type\Constant\ConstantStringType('SM2'),
                         ]),
                         new \PHPStan\Type\UnionType([
@@ -528,9 +530,11 @@ final class ACMPCAClientReturnTypeExtension implements \PHPStan\Type\DynamicMeth
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('RSA_2048'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RSA_3072'),
                             new \PHPStan\Type\Constant\ConstantStringType('RSA_4096'),
                             new \PHPStan\Type\Constant\ConstantStringType('EC_prime256v1'),
                             new \PHPStan\Type\Constant\ConstantStringType('EC_secp384r1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('EC_secp521r1'),
                             new \PHPStan\Type\Constant\ConstantStringType('SM2'),
                         ]),
                         new \PHPStan\Type\UnionType([

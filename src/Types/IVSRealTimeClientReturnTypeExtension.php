@@ -215,6 +215,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('mediaTypes'),
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -238,6 +239,11 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             ]),
                         ]),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetSegmentDurationSeconds'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),
@@ -462,8 +468,14 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                                 ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('targetSegmentDurationSeconds'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -667,6 +679,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('mediaTypes'),
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -690,6 +703,11 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             ]),
                         ]),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetSegmentDurationSeconds'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),
@@ -1186,8 +1204,14 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                                 ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('targetSegmentDurationSeconds'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                    ]),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1298,6 +1322,7 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('mediaTypes'),
                         new \PHPStan\Type\Constant\ConstantStringType('thumbnailConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordingReconnectWindowSeconds'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hlsConfiguration'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -1321,6 +1346,11 @@ final class IVSRealTimeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             ]),
                         ]),
                         new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('targetSegmentDurationSeconds'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('events'),

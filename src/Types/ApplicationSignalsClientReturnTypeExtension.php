@@ -15,12 +15,14 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
     {
         return in_array($methodReflection->getName(), [
             'batchGetServiceLevelObjectiveBudgetReport',
+            'batchUpdateExclusionWindows',
             'createServiceLevelObjective',
             'deleteServiceLevelObjective',
             'getService',
             'getServiceLevelObjective',
             'listServiceDependencies',
             'listServiceDependents',
+            'listServiceLevelObjectiveExclusionWindows',
             'listServiceLevelObjectives',
             'listServiceOperations',
             'listServices',
@@ -36,12 +38,14 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
             'batchGetServiceLevelObjectiveBudgetReport' => $this->batchGetServiceLevelObjectiveBudgetReport(),
+            'batchUpdateExclusionWindows' => $this->batchUpdateExclusionWindows(),
             'createServiceLevelObjective' => $this->createServiceLevelObjective(),
             'deleteServiceLevelObjective' => $this->deleteServiceLevelObjective(),
             'getService' => $this->getService(),
             'getServiceLevelObjective' => $this->getServiceLevelObjective(),
             'listServiceDependencies' => $this->listServiceDependencies(),
             'listServiceDependents' => $this->listServiceDependents(),
+            'listServiceLevelObjectiveExclusionWindows' => $this->listServiceLevelObjectiveExclusionWindows(),
             'listServiceLevelObjectives' => $this->listServiceLevelObjectives(),
             'listServiceOperations' => $this->listServiceOperations(),
             'listServices' => $this->listServices(),
@@ -473,6 +477,26 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
                 ], [
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function batchUpdateExclusionWindows(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SloIds'),
+                new \PHPStan\Type\Constant\ConstantStringType('Errors'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SloId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
+                ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1431,6 +1455,43 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listServiceLevelObjectiveExclusionWindows(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ExclusionWindows'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Window'),
+                    new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RecurrenceRule'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DurationUnit'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Duration'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('MINUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HOUR'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DAY'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MONTH'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

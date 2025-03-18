@@ -203,7 +203,9 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('Created'),
                     new \PHPStan\Type\Constant\ConstantStringType('CustomEvents'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataStorage'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DeobfuscationConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DomainList'),
                     new \PHPStan\Type\Constant\ConstantStringType('Id'),
                     new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
@@ -255,7 +257,22 @@ final class CloudWatchRUMClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('JavaScriptSourceMaps'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('S3Uri'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                        ]),
+                    ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),

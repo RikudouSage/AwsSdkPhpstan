@@ -203,6 +203,7 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Principal'),
                         new \PHPStan\Type\Constant\ConstantStringType('Resource'),
                         new \PHPStan\Type\Constant\ConstantStringType('Permissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Condition'),
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsWithGrantOption'),
                     ], [
                         new \PHPStan\Type\StringType(),
@@ -335,6 +336,11 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('CREATE_CATALOG'),
                             new \PHPStan\Type\Constant\ConstantStringType('SUPER_USER'),
                         ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                             new \PHPStan\Type\Constant\ConstantStringType('SELECT'),
@@ -380,6 +386,7 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('Principal'),
                         new \PHPStan\Type\Constant\ConstantStringType('Resource'),
                         new \PHPStan\Type\Constant\ConstantStringType('Permissions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Condition'),
                         new \PHPStan\Type\Constant\ConstantStringType('PermissionsWithGrantOption'),
                     ], [
                         new \PHPStan\Type\StringType(),
@@ -512,6 +519,11 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('CREATE_CATALOG'),
                             new \PHPStan\Type\Constant\ConstantStringType('SUPER_USER'),
                         ])),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Expression'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ALL'),
                             new \PHPStan\Type\Constant\ConstantStringType('SELECT'),
@@ -684,10 +696,12 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
                     new \PHPStan\Type\Constant\ConstantStringType('WithFederation'),
                     new \PHPStan\Type\Constant\ConstantStringType('HybridAccessEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WithPrivilegedAccess'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -1703,10 +1717,12 @@ final class LakeFormationClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('LastModified'),
                     new \PHPStan\Type\Constant\ConstantStringType('WithFederation'),
                     new \PHPStan\Type\Constant\ConstantStringType('HybridAccessEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WithPrivilegedAccess'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),

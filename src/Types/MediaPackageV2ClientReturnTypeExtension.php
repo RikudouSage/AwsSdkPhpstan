@@ -37,6 +37,8 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
             'listTagsForResource',
             'putChannelPolicy',
             'putOriginEndpointPolicy',
+            'resetChannelState',
+            'resetOriginEndpointState',
             'tagResource',
             'untagResource',
             'updateChannel',
@@ -71,6 +73,8 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
             'listTagsForResource' => $this->listTagsForResource(),
             'putChannelPolicy' => $this->putChannelPolicy(),
             'putOriginEndpointPolicy' => $this->putOriginEndpointPolicy(),
+            'resetChannelState' => $this->resetChannelState(),
+            'resetOriginEndpointState' => $this->resetOriginEndpointState(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateChannel' => $this->updateChannel(),
@@ -373,6 +377,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -404,6 +409,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
@@ -414,6 +420,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -445,6 +452,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
@@ -566,6 +574,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResetAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('IngestEndpoints'),
                 new \PHPStan\Type\Constant\ConstantStringType('InputType'),
@@ -577,6 +586,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
@@ -736,6 +746,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Segment'),
                 new \PHPStan\Type\Constant\ConstantStringType('CreatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('ModifiedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResetAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('StartoverWindowSeconds'),
                 new \PHPStan\Type\Constant\ConstantStringType('HlsManifests'),
@@ -849,6 +860,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -860,6 +872,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -891,6 +904,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
@@ -901,6 +915,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -932,6 +947,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
@@ -1263,6 +1279,40 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
+    private function resetChannelState(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResetAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
+    private function resetOriginEndpointState(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ChannelGroupName'),
+                new \PHPStan\Type\Constant\ConstantStringType('ChannelName'),
+                new \PHPStan\Type\Constant\ConstantStringType('OriginEndpointName'),
+                new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResetAt'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+            ]),
+        ]);
+    }
     private function tagResource(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1484,6 +1534,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1515,6 +1566,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('ManifestName'),
@@ -1525,6 +1577,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('ScteHls'),
                     new \PHPStan\Type\Constant\ConstantStringType('FilterConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('StartTag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UrlEncodeChildManifest'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1556,6 +1609,7 @@ final class MediaPackageV2ClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\BooleanType(),
                     ]),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointErrorConditions'),
