@@ -20,13 +20,16 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'deleteNamespace',
             'deleteTable',
             'deleteTableBucket',
+            'deleteTableBucketEncryption',
             'deleteTableBucketPolicy',
             'deleteTablePolicy',
             'getNamespace',
             'getTable',
             'getTableBucket',
+            'getTableBucketEncryption',
             'getTableBucketMaintenanceConfiguration',
             'getTableBucketPolicy',
+            'getTableEncryption',
             'getTableMaintenanceConfiguration',
             'getTableMaintenanceJobStatus',
             'getTableMetadataLocation',
@@ -34,6 +37,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'listNamespaces',
             'listTableBuckets',
             'listTables',
+            'putTableBucketEncryption',
             'putTableBucketMaintenanceConfiguration',
             'putTableBucketPolicy',
             'putTableMaintenanceConfiguration',
@@ -52,13 +56,16 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'deleteNamespace' => $this->deleteNamespace(),
             'deleteTable' => $this->deleteTable(),
             'deleteTableBucket' => $this->deleteTableBucket(),
+            'deleteTableBucketEncryption' => $this->deleteTableBucketEncryption(),
             'deleteTableBucketPolicy' => $this->deleteTableBucketPolicy(),
             'deleteTablePolicy' => $this->deleteTablePolicy(),
             'getNamespace' => $this->getNamespace(),
             'getTable' => $this->getTable(),
             'getTableBucket' => $this->getTableBucket(),
+            'getTableBucketEncryption' => $this->getTableBucketEncryption(),
             'getTableBucketMaintenanceConfiguration' => $this->getTableBucketMaintenanceConfiguration(),
             'getTableBucketPolicy' => $this->getTableBucketPolicy(),
+            'getTableEncryption' => $this->getTableEncryption(),
             'getTableMaintenanceConfiguration' => $this->getTableMaintenanceConfiguration(),
             'getTableMaintenanceJobStatus' => $this->getTableMaintenanceJobStatus(),
             'getTableMetadataLocation' => $this->getTableMetadataLocation(),
@@ -66,6 +73,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'listNamespaces' => $this->listNamespaces(),
             'listTableBuckets' => $this->listTableBuckets(),
             'listTables' => $this->listTables(),
+            'putTableBucketEncryption' => $this->putTableBucketEncryption(),
             'putTableBucketMaintenanceConfiguration' => $this->putTableBucketMaintenanceConfiguration(),
             'putTableBucketPolicy' => $this->putTableBucketPolicy(),
             'putTableMaintenanceConfiguration' => $this->putTableMaintenanceConfiguration(),
@@ -126,6 +134,12 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
+    private function deleteTableBucketEncryption(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
     private function deleteTableBucketPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -146,9 +160,13 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
                 new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
+                new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
+                new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -162,6 +180,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('type'),
                 new \PHPStan\Type\Constant\ConstantStringType('tableARN'),
                 new \PHPStan\Type\Constant\ConstantStringType('namespace'),
+                new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
                 new \PHPStan\Type\Constant\ConstantStringType('versionToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('metadataLocation'),
                 new \PHPStan\Type\Constant\ConstantStringType('warehouseLocation'),
@@ -172,6 +191,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('modifiedBy'),
                 new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
                 new \PHPStan\Type\Constant\ConstantStringType('format'),
+                new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -183,6 +203,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -190,6 +211,7 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantStringType('ICEBERG'),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -201,11 +223,32 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
                 new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getTableBucketEncryption(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('encryptionConfiguration'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('sseAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AES256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }
@@ -247,6 +290,25 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('resourcePolicy'),
             ], [
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getTableEncryption(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('encryptionConfiguration'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('sseAlgorithm'),
+                    new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AES256'),
+                        new \PHPStan\Type\Constant\ConstantStringType('aws:kms'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }
@@ -355,9 +417,13 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdBy'),
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
@@ -377,11 +443,13 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccountId'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -401,6 +469,8 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('tableARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('modifiedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('namespaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tableBucketId'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -411,9 +481,17 @@ final class S3TablesClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
+        ]);
+    }
+    private function putTableBucketEncryption(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
     private function putTableBucketMaintenanceConfiguration(): ?\PHPStan\Type\Type

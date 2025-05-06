@@ -766,6 +766,7 @@ final class CloudWatchLogsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
                         new \PHPStan\Type\Constant\ConstantStringType('INFREQUENT_ACCESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELIVERY'),
                     ]),
                     new \PHPStan\Type\StringType(),
                 ])),

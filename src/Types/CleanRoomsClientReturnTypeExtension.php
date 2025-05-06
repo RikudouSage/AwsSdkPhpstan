@@ -55,6 +55,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'getIdNamespaceAssociation',
             'getMembership',
             'getPrivacyBudgetTemplate',
+            'getProtectedJob',
             'getProtectedQuery',
             'getSchema',
             'getSchemaAnalysisRule',
@@ -74,11 +75,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listMemberships',
             'listPrivacyBudgetTemplates',
             'listPrivacyBudgets',
+            'listProtectedJobs',
             'listProtectedQueries',
             'listSchemas',
             'listTagsForResource',
             'populateIdMappingTable',
             'previewPrivacyImpact',
+            'startProtectedJob',
             'startProtectedQuery',
             'tagResource',
             'untagResource',
@@ -93,6 +96,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'updateIdNamespaceAssociation',
             'updateMembership',
             'updatePrivacyBudgetTemplate',
+            'updateProtectedJob',
             'updateProtectedQuery',
         ], true);
     }
@@ -141,6 +145,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'getIdNamespaceAssociation' => $this->getIdNamespaceAssociation(),
             'getMembership' => $this->getMembership(),
             'getPrivacyBudgetTemplate' => $this->getPrivacyBudgetTemplate(),
+            'getProtectedJob' => $this->getProtectedJob(),
             'getProtectedQuery' => $this->getProtectedQuery(),
             'getSchema' => $this->getSchema(),
             'getSchemaAnalysisRule' => $this->getSchemaAnalysisRule(),
@@ -160,11 +165,13 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listMemberships' => $this->listMemberships(),
             'listPrivacyBudgetTemplates' => $this->listPrivacyBudgetTemplates(),
             'listPrivacyBudgets' => $this->listPrivacyBudgets(),
+            'listProtectedJobs' => $this->listProtectedJobs(),
             'listProtectedQueries' => $this->listProtectedQueries(),
             'listSchemas' => $this->listSchemas(),
             'listTagsForResource' => $this->listTagsForResource(),
             'populateIdMappingTable' => $this->populateIdMappingTable(),
             'previewPrivacyImpact' => $this->previewPrivacyImpact(),
+            'startProtectedJob' => $this->startProtectedJob(),
             'startProtectedQuery' => $this->startProtectedQuery(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
@@ -179,6 +186,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'updateIdNamespaceAssociation' => $this->updateIdNamespaceAssociation(),
             'updateMembership' => $this->updateMembership(),
             'updatePrivacyBudgetTemplate' => $this->updatePrivacyBudgetTemplate(),
+            'updateProtectedJob' => $this->updateProtectedJob(),
             'updateProtectedQuery' => $this->updateProtectedQuery(),
         };
     }
@@ -202,6 +210,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                     new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('validations'),
                 ], [
@@ -219,11 +228,63 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PYSPARK_1_0'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifacts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPointHash'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifactHashes'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -305,6 +366,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('partitionKeys'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                     new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
@@ -336,7 +398,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                         new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -435,6 +505,8 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('createTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('collaborationPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('consolidatedPolicy'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -588,6 +660,173 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ]),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('v1'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('list'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('custom'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('v1'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('list'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('custom'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregateColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('joinRequired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scalarFunctions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalysisProviders'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ]),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -628,6 +867,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                     new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('validations'),
                 ], [
@@ -646,11 +886,63 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PYSPARK_1_0'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifacts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPointHash'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifactHashes'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -731,6 +1023,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('dataEncryptionMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('analyticsEngine'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -759,6 +1052,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -825,6 +1122,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
                     new \PHPStan\Type\Constant\ConstantStringType('allowedColumns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -886,8 +1184,16 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('LIST'),
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1277,7 +1583,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('memberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('mlMemberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('defaultResultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultJobResultConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -1297,6 +1605,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RUN_JOB'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
@@ -1305,6 +1614,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
                         ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -1335,8 +1648,26 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobCompute'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -1357,6 +1688,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\BooleanType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                 ]),
@@ -1502,6 +1838,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                     new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('validations'),
                 ], [
@@ -1520,11 +1857,63 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PYSPARK_1_0'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifacts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPointHash'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifactHashes'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -1605,6 +1994,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('dataEncryptionMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('analyticsEngine'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -1639,6 +2029,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SPARK'),
                         new \PHPStan\Type\Constant\ConstantStringType('CLEAN_ROOMS_SQL'),
                     ]),
@@ -1665,6 +2059,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                     new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('validations'),
                 ], [
@@ -1682,11 +2077,63 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PYSPARK_1_0'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifacts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPointHash'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifactHashes'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -1932,6 +2379,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
                     new \PHPStan\Type\Constant\ConstantStringType('allowedColumns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1993,8 +2441,16 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('LIST'),
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2384,7 +2840,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('memberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('mlMemberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('defaultResultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultJobResultConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -2404,6 +2862,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RUN_JOB'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
@@ -2412,6 +2871,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
                         ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -2442,8 +2905,26 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobCompute'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -2464,6 +2945,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\BooleanType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                 ]),
@@ -2517,6 +3003,103 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function getProtectedJob(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('protectedJob'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statistics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('result'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisTemplateArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('member'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('totalDurationInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('billedResourceUtilization'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('units'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function getProtectedQuery(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -2565,6 +3148,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('member'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
@@ -2585,6 +3169,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('locations'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('member'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('singleFileOutput'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PARQUET'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2604,6 +3216,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -2615,6 +3228,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2676,6 +3304,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('partitionKeys'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                     new \PHPStan\Type\Constant\ConstantStringType('creatorAccountId'),
                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                     new \PHPStan\Type\Constant\ConstantStringType('collaborationId'),
@@ -2707,7 +3336,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                         new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2796,6 +3433,8 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('createTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('policy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('collaborationPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('consolidatedPolicy'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -2945,6 +3584,173 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                     ]),
                                 ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('v1'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('list'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('custom'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('v1'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('list'),
+                            new \PHPStan\Type\Constant\ConstantStringType('aggregation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('custom'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                new \PHPStan\Type\Constant\ConstantStringType('listColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('aggregateColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('joinColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('joinRequired'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedJoinOperators'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dimensionColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('scalarFunctions'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outputConstraints'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnNames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('function'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SUM_DISTINCT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AVG'),
+                                    ]),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\Constant\ConstantStringType('QUERY_RUNNER'),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ABS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CAST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CEILING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COALESCE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CONVERT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CURRENT_DATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATEADD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EXTRACT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FLOOR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('GETDATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LOG'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LOWER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ROUND'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('RTRIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SQRT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SUBSTRING'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_CHAR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_DATE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_NUMBER'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TO_TIMESTAMP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TRUNC'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('UPPER'),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columnName'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('minimum'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\Constant\ConstantStringType('COUNT_DISTINCT'),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAnalysisProviders'),
+                                new \PHPStan\Type\Constant\ConstantStringType('additionalAnalyses'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disallowedOutputColumns'),
+                                new \PHPStan\Type\Constant\ConstantStringType('differentialPrivacy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedResultReceivers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('allowedAdditionalAnalyses'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALLOWED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('REQUIRED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NOT_ALLOWED'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('columns'),
+                                ], [
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             ]),
                         ]),
@@ -3284,6 +4090,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('id'),
                     new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3293,6 +4100,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AGGREGATION'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LIST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3313,6 +4125,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('updateTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3324,7 +4137,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('LIST'),
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3454,6 +4275,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RUN_JOB'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
@@ -3470,6 +4292,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobCompute'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -3490,6 +4313,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\BooleanType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                 ])),
@@ -3536,6 +4364,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RUN_JOB'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
@@ -3548,6 +4377,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobCompute'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -3568,6 +4398,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\BooleanType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                 ])),
@@ -3666,6 +4501,53 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function listProtectedJobs(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('protectedJobs'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('receiverConfigurations'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('configurationDetails'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_ANALYSIS'),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('directAnalysisConfigurationDetails'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('receiverAccountIds'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                    ])),
+                ])),
+            ]),
+        ]);
+    }
     private function listProtectedQueries(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3734,6 +4616,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('collaborationArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -3751,7 +4634,15 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                         new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING_TABLE'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3807,6 +4698,103 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function startProtectedJob(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('protectedJob'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statistics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('result'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisTemplateArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('member'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('totalDurationInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('billedResourceUtilization'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('units'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function startProtectedQuery(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3855,6 +4843,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('member'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
@@ -3875,6 +4864,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('locations'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('member'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('singleFileOutput'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PARQUET'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3894,6 +4911,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -3905,6 +4923,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3987,6 +5020,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('schema'),
                     new \PHPStan\Type\Constant\ConstantStringType('format'),
                     new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisParameters'),
                     new \PHPStan\Type\Constant\ConstantStringType('validations'),
                 ], [
@@ -4005,11 +5039,63 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
-                    new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SQL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PYSPARK_1_0'),
+                    ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifacts'),
+                            new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('key'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('artifacts'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('entryPointHash'),
+                            new \PHPStan\Type\Constant\ConstantStringType('additionalArtifactHashes'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sha256'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
@@ -4090,6 +5176,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('dataEncryptionMetadata'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('analyticsEngine'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -4118,6 +5205,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\BooleanType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -4184,6 +5275,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('analysisRuleTypes'),
                     new \PHPStan\Type\Constant\ConstantStringType('analysisMethod'),
                     new \PHPStan\Type\Constant\ConstantStringType('allowedColumns'),
+                    new \PHPStan\Type\Constant\ConstantStringType('selectedAnalysisMethods'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -4245,8 +5337,16 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('LIST'),
                         new \PHPStan\Type\Constant\ConstantStringType('CUSTOM'),
                     ])),
-                    new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MULTIPLE'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_QUERY'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DIRECT_JOB'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -4636,7 +5736,9 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('memberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('mlMemberAbilities'),
                     new \PHPStan\Type\Constant\ConstantStringType('queryLogStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobLogStatus'),
                     new \PHPStan\Type\Constant\ConstantStringType('defaultResultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('defaultJobResultConfiguration'),
                     new \PHPStan\Type\Constant\ConstantStringType('paymentConfiguration'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -4656,6 +5758,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_QUERY'),
                         new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_RESULTS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CAN_RUN_JOB'),
                     ])),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('customMLMemberAbilities'),
@@ -4664,6 +5767,10 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_MODEL_OUTPUT'),
                             new \PHPStan\Type\Constant\ConstantStringType('CAN_RECEIVE_INFERENCE_OUTPUT'),
                         ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
@@ -4694,8 +5801,26 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('queryCompute'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineLearning'),
+                        new \PHPStan\Type\Constant\ConstantStringType('jobCompute'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
@@ -4716,6 +5841,11 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\BooleanType(),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('isResponsible'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
                         ]),
                     ]),
                 ]),
@@ -4769,6 +5899,103 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function updateProtectedJob(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('protectedJob'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('membershipArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('jobParameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resultConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statistics'),
+                    new \PHPStan\Type\Constant\ConstantStringType('result'),
+                    new \PHPStan\Type\Constant\ConstantStringType('error'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('analysisTemplateArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SUBMITTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STARTED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CANCELLING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUCCESS'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('outputConfiguration'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('member'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('totalDurationInMillis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('billedResourceUtilization'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('units'),
+                        ], [
+                            new \PHPStan\Type\FloatType(),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('message'),
+                        new \PHPStan\Type\Constant\ConstantStringType('code'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function updateProtectedQuery(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -4817,6 +6044,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('member'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
@@ -4837,6 +6065,34 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('locations'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('member'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('resultFormat'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('bucket'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('keyPrefix'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('singleFileOutput'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('CSV'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PARQUET'),
+                                        ]),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4856,6 +6112,7 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('s3'),
                             new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            new \PHPStan\Type\Constant\ConstantStringType('distribute'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('location'),
@@ -4867,6 +6124,21 @@ final class CleanRoomsClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('s3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('memberList'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('accountId'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([

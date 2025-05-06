@@ -1837,9 +1837,11 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idcInstanceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('userAssignment'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('IAM_IDC'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -2432,7 +2434,10 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('target'),
                 new \PHPStan\Type\Constant\ConstantStringType('targetType'),
             ], [
-                new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_LISTING_CHANGE_SET'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -4561,9 +4566,11 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idcInstanceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('userAssignment'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('IAM_IDC'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -5609,7 +5616,10 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('targetType'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
-                new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_LISTING_CHANGE_SET'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -7520,6 +7530,7 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('delegateCreateEnvironmentProfile'),
                         new \PHPStan\Type\Constant\ConstantStringType('overrideDomainUnitOwners'),
                         new \PHPStan\Type\Constant\ConstantStringType('overrideProjectOwners'),
+                        new \PHPStan\Type\Constant\ConstantStringType('useAssetType'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('includeChildDomainUnits'),
@@ -7575,6 +7586,11 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('includeChildDomainUnits'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domainUnitId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7775,7 +7791,10 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('targetType'),
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_LISTING_CHANGE_SET'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -10149,9 +10168,11 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idcInstanceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('userAssignment'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('IAM_IDC'),
                         new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
@@ -10693,7 +10714,10 @@ final class DataZoneClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('target'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
-                new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_LISTING_CHANGE_SET'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATE_SUBSCRIPTION_REQUEST'),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),

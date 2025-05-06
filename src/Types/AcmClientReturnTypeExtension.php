@@ -74,6 +74,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
                     new \PHPStan\Type\Constant\ConstantStringType('SubjectAlternativeNames'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ManagedBy'),
                     new \PHPStan\Type\Constant\ConstantStringType('DomainValidationOptions'),
                     new \PHPStan\Type\Constant\ConstantStringType('Serial'),
                     new \PHPStan\Type\Constant\ConstantStringType('Subject'),
@@ -101,12 +102,14 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantStringType('CLOUDFRONT'),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
                         new \PHPStan\Type\Constant\ConstantStringType('ValidationEmails'),
                         new \PHPStan\Type\Constant\ConstantStringType('ValidationDomain'),
                         new \PHPStan\Type\Constant\ConstantStringType('ValidationStatus'),
                         new \PHPStan\Type\Constant\ConstantStringType('ResourceRecord'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HttpRedirect'),
                         new \PHPStan\Type\Constant\ConstantStringType('ValidationMethod'),
                     ], [
                         new \PHPStan\Type\StringType(),
@@ -126,9 +129,17 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RedirectFrom'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RedirectTo'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
                             new \PHPStan\Type\Constant\ConstantStringType('DNS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
@@ -153,6 +164,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CA_COMPROMISE'),
                         new \PHPStan\Type\Constant\ConstantStringType('AFFILIATION_CHANGED'),
                         new \PHPStan\Type\Constant\ConstantStringType('SUPERCEDED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SUPERSEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('CESSATION_OF_OPERATION'),
                         new \PHPStan\Type\Constant\ConstantStringType('CERTIFICATE_HOLD'),
                         new \PHPStan\Type\Constant\ConstantStringType('REMOVE_FROM_CRL'),
@@ -214,6 +226,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('ValidationDomain'),
                             new \PHPStan\Type\Constant\ConstantStringType('ValidationStatus'),
                             new \PHPStan\Type\Constant\ConstantStringType('ResourceRecord'),
+                            new \PHPStan\Type\Constant\ConstantStringType('HttpRedirect'),
                             new \PHPStan\Type\Constant\ConstantStringType('ValidationMethod'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -233,9 +246,17 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
                                 new \PHPStan\Type\StringType(),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RedirectFrom'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RedirectTo'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('EMAIL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DNS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('HTTP'),
                             ]),
                         ])),
                         new \PHPStan\Type\UnionType([
@@ -390,6 +411,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('IssuedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('ImportedAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('RevokedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ManagedBy'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -457,6 +479,7 @@ final class AcmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CLOUDFRONT'),
                 ])),
             ]),
         ]);

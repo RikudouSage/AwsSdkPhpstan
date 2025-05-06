@@ -33,6 +33,7 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'listShards',
             'listStreamConsumers',
             'listStreams',
+            'listTagsForResource',
             'listTagsForStream',
             'mergeShards',
             'putRecord',
@@ -43,6 +44,8 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'splitShard',
             'startStreamEncryption',
             'stopStreamEncryption',
+            'tagResource',
+            'untagResource',
             'updateShardCount',
             'updateStreamMode',
         ], true);
@@ -70,6 +73,7 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'listShards' => $this->listShards(),
             'listStreamConsumers' => $this->listStreamConsumers(),
             'listStreams' => $this->listStreams(),
+            'listTagsForResource' => $this->listTagsForResource(),
             'listTagsForStream' => $this->listTagsForStream(),
             'mergeShards' => $this->mergeShards(),
             'putRecord' => $this->putRecord(),
@@ -80,6 +84,8 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'splitShard' => $this->splitShard(),
             'startStreamEncryption' => $this->startStreamEncryption(),
             'stopStreamEncryption' => $this->stopStreamEncryption(),
+            'tagResource' => $this->tagResource(),
+            'untagResource' => $this->untagResource(),
             'updateShardCount' => $this->updateShardCount(),
             'updateStreamMode' => $this->updateStreamMode(),
         };
@@ -555,6 +561,22 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             ]),
         ]);
     }
+    private function listTagsForResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function listTagsForStream(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -672,6 +694,18 @@ final class KinesisClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
         ]);
     }
     private function stopStreamEncryption(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function tagResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function untagResource(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),

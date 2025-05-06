@@ -31,6 +31,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'createShare',
             'createVariantStore',
             'createWorkflow',
+            'createWorkflowVersion',
             'deleteAnnotationStore',
             'deleteAnnotationStoreVersions',
             'deleteReference',
@@ -43,6 +44,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'deleteShare',
             'deleteVariantStore',
             'deleteWorkflow',
+            'deleteWorkflowVersion',
             'getAnnotationImportJob',
             'getAnnotationStore',
             'getAnnotationStoreVersion',
@@ -65,6 +67,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'getVariantImportJob',
             'getVariantStore',
             'getWorkflow',
+            'getWorkflowVersion',
             'listAnnotationImportJobs',
             'listAnnotationStoreVersions',
             'listAnnotationStores',
@@ -86,6 +89,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'listTagsForResource',
             'listVariantImportJobs',
             'listVariantStores',
+            'listWorkflowVersions',
             'listWorkflows',
             'putS3AccessPolicy',
             'startAnnotationImportJob',
@@ -104,6 +108,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'updateSequenceStore',
             'updateVariantStore',
             'updateWorkflow',
+            'updateWorkflowVersion',
             'uploadReadSetPart',
         ], true);
     }
@@ -128,6 +133,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'createShare' => $this->createShare(),
             'createVariantStore' => $this->createVariantStore(),
             'createWorkflow' => $this->createWorkflow(),
+            'createWorkflowVersion' => $this->createWorkflowVersion(),
             'deleteAnnotationStore' => $this->deleteAnnotationStore(),
             'deleteAnnotationStoreVersions' => $this->deleteAnnotationStoreVersions(),
             'deleteReference' => $this->deleteReference(),
@@ -140,6 +146,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'deleteShare' => $this->deleteShare(),
             'deleteVariantStore' => $this->deleteVariantStore(),
             'deleteWorkflow' => $this->deleteWorkflow(),
+            'deleteWorkflowVersion' => $this->deleteWorkflowVersion(),
             'getAnnotationImportJob' => $this->getAnnotationImportJob(),
             'getAnnotationStore' => $this->getAnnotationStore(),
             'getAnnotationStoreVersion' => $this->getAnnotationStoreVersion(),
@@ -162,6 +169,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'getVariantImportJob' => $this->getVariantImportJob(),
             'getVariantStore' => $this->getVariantStore(),
             'getWorkflow' => $this->getWorkflow(),
+            'getWorkflowVersion' => $this->getWorkflowVersion(),
             'listAnnotationImportJobs' => $this->listAnnotationImportJobs(),
             'listAnnotationStoreVersions' => $this->listAnnotationStoreVersions(),
             'listAnnotationStores' => $this->listAnnotationStores(),
@@ -183,6 +191,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'listTagsForResource' => $this->listTagsForResource(),
             'listVariantImportJobs' => $this->listVariantImportJobs(),
             'listVariantStores' => $this->listVariantStores(),
+            'listWorkflowVersions' => $this->listWorkflowVersions(),
             'listWorkflows' => $this->listWorkflows(),
             'putS3AccessPolicy' => $this->putS3AccessPolicy(),
             'startAnnotationImportJob' => $this->startAnnotationImportJob(),
@@ -201,6 +210,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
             'updateSequenceStore' => $this->updateSequenceStore(),
             'updateVariantStore' => $this->updateVariantStore(),
             'updateWorkflow' => $this->updateWorkflow(),
+            'updateWorkflowVersion' => $this->updateWorkflowVersion(),
             'uploadReadSetPart' => $this->uploadReadSetPart(),
         };
     }
@@ -615,6 +625,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('id'),
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('uuid'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -627,6 +638,34 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function createWorkflowVersion(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowId'),
+                new \PHPStan\Type\Constant\ConstantStringType('versionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('uuid'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -738,6 +777,12 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
         ]);
     }
     private function deleteWorkflow(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function deleteWorkflowVersion(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
@@ -1512,6 +1557,8 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('runOutputUri'),
                 new \PHPStan\Type\Constant\ConstantStringType('storageType'),
                 new \PHPStan\Type\Constant\ConstantStringType('workflowOwnerId'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowVersionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowUuid'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1578,6 +1625,8 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
                     new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
                 ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1928,6 +1977,8 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 new \PHPStan\Type\Constant\ConstantStringType('metadata'),
                 new \PHPStan\Type\Constant\ConstantStringType('accelerators'),
+                new \PHPStan\Type\Constant\ConstantStringType('storageType'),
+                new \PHPStan\Type\Constant\ConstantStringType('uuid'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1966,6 +2017,82 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\Constant\ConstantStringType('GPU'),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getWorkflowVersion(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowId'),
+                new \PHPStan\Type\Constant\ConstantStringType('versionName'),
+                new \PHPStan\Type\Constant\ConstantStringType('accelerators'),
+                new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('description'),
+                new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                new \PHPStan\Type\Constant\ConstantStringType('digest'),
+                new \PHPStan\Type\Constant\ConstantStringType('engine'),
+                new \PHPStan\Type\Constant\ConstantStringType('main'),
+                new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                new \PHPStan\Type\Constant\ConstantStringType('parameterTemplate'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('statusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('storageType'),
+                new \PHPStan\Type\Constant\ConstantStringType('storageCapacity'),
+                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('uuid'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowBucketOwnerId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantStringType('GPU'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('WDL'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NEXTFLOW'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CWL'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('optional'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
+                ]),
+                new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                    new \PHPStan\Type\Constant\ConstantStringType('READY2RUN'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -2600,6 +2727,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('stopTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('storageType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workflowVersionName'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2624,6 +2752,7 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('STATIC'),
                         new \PHPStan\Type\Constant\ConstantStringType('DYNAMIC'),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2818,6 +2947,48 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listWorkflowVersions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('items'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workflowId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('versionName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('digest'),
+                    new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('metadata'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CREATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INACTIVE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('READY2RUN'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3250,6 +3421,12 @@ final class OmicsClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
         ]);
     }
     private function updateWorkflow(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function updateWorkflowVersion(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),

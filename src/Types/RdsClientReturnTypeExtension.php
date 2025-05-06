@@ -2954,6 +2954,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('NcharCharacterSetName'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterUserSecret'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -2971,6 +2972,15 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MasterUserPassword'),
                         new \PHPStan\Type\Constant\ConstantStringType('TenantDBName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -4679,6 +4689,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('NcharCharacterSetName'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterUserSecret'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -4696,6 +4707,15 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MasterUserPassword'),
                         new \PHPStan\Type\Constant\ConstantStringType('TenantDBName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -7729,6 +7749,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('NcharCharacterSetName'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterUserSecret'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -7746,6 +7767,15 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MasterUserPassword'),
                         new \PHPStan\Type\Constant\ConstantStringType('TenantDBName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
@@ -10249,6 +10279,7 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('NcharCharacterSetName'),
                     new \PHPStan\Type\Constant\ConstantStringType('DeletionProtection'),
                     new \PHPStan\Type\Constant\ConstantStringType('PendingModifiedValues'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MasterUserSecret'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagList'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -10266,6 +10297,15 @@ final class RdsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MasterUserPassword'),
                         new \PHPStan\Type\Constant\ConstantStringType('TenantDBName'),
                     ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SecretStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('KmsKeyId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),

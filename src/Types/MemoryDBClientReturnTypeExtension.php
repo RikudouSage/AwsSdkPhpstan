@@ -144,6 +144,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -251,6 +253,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
                     ]),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -413,6 +424,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -520,6 +533,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
                     ]),
                 ]),
             ]),
@@ -682,6 +704,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -689,6 +712,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -696,8 +720,18 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -805,6 +839,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -912,6 +948,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
                     ]),
                 ]),
             ]),
@@ -1074,6 +1119,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1081,6 +1127,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1088,8 +1135,18 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -1201,6 +1258,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1308,6 +1367,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
                     ]),
                 ])),
             ]),
@@ -1666,6 +1734,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1673,6 +1742,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1680,8 +1750,18 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ])),
                 ])),
             ]),
         ]);
@@ -1759,6 +1839,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1866,6 +1948,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
                     ]),
                 ]),
             ]),
@@ -2070,6 +2161,8 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('ACLName'),
                     new \PHPStan\Type\Constant\ConstantStringType('AutoMinorVersionUpgrade'),
                     new \PHPStan\Type\Constant\ConstantStringType('DataTiering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpDiscovery'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2178,6 +2271,15 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('true'),
                         new \PHPStan\Type\Constant\ConstantStringType('false'),
                     ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -2258,6 +2360,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Subnets'),
                     new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2265,6 +2368,7 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
                         new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SupportedNetworkTypes'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2272,8 +2376,18 @@ final class MemoryDBClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                        ])),
                     ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dual_stack'),
+                    ])),
                 ]),
             ]),
         ]);

@@ -313,6 +313,7 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
                 new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResourceQuery'),
                 new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
@@ -323,6 +324,16 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Query'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TAG_FILTERS_1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION_STACK_1_0'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -513,6 +524,7 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
                     new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceQuery'),
                     new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorMessage'),
@@ -523,6 +535,16 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Query'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TAG_FILTERS_1_0'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION_STACK_1_0'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
@@ -581,6 +603,7 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('TaskArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('TagKey'),
                 new \PHPStan\Type\Constant\ConstantStringType('TagValue'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResourceQuery'),
                 new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
             ], [
                 new \PHPStan\Type\StringType(),
@@ -588,6 +611,16 @@ final class ResourceGroupsClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Query'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('TAG_FILTERS_1_0'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CLOUDFORMATION_STACK_1_0'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);

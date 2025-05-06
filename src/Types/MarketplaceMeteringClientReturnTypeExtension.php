@@ -48,6 +48,7 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
                         new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
                         new \PHPStan\Type\Constant\ConstantStringType('UsageAllocations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CustomerAWSAccountId'),
                     ], [
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
@@ -66,6 +67,7 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                                 new \PHPStan\Type\StringType(),
                             ])),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -80,6 +82,7 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                     new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
                     new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
                     new \PHPStan\Type\Constant\ConstantStringType('UsageAllocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CustomerAWSAccountId'),
                 ], [
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -98,6 +101,7 @@ final class MarketplaceMeteringClientReturnTypeExtension implements \PHPStan\Typ
                             new \PHPStan\Type\StringType(),
                         ])),
                     ])),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

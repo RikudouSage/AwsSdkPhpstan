@@ -802,6 +802,7 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LogDeliveryConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScaleConfig'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -849,6 +850,13 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('preferred'),
                             new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScalePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScaleIntervalMinutes'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2126,6 +2134,7 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LogDeliveryConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScaleConfig'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -2173,6 +2182,13 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('preferred'),
                             new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScalePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScaleIntervalMinutes'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3025,6 +3041,7 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LogDeliveryConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScaleConfig'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -3072,6 +3089,13 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('preferred'),
                             new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScalePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScaleIntervalMinutes'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5023,6 +5047,7 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LogDeliveryConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScaleConfig'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -5070,6 +5095,13 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('preferred'),
                             new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScalePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScaleIntervalMinutes'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -6203,6 +6235,7 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('LogDeliveryConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionEnabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('TransitEncryptionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ScaleConfig'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -6250,6 +6283,13 @@ final class ElastiCacheClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('preferred'),
                             new \PHPStan\Type\Constant\ConstantStringType('required'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ScalePercentage'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ScaleIntervalMinutes'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([

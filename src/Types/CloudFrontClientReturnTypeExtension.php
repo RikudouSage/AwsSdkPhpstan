@@ -15,17 +15,22 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
     {
         return in_array($methodReflection->getName(), [
             'associateAlias',
+            'associateDistributionTenantWebACL',
+            'associateDistributionWebACL',
             'copyDistribution',
             'createAnycastIpList',
             'createCachePolicy',
             'createCloudFrontOriginAccessIdentity',
+            'createConnectionGroup',
             'createContinuousDeploymentPolicy',
             'createDistribution',
+            'createDistributionTenant',
             'createDistributionWithTags',
             'createFieldLevelEncryptionConfig',
             'createFieldLevelEncryptionProfile',
             'createFunction',
             'createInvalidation',
+            'createInvalidationForDistributionTenant',
             'createKeyGroup',
             'createKeyValueStore',
             'createMonitoringSubscription',
@@ -40,8 +45,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'deleteAnycastIpList',
             'deleteCachePolicy',
             'deleteCloudFrontOriginAccessIdentity',
+            'deleteConnectionGroup',
             'deleteContinuousDeploymentPolicy',
             'deleteDistribution',
+            'deleteDistributionTenant',
             'deleteFieldLevelEncryptionConfig',
             'deleteFieldLevelEncryptionProfile',
             'deleteFunction',
@@ -57,23 +64,31 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'deleteVpcOrigin',
             'describeFunction',
             'describeKeyValueStore',
+            'disassociateDistributionTenantWebACL',
+            'disassociateDistributionWebACL',
             'getAnycastIpList',
             'getCachePolicy',
             'getCachePolicyConfig',
             'getCloudFrontOriginAccessIdentity',
             'getCloudFrontOriginAccessIdentityConfig',
+            'getConnectionGroup',
+            'getConnectionGroupByRoutingEndpoint',
             'getContinuousDeploymentPolicy',
             'getContinuousDeploymentPolicyConfig',
             'getDistribution',
             'getDistributionConfig',
+            'getDistributionTenant',
+            'getDistributionTenantByDomain',
             'getFieldLevelEncryption',
             'getFieldLevelEncryptionConfig',
             'getFieldLevelEncryptionProfile',
             'getFieldLevelEncryptionProfileConfig',
             'getFunction',
             'getInvalidation',
+            'getInvalidationForDistributionTenant',
             'getKeyGroup',
             'getKeyGroupConfig',
+            'getManagedCertificateDetails',
             'getMonitoringSubscription',
             'getOriginAccessControl',
             'getOriginAccessControlConfig',
@@ -91,20 +106,26 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listCachePolicies',
             'listCloudFrontOriginAccessIdentities',
             'listConflictingAliases',
+            'listConnectionGroups',
             'listContinuousDeploymentPolicies',
+            'listDistributionTenants',
+            'listDistributionTenantsByCustomization',
             'listDistributions',
             'listDistributionsByAnycastIpListId',
             'listDistributionsByCachePolicyId',
+            'listDistributionsByConnectionMode',
             'listDistributionsByKeyGroup',
             'listDistributionsByOriginRequestPolicyId',
             'listDistributionsByRealtimeLogConfig',
             'listDistributionsByResponseHeadersPolicyId',
             'listDistributionsByVpcOriginId',
             'listDistributionsByWebACLId',
+            'listDomainConflicts',
             'listFieldLevelEncryptionConfigs',
             'listFieldLevelEncryptionProfiles',
             'listFunctions',
             'listInvalidations',
+            'listInvalidationsForDistributionTenant',
             'listKeyGroups',
             'listKeyValueStores',
             'listOriginAccessControls',
@@ -121,9 +142,12 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'untagResource',
             'updateCachePolicy',
             'updateCloudFrontOriginAccessIdentity',
+            'updateConnectionGroup',
             'updateContinuousDeploymentPolicy',
             'updateDistribution',
+            'updateDistributionTenant',
             'updateDistributionWithStagingConfig',
+            'updateDomainAssociation',
             'updateFieldLevelEncryptionConfig',
             'updateFieldLevelEncryptionProfile',
             'updateFunction',
@@ -136,6 +160,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'updateResponseHeadersPolicy',
             'updateStreamingDistribution',
             'updateVpcOrigin',
+            'verifyDnsConfiguration',
         ], true);
     }
     public function getTypeFromMethodCall(\PHPStan\Reflection\MethodReflection $methodReflection, \PhpParser\Node\Expr\MethodCall $methodCall, \PHPStan\Analyser\Scope $scope): ?\PHPStan\Type\Type
@@ -143,17 +168,22 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         return match ((string) $methodCall->name) {
             default => throw new \RuntimeException('Unsupported method'),
             'associateAlias' => $this->associateAlias(),
+            'associateDistributionTenantWebACL' => $this->associateDistributionTenantWebACL(),
+            'associateDistributionWebACL' => $this->associateDistributionWebACL(),
             'copyDistribution' => $this->copyDistribution(),
             'createAnycastIpList' => $this->createAnycastIpList(),
             'createCachePolicy' => $this->createCachePolicy(),
             'createCloudFrontOriginAccessIdentity' => $this->createCloudFrontOriginAccessIdentity(),
+            'createConnectionGroup' => $this->createConnectionGroup(),
             'createContinuousDeploymentPolicy' => $this->createContinuousDeploymentPolicy(),
             'createDistribution' => $this->createDistribution(),
+            'createDistributionTenant' => $this->createDistributionTenant(),
             'createDistributionWithTags' => $this->createDistributionWithTags(),
             'createFieldLevelEncryptionConfig' => $this->createFieldLevelEncryptionConfig(),
             'createFieldLevelEncryptionProfile' => $this->createFieldLevelEncryptionProfile(),
             'createFunction' => $this->createFunction(),
             'createInvalidation' => $this->createInvalidation(),
+            'createInvalidationForDistributionTenant' => $this->createInvalidationForDistributionTenant(),
             'createKeyGroup' => $this->createKeyGroup(),
             'createKeyValueStore' => $this->createKeyValueStore(),
             'createMonitoringSubscription' => $this->createMonitoringSubscription(),
@@ -168,8 +198,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'deleteAnycastIpList' => $this->deleteAnycastIpList(),
             'deleteCachePolicy' => $this->deleteCachePolicy(),
             'deleteCloudFrontOriginAccessIdentity' => $this->deleteCloudFrontOriginAccessIdentity(),
+            'deleteConnectionGroup' => $this->deleteConnectionGroup(),
             'deleteContinuousDeploymentPolicy' => $this->deleteContinuousDeploymentPolicy(),
             'deleteDistribution' => $this->deleteDistribution(),
+            'deleteDistributionTenant' => $this->deleteDistributionTenant(),
             'deleteFieldLevelEncryptionConfig' => $this->deleteFieldLevelEncryptionConfig(),
             'deleteFieldLevelEncryptionProfile' => $this->deleteFieldLevelEncryptionProfile(),
             'deleteFunction' => $this->deleteFunction(),
@@ -185,23 +217,31 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'deleteVpcOrigin' => $this->deleteVpcOrigin(),
             'describeFunction' => $this->describeFunction(),
             'describeKeyValueStore' => $this->describeKeyValueStore(),
+            'disassociateDistributionTenantWebACL' => $this->disassociateDistributionTenantWebACL(),
+            'disassociateDistributionWebACL' => $this->disassociateDistributionWebACL(),
             'getAnycastIpList' => $this->getAnycastIpList(),
             'getCachePolicy' => $this->getCachePolicy(),
             'getCachePolicyConfig' => $this->getCachePolicyConfig(),
             'getCloudFrontOriginAccessIdentity' => $this->getCloudFrontOriginAccessIdentity(),
             'getCloudFrontOriginAccessIdentityConfig' => $this->getCloudFrontOriginAccessIdentityConfig(),
+            'getConnectionGroup' => $this->getConnectionGroup(),
+            'getConnectionGroupByRoutingEndpoint' => $this->getConnectionGroupByRoutingEndpoint(),
             'getContinuousDeploymentPolicy' => $this->getContinuousDeploymentPolicy(),
             'getContinuousDeploymentPolicyConfig' => $this->getContinuousDeploymentPolicyConfig(),
             'getDistribution' => $this->getDistribution(),
             'getDistributionConfig' => $this->getDistributionConfig(),
+            'getDistributionTenant' => $this->getDistributionTenant(),
+            'getDistributionTenantByDomain' => $this->getDistributionTenantByDomain(),
             'getFieldLevelEncryption' => $this->getFieldLevelEncryption(),
             'getFieldLevelEncryptionConfig' => $this->getFieldLevelEncryptionConfig(),
             'getFieldLevelEncryptionProfile' => $this->getFieldLevelEncryptionProfile(),
             'getFieldLevelEncryptionProfileConfig' => $this->getFieldLevelEncryptionProfileConfig(),
             'getFunction' => $this->getFunction(),
             'getInvalidation' => $this->getInvalidation(),
+            'getInvalidationForDistributionTenant' => $this->getInvalidationForDistributionTenant(),
             'getKeyGroup' => $this->getKeyGroup(),
             'getKeyGroupConfig' => $this->getKeyGroupConfig(),
+            'getManagedCertificateDetails' => $this->getManagedCertificateDetails(),
             'getMonitoringSubscription' => $this->getMonitoringSubscription(),
             'getOriginAccessControl' => $this->getOriginAccessControl(),
             'getOriginAccessControlConfig' => $this->getOriginAccessControlConfig(),
@@ -219,20 +259,26 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'listCachePolicies' => $this->listCachePolicies(),
             'listCloudFrontOriginAccessIdentities' => $this->listCloudFrontOriginAccessIdentities(),
             'listConflictingAliases' => $this->listConflictingAliases(),
+            'listConnectionGroups' => $this->listConnectionGroups(),
             'listContinuousDeploymentPolicies' => $this->listContinuousDeploymentPolicies(),
+            'listDistributionTenants' => $this->listDistributionTenants(),
+            'listDistributionTenantsByCustomization' => $this->listDistributionTenantsByCustomization(),
             'listDistributions' => $this->listDistributions(),
             'listDistributionsByAnycastIpListId' => $this->listDistributionsByAnycastIpListId(),
             'listDistributionsByCachePolicyId' => $this->listDistributionsByCachePolicyId(),
+            'listDistributionsByConnectionMode' => $this->listDistributionsByConnectionMode(),
             'listDistributionsByKeyGroup' => $this->listDistributionsByKeyGroup(),
             'listDistributionsByOriginRequestPolicyId' => $this->listDistributionsByOriginRequestPolicyId(),
             'listDistributionsByRealtimeLogConfig' => $this->listDistributionsByRealtimeLogConfig(),
             'listDistributionsByResponseHeadersPolicyId' => $this->listDistributionsByResponseHeadersPolicyId(),
             'listDistributionsByVpcOriginId' => $this->listDistributionsByVpcOriginId(),
             'listDistributionsByWebACLId' => $this->listDistributionsByWebACLId(),
+            'listDomainConflicts' => $this->listDomainConflicts(),
             'listFieldLevelEncryptionConfigs' => $this->listFieldLevelEncryptionConfigs(),
             'listFieldLevelEncryptionProfiles' => $this->listFieldLevelEncryptionProfiles(),
             'listFunctions' => $this->listFunctions(),
             'listInvalidations' => $this->listInvalidations(),
+            'listInvalidationsForDistributionTenant' => $this->listInvalidationsForDistributionTenant(),
             'listKeyGroups' => $this->listKeyGroups(),
             'listKeyValueStores' => $this->listKeyValueStores(),
             'listOriginAccessControls' => $this->listOriginAccessControls(),
@@ -249,9 +295,12 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'untagResource' => $this->untagResource(),
             'updateCachePolicy' => $this->updateCachePolicy(),
             'updateCloudFrontOriginAccessIdentity' => $this->updateCloudFrontOriginAccessIdentity(),
+            'updateConnectionGroup' => $this->updateConnectionGroup(),
             'updateContinuousDeploymentPolicy' => $this->updateContinuousDeploymentPolicy(),
             'updateDistribution' => $this->updateDistribution(),
+            'updateDistributionTenant' => $this->updateDistributionTenant(),
             'updateDistributionWithStagingConfig' => $this->updateDistributionWithStagingConfig(),
+            'updateDomainAssociation' => $this->updateDomainAssociation(),
             'updateFieldLevelEncryptionConfig' => $this->updateFieldLevelEncryptionConfig(),
             'updateFieldLevelEncryptionProfile' => $this->updateFieldLevelEncryptionProfile(),
             'updateFunction' => $this->updateFunction(),
@@ -264,12 +313,41 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             'updateResponseHeadersPolicy' => $this->updateResponseHeadersPolicy(),
             'updateStreamingDistribution' => $this->updateStreamingDistribution(),
             'updateVpcOrigin' => $this->updateVpcOrigin(),
+            'verifyDnsConfiguration' => $this->verifyDnsConfiguration(),
         };
     }
     private function associateAlias(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function associateDistributionTenantWebACL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('WebACLArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function associateDistributionWebACL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('WebACLArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function copyDistribution(): ?\PHPStan\Type\Type
@@ -361,6 +439,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -880,6 +960,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -943,6 +1024,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -1114,6 +1222,54 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function createConnectionGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroup'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function createContinuousDeploymentPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1268,6 +1424,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1787,6 +1945,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1850,6 +2009,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -1864,6 +2050,102 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ])),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function createDistributionTenant(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenant'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1957,6 +2239,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2476,6 +2760,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2539,6 +2824,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -2738,6 +3050,40 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         ]);
     }
     private function createInvalidation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Location'),
+                new \PHPStan\Type\Constant\ConstantStringType('Invalidation'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvalidationBatch'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Paths'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CallerReference'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function createInvalidationForDistributionTenant(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3319,6 +3665,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -3419,6 +3766,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -3503,6 +3851,12 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
+    private function deleteConnectionGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
     private function deleteContinuousDeploymentPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3510,6 +3864,12 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         ]);
     }
     private function deleteDistribution(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function deleteDistributionTenant(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
@@ -3720,6 +4080,30 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function disassociateDistributionTenantWebACL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function disassociateDistributionWebACL(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -3978,6 +4362,102 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function getConnectionGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroup'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getConnectionGroupByRoutingEndpoint(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroup'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function getContinuousDeploymentPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -4184,6 +4664,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4703,6 +5185,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -4766,6 +5249,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -4811,6 +5321,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                     new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5330,6 +5842,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                        new \PHPStan\Type\Constant\ConstantStringType('None'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -5391,6 +5904,225 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                    ]),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getDistributionTenant(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenant'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getDistributionTenantByDomain(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenant'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -5668,6 +6400,38 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function getInvalidationForDistributionTenant(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Invalidation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InvalidationBatch'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Paths'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CallerReference'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function getKeyGroup(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -5713,6 +6477,45 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getManagedCertificateDetails(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ManagedCertificateDetails'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CertificateArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CertificateStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidationTokenHost'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ValidationTokenDetails'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending-validation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('issued'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        new \PHPStan\Type\Constant\ConstantStringType('expired'),
+                        new \PHPStan\Type\Constant\ConstantStringType('validation-timed-out'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revoked'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudfront'),
+                        new \PHPStan\Type\Constant\ConstantStringType('self-hosted'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RedirectTo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RedirectFrom'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
             ]),
         ]);
     }
@@ -6503,6 +7306,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -6566,6 +7370,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                         new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                        new \PHPStan\Type\Constant\ConstantStringType('None'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                 ]),
@@ -6838,6 +7643,42 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function listConnectionGroups(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroups'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                ])),
+            ]),
+        ]);
+    }
     private function listContinuousDeploymentPolicies(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -6913,6 +7754,162 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function listDistributionTenants(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenantList'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listDistributionTenantsByCustomization(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenantList'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
     private function listDistributions(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -6935,6 +7932,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
@@ -6954,8 +7952,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('IsIPV6Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('AliasICPRecordals'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -7466,6 +8466,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -7538,6 +8539,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ])),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
@@ -7566,6 +8571,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
@@ -7585,8 +8591,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('IsIPV6Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('AliasICPRecordals'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -8097,6 +9105,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8169,6 +9178,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ])),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
@@ -8195,6 +9208,645 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]),
+            ]),
+        ]);
+    }
+    private function listDistributionsByConnectionMode(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionList'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxItems'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Aliases'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Origins'),
+                        new \PHPStan\Type\Constant\ConstantStringType('OriginGroups'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DefaultCacheBehavior'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CacheBehaviors'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CustomErrorResponses'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PriceClass'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ViewerCertificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Restrictions'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WebACLId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HttpVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IsIPV6Enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AliasICPRecordals'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Staging'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OriginPath'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomHeaders'),
+                                new \PHPStan\Type\Constant\ConstantStringType('S3OriginConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CustomOriginConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VpcOriginConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConnectionAttempts'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ConnectionTimeout'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OriginShield'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OriginAccessControlId'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('HeaderName'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HeaderValue'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginAccessIdentity'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('HTTPPort'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HTTPSPort'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginProtocolPolicy'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginSslProtocols'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginReadTimeout'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginKeepaliveTimeout'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('http-only'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('match-viewer'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('https-only'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('SSLv3'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TLSv1'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TLSv1.1'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('TLSv1.2'),
+                                        ])),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('VpcOriginId'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginReadTimeout'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginKeepaliveTimeout'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OriginShieldRegion'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FailoverCriteria'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Members'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SelectionCriteria'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StatusCodes'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('OriginId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('default'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('media-quality-based'),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('TargetOriginId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TrustedSigners'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TrustedKeyGroups'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ViewerProtocolPolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AllowedMethods'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SmoothStreaming'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Compress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FunctionAssociations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FieldLevelEncryptionId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RealtimeLogConfigArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CachePolicyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OriginRequestPolicyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ResponseHeadersPolicyId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GrpcConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ForwardedValues'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinTTL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DefaultTTL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MaxTTL'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('allow-all'),
+                                new \PHPStan\Type\Constant\ConstantStringType('https-only'),
+                                new \PHPStan\Type\Constant\ConstantStringType('redirect-to-https'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CachedMethods'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('GET'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('POST'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PUT'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PATCH'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('OPTIONS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GET'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('POST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PUT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PATCH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPTIONS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                    ])),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('IncludeBody'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('viewer-request'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('viewer-response'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('origin-request'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('origin-response'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('FunctionARN'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('viewer-request'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('viewer-response'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('origin-request'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('origin-response'),
+                                    ]),
+                                ])),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryString'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Cookies'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Headers'),
+                                new \PHPStan\Type\Constant\ConstantStringType('QueryStringCacheKeys'),
+                            ], [
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Forward'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('WhitelistedNames'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('all'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                ]),
+                            ]),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PathPattern'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TargetOriginId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TrustedSigners'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TrustedKeyGroups'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ViewerProtocolPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AllowedMethods'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SmoothStreaming'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Compress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionAssociations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FunctionAssociations'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FieldLevelEncryptionId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('RealtimeLogConfigArn'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CachePolicyId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OriginRequestPolicyId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResponseHeadersPolicyId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('GrpcConfig'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ForwardedValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MinTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DefaultTTL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('MaxTTL'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                ]),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('allow-all'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('https-only'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('redirect-to-https'),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CachedMethods'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('GET'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('POST'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PUT'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PATCH'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('OPTIONS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                    ])),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('GET'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('HEAD'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('POST'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PUT'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PATCH'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('OPTIONS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('DELETE'),
+                                        ])),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('LambdaFunctionARN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('IncludeBody'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('viewer-request'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('viewer-response'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('origin-request'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('origin-response'),
+                                        ]),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('FunctionARN'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EventType'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('viewer-request'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('viewer-response'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('origin-request'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('origin-response'),
+                                        ]),
+                                    ])),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                ]),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('QueryString'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Cookies'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Headers'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QueryStringCacheKeys'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Forward'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('WhitelistedNames'),
+                                    ], [
+                                        new \PHPStan\Type\UnionType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('all'),
+                                        ]),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                        ], [
+                                            new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                        ]),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                                    ]),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResponsePagePath'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ResponseCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ErrorCachingMinTTL'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\IntegerType(),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CloudFrontDefaultCertificate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IAMCertificateId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ACMCertificateArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SSLSupportMethod'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MinimumProtocolVersion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CertificateSource'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('sni-only'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('static-ip'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SSLv3'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1_2016'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1.1_2016'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1.2_2018'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1.2_2019'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TLSv1.2_2021'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('cloudfront'),
+                                new \PHPStan\Type\Constant\ConstantStringType('iam'),
+                                new \PHPStan\Type\Constant\ConstantStringType('acm'),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('GeoRestriction'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('none'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('http1.1'),
+                            new \PHPStan\Type\Constant\ConstantStringType('http2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('http3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('http2and3'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ICPRecordalStatus'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('APPROVED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SUSPENDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -8269,6 +9921,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
@@ -8288,8 +9941,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('IsIPV6Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('AliasICPRecordals'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -8800,6 +10455,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8872,6 +10528,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ])),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
@@ -8948,6 +10608,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Id'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ETag'),
                         new \PHPStan\Type\Constant\ConstantStringType('Status'),
                         new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('DomainName'),
@@ -8967,8 +10628,10 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('IsIPV6Enabled'),
                         new \PHPStan\Type\Constant\ConstantStringType('AliasICPRecordals'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -9479,6 +11142,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -9551,9 +11215,38 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             ]),
                         ])),
                         new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
+            ]),
+        ]);
+    }
+    private function listDomainConflicts(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DomainConflicts'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('distribution'),
+                        new \PHPStan\Type\Constant\ConstantStringType('distribution-tenant'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -9744,6 +11437,38 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
         ]);
     }
     private function listInvalidations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('InvalidationList'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Marker'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextMarker'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MaxItems'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsTruncated'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Quantity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function listInvalidationsForDistributionTenant(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -10340,6 +12065,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                     ])),
@@ -10660,6 +12386,54 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
             ]),
         ]);
     }
+    private function updateConnectionGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroup'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Ipv6Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RoutingEndpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IsDefault'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\BooleanType(),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function updateContinuousDeploymentPolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -10811,6 +12585,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11330,6 +13106,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -11393,6 +13170,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -11405,6 +13209,102 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
                         ]),
                     ])),
+                ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function updateDistributionTenant(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DistributionTenant'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DistributionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Domains'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Customizations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConnectionGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Enabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('active'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inactive'),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Items'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('WebAcl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GeoRestrictions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('override'),
+                                new \PHPStan\Type\Constant\ConstantStringType('disable'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('RestrictionType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Locations'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('blacklist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('whitelist'),
+                                new \PHPStan\Type\Constant\ConstantStringType('none'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -11498,6 +13398,8 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('ContinuousDeploymentPolicyId'),
                         new \PHPStan\Type\Constant\ConstantStringType('Staging'),
                         new \PHPStan\Type\Constant\ConstantStringType('AnycastIpListId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('TenantConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ConnectionMode'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12017,6 +13919,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -12080,6 +13983,33 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ParameterDefinitions'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Definition'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('StringSchema'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('Comment'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('DefaultValue'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('Required'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\BooleanType(),
+                                    ]),
+                                ]),
+                            ])),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('direct'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tenant-only'),
+                        ]),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('CNAME'),
@@ -12093,6 +14023,20 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         ]),
                     ])),
                 ]),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function updateDomainAssociation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                new \PHPStan\Type\Constant\ConstantStringType('ResourceId'),
+                new \PHPStan\Type\Constant\ConstantStringType('ETag'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -12785,6 +14729,7 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_100'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_200'),
                             new \PHPStan\Type\Constant\ConstantStringType('PriceClass_All'),
+                            new \PHPStan\Type\Constant\ConstantStringType('None'),
                         ]),
                         new \PHPStan\Type\BooleanType(),
                     ]),
@@ -12845,6 +14790,28 @@ final class CloudFrontClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function verifyDnsConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DnsConfigurationList'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Domain'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Reason'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('valid-configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('invalid-configuration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('unknown-configuration'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }

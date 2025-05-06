@@ -18,6 +18,7 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'createCustomDomainAssociation',
             'createEndpointAccess',
             'createNamespace',
+            'createReservation',
             'createScheduledAction',
             'createSnapshot',
             'createSnapshotCopyConfiguration',
@@ -37,6 +38,8 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'getEndpointAccess',
             'getNamespace',
             'getRecoveryPoint',
+            'getReservation',
+            'getReservationOffering',
             'getResourcePolicy',
             'getScheduledAction',
             'getSnapshot',
@@ -49,6 +52,8 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'listManagedWorkgroups',
             'listNamespaces',
             'listRecoveryPoints',
+            'listReservationOfferings',
+            'listReservations',
             'listScheduledActions',
             'listSnapshotCopyConfigurations',
             'listSnapshots',
@@ -82,6 +87,7 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'createCustomDomainAssociation' => $this->createCustomDomainAssociation(),
             'createEndpointAccess' => $this->createEndpointAccess(),
             'createNamespace' => $this->createNamespace(),
+            'createReservation' => $this->createReservation(),
             'createScheduledAction' => $this->createScheduledAction(),
             'createSnapshot' => $this->createSnapshot(),
             'createSnapshotCopyConfiguration' => $this->createSnapshotCopyConfiguration(),
@@ -101,6 +107,8 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'getEndpointAccess' => $this->getEndpointAccess(),
             'getNamespace' => $this->getNamespace(),
             'getRecoveryPoint' => $this->getRecoveryPoint(),
+            'getReservation' => $this->getReservation(),
+            'getReservationOffering' => $this->getReservationOffering(),
             'getResourcePolicy' => $this->getResourcePolicy(),
             'getScheduledAction' => $this->getScheduledAction(),
             'getSnapshot' => $this->getSnapshot(),
@@ -113,6 +121,8 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             'listManagedWorkgroups' => $this->listManagedWorkgroups(),
             'listNamespaces' => $this->listNamespaces(),
             'listRecoveryPoints' => $this->listRecoveryPoints(),
+            'listReservationOfferings' => $this->listReservationOfferings(),
+            'listReservations' => $this->listReservations(),
             'listScheduledActions' => $this->listScheduledActions(),
             'listSnapshotCopyConfigurations' => $this->listSnapshotCopyConfigurations(),
             'listSnapshots' => $this->listSnapshots(),
@@ -317,6 +327,49 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                         new \PHPStan\Type\Constant\ConstantStringType('MODIFYING'),
                         new \PHPStan\Type\Constant\ConstantStringType('DELETING'),
                     ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function createReservation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('reservation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('capacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('currencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hourlyCharge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('upfrontCharge'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL_UPFRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_UPFRONT'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -1191,6 +1244,76 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
             ]),
         ]);
     }
+    private function getReservation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('reservation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('capacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('currencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hourlyCharge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('upfrontCharge'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL_UPFRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_UPFRONT'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function getReservationOffering(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('reservationOffering'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('currencyCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hourlyCharge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offeringId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offeringType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('upfrontCharge'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL_UPFRONT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NO_UPFRONT'),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                ]),
+            ]),
+        ]);
+    }
     private function getResourcePolicy(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1729,6 +1852,80 @@ final class RedshiftServerlessClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listReservationOfferings(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('reservationOfferingsList'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('currencyCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hourlyCharge'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offeringId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offeringType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('upfrontCharge'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ALL_UPFRONT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('NO_UPFRONT'),
+                    ]),
+                    new \PHPStan\Type\FloatType(),
+                ])),
+            ]),
+        ]);
+    }
+    private function listReservations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('reservationsList'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('capacity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('offering'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('reservationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startDate'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('currencyCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('duration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hourlyCharge'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('offeringType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('upfrontCharge'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ALL_UPFRONT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_UPFRONT'),
+                        ]),
+                        new \PHPStan\Type\FloatType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ])),
             ]),

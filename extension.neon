@@ -1455,6 +1455,10 @@ services:
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension
     -
+        class: Rikudou\AwsSdkPhpstan\Types\SSMGuiConnectClientReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
         class: Rikudou\AwsSdkPhpstan\Types\SSMIncidentsClientReturnTypeExtension
         tags:
             - phpstan.broker.dynamicMethodReturnTypeExtension

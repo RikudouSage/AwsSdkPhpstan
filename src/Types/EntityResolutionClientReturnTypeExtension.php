@@ -101,8 +101,8 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                new \PHPStan\Type\Constant\ConstantStringType('policy'),
                 new \PHPStan\Type\Constant\ConstantStringType('token'),
+                new \PHPStan\Type\Constant\ConstantStringType('policy'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -114,31 +114,31 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('errors'),
                 new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                 new \PHPStan\Type\Constant\ConstantStringType('disconnectedUniqueIds'),
-                new \PHPStan\Type\Constant\ConstantStringType('errors'),
-                new \PHPStan\Type\Constant\ConstantStringType('status'),
             ], [
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('uniqueId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('errorType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ERROR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_ERROR'),
+                    ]),
+                ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('uniqueId'),
                 ], [
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('uniqueId'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ERROR'),
-                        new \PHPStan\Type\Constant\ConstantStringType('VALIDATION_ERROR'),
-                    ]),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ACCEPTED'),
-                ]),
             ]),
         ]);
     }
@@ -146,64 +146,17 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
-                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
@@ -217,14 +170,61 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                     ]),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -233,41 +233,53 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
-                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('idNamespaceName'),
+                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
-                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
                 new \PHPStan\Type\Constant\ConstantStringType('type'),
+                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
                         new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
@@ -276,35 +288,23 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     ]),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                     new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                 ]),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -312,75 +312,66 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('resolutionTechniques'),
+                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
-                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
-                    new \PHPStan\Type\Constant\ConstantStringType('output'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('resolutionType'),
                     new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ML_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                         new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
                         new \PHPStan\Type\Constant\ConstantStringType('matchPurpose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
@@ -389,17 +380,26 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('IDENTIFIER_GENERATION'),
                             new \PHPStan\Type\Constant\ConstantStringType('INDEXING'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                        ])),
+                        ]),
                     ]),
                 ]),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -408,24 +408,22 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('mappedInputFields'),
-                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
             ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('groupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                     new \PHPStan\Type\Constant\ConstantStringType('matchKey'),
                     new \PHPStan\Type\Constant\ConstantStringType('subType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('NAME'),
@@ -448,10 +446,15 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('DATE'),
                         new \PHPStan\Type\Constant\ConstantStringType('STRING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAID'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -490,8 +493,8 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                new \PHPStan\Type\Constant\ConstantStringType('policy'),
                 new \PHPStan\Type\Constant\ConstantStringType('token'),
+                new \PHPStan\Type\Constant\ConstantStringType('policy'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -513,52 +516,54 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                new \PHPStan\Type\Constant\ConstantStringType('errorDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('metrics'),
-                new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
-                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('metrics'),
+                new \PHPStan\Type\Constant\ConstantStringType('errorDetails'),
+                new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('inputRecords'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recordsNotProcessed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedRecords'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedSourceRecords'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedTargetRecords'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsProcessed'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
                     new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
                 ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsProcessed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recordsNotProcessed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedSourceRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalMappedTargetRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('uniqueRecordsLoaded'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -566,68 +571,20 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
-                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
@@ -641,17 +598,65 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                     ]),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -659,62 +664,18 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
-                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('idNamespaceName'),
+                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
-                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
                 new \PHPStan\Type\Constant\ConstantStringType('type'),
+                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
-                ])),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -724,13 +685,57 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModels'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                    ]),
+                ])),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                     new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                 ]),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -750,48 +755,48 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
-                new \PHPStan\Type\Constant\ConstantStringType('errorDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                new \PHPStan\Type\Constant\ConstantStringType('metrics'),
-                new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
-                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                new \PHPStan\Type\Constant\ConstantStringType('metrics'),
+                new \PHPStan\Type\Constant\ConstantStringType('errorDetails'),
+                new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                ]),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('inputRecords'),
-                    new \PHPStan\Type\Constant\ConstantStringType('matchIDs'),
-                    new \PHPStan\Type\Constant\ConstantStringType('recordsNotProcessed'),
-                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsProcessed'),
-                ], [
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                    new \PHPStan\Type\IntegerType(),
-                ]),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
-                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
                     new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
                 ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputRecords'),
+                    new \PHPStan\Type\Constant\ConstantStringType('totalRecordsProcessed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('recordsNotProcessed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('matchIDs'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('errorMessage'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -799,79 +804,69 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('resolutionTechniques'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('tags'),
-                new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
-                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
-                    new \PHPStan\Type\Constant\ConstantStringType('output'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('resolutionType'),
                     new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ML_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                         new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
                         new \PHPStan\Type\Constant\ConstantStringType('matchPurpose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
@@ -880,20 +875,30 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('IDENTIFIER_GENERATION'),
                             new \PHPStan\Type\Constant\ConstantStringType('INDEXING'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -902,8 +907,8 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                new \PHPStan\Type\Constant\ConstantStringType('policy'),
                 new \PHPStan\Type\Constant\ConstantStringType('token'),
+                new \PHPStan\Type\Constant\ConstantStringType('policy'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -915,33 +920,74 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('anonymizedOutput'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerComponentSchema'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerConfigurationDefinition'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerEndpointConfiguration'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerEntityOutputDefinition'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerIdNameSpaceConfiguration'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerIntermediateDataAccessConfiguration'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerJobConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('providerName'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('providerServiceDisplayName'),
                 new \PHPStan\Type\Constant\ConstantStringType('providerServiceName'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerServiceDisplayName'),
                 new \PHPStan\Type\Constant\ConstantStringType('providerServiceType'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerConfigurationDefinition'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerIdNameSpaceConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerJobConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerEndpointConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('anonymizedOutput'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerEntityOutputDefinition'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerIntermediateDataAccessConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('providerComponentSchema'),
             ], [
-                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ASSIGNMENT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([], []),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('providerSchemaAttributes'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemas'),
+                    new \PHPStan\Type\Constant\ConstantStringType('description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerTargetConfigurationDefinition'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerSourceConfigurationDefinition'),
                 ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
-                        new \PHPStan\Type\Constant\ConstantStringType('hashing'),
-                        new \PHPStan\Type\Constant\ConstantStringType('subType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('marketplaceConfiguration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('dataSetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('assetId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('listingId'),
                     ], [
                         new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('requiredBucketActions'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('schemas'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerSchemaAttributes'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hashing'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NAME'),
@@ -964,51 +1010,13 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('DATE'),
                             new \PHPStan\Type\Constant\ConstantStringType('STRING'),
                             new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ID'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAID'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType())),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('marketplaceConfiguration'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('assetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('dataSetId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('listingId'),
-                        new \PHPStan\Type\Constant\ConstantStringType('revisionId'),
-                    ], [
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('description'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerSourceConfigurationDefinition'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerTargetConfigurationDefinition'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('awsAccountIds'),
-                    new \PHPStan\Type\Constant\ConstantStringType('requiredBucketActions'),
-                ], [
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                ]),
-                new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\UnionType([
-                    new \PHPStan\Type\Constant\ConstantStringType('ASSIGNMENT'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING'),
                 ]),
             ]),
         ]);
@@ -1017,30 +1025,26 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('hasWorkflows'),
-                new \PHPStan\Type\Constant\ConstantStringType('mappedInputFields'),
-                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
-                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('description'),
+                new \PHPStan\Type\Constant\ConstantStringType('mappedInputFields'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                new \PHPStan\Type\Constant\ConstantStringType('hasWorkflows'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('groupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                     new \PHPStan\Type\Constant\ConstantStringType('matchKey'),
                     new \PHPStan\Type\Constant\ConstantStringType('subType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('NAME'),
@@ -1063,12 +1067,19 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('DATE'),
                         new \PHPStan\Type\Constant\ConstantStringType('STRING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAID'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\BooleanType(),
             ]),
         ]);
     }
@@ -1080,20 +1091,20 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                 ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
                         new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1103,21 +1114,21 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('workflowSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
                 ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1129,15 +1140,16 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('idNamespaceName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('description'),
                     new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('idNamespaceName'),
                     new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
                 ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
@@ -1147,12 +1159,11 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
                         ]),
                     ])),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                         new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -1167,20 +1178,20 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('jobId'),
-                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                 ], [
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RUNNING'),
                         new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('QUEUED'),
                     ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1190,27 +1201,27 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('workflowSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('resolutionType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('resolutionType'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ML_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                     ]),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1218,13 +1229,12 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('providerServiceSummaries'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('providerName'),
                     new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerName'),
                     new \PHPStan\Type\Constant\ConstantStringType('providerServiceDisplayName'),
                     new \PHPStan\Type\Constant\ConstantStringType('providerServiceName'),
                     new \PHPStan\Type\Constant\ConstantStringType('providerServiceType'),
@@ -1238,6 +1248,7 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('ID_MAPPING'),
                     ]),
                 ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1245,23 +1256,23 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('schemaList'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
             ], [
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hasWorkflows'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                     new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hasWorkflows'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -1280,8 +1291,8 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('arn'),
-                new \PHPStan\Type\Constant\ConstantStringType('policy'),
                 new \PHPStan\Type\Constant\ConstantStringType('token'),
+                new \PHPStan\Type\Constant\ConstantStringType('policy'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1298,9 +1309,9 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
                     new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1335,64 +1346,17 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
+                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingTechniques'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
-                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
-                ], [
-                    new \PHPStan\Type\UnionType([
-                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
-                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
-                    ], [
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
-                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
-                        ]),
-                        new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
-                    ]),
-                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
@@ -1406,14 +1370,61 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                     ]),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModel'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1422,40 +1433,52 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
-                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
-                new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
-                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('idNamespaceName'),
+                new \PHPStan\Type\Constant\ConstantStringType('idNamespaceArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
-                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('idMappingWorkflowProperties'),
                 new \PHPStan\Type\Constant\ConstantStringType('type'),
+                new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('createdAt'),
                 new \PHPStan\Type\Constant\ConstantStringType('updatedAt'),
             ], [
-                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
+                    new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('idMappingType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_BASED'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
-                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
                         new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
                         new \PHPStan\Type\Constant\ConstantStringType('recordMatchingModels'),
-                        new \PHPStan\Type\Constant\ConstantStringType('ruleDefinitionTypes'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
@@ -1464,33 +1487,21 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_SOURCE_TO_ONE_TARGET'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_SOURCE_TO_ONE_TARGET'),
                         ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
-                            new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
-                            new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
-                        ])),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
-                        ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
-                            new \PHPStan\Type\StringType(),
-                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
                     ]),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
-                    new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
-                ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                ])),
-                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('SOURCE'),
                     new \PHPStan\Type\Constant\ConstantStringType('TARGET'),
                 ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
@@ -1499,74 +1510,64 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
-                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('inputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputSourceConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('resolutionTechniques'),
+                new \PHPStan\Type\Constant\ConstantStringType('incrementalRunConfig'),
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('workflowName'),
             ], [
                 new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
-                ], [
-                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
-                ]),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                     new \PHPStan\Type\Constant\ConstantStringType('inputSourceARN'),
                     new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
-                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
-                    new \PHPStan\Type\Constant\ConstantStringType('output'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputS3Path'),
+                    new \PHPStan\Type\Constant\ConstantStringType('KMSArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('output'),
+                    new \PHPStan\Type\Constant\ConstantStringType('applyNormalization'),
                 ], [
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
-                        new \PHPStan\Type\Constant\ConstantStringType('name'),
-                    ], [
-                        new \PHPStan\Type\BooleanType(),
-                        new \PHPStan\Type\StringType(),
-                    ])),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('name'),
+                        new \PHPStan\Type\Constant\ConstantStringType('hashed'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\BooleanType(),
+                    ])),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
                 new \PHPStan\Type\Constant\ConstantArrayType([
-                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                     new \PHPStan\Type\Constant\ConstantStringType('resolutionType'),
                     new \PHPStan\Type\Constant\ConstantStringType('ruleBasedProperties'),
+                    new \PHPStan\Type\Constant\ConstantStringType('providerProperties'),
                 ], [
-                    new \PHPStan\Type\Constant\ConstantArrayType([
-                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
-                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
-                    ], [
-                        new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
-                        ], [
-                            new \PHPStan\Type\StringType(),
-                        ]),
-                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
-                        new \PHPStan\Type\StringType(),
-                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('RULE_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('ML_MATCHING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                         new \PHPStan\Type\Constant\ConstantStringType('attributeMatchingModel'),
                         new \PHPStan\Type\Constant\ConstantStringType('matchPurpose'),
-                        new \PHPStan\Type\Constant\ConstantStringType('rules'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ])),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ONE_TO_ONE'),
                             new \PHPStan\Type\Constant\ConstantStringType('MANY_TO_MANY'),
@@ -1575,16 +1576,26 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                             new \PHPStan\Type\Constant\ConstantStringType('IDENTIFIER_GENERATION'),
                             new \PHPStan\Type\Constant\ConstantStringType('INDEXING'),
                         ]),
-                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
-                            new \PHPStan\Type\Constant\ConstantStringType('matchingKeys'),
-                            new \PHPStan\Type\Constant\ConstantStringType('ruleName'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('providerServiceArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('providerConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('intermediateSourceConfiguration'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('intermediateS3Path'),
                         ], [
-                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
-                        ])),
+                        ]),
                     ]),
                 ]),
-                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('incrementalRunType'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantStringType('IMMEDIATE'),
+                ]),
                 new \PHPStan\Type\StringType(),
             ]),
         ]);
@@ -1593,24 +1604,22 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
+                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
                 new \PHPStan\Type\Constant\ConstantStringType('mappedInputFields'),
-                new \PHPStan\Type\Constant\ConstantStringType('schemaArn'),
-                new \PHPStan\Type\Constant\ConstantStringType('schemaName'),
             ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('fieldName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
                     new \PHPStan\Type\Constant\ConstantStringType('groupName'),
-                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                     new \PHPStan\Type\Constant\ConstantStringType('matchKey'),
                     new \PHPStan\Type\Constant\ConstantStringType('subType'),
-                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('hashed'),
                 ], [
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\BooleanType(),
-                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('NAME'),
@@ -1633,10 +1642,15 @@ final class EntityResolutionClientReturnTypeExtension implements \PHPStan\Type\D
                         new \PHPStan\Type\Constant\ConstantStringType('DATE'),
                         new \PHPStan\Type\Constant\ConstantStringType('STRING'),
                         new \PHPStan\Type\Constant\ConstantStringType('PROVIDER_ID'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV6'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MAID'),
                     ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
                 ])),
-                new \PHPStan\Type\StringType(),
-                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

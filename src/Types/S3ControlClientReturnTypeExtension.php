@@ -32,6 +32,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'deleteAccessPointForObjectLambda',
             'deleteAccessPointPolicy',
             'deleteAccessPointPolicyForObjectLambda',
+            'deleteAccessPointScope',
             'deleteBucket',
             'deleteBucketLifecycleConfiguration',
             'deleteBucketPolicy',
@@ -58,6 +59,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'getAccessPointPolicyForObjectLambda',
             'getAccessPointPolicyStatus',
             'getAccessPointPolicyStatusForObjectLambda',
+            'getAccessPointScope',
             'getBucket',
             'getBucketLifecycleConfiguration',
             'getBucketPolicy',
@@ -78,6 +80,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'listAccessGrantsInstances',
             'listAccessGrantsLocations',
             'listAccessPoints',
+            'listAccessPointsForDirectoryBuckets',
             'listAccessPointsForObjectLambda',
             'listCallerAccessGrants',
             'listJobs',
@@ -90,6 +93,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'putAccessPointConfigurationForObjectLambda',
             'putAccessPointPolicy',
             'putAccessPointPolicyForObjectLambda',
+            'putAccessPointScope',
             'putBucketLifecycleConfiguration',
             'putBucketPolicy',
             'putBucketReplication',
@@ -131,6 +135,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'deleteAccessPointForObjectLambda' => $this->deleteAccessPointForObjectLambda(),
             'deleteAccessPointPolicy' => $this->deleteAccessPointPolicy(),
             'deleteAccessPointPolicyForObjectLambda' => $this->deleteAccessPointPolicyForObjectLambda(),
+            'deleteAccessPointScope' => $this->deleteAccessPointScope(),
             'deleteBucket' => $this->deleteBucket(),
             'deleteBucketLifecycleConfiguration' => $this->deleteBucketLifecycleConfiguration(),
             'deleteBucketPolicy' => $this->deleteBucketPolicy(),
@@ -157,6 +162,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'getAccessPointPolicyForObjectLambda' => $this->getAccessPointPolicyForObjectLambda(),
             'getAccessPointPolicyStatus' => $this->getAccessPointPolicyStatus(),
             'getAccessPointPolicyStatusForObjectLambda' => $this->getAccessPointPolicyStatusForObjectLambda(),
+            'getAccessPointScope' => $this->getAccessPointScope(),
             'getBucket' => $this->getBucket(),
             'getBucketLifecycleConfiguration' => $this->getBucketLifecycleConfiguration(),
             'getBucketPolicy' => $this->getBucketPolicy(),
@@ -177,6 +183,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'listAccessGrantsInstances' => $this->listAccessGrantsInstances(),
             'listAccessGrantsLocations' => $this->listAccessGrantsLocations(),
             'listAccessPoints' => $this->listAccessPoints(),
+            'listAccessPointsForDirectoryBuckets' => $this->listAccessPointsForDirectoryBuckets(),
             'listAccessPointsForObjectLambda' => $this->listAccessPointsForObjectLambda(),
             'listCallerAccessGrants' => $this->listCallerAccessGrants(),
             'listJobs' => $this->listJobs(),
@@ -189,6 +196,7 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'putAccessPointConfigurationForObjectLambda' => $this->putAccessPointConfigurationForObjectLambda(),
             'putAccessPointPolicy' => $this->putAccessPointPolicy(),
             'putAccessPointPolicyForObjectLambda' => $this->putAccessPointPolicyForObjectLambda(),
+            'putAccessPointScope' => $this->putAccessPointScope(),
             'putBucketLifecycleConfiguration' => $this->putBucketLifecycleConfiguration(),
             'putBucketPolicy' => $this->putBucketPolicy(),
             'putBucketReplication' => $this->putBucketReplication(),
@@ -410,6 +418,12 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
         ]);
     }
     private function deleteAccessPointPolicyForObjectLambda(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function deleteAccessPointScope(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
@@ -1336,6 +1350,31 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('IsPublic'),
                 ], [
                     new \PHPStan\Type\BooleanType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function getAccessPointScope(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Scope'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefixes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Permissions'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('GetObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('GetObjectAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListMultipartUploadParts'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListBucket'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ListBucketMultipartUploads'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PutObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeleteObject'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AbortMultipartUpload'),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2275,6 +2314,41 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function listAccessPointsForDirectoryBuckets(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AccessPointList'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkOrigin'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Bucket'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessPointArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Alias'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BucketAccountId'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Internet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('VPC'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listAccessPointsForObjectLambda(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -2556,6 +2630,12 @@ final class S3ControlClientReturnTypeExtension implements \PHPStan\Type\DynamicM
         ]);
     }
     private function putAccessPointPolicyForObjectLambda(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function putAccessPointScope(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),

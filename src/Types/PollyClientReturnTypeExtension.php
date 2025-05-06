@@ -166,6 +166,7 @@ final class PollyClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('Jitka'),
                         new \PHPStan\Type\Constant\ConstantStringType('Sabrina'),
                         new \PHPStan\Type\Constant\ConstantStringType('Jasmine'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Jihye'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('arb'),
@@ -502,6 +503,7 @@ final class PollyClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('Jitka'),
                         new \PHPStan\Type\Constant\ConstantStringType('Sabrina'),
                         new \PHPStan\Type\Constant\ConstantStringType('Jasmine'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Jihye'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('arb'),
@@ -787,6 +789,7 @@ final class PollyClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('Jitka'),
                         new \PHPStan\Type\Constant\ConstantStringType('Sabrina'),
                         new \PHPStan\Type\Constant\ConstantStringType('Jasmine'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Jihye'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('arb'),
@@ -1001,6 +1004,7 @@ final class PollyClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('Jitka'),
                         new \PHPStan\Type\Constant\ConstantStringType('Sabrina'),
                         new \PHPStan\Type\Constant\ConstantStringType('Jasmine'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Jihye'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('arb'),

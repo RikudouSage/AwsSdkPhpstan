@@ -129,6 +129,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'updateNode',
             'updateNodeState',
             'listVersions',
+            'createSdiSource',
+            'deleteSdiSource',
+            'describeSdiSource',
+            'listSdiSources',
+            'updateSdiSource',
         ], true);
     }
     public function getTypeFromMethodCall(\PHPStan\Reflection\MethodReflection $methodReflection, \PhpParser\Node\Expr\MethodCall $methodCall, \PHPStan\Analyser\Scope $scope): ?\PHPStan\Type\Type
@@ -250,6 +255,11 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'updateNode' => $this->updateNode(),
             'updateNodeState' => $this->updateNodeState(),
             'listVersions' => $this->listVersions(),
+            'createSdiSource' => $this->createSdiSource(),
+            'deleteSdiSource' => $this->deleteSdiSource(),
+            'describeSdiSource' => $this->describeSdiSource(),
+            'listSdiSources' => $this->listSdiSources(),
+            'updateSdiSource' => $this->updateSdiSource(),
         };
     }
     private function acceptInputDeviceTransfer(): ?\PHPStan\Type\Type
@@ -2501,6 +2511,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -2533,6 +2547,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -4801,6 +4832,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('InputNetworkLocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('MulticastSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroupSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -4884,6 +4917,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('TS_FILE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SRT_CALLER'),
                         new \PHPStan\Type\Constant\ConstantStringType('MULTICAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMPTE_2110_RECEIVER_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SDI'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SrtCallerSources'),
@@ -4927,6 +4962,42 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroups'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SdpSettings'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AncillarySdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioSdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VideoSdp'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -5148,6 +5219,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('InputNetworkLocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('MulticastSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroupSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -5231,6 +5304,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('TS_FILE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SRT_CALLER'),
                         new \PHPStan\Type\Constant\ConstantStringType('MULTICAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMPTE_2110_RECEIVER_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SDI'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SrtCallerSources'),
@@ -5274,6 +5349,42 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroups'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SdpSettings'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AncillarySdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioSdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VideoSdp'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -6746,6 +6857,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -6778,6 +6893,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -10784,6 +10916,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -10816,6 +10952,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -13080,6 +13233,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
                 new \PHPStan\Type\Constant\ConstantStringType('InputNetworkLocation'),
                 new \PHPStan\Type\Constant\ConstantStringType('MulticastSettings'),
+                new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroupSettings'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -13163,6 +13318,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('TS_FILE'),
                     new \PHPStan\Type\Constant\ConstantStringType('SRT_CALLER'),
                     new \PHPStan\Type\Constant\ConstantStringType('MULTICAST'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SMPTE_2110_RECEIVER_GROUP'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SDI'),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('SrtCallerSources'),
@@ -13206,6 +13363,42 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\StringType(),
                     ])),
                 ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroups'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SdpSettings'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AncillarySdps'),
+                            new \PHPStan\Type\Constant\ConstantStringType('AudioSdps'),
+                            new \PHPStan\Type\Constant\ConstantStringType('VideoSdp'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                            ], [
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
+                    ])),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -13315,6 +13508,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('Codec'),
                     new \PHPStan\Type\Constant\ConstantStringType('MediaconnectSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('AudioChannelPairs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputResolution'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('HDMI'),
@@ -13369,6 +13563,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('CBR-AAC_HQ-512000'),
                         ]),
                     ])),
+                    new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
@@ -14801,6 +14996,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('Codec'),
                         new \PHPStan\Type\Constant\ConstantStringType('MediaconnectSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('AudioChannelPairs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('InputResolution'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('HDMI'),
@@ -14855,6 +15051,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('CBR-AAC_HQ-512000'),
                             ]),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -14931,6 +15128,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('InputNetworkLocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('MulticastSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroupSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -15014,6 +15213,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('TS_FILE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SRT_CALLER'),
                         new \PHPStan\Type\Constant\ConstantStringType('MULTICAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMPTE_2110_RECEIVER_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SDI'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SrtCallerSources'),
@@ -15057,6 +15258,42 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroups'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SdpSettings'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AncillarySdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioSdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VideoSdp'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -16940,6 +17177,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -16972,6 +17213,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -20743,6 +21001,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -20775,6 +21037,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -24563,6 +24842,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -24595,6 +24878,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -28302,6 +28602,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                                 ], [
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -28334,6 +28638,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                         new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     ]),
                                     new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                    ], [
+                                        new \PHPStan\Type\IntegerType(),
+                                        new \PHPStan\Type\StringType(),
+                                    ])),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                    ]),
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    ]),
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -30602,6 +30923,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('SrtSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('InputNetworkLocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('MulticastSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroupSettings'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -30685,6 +31008,8 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('TS_FILE'),
                         new \PHPStan\Type\Constant\ConstantStringType('SRT_CALLER'),
                         new \PHPStan\Type\Constant\ConstantStringType('MULTICAST'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SMPTE_2110_RECEIVER_GROUP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SDI'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('SrtCallerSources'),
@@ -30728,6 +31053,42 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\StringType(),
                         ])),
                     ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Smpte2110ReceiverGroups'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('SdpSettings'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AncillarySdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioSdps'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VideoSdp'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('MediaIndex'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SdpUrl'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
+                            ]),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
             ]),
         ]);
@@ -30838,6 +31199,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('Codec'),
                     new \PHPStan\Type\Constant\ConstantStringType('MediaconnectSettings'),
                     new \PHPStan\Type\Constant\ConstantStringType('AudioChannelPairs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('InputResolution'),
                 ], [
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('HDMI'),
@@ -30892,6 +31254,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('CBR-AAC_HQ-512000'),
                         ]),
                     ])),
+                    new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\StringType(),
@@ -32677,6 +33040,10 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('Scte35NameModifier'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3Behavior'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Id3NameModifier'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaptionLanguageMappings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Frame'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataId3Period'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TimedMetadataPassthrough'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('DestinationRefId'),
@@ -32709,6 +33076,23 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('CaptionChannel'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('LanguageCode'),
+                                ], [
+                                    new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PRIV'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('TDRL'),
+                                ]),
+                                new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('InputLossAction'),
@@ -36469,6 +36853,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 new \PHPStan\Type\Constant\ConstantStringType('State'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -36510,6 +36895,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                 ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -36652,6 +37046,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 new \PHPStan\Type\Constant\ConstantStringType('State'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -36693,6 +37088,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                 ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -36825,6 +37229,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 new \PHPStan\Type\Constant\ConstantStringType('State'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -36866,6 +37271,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                 ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -37022,6 +37436,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                     new \PHPStan\Type\Constant\ConstantStringType('Role'),
                     new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -37064,6 +37479,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                         new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                     ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
             ]),
         ]);
@@ -37195,6 +37619,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 new \PHPStan\Type\Constant\ConstantStringType('State'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -37236,6 +37661,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                 ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -37253,6 +37687,7 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('NodeInterfaceMappings'),
                 new \PHPStan\Type\Constant\ConstantStringType('Role'),
                 new \PHPStan\Type\Constant\ConstantStringType('State'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSourceMappings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
@@ -37294,6 +37729,15 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTRATION_FAILED'),
                     new \PHPStan\Type\Constant\ConstantStringType('DEREGISTERED'),
                 ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CardNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ChannelNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
             ]),
         ]);
     }
@@ -37310,6 +37754,188 @@ final class MediaLiveClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ])),
+            ]),
+        ]);
+    }
+    private function createSdiSource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUADRANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERLEAVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUAD'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function deleteSdiSource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUADRANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERLEAVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUAD'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function describeSdiSource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUADRANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERLEAVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUAD'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function listSdiSources(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSources'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUADRANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERLEAVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUAD'),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function updateSdiSource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('SdiSource'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Inputs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Mode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('QUADRANT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('INTERLEAVE'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IDLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_USE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DELETED'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SINGLE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('QUAD'),
+                    ]),
+                ]),
             ]),
         ]);
     }

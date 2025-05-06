@@ -27,6 +27,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'deleteTLSInspectionConfiguration',
             'describeFirewall',
             'describeFirewallPolicy',
+            'describeFlowOperation',
             'describeLoggingConfiguration',
             'describeResourcePolicy',
             'describeRuleGroup',
@@ -37,11 +38,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'listAnalysisReports',
             'listFirewallPolicies',
             'listFirewalls',
+            'listFlowOperationResults',
+            'listFlowOperations',
             'listRuleGroups',
             'listTLSInspectionConfigurations',
             'listTagsForResource',
             'putResourcePolicy',
             'startAnalysisReport',
+            'startFlowCapture',
+            'startFlowFlush',
             'tagResource',
             'untagResource',
             'updateFirewallAnalysisSettings',
@@ -73,6 +78,7 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'deleteTLSInspectionConfiguration' => $this->deleteTLSInspectionConfiguration(),
             'describeFirewall' => $this->describeFirewall(),
             'describeFirewallPolicy' => $this->describeFirewallPolicy(),
+            'describeFlowOperation' => $this->describeFlowOperation(),
             'describeLoggingConfiguration' => $this->describeLoggingConfiguration(),
             'describeResourcePolicy' => $this->describeResourcePolicy(),
             'describeRuleGroup' => $this->describeRuleGroup(),
@@ -83,11 +89,15 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             'listAnalysisReports' => $this->listAnalysisReports(),
             'listFirewallPolicies' => $this->listFirewallPolicies(),
             'listFirewalls' => $this->listFirewalls(),
+            'listFlowOperationResults' => $this->listFlowOperationResults(),
+            'listFlowOperations' => $this->listFlowOperations(),
             'listRuleGroups' => $this->listRuleGroups(),
             'listTLSInspectionConfigurations' => $this->listTLSInspectionConfigurations(),
             'listTagsForResource' => $this->listTagsForResource(),
             'putResourcePolicy' => $this->putResourcePolicy(),
             'startAnalysisReport' => $this->startAnalysisReport(),
+            'startFlowCapture' => $this->startFlowCapture(),
+            'startFlowFlush' => $this->startFlowFlush(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
             'updateFirewallAnalysisSettings' => $this->updateFirewallAnalysisSettings(),
@@ -1117,6 +1127,64 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function describeFlowOperation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationType'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowRequestTimestamp'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperation'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FLOW_FLUSH'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FLOW_CAPTURE'),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('MinimumFlowAgeInSeconds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowFilters'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('SourceAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationAddress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('SourcePort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Protocols'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
     private function describeLoggingConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1764,6 +1832,91 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
             ]),
         ]);
     }
+    private function listFlowOperationResults(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailabilityZone'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
+                new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowRequestTimestamp'),
+                new \PHPStan\Type\Constant\ConstantStringType('Flows'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('SourceAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SourcePort'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DestinationPort'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Protocol'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Age'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PacketCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ByteCount'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('AddressDefinition'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listFlowOperations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperations'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowOperationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowRequestTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FLOW_FLUSH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FLOW_CAPTURE'),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listRuleGroups(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1831,6 +1984,44 @@ final class NetworkFirewallClientReturnTypeExtension implements \PHPStan\Type\Dy
                 new \PHPStan\Type\Constant\ConstantStringType('AnalysisReportId'),
             ], [
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function startFlowCapture(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                ]),
+            ]),
+        ]);
+    }
+    private function startFlowFlush(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('FirewallArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationId'),
+                new \PHPStan\Type\Constant\ConstantStringType('FlowOperationStatus'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLETED_WITH_ERRORS'),
+                ]),
             ]),
         ]);
     }

@@ -513,6 +513,7 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('created'),
                     new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('handlerConfigs'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -543,6 +544,57 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('onPublish'),
+                        new \PHPStan\Type\Constant\ConstantStringType('onSubscribe'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                 ]),
             ]),
         ]);
@@ -686,11 +738,15 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
                     new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -1437,6 +1493,7 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('created'),
                     new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('handlerConfigs'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1467,6 +1524,57 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('onPublish'),
+                        new \PHPStan\Type\Constant\ConstantStringType('onSubscribe'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                 ]),
             ]),
         ]);
@@ -1678,11 +1786,15 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
                     new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),
@@ -2296,6 +2408,7 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('created'),
                     new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('handlerConfigs'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2326,6 +2439,57 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('onPublish'),
+                        new \PHPStan\Type\Constant\ConstantStringType('onSubscribe'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -2473,11 +2637,15 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
                     new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\StringType(),
@@ -3282,6 +3450,7 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('channelNamespaceArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('created'),
                     new \PHPStan\Type\Constant\ConstantStringType('lastModified'),
+                    new \PHPStan\Type\Constant\ConstantStringType('handlerConfigs'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3312,6 +3481,57 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('onPublish'),
+                        new \PHPStan\Type\Constant\ConstantStringType('onSubscribe'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('behavior'),
+                            new \PHPStan\Type\Constant\ConstantStringType('integration'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CODE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DIRECT'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('dataSourceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('lambdaConfig'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('invokeType'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('REQUEST_RESPONSE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('EVENT'),
+                                    ]),
+                                ]),
+                            ]),
+                        ]),
+                    ]),
                 ]),
             ]),
         ]);
@@ -3455,11 +3675,15 @@ final class AppSyncClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('certificateArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('appsyncDomainName'),
                     new \PHPStan\Type\Constant\ConstantStringType('hostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('domainNameArn'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ]),
             ]),

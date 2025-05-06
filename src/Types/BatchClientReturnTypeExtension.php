@@ -415,6 +415,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('secrets'),
                         new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('fargatePlatformConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                         new \PHPStan\Type\Constant\ConstantStringType('ephemeralStorage'),
                         new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                         new \PHPStan\Type\Constant\ConstantStringType('repositoryCredentials'),
@@ -550,6 +551,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                 new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                 new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -580,6 +582,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('sizeInGiB'),
                         ], [
@@ -640,6 +643,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\Constant\ConstantStringType('secrets'),
                                 new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('fargatePlatformConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ephemeralStorage'),
                                 new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                                 new \PHPStan\Type\Constant\ConstantStringType('repositoryCredentials'),
@@ -775,6 +779,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                         new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                         new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                     ]),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -805,6 +810,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('sizeInGiB'),
                                 ], [
@@ -838,12 +844,14 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                                     new \PHPStan\Type\Constant\ConstantStringType('volumes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                                 ], [
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('command'),
                                         new \PHPStan\Type\Constant\ConstantStringType('dependsOn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('environment'),
                                         new \PHPStan\Type\Constant\ConstantStringType('essential'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('firelensConfiguration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('image'),
                                         new \PHPStan\Type\Constant\ConstantStringType('linuxParameters'),
                                         new \PHPStan\Type\Constant\ConstantStringType('logConfiguration'),
@@ -873,6 +881,16 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('options'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fluentbit'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('devices'),
@@ -922,6 +940,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                 new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                             ]),
                                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1040,6 +1059,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                     ])),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1258,12 +1278,14 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                             new \PHPStan\Type\Constant\ConstantStringType('volumes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('command'),
                                 new \PHPStan\Type\Constant\ConstantStringType('dependsOn'),
                                 new \PHPStan\Type\Constant\ConstantStringType('environment'),
                                 new \PHPStan\Type\Constant\ConstantStringType('essential'),
+                                new \PHPStan\Type\Constant\ConstantStringType('firelensConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('image'),
                                 new \PHPStan\Type\Constant\ConstantStringType('linuxParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('logConfiguration'),
@@ -1293,6 +1315,16 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('options'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('fluentbit'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('devices'),
@@ -1342,6 +1374,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                         new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                         new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                     ]),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1460,6 +1493,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ]),
                                 ]),
                             ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1907,6 +1941,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         new \PHPStan\Type\Constant\ConstantStringType('ephemeralStorage'),
                         new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                         new \PHPStan\Type\Constant\ConstantStringType('repositoryCredentials'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\IntegerType(),
@@ -2053,6 +2088,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                 new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                 new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                             ]),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2100,6 +2136,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('nodeIndex'),
@@ -2145,6 +2182,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 new \PHPStan\Type\Constant\ConstantStringType('secrets'),
                                 new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('fargatePlatformConfiguration'),
+                                new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ephemeralStorage'),
                                 new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                                 new \PHPStan\Type\Constant\ConstantStringType('repositoryCredentials'),
@@ -2280,6 +2318,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                         new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                         new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                     ]),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2310,6 +2349,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                 ]),
+                                new \PHPStan\Type\BooleanType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('sizeInGiB'),
                                 ], [
@@ -2343,12 +2383,14 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                                     new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                                     new \PHPStan\Type\Constant\ConstantStringType('volumes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                                 ], [
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('command'),
                                         new \PHPStan\Type\Constant\ConstantStringType('dependsOn'),
                                         new \PHPStan\Type\Constant\ConstantStringType('environment'),
                                         new \PHPStan\Type\Constant\ConstantStringType('essential'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('firelensConfiguration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('image'),
                                         new \PHPStan\Type\Constant\ConstantStringType('linuxParameters'),
                                         new \PHPStan\Type\Constant\ConstantStringType('logConfiguration'),
@@ -2378,6 +2420,16 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             new \PHPStan\Type\StringType(),
                                         ])),
                                         new \PHPStan\Type\BooleanType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('options'),
+                                        ], [
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('fluentbit'),
+                                            ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                        ]),
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('devices'),
@@ -2427,6 +2479,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                                 new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                             ]),
                                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2545,6 +2598,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                             ]),
                                         ]),
                                     ])),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3015,12 +3069,14 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                             new \PHPStan\Type\Constant\ConstantStringType('networkConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('runtimePlatform'),
                             new \PHPStan\Type\Constant\ConstantStringType('volumes'),
+                            new \PHPStan\Type\Constant\ConstantStringType('enableExecuteCommand'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('command'),
                                 new \PHPStan\Type\Constant\ConstantStringType('dependsOn'),
                                 new \PHPStan\Type\Constant\ConstantStringType('environment'),
                                 new \PHPStan\Type\Constant\ConstantStringType('essential'),
+                                new \PHPStan\Type\Constant\ConstantStringType('firelensConfiguration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('image'),
                                 new \PHPStan\Type\Constant\ConstantStringType('linuxParameters'),
                                 new \PHPStan\Type\Constant\ConstantStringType('logConfiguration'),
@@ -3054,6 +3110,16 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     new \PHPStan\Type\StringType(),
                                 ])),
                                 new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('options'),
+                                ], [
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('fluentbit'),
+                                    ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                ]),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('devices'),
@@ -3103,6 +3169,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                         new \PHPStan\Type\Constant\ConstantStringType('fluentd'),
                                         new \PHPStan\Type\Constant\ConstantStringType('awslogs'),
                                         new \PHPStan\Type\Constant\ConstantStringType('splunk'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('awsfirelens'),
                                     ]),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -3235,6 +3302,7 @@ final class BatchClientReturnTypeExtension implements \PHPStan\Type\DynamicMetho
                                     ]),
                                 ]),
                             ])),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\BooleanType(),

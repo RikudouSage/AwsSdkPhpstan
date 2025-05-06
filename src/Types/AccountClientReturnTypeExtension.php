@@ -18,11 +18,13 @@ final class AccountClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'deleteAlternateContact',
             'disableRegion',
             'enableRegion',
+            'getAccountInformation',
             'getAlternateContact',
             'getContactInformation',
             'getPrimaryEmail',
             'getRegionOptStatus',
             'listRegions',
+            'putAccountName',
             'putAlternateContact',
             'putContactInformation',
             'startPrimaryEmailUpdate',
@@ -36,11 +38,13 @@ final class AccountClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
             'deleteAlternateContact' => $this->deleteAlternateContact(),
             'disableRegion' => $this->disableRegion(),
             'enableRegion' => $this->enableRegion(),
+            'getAccountInformation' => $this->getAccountInformation(),
             'getAlternateContact' => $this->getAlternateContact(),
             'getContactInformation' => $this->getContactInformation(),
             'getPrimaryEmail' => $this->getPrimaryEmail(),
             'getRegionOptStatus' => $this->getRegionOptStatus(),
             'listRegions' => $this->listRegions(),
+            'putAccountName' => $this->putAccountName(),
             'putAlternateContact' => $this->putAlternateContact(),
             'putContactInformation' => $this->putContactInformation(),
             'startPrimaryEmailUpdate' => $this->startPrimaryEmailUpdate(),
@@ -75,6 +79,20 @@ final class AccountClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function getAccountInformation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AccountCreatedDate'),
+                new \PHPStan\Type\Constant\ConstantStringType('AccountId'),
+                new \PHPStan\Type\Constant\ConstantStringType('AccountName'),
+            ], [
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\StringType(),
+            ]),
         ]);
     }
     private function getAlternateContact(): ?\PHPStan\Type\Type
@@ -189,6 +207,12 @@ final class AccountClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     ]),
                 ])),
             ]),
+        ]);
+    }
+    private function putAccountName(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
         ]);
     }
     private function putAlternateContact(): ?\PHPStan\Type\Type

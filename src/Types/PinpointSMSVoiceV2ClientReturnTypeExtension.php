@@ -2004,6 +2004,8 @@ final class PinpointSMSVoiceV2ClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                         new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MONITOR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FILTER'),
                     ]),
                 ])),
             ]),
@@ -2852,6 +2854,8 @@ final class PinpointSMSVoiceV2ClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ALLOW'),
                         new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MONITOR'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FILTER'),
                     ]),
                 ])),
             ]),

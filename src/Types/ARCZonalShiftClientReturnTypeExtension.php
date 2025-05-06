@@ -206,6 +206,7 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
                     new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('shiftType'),
                     new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
                 ], [
@@ -223,6 +224,12 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ZONAL_SHIFT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRACTICE_RUN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FIS_EXPERIMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZONAL_AUTOSHIFT'),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                 ])),
@@ -302,6 +309,7 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
                         new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('shiftType'),
                         new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
                     ], [
@@ -319,6 +327,12 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ZONAL_SHIFT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PRACTICE_RUN'),
+                            new \PHPStan\Type\Constant\ConstantStringType('FIS_EXPERIMENT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ZONAL_AUTOSHIFT'),
+                        ]),
                         new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                     ])),
@@ -340,6 +354,7 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('expiryTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('practiceRunOutcome'),
                     new \PHPStan\Type\Constant\ConstantStringType('resourceIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('shiftType'),
                     new \PHPStan\Type\Constant\ConstantStringType('startTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('zonalShiftId'),
@@ -354,6 +369,12 @@ final class ARCZonalShiftClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ZONAL_SHIFT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PRACTICE_RUN'),
+                        new \PHPStan\Type\Constant\ConstantStringType('FIS_EXPERIMENT'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ZONAL_AUTOSHIFT'),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),

@@ -77,6 +77,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describePatchProperties',
             'describeSessions',
             'disassociateOpsItemRelatedItem',
+            'getAccessToken',
             'getAutomationExecution',
             'getCalendarState',
             'getCommandInvocation',
@@ -136,6 +137,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'resumeSession',
             'sendAutomationSignal',
             'sendCommand',
+            'startAccessRequest',
             'startAssociationsOnce',
             'startAutomationExecution',
             'startChangeRequestExecution',
@@ -227,6 +229,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describePatchProperties' => $this->describePatchProperties(),
             'describeSessions' => $this->describeSessions(),
             'disassociateOpsItemRelatedItem' => $this->disassociateOpsItemRelatedItem(),
+            'getAccessToken' => $this->getAccessToken(),
             'getAutomationExecution' => $this->getAutomationExecution(),
             'getCalendarState' => $this->getCalendarState(),
             'getCommandInvocation' => $this->getCommandInvocation(),
@@ -286,6 +289,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'resumeSession' => $this->resumeSession(),
             'sendAutomationSignal' => $this->sendAutomationSignal(),
             'sendCommand' => $this->sendCommand(),
+            'startAccessRequest' => $this->startAccessRequest(),
             'startAssociationsOnce' => $this->startAssociationsOnce(),
             'startAutomationExecution' => $this->startAutomationExecution(),
             'startChangeRequestExecution' => $this->startChangeRequestExecution(),
@@ -937,6 +941,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
                         new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManualApprovalPolicy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutoApprovalPolicy'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1630,7 +1636,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessRequest'),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
@@ -2018,6 +2027,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
                         new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManualApprovalPolicy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutoApprovalPolicy'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2353,6 +2364,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailableSecurityUpdateCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Operation'),
@@ -2368,6 +2380,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -2417,6 +2430,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('FailedCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('UnreportedNotApplicableCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('NotApplicableCount'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AvailableSecurityUpdateCount'),
                     new \PHPStan\Type\Constant\ConstantStringType('OperationStartTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('OperationEndTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('Operation'),
@@ -2432,6 +2446,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -2487,6 +2502,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('MISSING'),
                         new \PHPStan\Type\Constant\ConstantStringType('NOT_APPLICABLE'),
                         new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AVAILABLE_SECURITY_UPDATE'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
@@ -3024,6 +3040,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
                         new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
                         new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Revoked'),
                         new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
                         new \PHPStan\Type\Constant\ConstantStringType('Closed'),
                     ]),
@@ -3160,7 +3177,9 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('InstancesWithCriticalNonCompliantPatches'),
                 new \PHPStan\Type\Constant\ConstantStringType('InstancesWithSecurityNonCompliantPatches'),
                 new \PHPStan\Type\Constant\ConstantStringType('InstancesWithOtherNonCompliantPatches'),
+                new \PHPStan\Type\Constant\ConstantStringType('InstancesWithAvailableSecurityUpdates'),
             ], [
+                new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
@@ -3287,6 +3306,34 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function getAccessToken(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Credentials'),
+                new \PHPStan\Type\Constant\ConstantStringType('AccessRequestStatus'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessKeyId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SecretAccessKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SessionToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpirationTime'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Revoked'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Expired'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Pending'),
+                ]),
+            ]),
         ]);
     }
     private function getAutomationExecution(): ?\PHPStan\Type\Type
@@ -3611,7 +3658,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ]),
                     ])),
                     new \PHPStan\Type\StringType(),
-                    new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ChangeRequest'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AccessRequest'),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('DocumentName'),
@@ -3869,6 +3919,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
                     new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ManualApprovalPolicy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AutoApprovalPolicy'),
                 ]),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('YAML'),
@@ -4430,6 +4482,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('ChangeCalendarOverrideRejected'),
                         new \PHPStan\Type\Constant\ConstantStringType('PendingApproval'),
                         new \PHPStan\Type\Constant\ConstantStringType('Approved'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Revoked'),
                         new \PHPStan\Type\Constant\ConstantStringType('Rejected'),
                         new \PHPStan\Type\Constant\ConstantStringType('Closed'),
                     ]),
@@ -4681,6 +4734,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ModifiedDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailableSecurityUpdatesComplianceStatus'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -4814,6 +4868,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
+                ]),
             ]),
         ]);
     }
@@ -5568,6 +5626,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
                         new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManualApprovalPolicy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutoApprovalPolicy'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -6250,6 +6310,16 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function startAccessRequest(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AccessRequestId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function startAssociationsOnce(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -6778,6 +6848,8 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('CloudFormation'),
                         new \PHPStan\Type\Constant\ConstantStringType('ConformancePackTemplate'),
                         new \PHPStan\Type\Constant\ConstantStringType('QuickSetup'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ManualApprovalPolicy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AutoApprovalPolicy'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -7116,6 +7188,7 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ModifiedDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('Sources'),
+                new \PHPStan\Type\Constant\ConstantStringType('AvailableSecurityUpdatesComplianceStatus'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -7248,6 +7321,10 @@ final class SsmClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('COMPLIANT'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NON_COMPLIANT'),
+                ]),
             ]),
         ]);
     }

@@ -35,6 +35,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
             'listTagsForResource',
             'tagResource',
             'untagResource',
+            'updateCluster',
             'updateControlPanel',
             'updateRoutingControl',
             'updateSafetyRule',
@@ -65,6 +66,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
             'listTagsForResource' => $this->listTagsForResource(),
             'tagResource' => $this->tagResource(),
             'untagResource' => $this->untagResource(),
+            'updateCluster' => $this->updateCluster(),
             'updateControlPanel' => $this->updateControlPanel(),
             'updateRoutingControl' => $this->updateRoutingControl(),
             'updateSafetyRule' => $this->updateSafetyRule(),
@@ -82,6 +84,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -98,6 +101,10 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -276,6 +283,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -292,6 +300,10 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -469,6 +481,7 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Status'),
                     new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -485,6 +498,10 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
                         new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -658,6 +675,43 @@ final class Route53RecoveryControlConfigClientReturnTypeExtension implements \PH
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function updateCluster(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('Cluster'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClusterEndpoints'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Owner'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NetworkType'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Region'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DEPLOYED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PENDING_DELETION'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DUALSTACK'),
+                    ]),
+                ]),
+            ]),
         ]);
     }
     private function updateControlPanel(): ?\PHPStan\Type\Type

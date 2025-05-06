@@ -29,6 +29,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'describeRuleGroupsNamespace',
             'describeScraper',
             'describeWorkspace',
+            'describeWorkspaceConfiguration',
             'getDefaultScraperConfiguration',
             'listRuleGroupsNamespaces',
             'listScrapers',
@@ -41,6 +42,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'updateLoggingConfiguration',
             'updateScraper',
             'updateWorkspaceAlias',
+            'updateWorkspaceConfiguration',
         ], true);
     }
     public function getTypeFromMethodCall(\PHPStan\Reflection\MethodReflection $methodReflection, \PhpParser\Node\Expr\MethodCall $methodCall, \PHPStan\Analyser\Scope $scope): ?\PHPStan\Type\Type
@@ -62,6 +64,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'describeRuleGroupsNamespace' => $this->describeRuleGroupsNamespace(),
             'describeScraper' => $this->describeScraper(),
             'describeWorkspace' => $this->describeWorkspace(),
+            'describeWorkspaceConfiguration' => $this->describeWorkspaceConfiguration(),
             'getDefaultScraperConfiguration' => $this->getDefaultScraperConfiguration(),
             'listRuleGroupsNamespaces' => $this->listRuleGroupsNamespaces(),
             'listScrapers' => $this->listScrapers(),
@@ -74,6 +77,7 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             'updateLoggingConfiguration' => $this->updateLoggingConfiguration(),
             'updateScraper' => $this->updateScraper(),
             'updateWorkspaceAlias' => $this->updateWorkspaceAlias(),
+            'updateWorkspaceConfiguration' => $this->updateWorkspaceConfiguration(),
         };
     }
     private function createAlertManagerDefinition(): ?\PHPStan\Type\Type
@@ -492,6 +496,44 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
             ]),
         ]);
     }
+    private function describeWorkspaceConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('workspaceConfiguration'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('limitsPerLabelSet'),
+                    new \PHPStan\Type\Constant\ConstantStringType('retentionPeriodInDays'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('labelSet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('limits'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('maxSeries'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                        ]),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                            new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function getDefaultScraperConfiguration(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -788,6 +830,26 @@ final class PrometheusServiceClientReturnTypeExtension implements \PHPStan\Type\
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function updateWorkspaceConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATING'),
+                        new \PHPStan\Type\Constant\ConstantStringType('UPDATE_FAILED'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
         ]);
     }
 }

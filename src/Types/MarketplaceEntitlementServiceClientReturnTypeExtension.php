@@ -35,9 +35,11 @@ final class MarketplaceEntitlementServiceClientReturnTypeExtension implements \P
                     new \PHPStan\Type\Constant\ConstantStringType('ProductCode'),
                     new \PHPStan\Type\Constant\ConstantStringType('Dimension'),
                     new \PHPStan\Type\Constant\ConstantStringType('CustomerIdentifier'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CustomerAWSAccountId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Value'),
                     new \PHPStan\Type\Constant\ConstantStringType('ExpirationDate'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),

@@ -16,6 +16,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
         return in_array($methodReflection->getName(), [
             'cancelBatchJobExecution',
             'createApplication',
+            'createDataSetExportTask',
             'createDataSetImportTask',
             'createDeployment',
             'createEnvironment',
@@ -26,6 +27,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             'getApplicationVersion',
             'getBatchJobExecution',
             'getDataSetDetails',
+            'getDataSetExportTask',
             'getDataSetImportTask',
             'getDeployment',
             'getEnvironment',
@@ -35,6 +37,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             'listBatchJobDefinitions',
             'listBatchJobExecutions',
             'listBatchJobRestartPoints',
+            'listDataSetExportHistory',
             'listDataSetImportHistory',
             'listDataSets',
             'listDeployments',
@@ -56,6 +59,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             default => throw new \RuntimeException('Unsupported method'),
             'cancelBatchJobExecution' => $this->cancelBatchJobExecution(),
             'createApplication' => $this->createApplication(),
+            'createDataSetExportTask' => $this->createDataSetExportTask(),
             'createDataSetImportTask' => $this->createDataSetImportTask(),
             'createDeployment' => $this->createDeployment(),
             'createEnvironment' => $this->createEnvironment(),
@@ -66,6 +70,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             'getApplicationVersion' => $this->getApplicationVersion(),
             'getBatchJobExecution' => $this->getBatchJobExecution(),
             'getDataSetDetails' => $this->getDataSetDetails(),
+            'getDataSetExportTask' => $this->getDataSetExportTask(),
             'getDataSetImportTask' => $this->getDataSetImportTask(),
             'getDeployment' => $this->getDeployment(),
             'getEnvironment' => $this->getEnvironment(),
@@ -75,6 +80,7 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
             'listBatchJobDefinitions' => $this->listBatchJobDefinitions(),
             'listBatchJobExecutions' => $this->listBatchJobExecutions(),
             'listBatchJobRestartPoints' => $this->listBatchJobRestartPoints(),
+            'listDataSetExportHistory' => $this->listDataSetExportHistory(),
             'listDataSetImportHistory' => $this->listDataSetImportHistory(),
             'listDataSets' => $this->listDataSets(),
             'listDeployments' => $this->listDeployments(),
@@ -107,6 +113,16 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
+            ]),
+        ]);
+    }
+    private function createDataSetExportTask(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+            ], [
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -320,11 +336,15 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fromProcStep'),
                             new \PHPStan\Type\Constant\ConstantStringType('fromStep'),
+                            new \PHPStan\Type\Constant\ConstantStringType('skip'),
+                            new \PHPStan\Type\Constant\ConstantStringType('stepCheckpoint'),
                             new \PHPStan\Type\Constant\ConstantStringType('toProcStep'),
                             new \PHPStan\Type\Constant\ConstantStringType('toStep'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
@@ -357,11 +377,15 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('fromProcStep'),
                     new \PHPStan\Type\Constant\ConstantStringType('fromStep'),
+                    new \PHPStan\Type\Constant\ConstantStringType('skip'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepCheckpoint'),
                     new \PHPStan\Type\Constant\ConstantStringType('toProcStep'),
                     new \PHPStan\Type\Constant\ConstantStringType('toStep'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
@@ -472,6 +496,41 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\IntegerType(),
+            ]),
+        ]);
+    }
+    private function getDataSetExportTask(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('kmsKeyArn'),
+                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                new \PHPStan\Type\Constant\ConstantStringType('summary'),
+                new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                ]),
+                new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                    new \PHPStan\Type\Constant\ConstantStringType('inProgress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                    new \PHPStan\Type\Constant\ConstantStringType('succeeded'),
+                    new \PHPStan\Type\Constant\ConstantStringType('total'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                ]),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -801,11 +860,15 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('fromProcStep'),
                                 new \PHPStan\Type\Constant\ConstantStringType('fromStep'),
+                                new \PHPStan\Type\Constant\ConstantStringType('skip'),
+                                new \PHPStan\Type\Constant\ConstantStringType('stepCheckpoint'),
                                 new \PHPStan\Type\Constant\ConstantStringType('toProcStep'),
                                 new \PHPStan\Type\Constant\ConstantStringType('toStep'),
                             ], [
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
@@ -868,6 +931,9 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('procStepName'),
                     new \PHPStan\Type\Constant\ConstantStringType('procStepNumber'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepCheckpoint'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepCheckpointStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('stepCheckpointTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('stepCondCode'),
                     new \PHPStan\Type\Constant\ConstantStringType('stepName'),
                     new \PHPStan\Type\Constant\ConstantStringType('stepNumber'),
@@ -875,11 +941,53 @@ final class MainframeModernizationClientReturnTypeExtension implements \PHPStan\
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\BooleanType(),
                 ])),
+            ]),
+        ]);
+    }
+    private function listDataSetExportHistory(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('dataSetExportTasks'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('summary'),
+                    new \PHPStan\Type\Constant\ConstantStringType('taskId'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Creating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Running'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inProgress'),
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('succeeded'),
+                        new \PHPStan\Type\Constant\ConstantStringType('total'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

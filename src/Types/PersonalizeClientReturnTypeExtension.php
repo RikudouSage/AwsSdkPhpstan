@@ -1134,6 +1134,7 @@ final class PersonalizeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('algorithmHyperParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('featureTransformationParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('autoMLConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('optimizationObjective'),
                         new \PHPStan\Type\Constant\ConstantStringType('trainingDataConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('autoTrainingConfig'),
@@ -1200,6 +1201,19 @@ final class PersonalizeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eventParametersList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventValueThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('itemAttribute'),
@@ -1266,11 +1280,25 @@ final class PersonalizeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('autoTrainingConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('eventsConfig'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('schedulingExpression'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('eventParametersList'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('eventValueThreshold'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\FloatType(),
+                                ])),
                             ]),
                         ]),
                         new \PHPStan\Type\StringType(),
@@ -1322,6 +1350,7 @@ final class PersonalizeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('algorithmHyperParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('featureTransformationParameters'),
                         new \PHPStan\Type\Constant\ConstantStringType('autoMLConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventsConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('optimizationObjective'),
                         new \PHPStan\Type\Constant\ConstantStringType('trainingDataConfig'),
                         new \PHPStan\Type\Constant\ConstantStringType('autoTrainingConfig'),
@@ -1388,6 +1417,19 @@ final class PersonalizeClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('eventParametersList'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('eventType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('eventValueThreshold'),
+                                new \PHPStan\Type\Constant\ConstantStringType('weight'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\FloatType(),
+                                new \PHPStan\Type\FloatType(),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('itemAttribute'),

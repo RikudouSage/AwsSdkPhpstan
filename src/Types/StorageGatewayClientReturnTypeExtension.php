@@ -1129,6 +1129,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_ERROR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSIONS'),
                 ]),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\UnionType([
@@ -1454,6 +1455,7 @@ final class StorageGatewayClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('NETWORK_ERROR'),
                     new \PHPStan\Type\Constant\ConstantStringType('TIMEOUT'),
                     new \PHPStan\Type\Constant\ConstantStringType('UNKNOWN_ERROR'),
+                    new \PHPStan\Type\Constant\ConstantStringType('INSUFFICIENT_PERMISSIONS'),
                 ]),
             ]),
         ]);

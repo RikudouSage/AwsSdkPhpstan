@@ -58,6 +58,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'registerTaskDefinition',
             'runTask',
             'startTask',
+            'stopServiceDeployment',
             'stopTask',
             'submitAttachmentStateChanges',
             'submitContainerStateChange',
@@ -123,6 +124,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'registerTaskDefinition' => $this->registerTaskDefinition(),
             'runTask' => $this->runTask(),
             'startTask' => $this->startTask(),
+            'stopServiceDeployment' => $this->stopServiceDeployment(),
             'stopTask' => $this->stopTask(),
             'submitAttachmentStateChanges' => $this->submitAttachmentStateChanges(),
             'submitContainerStateChange' => $this->submitContainerStateChange(),
@@ -1020,6 +1022,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('tagResourceAuthorization'),
                         new \PHPStan\Type\Constant\ConstantStringType('fargateTaskRetirementWaitPeriod'),
                         new \PHPStan\Type\Constant\ConstantStringType('guardDutyActivate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultLogDriverMode'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3531,6 +3534,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                         new \PHPStan\Type\Constant\ConstantStringType('STOP_REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_IN_PROGRESS'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_SUCCESSFUL'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
@@ -5451,6 +5455,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('tagResourceAuthorization'),
                         new \PHPStan\Type\Constant\ConstantStringType('fargateTaskRetirementWaitPeriod'),
                         new \PHPStan\Type\Constant\ConstantStringType('guardDutyActivate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultLogDriverMode'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -5540,6 +5545,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
                         new \PHPStan\Type\Constant\ConstantStringType('STOP_REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_REQUESTED'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_IN_PROGRESS'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_SUCCESSFUL'),
                         new \PHPStan\Type\Constant\ConstantStringType('ROLLBACK_FAILED'),
@@ -5648,6 +5654,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('tagResourceAuthorization'),
                         new \PHPStan\Type\Constant\ConstantStringType('fargateTaskRetirementWaitPeriod'),
                         new \PHPStan\Type\Constant\ConstantStringType('guardDutyActivate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultLogDriverMode'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -5681,6 +5688,7 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('tagResourceAuthorization'),
                         new \PHPStan\Type\Constant\ConstantStringType('fargateTaskRetirementWaitPeriod'),
                         new \PHPStan\Type\Constant\ConstantStringType('guardDutyActivate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('defaultLogDriverMode'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -7107,6 +7115,16 @@ final class EcsClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+            ]),
+        ]);
+    }
+    private function stopServiceDeployment(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('serviceDeploymentArn'),
+            ], [
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

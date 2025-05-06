@@ -17,10 +17,12 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'batchDeleteBuilds',
             'batchGetBuildBatches',
             'batchGetBuilds',
+            'batchGetCommandExecutions',
             'batchGetFleets',
             'batchGetProjects',
             'batchGetReportGroups',
             'batchGetReports',
+            'batchGetSandboxes',
             'createFleet',
             'createProject',
             'createReportGroup',
@@ -43,12 +45,15 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'listBuildBatchesForProject',
             'listBuilds',
             'listBuildsForProject',
+            'listCommandExecutionsForSandbox',
             'listCuratedEnvironmentImages',
             'listFleets',
             'listProjects',
             'listReportGroups',
             'listReports',
             'listReportsForReportGroup',
+            'listSandboxes',
+            'listSandboxesForProject',
             'listSharedProjects',
             'listSharedReportGroups',
             'listSourceCredentials',
@@ -57,8 +62,12 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'retryBuildBatch',
             'startBuild',
             'startBuildBatch',
+            'startCommandExecution',
+            'startSandbox',
+            'startSandboxConnection',
             'stopBuild',
             'stopBuildBatch',
+            'stopSandbox',
             'updateFleet',
             'updateProject',
             'updateProjectVisibility',
@@ -73,10 +82,12 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'batchDeleteBuilds' => $this->batchDeleteBuilds(),
             'batchGetBuildBatches' => $this->batchGetBuildBatches(),
             'batchGetBuilds' => $this->batchGetBuilds(),
+            'batchGetCommandExecutions' => $this->batchGetCommandExecutions(),
             'batchGetFleets' => $this->batchGetFleets(),
             'batchGetProjects' => $this->batchGetProjects(),
             'batchGetReportGroups' => $this->batchGetReportGroups(),
             'batchGetReports' => $this->batchGetReports(),
+            'batchGetSandboxes' => $this->batchGetSandboxes(),
             'createFleet' => $this->createFleet(),
             'createProject' => $this->createProject(),
             'createReportGroup' => $this->createReportGroup(),
@@ -99,12 +110,15 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'listBuildBatchesForProject' => $this->listBuildBatchesForProject(),
             'listBuilds' => $this->listBuilds(),
             'listBuildsForProject' => $this->listBuildsForProject(),
+            'listCommandExecutionsForSandbox' => $this->listCommandExecutionsForSandbox(),
             'listCuratedEnvironmentImages' => $this->listCuratedEnvironmentImages(),
             'listFleets' => $this->listFleets(),
             'listProjects' => $this->listProjects(),
             'listReportGroups' => $this->listReportGroups(),
             'listReports' => $this->listReports(),
             'listReportsForReportGroup' => $this->listReportsForReportGroup(),
+            'listSandboxes' => $this->listSandboxes(),
+            'listSandboxesForProject' => $this->listSandboxesForProject(),
             'listSharedProjects' => $this->listSharedProjects(),
             'listSharedReportGroups' => $this->listSharedReportGroups(),
             'listSourceCredentials' => $this->listSourceCredentials(),
@@ -113,8 +127,12 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'retryBuildBatch' => $this->retryBuildBatch(),
             'startBuild' => $this->startBuild(),
             'startBuildBatch' => $this->startBuildBatch(),
+            'startCommandExecution' => $this->startCommandExecution(),
+            'startSandbox' => $this->startSandbox(),
+            'startSandboxConnection' => $this->startSandboxConnection(),
             'stopBuild' => $this->stopBuild(),
             'stopBuildBatch' => $this->stopBuildBatch(),
+            'stopSandbox' => $this->stopSandbox(),
             'updateFleet' => $this->updateFleet(),
             'updateProject' => $this->updateProject(),
             'updateProjectVisibility' => $this->updateProjectVisibility(),
@@ -391,6 +409,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -403,6 +422,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -422,6 +442,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -442,12 +463,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -456,6 +479,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -941,6 +965,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -953,6 +978,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -972,6 +998,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -992,12 +1019,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -1006,6 +1035,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -1153,6 +1183,92 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function batchGetCommandExecutions(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('commandExecutions'),
+                new \PHPStan\Type\Constant\ConstantStringType('commandExecutionsNotFound'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('submitTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('command'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('exitCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardOutputContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardErrContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('SHELL'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
     private function batchGetFleets(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1215,6 +1331,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -1234,12 +1351,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                         new \PHPStan\Type\Constant\ConstantStringType('memory'),
                         new \PHPStan\Type\Constant\ConstantStringType('disk'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
@@ -1248,6 +1367,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                             new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('scalingType'),
@@ -1550,6 +1670,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -1562,6 +1683,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -1581,6 +1703,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -1601,12 +1724,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -1615,6 +1740,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -1991,6 +2117,411 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function batchGetSandboxes(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('sandboxes'),
+                new \PHPStan\Type\Constant\ConstantStringType('sandboxesNotFound'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('requestTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySourceVersions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fileSystemLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('queuedTimeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('encryptionKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('currentSession'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('image'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fleet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privilegedMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAC_ARM'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('disk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NVME'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARAMETER_STORE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('credential'),
+                            new \PHPStan\Type\Constant\ConstantStringType('credentialProvider'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountOptions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('currentPhase'),
+                        new \PHPStan\Type\Constant\ConstantStringType('phases'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolvedSourceVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('networkInterface'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contexts'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAULT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
     private function createFleet(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -2052,6 +2583,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -2071,12 +2603,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                         new \PHPStan\Type\Constant\ConstantStringType('memory'),
                         new \PHPStan\Type\Constant\ConstantStringType('disk'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
@@ -2085,6 +2619,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                             new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('scalingType'),
@@ -2385,6 +2920,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -2397,6 +2933,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -2416,6 +2953,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -2436,12 +2974,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -2450,6 +2990,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -3035,6 +3576,92 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function listCommandExecutionsForSandbox(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('commandExecutions'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('submitTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('command'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('exitCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardOutputContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardErrContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('SHELL'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function listCuratedEnvironmentImages(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -3138,6 +3765,30 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function listSandboxes(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ids'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function listSandboxesForProject(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ids'),
+                new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -3464,6 +4115,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -3476,6 +4128,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -3495,6 +4148,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -3515,12 +4169,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3529,6 +4185,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -3925,6 +4582,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -3937,6 +4595,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -3956,6 +4615,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -3976,12 +4636,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -3990,6 +4652,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -4473,6 +5136,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -4485,6 +5149,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -4504,6 +5169,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -4524,12 +5190,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -4538,6 +5206,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -4934,6 +5603,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -4946,6 +5616,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -4965,6 +5636,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -4985,12 +5657,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -4999,6 +5673,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -5221,6 +5896,511 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     ])),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ]),
+            ]),
+        ]);
+    }
+    private function startCommandExecution(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('commandExecution'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('submitTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('command'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('exitCode'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardOutputContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('standardErrContent'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sandboxArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantStringType('SHELL'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function startSandbox(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('sandbox'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('requestTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySourceVersions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fileSystemLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('queuedTimeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('encryptionKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('currentSession'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('image'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fleet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privilegedMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAC_ARM'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('disk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NVME'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARAMETER_STORE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('credential'),
+                            new \PHPStan\Type\Constant\ConstantStringType('credentialProvider'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountOptions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('currentPhase'),
+                        new \PHPStan\Type\Constant\ConstantStringType('phases'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolvedSourceVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('networkInterface'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contexts'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAULT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function startSandboxConnection(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ssmSession'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tokenValue'),
+                    new \PHPStan\Type\Constant\ConstantStringType('streamUrl'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -5482,6 +6662,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -5494,6 +6675,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -5513,6 +6695,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -5533,12 +6716,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -5547,6 +6732,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -5943,6 +7129,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -5955,6 +7142,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -5974,6 +7162,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -5994,12 +7183,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6008,6 +7199,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
@@ -6234,6 +7426,409 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function stopSandbox(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('sandbox'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('arn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('projectName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('requestTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('status'),
+                    new \PHPStan\Type\Constant\ConstantStringType('source'),
+                    new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySources'),
+                    new \PHPStan\Type\Constant\ConstantStringType('secondarySourceVersions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('environment'),
+                    new \PHPStan\Type\Constant\ConstantStringType('fileSystemLocations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('timeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('queuedTimeoutInMinutes'),
+                    new \PHPStan\Type\Constant\ConstantStringType('vpcConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('logConfig'),
+                    new \PHPStan\Type\Constant\ConstantStringType('encryptionKey'),
+                    new \PHPStan\Type\Constant\ConstantStringType('serviceRole'),
+                    new \PHPStan\Type\Constant\ConstantStringType('currentSession'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitCloneDepth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('gitSubmodulesConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildspec'),
+                        new \PHPStan\Type\Constant\ConstantStringType('auth'),
+                        new \PHPStan\Type\Constant\ConstantStringType('reportBuildStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('buildStatusConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('insecureSsl'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODECOMMIT'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEPIPELINE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITLAB_SELF_MANAGED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('S3'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BITBUCKET'),
+                            new \PHPStan\Type\Constant\ConstantStringType('GITHUB_ENTERPRISE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_SOURCE'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fetchSubmodules'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            new \PHPStan\Type\Constant\ConstantStringType('resource'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('OAUTH'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CODECONNECTIONS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('context'),
+                            new \PHPStan\Type\Constant\ConstantStringType('targetUrl'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceIdentifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sourceVersion'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('image'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('computeConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('fleet'),
+                        new \PHPStan\Type\Constant\ConstantStringType('environmentVariables'),
+                        new \PHPStan\Type\Constant\ConstantStringType('privilegedMode'),
+                        new \PHPStan\Type\Constant\ConstantStringType('certificate'),
+                        new \PHPStan\Type\Constant\ConstantStringType('registryCredential'),
+                        new \PHPStan\Type\Constant\ConstantStringType('imagePullCredentialsType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ARM_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_EC2'),
+                            new \PHPStan\Type\Constant\ConstantStringType('MAC_ARM'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_SMALL'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_MEDIUM'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_LARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_GENERAL1_2XLARGE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_1GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_2GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_4GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
+                            new \PHPStan\Type\Constant\ConstantStringType('memory'),
+                            new \PHPStan\Type\Constant\ConstantStringType('disk'),
+                            new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
+                        ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NVME'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('name'),
+                            new \PHPStan\Type\Constant\ConstantStringType('value'),
+                            new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('PLAINTEXT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PARAMETER_STORE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                            ]),
+                        ])),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('credential'),
+                            new \PHPStan\Type\Constant\ConstantStringType('credentialProvider'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantStringType('SECRETS_MANAGER'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('CODEBUILD'),
+                            new \PHPStan\Type\Constant\ConstantStringType('SERVICE_ROLE'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('location'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountPoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('identifier'),
+                        new \PHPStan\Type\Constant\ConstantStringType('mountOptions'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantStringType('EFS'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('subnets'),
+                        new \PHPStan\Type\Constant\ConstantStringType('securityGroupIds'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('location'),
+                            new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\BooleanType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                            ]),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('id'),
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('currentPhase'),
+                        new \PHPStan\Type\Constant\ConstantStringType('phases'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resolvedSourceVersion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('logs'),
+                        new \PHPStan\Type\Constant\ConstantStringType('networkInterface'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('phaseStatus'),
+                            new \PHPStan\Type\Constant\ConstantStringType('startTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('endTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('durationInSeconds'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contexts'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('SUCCEEDED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAILED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('FAULT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('TIMED_OUT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('IN_PROGRESS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('STOPPED'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('statusCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('message'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ])),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('deepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3DeepLink'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3LogsArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cloudWatchLogs'),
+                            new \PHPStan\Type\Constant\ConstantStringType('s3Logs'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('groupName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('streamName'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('location'),
+                                new \PHPStan\Type\Constant\ConstantStringType('encryptionDisabled'),
+                                new \PHPStan\Type\Constant\ConstantStringType('bucketOwnerAccess'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\BooleanType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('READ_ONLY'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('subnetId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('networkInterfaceId'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function updateFleet(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -6295,6 +7890,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                        new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                         new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -6314,12 +7910,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                         new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                         new \PHPStan\Type\Constant\ConstantStringType('memory'),
                         new \PHPStan\Type\Constant\ConstantStringType('disk'),
                         new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                        new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                     ], [
                         new \PHPStan\Type\IntegerType(),
                         new \PHPStan\Type\IntegerType(),
@@ -6328,6 +7926,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                             new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                         ]),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('scalingType'),
@@ -6628,6 +8227,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('location'),
                         new \PHPStan\Type\Constant\ConstantStringType('modes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('cacheNamespace'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_CACHE'),
@@ -6640,6 +8240,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_SOURCE_CACHE'),
                             new \PHPStan\Type\Constant\ConstantStringType('LOCAL_CUSTOM_CACHE'),
                         ])),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
@@ -6659,6 +8260,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_GPU_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2019_CONTAINER'),
+                            new \PHPStan\Type\Constant\ConstantStringType('WINDOWS_SERVER_2022_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('ARM_LAMBDA_CONTAINER'),
                             new \PHPStan\Type\Constant\ConstantStringType('LINUX_EC2'),
@@ -6679,12 +8281,14 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_8GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('BUILD_LAMBDA_10GB'),
                             new \PHPStan\Type\Constant\ConstantStringType('ATTRIBUTE_BASED_COMPUTE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('CUSTOM_INSTANCE_TYPE'),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('vCpu'),
                             new \PHPStan\Type\Constant\ConstantStringType('memory'),
                             new \PHPStan\Type\Constant\ConstantStringType('disk'),
                             new \PHPStan\Type\Constant\ConstantStringType('machineType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('instanceType'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -6693,6 +8297,7 @@ final class CodeBuildClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                                 new \PHPStan\Type\Constant\ConstantStringType('GENERAL'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NVME'),
                             ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fleetArn'),

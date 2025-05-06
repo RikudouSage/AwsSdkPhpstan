@@ -44,6 +44,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('usage'),
                 new \PHPStan\Type\Constant\ConstantStringType('action'),
+                new \PHPStan\Type\Constant\ConstantStringType('actionReason'),
                 new \PHPStan\Type\Constant\ConstantStringType('outputs'),
                 new \PHPStan\Type\Constant\ConstantStringType('assessments'),
                 new \PHPStan\Type\Constant\ConstantStringType('guardrailCoverage'),
@@ -55,7 +56,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                     new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                    new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                 ], [
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -67,6 +70,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                     new \PHPStan\Type\Constant\ConstantStringType('GUARDRAIL_INTERVENED'),
                 ]),
+                new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('text'),
                 ], [
@@ -87,10 +91,15 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -101,6 +110,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('confidence'),
                             new \PHPStan\Type\Constant\ConstantStringType('filterStrength'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
@@ -122,7 +132,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                             ]),
-                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -132,18 +146,28 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\StringType(),
-                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                            ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -154,6 +178,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\UnionType([
@@ -192,13 +217,16 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                             new \PHPStan\Type\Constant\ConstantStringType('regex'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
@@ -206,7 +234,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -217,6 +247,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                             new \PHPStan\Type\Constant\ConstantStringType('score'),
                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
@@ -228,6 +259,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                             ]),
+                            new \PHPStan\Type\BooleanType(),
                         ])),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -243,7 +275,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                             new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                            new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                         ], [
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -325,6 +359,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('toolUse'),
                             new \PHPStan\Type\Constant\ConstantStringType('toolResult'),
                             new \PHPStan\Type\Constant\ConstantStringType('guardContent'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cachePoint'),
                             new \PHPStan\Type\Constant\ConstantStringType('reasoningContent'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -340,11 +375,19 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\ResourceType(),
                                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('uri'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('bucketOwner'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
                             ]),
@@ -367,11 +410,19 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\ResourceType(),
                                         new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('uri'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('bucketOwner'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\StringType(),
                                     ]),
                                 ]),
                             ]),
@@ -444,11 +495,19 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         ]),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\StringType(),
                                                 new \PHPStan\Type\ResourceType(),
                                                 new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('uri'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('bucketOwner'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
                                     ]),
@@ -471,11 +530,19 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\StringType(),
                                         new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('bytes'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('s3Location'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\StringType(),
                                                 new \PHPStan\Type\ResourceType(),
                                                 new \PHPStan\Type\ObjectType('Psr\Http\Message\StreamInterface'),
+                                            ]),
+                                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('uri'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('bucketOwner'),
+                                            ], [
+                                                new \PHPStan\Type\StringType(),
+                                                new \PHPStan\Type\StringType(),
                                             ]),
                                         ]),
                                     ]),
@@ -553,6 +620,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('default'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('reasoningText'),
                                 new \PHPStan\Type\Constant\ConstantStringType('redactedContent'),
                             ], [
@@ -584,7 +656,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                     new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
                     new \PHPStan\Type\Constant\ConstantStringType('totalTokens'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cacheReadInputTokens'),
+                    new \PHPStan\Type\Constant\ConstantStringType('cacheWriteInputTokens'),
                 ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
@@ -603,6 +679,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         new \PHPStan\Type\Constant\ConstantStringType('modelOutput'),
                         new \PHPStan\Type\Constant\ConstantStringType('inputAssessment'),
                         new \PHPStan\Type\Constant\ConstantStringType('outputAssessments'),
+                        new \PHPStan\Type\Constant\ConstantStringType('actionReason'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -620,10 +697,15 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -634,6 +716,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('confidence'),
                                     new \PHPStan\Type\Constant\ConstantStringType('filterStrength'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
@@ -655,7 +738,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
                                         new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -665,18 +752,28 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -687,6 +784,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -725,13 +823,16 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('regex'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
@@ -739,7 +840,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -750,6 +853,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                                     new \PHPStan\Type\Constant\ConstantStringType('score'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
@@ -761,6 +865,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -776,7 +881,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                                     new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                                 ], [
+                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -820,10 +927,15 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -834,6 +946,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('confidence'),
                                     new \PHPStan\Type\Constant\ConstantStringType('filterStrength'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
@@ -855,7 +968,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
                                         new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                                     ]),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -865,18 +982,28 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                                    new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                    new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                    ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -887,6 +1014,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\UnionType([
@@ -925,13 +1053,16 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('name'),
                                     new \PHPStan\Type\Constant\ConstantStringType('match'),
                                     new \PHPStan\Type\Constant\ConstantStringType('regex'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
@@ -939,7 +1070,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -950,6 +1083,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                                     new \PHPStan\Type\Constant\ConstantStringType('score'),
                                     new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                 ], [
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
@@ -961,6 +1095,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                     ]),
+                                    new \PHPStan\Type\BooleanType(),
                                 ])),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -976,7 +1111,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                                     new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                                     new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                                 ], [
+                                    new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
@@ -1005,6 +1142,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 ]),
                             ]),
                         ]))),
+                        new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('invokedModelId'),
@@ -1127,7 +1265,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                             new \PHPStan\Type\Constant\ConstantStringType('inputTokens'),
                             new \PHPStan\Type\Constant\ConstantStringType('outputTokens'),
                             new \PHPStan\Type\Constant\ConstantStringType('totalTokens'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cacheReadInputTokens'),
+                            new \PHPStan\Type\Constant\ConstantStringType('cacheWriteInputTokens'),
                         ], [
+                            new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
@@ -1145,6 +1287,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                 new \PHPStan\Type\Constant\ConstantStringType('modelOutput'),
                                 new \PHPStan\Type\Constant\ConstantStringType('inputAssessment'),
                                 new \PHPStan\Type\Constant\ConstantStringType('outputAssessments'),
+                                new \PHPStan\Type\Constant\ConstantStringType('actionReason'),
                             ], [
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1162,10 +1305,15 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1176,6 +1324,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('confidence'),
                                             new \PHPStan\Type\Constant\ConstantStringType('filterStrength'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
@@ -1197,7 +1346,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                                 new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                                             ]),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1207,18 +1360,28 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1229,6 +1392,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\UnionType([
@@ -1267,13 +1431,16 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('regex'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
@@ -1281,7 +1448,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1292,6 +1461,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                                             new \PHPStan\Type\Constant\ConstantStringType('score'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
@@ -1303,6 +1473,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1318,7 +1489,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                                             new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                                         ], [
+                                            new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -1362,10 +1535,15 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantStringType('DENY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1376,6 +1554,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('confidence'),
                                             new \PHPStan\Type\Constant\ConstantStringType('filterStrength'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INSULTS'),
@@ -1397,7 +1576,11 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                                 new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
                                             ]),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1407,18 +1590,28 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
-                                            new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                            new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                                            ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1429,6 +1622,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('type'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\UnionType([
@@ -1467,13 +1661,16 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                                             new \PHPStan\Type\Constant\ConstantStringType('name'),
                                             new \PHPStan\Type\Constant\ConstantStringType('match'),
                                             new \PHPStan\Type\Constant\ConstantStringType('regex'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\StringType(),
                                             new \PHPStan\Type\StringType(),
@@ -1481,7 +1678,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1492,6 +1691,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('threshold'),
                                             new \PHPStan\Type\Constant\ConstantStringType('score'),
                                             new \PHPStan\Type\Constant\ConstantStringType('action'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('detected'),
                                         ], [
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
@@ -1503,6 +1703,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                                 new \PHPStan\Type\Constant\ConstantStringType('BLOCKED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                                             ]),
+                                            new \PHPStan\Type\BooleanType(),
                                         ])),
                                     ]),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1518,7 +1719,9 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyUnits'),
                                             new \PHPStan\Type\Constant\ConstantStringType('sensitiveInformationPolicyFreeUnits'),
                                             new \PHPStan\Type\Constant\ConstantStringType('contextualGroundingPolicyUnits'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('contentPolicyImageUnits'),
                                         ], [
+                                            new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
@@ -1547,6 +1750,7 @@ final class BedrockRuntimeClientReturnTypeExtension implements \PHPStan\Type\Dyn
                                         ]),
                                     ]),
                                 ]))),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('invokedModelId'),

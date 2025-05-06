@@ -368,6 +368,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('OrderedPhoneNumbers'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
                     new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FocDate'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -402,6 +403,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                         ]),
                     ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -961,6 +963,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('OrderedPhoneNumbers'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
                     new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FocDate'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -995,6 +998,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                         ]),
                     ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ]),
@@ -1612,6 +1616,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('OrderedPhoneNumbers'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreatedTimestamp'),
                     new \PHPStan\Type\Constant\ConstantStringType('UpdatedTimestamp'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FocDate'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -1646,6 +1651,7 @@ final class ChimeSDKVoiceClientReturnTypeExtension implements \PHPStan\Type\Dyna
                             new \PHPStan\Type\Constant\ConstantStringType('Failed'),
                         ]),
                     ])),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),

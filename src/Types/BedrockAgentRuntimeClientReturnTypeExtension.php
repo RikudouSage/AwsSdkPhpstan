@@ -2290,6 +2290,7 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('conditionNodeResultTrace'),
+                            new \PHPStan\Type\Constant\ConstantStringType('nodeActionTrace'),
                             new \PHPStan\Type\Constant\ConstantStringType('nodeInputTrace'),
                             new \PHPStan\Type\Constant\ConstantStringType('nodeOutputTrace'),
                         ], [
@@ -2304,6 +2305,19 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                                 ], [
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('nodeName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('operationName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('requestId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('timestamp'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2684,9 +2698,19 @@ final class BedrockAgentRuntimeClientReturnTypeExtension implements \PHPStan\Typ
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('callerChain'),
+                        new \PHPStan\Type\Constant\ConstantStringType('collaboratorName'),
+                        new \PHPStan\Type\Constant\ConstantStringType('eventTime'),
                         new \PHPStan\Type\Constant\ConstantStringType('sessionId'),
                         new \PHPStan\Type\Constant\ConstantStringType('trace'),
                     ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('agentAliasArn'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('customOrchestrationTrace'),

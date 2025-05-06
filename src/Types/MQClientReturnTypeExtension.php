@@ -19,6 +19,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             'createTags',
             'createUser',
             'deleteBroker',
+            'deleteConfiguration',
             'deleteTags',
             'deleteUser',
             'describeBroker',
@@ -48,6 +49,7 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
             'createTags' => $this->createTags(),
             'createUser' => $this->createUser(),
             'deleteBroker' => $this->deleteBroker(),
+            'deleteConfiguration' => $this->deleteConfiguration(),
             'deleteTags' => $this->deleteTags(),
             'deleteUser' => $this->deleteUser(),
             'describeBroker' => $this->describeBroker(),
@@ -128,6 +130,16 @@ final class MQClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodRe
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\Constant\ConstantArrayType([
                 new \PHPStan\Type\Constant\ConstantStringType('BrokerId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function deleteConfiguration(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ConfigurationId'),
             ], [
                 new \PHPStan\Type\StringType(),
             ]),

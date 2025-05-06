@@ -423,8 +423,26 @@ final class AccessAnalyzerClientReturnTypeExtension implements \PHPStan\Type\Dyn
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('bucketPolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('accessPoints'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('accessPointPolicy'),
+                                new \PHPStan\Type\Constant\ConstantStringType('networkOrigin'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('vpcConfiguration'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('internetConfiguration'),
+                                ], [
+                                    new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('vpcId'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                    ]),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                ]),
+                            ])),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('streamPolicy'),

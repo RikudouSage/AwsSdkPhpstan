@@ -972,6 +972,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('agent'),
                             new \PHPStan\Type\Constant\ConstantStringType('collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inlineCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
@@ -998,6 +999,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Python_3'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -1255,6 +1263,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Retrieval'),
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
                         ]),
                     ])),
                 ]),
@@ -1366,6 +1375,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('agent'),
                             new \PHPStan\Type\Constant\ConstantStringType('collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inlineCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
@@ -1392,6 +1402,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Python_3'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -1649,6 +1666,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Retrieval'),
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
                         ]),
                     ])),
                 ]),
@@ -1876,6 +1894,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('mongoDbAtlasConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('neptuneAnalyticsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('opensearchManagedClusterConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('opensearchServerlessConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('pineconeConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('rdsConfiguration'),
@@ -1889,6 +1908,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
                             new \PHPStan\Type\Constant\ConstantStringType('endpointServiceName'),
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('textIndexName'),
                             new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -1906,6 +1926,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
@@ -1915,6 +1936,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('domainEndpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
@@ -1964,11 +2004,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('customMetadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('primaryKeyField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -2003,6 +2045,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('RDS'),
                             new \PHPStan\Type\Constant\ConstantStringType('MONGO_DB_ATLAS'),
                             new \PHPStan\Type\Constant\ConstantStringType('NEPTUNE_ANALYTICS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH_MANAGED_CLUSTER'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -3535,6 +3578,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('agent'),
                             new \PHPStan\Type\Constant\ConstantStringType('collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inlineCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
@@ -3561,6 +3605,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Python_3'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -3818,6 +3869,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Retrieval'),
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
                         ]),
                     ])),
                 ]),
@@ -4167,6 +4219,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('agent'),
                             new \PHPStan\Type\Constant\ConstantStringType('collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inlineCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
@@ -4193,6 +4246,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Python_3'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -4450,6 +4510,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Retrieval'),
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
                         ]),
                     ])),
                 ]),
@@ -4730,6 +4791,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('mongoDbAtlasConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('neptuneAnalyticsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('opensearchManagedClusterConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('opensearchServerlessConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('pineconeConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('rdsConfiguration'),
@@ -4743,6 +4805,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
                             new \PHPStan\Type\Constant\ConstantStringType('endpointServiceName'),
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('textIndexName'),
                             new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -4760,6 +4823,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
@@ -4769,6 +4833,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('domainEndpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
@@ -4818,11 +4901,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('customMetadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('primaryKeyField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -4857,6 +4942,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('RDS'),
                             new \PHPStan\Type\Constant\ConstantStringType('MONGO_DB_ATLAS'),
                             new \PHPStan\Type\Constant\ConstantStringType('NEPTUNE_ANALYTICS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH_MANAGED_CLUSTER'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -6650,6 +6736,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('agent'),
                             new \PHPStan\Type\Constant\ConstantStringType('collector'),
                             new \PHPStan\Type\Constant\ConstantStringType('condition'),
+                            new \PHPStan\Type\Constant\ConstantStringType('inlineCode'),
                             new \PHPStan\Type\Constant\ConstantStringType('input'),
                             new \PHPStan\Type\Constant\ConstantStringType('iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('knowledgeBase'),
@@ -6676,6 +6763,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('code'),
+                                new \PHPStan\Type\Constant\ConstantStringType('language'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\Constant\ConstantStringType('Python_3'),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
                             new \PHPStan\Type\Constant\ConstantArrayType([], []),
@@ -6933,6 +7027,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('Retrieval'),
                             new \PHPStan\Type\Constant\ConstantStringType('Iterator'),
                             new \PHPStan\Type\Constant\ConstantStringType('Collector'),
+                            new \PHPStan\Type\Constant\ConstantStringType('InlineCode'),
                         ]),
                     ])),
                 ]),
@@ -7189,6 +7284,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('mongoDbAtlasConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('neptuneAnalyticsConfiguration'),
+                        new \PHPStan\Type\Constant\ConstantStringType('opensearchManagedClusterConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('opensearchServerlessConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('pineconeConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('rdsConfiguration'),
@@ -7202,6 +7298,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('endpoint'),
                             new \PHPStan\Type\Constant\ConstantStringType('endpointServiceName'),
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('textIndexName'),
                             new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
                         ], [
                             new \PHPStan\Type\StringType(),
@@ -7219,6 +7316,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
@@ -7228,6 +7326,25 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('domainArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('domainEndpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('fieldMapping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vectorIndexName'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('textField'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                             ]),
@@ -7277,11 +7394,13 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('customMetadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('metadataField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('primaryKeyField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('textField'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vectorField'),
                             ], [
+                                new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
                                 new \PHPStan\Type\StringType(),
@@ -7316,6 +7435,7 @@ final class BedrockAgentClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('RDS'),
                             new \PHPStan\Type\Constant\ConstantStringType('MONGO_DB_ATLAS'),
                             new \PHPStan\Type\Constant\ConstantStringType('NEPTUNE_ANALYTICS'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OPENSEARCH_MANAGED_CLUSTER'),
                         ]),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),

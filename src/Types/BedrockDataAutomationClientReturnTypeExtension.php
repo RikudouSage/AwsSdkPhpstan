@@ -73,6 +73,7 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
                         new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -111,6 +112,7 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
                         new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -192,6 +194,7 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
                         new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -451,9 +454,14 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('document'),
+                        new \PHPStan\Type\Constant\ConstantStringType('image'),
+                        new \PHPStan\Type\Constant\ConstantStringType('video'),
+                        new \PHPStan\Type\Constant\ConstantStringType('audio'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modalityRouting'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('splitter'),
+                            new \PHPStan\Type\Constant\ConstantStringType('modalityProcessing'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('state'),
@@ -462,6 +470,81 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                                     new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                                 ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('modalityProcessing'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('modalityProcessing'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('modalityProcessing'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('state'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                                ]),
+                            ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('jpeg'),
+                            new \PHPStan\Type\Constant\ConstantStringType('png'),
+                            new \PHPStan\Type\Constant\ConstantStringType('mp4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('mov'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIDEO'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIDEO'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIDEO'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
+                                new \PHPStan\Type\Constant\ConstantStringType('VIDEO'),
                             ]),
                         ]),
                     ]),
@@ -581,6 +664,7 @@ final class BedrockDataAutomationClientReturnTypeExtension implements \PHPStan\T
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('DOCUMENT'),
                         new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('AUDIO'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),

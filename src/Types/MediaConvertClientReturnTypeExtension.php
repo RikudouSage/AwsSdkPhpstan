@@ -804,6 +804,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -1929,11 +1930,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1993,6 +1996,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -2215,6 +2219,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -2421,6 +2426,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -2924,6 +2930,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -3055,6 +3062,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -4450,6 +4465,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -4499,6 +4515,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -4586,6 +4603,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -4622,6 +4640,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -4647,6 +4666,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -4670,6 +4690,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -4917,6 +4938,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -4953,6 +4975,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -4975,6 +5005,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -5012,6 +5043,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -5099,6 +5138,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -5235,6 +5275,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -5333,6 +5381,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -5466,6 +5515,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -5558,6 +5615,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -5635,6 +5693,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -5685,6 +5751,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -5726,6 +5793,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -5922,6 +5997,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -5959,6 +6035,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -7120,6 +7204,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -8215,11 +8300,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8279,6 +8366,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8501,6 +8589,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -8707,6 +8796,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -9210,6 +9300,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -9341,6 +9432,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -10736,6 +10835,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -10785,6 +10885,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -10872,6 +10973,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -10908,6 +11010,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -10933,6 +11036,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -10956,6 +11060,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -11203,6 +11308,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -11239,6 +11345,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -11261,6 +11375,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -11298,6 +11413,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -11385,6 +11508,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -11521,6 +11645,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -11619,6 +11751,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -11752,6 +11885,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -11844,6 +11985,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -11921,6 +12063,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -11971,6 +12121,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -12012,6 +12163,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -12208,6 +12367,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -12245,6 +12405,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -14153,6 +14321,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -14202,6 +14371,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -14289,6 +14459,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -14325,6 +14496,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -14350,6 +14522,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -14373,6 +14546,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
@@ -14582,6 +14756,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -14618,6 +14793,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -14640,6 +14823,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -14677,6 +14861,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -14764,6 +14956,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -14900,6 +15093,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -14998,6 +15199,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -15131,6 +15333,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -15223,6 +15433,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -15300,6 +15511,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -15350,6 +15569,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -15391,6 +15611,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -15587,6 +15815,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -15624,6 +15853,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -16915,6 +17152,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -18040,11 +18278,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -18104,6 +18344,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -18326,6 +18567,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -18532,6 +18774,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -19035,6 +19278,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -19166,6 +19410,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -20561,6 +20813,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -20610,6 +20863,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -20697,6 +20951,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -20733,6 +20988,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -20758,6 +21014,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -20781,6 +21038,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -21028,6 +21286,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -21064,6 +21323,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -21086,6 +21353,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -21123,6 +21391,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -21210,6 +21486,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -21346,6 +21623,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -21444,6 +21729,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -21577,6 +21863,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -21669,6 +21963,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -21746,6 +22041,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -21796,6 +22099,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -21837,6 +22141,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -22033,6 +22345,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -22070,6 +22383,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -23231,6 +23552,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -24326,11 +24648,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -24390,6 +24714,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -24612,6 +24937,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -24818,6 +25144,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -25321,6 +25648,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -25452,6 +25780,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -26847,6 +27183,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -26896,6 +27233,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -26983,6 +27321,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -27019,6 +27358,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -27044,6 +27384,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -27067,6 +27408,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -27314,6 +27656,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -27350,6 +27693,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -27372,6 +27723,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -27409,6 +27761,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -27496,6 +27856,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -27632,6 +27993,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -27730,6 +28099,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -27863,6 +28233,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -27955,6 +28333,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -28032,6 +28411,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -28082,6 +28469,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -28123,6 +28511,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -28319,6 +28715,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -28356,6 +28753,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -30291,6 +30696,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -30340,6 +30746,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -30427,6 +30834,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -30463,6 +30871,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -30488,6 +30897,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -30511,6 +30921,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
@@ -30720,6 +31131,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -30756,6 +31168,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -30778,6 +31198,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -30815,6 +31236,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -30902,6 +31331,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -31038,6 +31468,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -31136,6 +31574,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -31269,6 +31708,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -31361,6 +31808,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -31438,6 +31886,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -31488,6 +31944,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -31529,6 +31986,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -31725,6 +32190,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -31762,6 +32228,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -32932,6 +33406,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -34027,11 +34502,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -34091,6 +34568,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -34313,6 +34791,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -34519,6 +34998,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -35022,6 +35502,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -35153,6 +35634,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -36548,6 +37037,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -36597,6 +37087,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -36684,6 +37175,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -36720,6 +37212,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -36745,6 +37238,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -36768,6 +37262,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -37015,6 +37510,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -37051,6 +37547,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -37073,6 +37577,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -37110,6 +37615,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -37197,6 +37710,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -37333,6 +37847,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -37431,6 +37953,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -37564,6 +38087,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -37656,6 +38187,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -37733,6 +38265,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -37783,6 +38323,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -37824,6 +38365,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -38020,6 +38569,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -38057,6 +38607,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -39272,6 +39830,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -40397,11 +40956,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -40461,6 +41022,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -40683,6 +41245,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -40889,6 +41452,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -41392,6 +41956,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -41523,6 +42088,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -42918,6 +43491,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -42967,6 +43541,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -43054,6 +43629,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -43090,6 +43666,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -43115,6 +43692,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -43138,6 +43716,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -43385,6 +43964,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -43421,6 +44001,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -43443,6 +44031,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -43480,6 +44069,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -43567,6 +44164,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -43703,6 +44301,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -43801,6 +44407,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -43934,6 +44541,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -44026,6 +44641,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -44103,6 +44719,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -44153,6 +44777,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -44194,6 +44819,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -44390,6 +45023,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -44427,6 +45061,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -46362,6 +47004,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -46411,6 +47054,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -46498,6 +47142,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -46534,6 +47179,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -46559,6 +47205,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -46582,6 +47229,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
@@ -46791,6 +47439,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -46827,6 +47476,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -46849,6 +47506,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -46886,6 +47544,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -46973,6 +47639,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -47109,6 +47776,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -47207,6 +47882,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -47340,6 +48016,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -47432,6 +48116,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -47509,6 +48194,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -47559,6 +48252,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -47600,6 +48294,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -47796,6 +48498,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -47833,6 +48536,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -49342,6 +50053,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -50467,11 +51179,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -50531,6 +51245,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -50753,6 +51468,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -50959,6 +51675,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -51462,6 +52179,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -51593,6 +52311,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -52988,6 +53714,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -53037,6 +53764,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -53124,6 +53852,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -53160,6 +53889,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -53185,6 +53915,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -53208,6 +53939,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -53455,6 +54187,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -53491,6 +54224,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -53513,6 +54254,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -53550,6 +54292,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -53637,6 +54387,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -53773,6 +54524,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -53871,6 +54630,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -54004,6 +54764,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -54096,6 +54864,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -54173,6 +54942,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -54223,6 +55000,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -54264,6 +55042,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -54460,6 +55246,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -54497,6 +55284,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -55671,6 +56466,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('TRACK'),
                                     new \PHPStan\Type\Constant\ConstantStringType('LANGUAGE_CODE'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_RENDITION_GROUP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ALL_PCM'),
                                 ]),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
                             ])),
@@ -56766,11 +57562,13 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxAbrBitrate'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MaxQualityLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxRenditions'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MinAbrBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Rules'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -56830,6 +57628,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('FileGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('HlsGroupSettings'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MsSmoothGroupSettings'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Type'),
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -57052,6 +57851,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INCLUDE'),
@@ -57258,6 +58058,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SIGNED'),
@@ -57761,6 +58562,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('EXACT'),
                                         new \PHPStan\Type\Constant\ConstantStringType('GOP_MULTIPLE'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MATCH'),
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\UnionType([
@@ -57892,6 +58694,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('UTF16'),
                                     ]),
                                 ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                ])),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('HLS_GROUP_SETTINGS'),
                                     new \PHPStan\Type\Constant\ConstantStringType('DASH_ISO_GROUP_SETTINGS'),
@@ -59287,6 +60097,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                         new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -59336,6 +60147,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -59423,6 +60235,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -59459,6 +60272,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                         new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                         new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                         new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -59484,6 +60298,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                        new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -59507,6 +60322,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\UnionType([
                                             new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                         ]),
                                         new \PHPStan\Type\IntegerType(),
                                         new \PHPStan\Type\UnionType([
@@ -59754,6 +60570,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                             new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                             new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -59790,6 +60607,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\FloatType(),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\Constant\ConstantArrayType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -59812,6 +60637,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -59849,6 +60675,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                             ]),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -59936,6 +60770,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -60072,6 +60907,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -60170,6 +61013,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -60303,6 +61147,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -60395,6 +61247,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                             new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -60472,6 +61325,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -60522,6 +61383,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -60563,6 +61425,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -60759,6 +61629,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                             new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                             new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                             new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -60796,6 +61667,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                             ]),
                                             new \PHPStan\Type\IntegerType(),
                                             new \PHPStan\Type\IntegerType(),
+                                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                                new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                            ])),
                                             new \PHPStan\Type\UnionType([
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                                 new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),
@@ -62704,6 +63583,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Bitrate'),
                                 new \PHPStan\Type\Constant\ConstantStringType('BufferModel'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
@@ -62753,6 +63633,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MULTIPLEX'),
@@ -62840,6 +63721,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('VBR'),
@@ -62876,6 +63758,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioDuration'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioFramesPerPes'),
                                 new \PHPStan\Type\Constant\ConstantStringType('AudioPids'),
+                                new \PHPStan\Type\Constant\ConstantStringType('AudioPtsOffsetDelta'),
                                 new \PHPStan\Type\Constant\ConstantStringType('DataPTSControl'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MaxPcrInterval'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NielsenId3'),
@@ -62901,6 +63784,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\IntegerType()),
+                                new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ALIGN_TO_VIDEO'),
@@ -62924,6 +63808,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('AUTO'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SECONDS'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('MILLISECONDS'),
                                 ]),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\UnionType([
@@ -63133,6 +64018,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('GopSize'),
                                     new \PHPStan\Type\Constant\ConstantStringType('MaxBitrate'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberBFramesBetweenReferenceFrames'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Slices'),
@@ -63169,6 +64055,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\Constant\ConstantArrayType([
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevel'),
                                         new \PHPStan\Type\Constant\ConstantStringType('QvbrQualityLevelFineTune'),
@@ -63191,6 +64085,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('InterlaceMode'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -63228,6 +64123,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_TOP_FIELD'),
                                         new \PHPStan\Type\Constant\ConstantStringType('FOLLOW_BOTTOM_FIELD'),
                                     ]),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -63315,6 +64218,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -63451,6 +64355,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -63549,6 +64461,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QvbrSettings'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
@@ -63682,6 +64595,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS_HQ'),
@@ -63774,6 +64695,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('QualityTuningLevel'),
                                     new \PHPStan\Type\Constant\ConstantStringType('RateControlMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
@@ -63851,6 +64773,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('SINGLE_PASS'),
                                         new \PHPStan\Type\Constant\ConstantStringType('MULTI_PASS'),
@@ -63901,6 +64831,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('ParControl'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ParNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ScanTypeConversionMode'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Telecine'),
@@ -63942,6 +64873,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED'),
                                         new \PHPStan\Type\Constant\ConstantStringType('INTERLACED_OPTIMIZE'),
@@ -64138,6 +65077,7 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateConversionAlgorithm'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateDenominator'),
                                     new \PHPStan\Type\Constant\ConstantStringType('FramerateNumerator'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PerFrameMetrics'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Profile'),
                                     new \PHPStan\Type\Constant\ConstantStringType('SlowPal'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Softness'),
@@ -64175,6 +65115,14 @@ final class MediaConvertClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     ]),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('MS_SSIM'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('PSNR_HVS'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('VMAF'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('QVBR'),
+                                    ])),
                                     new \PHPStan\Type\UnionType([
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_HD_INTRA_CBG'),
                                         new \PHPStan\Type\Constant\ConstantStringType('XAVC_4K_INTRA_CBG'),

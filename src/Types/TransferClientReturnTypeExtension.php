@@ -67,6 +67,8 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'sendWorkflowStepState',
             'startDirectoryListing',
             'startFileTransfer',
+            'startRemoteDelete',
+            'startRemoteMove',
             'startServer',
             'stopServer',
             'tagResource',
@@ -142,6 +144,8 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             'sendWorkflowStepState' => $this->sendWorkflowStepState(),
             'startDirectoryListing' => $this->startDirectoryListing(),
             'startFileTransfer' => $this->startFileTransfer(),
+            'startRemoteDelete' => $this->startRemoteDelete(),
+            'startRemoteMove' => $this->startRemoteMove(),
             'startServer' => $this->startServer(),
             'stopServer' => $this->stopServer(),
             'tagResource' => $this->tagResource(),
@@ -572,9 +576,11 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('UserSecretId'),
                         new \PHPStan\Type\Constant\ConstantStringType('TrustedHostKeys'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MaxConcurrentConnections'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\IntegerType(),
                     ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
@@ -1071,6 +1077,7 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                     new \PHPStan\Type\Constant\ConstantStringType('WebAppEndpoint'),
                     new \PHPStan\Type\Constant\ConstantStringType('WebAppUnits'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('WebAppEndpointPolicy'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1101,6 +1108,10 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FIPS'),
+                        new \PHPStan\Type\Constant\ConstantStringType('STANDARD'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -1873,6 +1884,26 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
             ]),
         ]);
     }
+    private function startRemoteDelete(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('DeleteId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function startRemoteMove(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('MoveId'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function startServer(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -1898,10 +1929,16 @@ final class TransferClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                 new \PHPStan\Type\Constant\ConstantStringType('ConnectorId'),
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('StatusMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('SftpConnectionDetails'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('HostKey'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }

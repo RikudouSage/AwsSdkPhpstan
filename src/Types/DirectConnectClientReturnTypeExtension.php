@@ -1346,6 +1346,7 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
                     new \PHPStan\Type\Constant\ConstantStringType('directConnectGatewayState'),
                     new \PHPStan\Type\Constant\ConstantStringType('stateChangeError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1358,6 +1359,13 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2263,6 +2271,7 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
                     new \PHPStan\Type\Constant\ConstantStringType('directConnectGatewayState'),
                     new \PHPStan\Type\Constant\ConstantStringType('stateChangeError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2275,6 +2284,13 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);
@@ -2971,6 +2987,7 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
                     new \PHPStan\Type\Constant\ConstantStringType('directConnectGatewayState'),
                     new \PHPStan\Type\Constant\ConstantStringType('stateChangeError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2983,6 +3000,13 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -3839,6 +3863,7 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ownerAccount'),
                     new \PHPStan\Type\Constant\ConstantStringType('directConnectGatewayState'),
                     new \PHPStan\Type\Constant\ConstantStringType('stateChangeError'),
+                    new \PHPStan\Type\Constant\ConstantStringType('tags'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -3851,6 +3876,13 @@ final class DirectConnectClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ]),
             ]),
         ]);

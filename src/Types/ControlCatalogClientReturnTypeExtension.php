@@ -40,9 +40,11 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 new \PHPStan\Type\Constant\ConstantStringType('Behavior'),
+                new \PHPStan\Type\Constant\ConstantStringType('Severity'),
                 new \PHPStan\Type\Constant\ConstantStringType('RegionConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('Implementation'),
                 new \PHPStan\Type\Constant\ConstantStringType('Parameters'),
+                new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -51,6 +53,12 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('PREVENTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('PROACTIVE'),
                     new \PHPStan\Type\Constant\ConstantStringType('DETECTIVE'),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                    new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Scope'),
@@ -64,7 +72,9 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
                 ], [
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ]),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
@@ -72,6 +82,7 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 ], [
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
         ]);
     }
@@ -126,10 +137,33 @@ final class ControlCatalogClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('Arn'),
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('Description'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Behavior'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Severity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Implementation'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CreateTime'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PREVENTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PROACTIVE'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DETECTIVE'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('LOW'),
+                        new \PHPStan\Type\Constant\ConstantStringType('MEDIUM'),
+                        new \PHPStan\Type\Constant\ConstantStringType('HIGH'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CRITICAL'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Identifier'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

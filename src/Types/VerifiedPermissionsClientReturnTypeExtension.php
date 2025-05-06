@@ -36,7 +36,10 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
             'listPolicies',
             'listPolicyStores',
             'listPolicyTemplates',
+            'listTagsForResource',
             'putSchema',
+            'tagResource',
+            'untagResource',
             'updateIdentitySource',
             'updatePolicy',
             'updatePolicyStore',
@@ -69,7 +72,10 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
             'listPolicies' => $this->listPolicies(),
             'listPolicyStores' => $this->listPolicyStores(),
             'listPolicyTemplates' => $this->listPolicyTemplates(),
+            'listTagsForResource' => $this->listTagsForResource(),
             'putSchema' => $this->putSchema(),
+            'tagResource' => $this->tagResource(),
+            'untagResource' => $this->untagResource(),
             'updateIdentitySource' => $this->updateIdentitySource(),
             'updatePolicy' => $this->updatePolicy(),
             'updatePolicyStore' => $this->updatePolicyStore(),
@@ -630,6 +636,9 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\Constant\ConstantStringType('createdDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDate'),
                 new \PHPStan\Type\Constant\ConstantStringType('description'),
+                new \PHPStan\Type\Constant\ConstantStringType('deletionProtection'),
+                new \PHPStan\Type\Constant\ConstantStringType('cedarVersion'),
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -644,6 +653,15 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                ]),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('CEDAR_2'),
+                    new \PHPStan\Type\Constant\ConstantStringType('CEDAR_4'),
+                ]),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
             ]),
         ]);
     }
@@ -971,6 +989,16 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
             ]),
         ]);
     }
+    private function listTagsForResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('tags'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
     private function putSchema(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -985,6 +1013,18 @@ final class VerifiedPermissionsClientReturnTypeExtension implements \PHPStan\Typ
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
             ]),
+        ]);
+    }
+    private function tagResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
+        ]);
+    }
+    private function untagResource(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([], []),
         ]);
     }
     private function updateIdentitySource(): ?\PHPStan\Type\Type

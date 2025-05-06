@@ -3789,11 +3789,13 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfBytesCompacted'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfFilesCompacted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\FloatType(),
                                 ]),
@@ -3805,12 +3807,14 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfDataFilesDeleted'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestFilesDeleted'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestListsDeleted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\FloatType(),
                                 ]),
@@ -3820,10 +3824,12 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             ], [
                                 new \PHPStan\Type\Constant\ConstantArrayType([
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfOrphanFilesDeleted'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                     new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                     new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                                 ], [
                                     new \PHPStan\Type\IntegerType(),
+                                    new \PHPStan\Type\FloatType(),
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\FloatType(),
                                 ]),
@@ -15480,11 +15486,13 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfBytesCompacted'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfFilesCompacted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                 new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                             ], [
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
@@ -15496,12 +15504,14 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfDataFilesDeleted'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestFilesDeleted'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestListsDeleted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                 new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                             ], [
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
@@ -15511,10 +15521,12 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfOrphanFilesDeleted'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                                 new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                                 new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                             ], [
                                 new \PHPStan\Type\IntegerType(),
+                                new \PHPStan\Type\FloatType(),
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\FloatType(),
                             ]),
@@ -19246,11 +19258,13 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfBytesCompacted'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfFilesCompacted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                             new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
                         ]),
@@ -19262,12 +19276,14 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfDataFilesDeleted'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestFilesDeleted'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfManifestListsDeleted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                             new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
                         ]),
@@ -19277,10 +19293,12 @@ final class GlueClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfOrphanFilesDeleted'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DpuHours'),
                             new \PHPStan\Type\Constant\ConstantStringType('NumberOfDpus'),
                             new \PHPStan\Type\Constant\ConstantStringType('JobDurationInHour'),
                         ], [
                             new \PHPStan\Type\IntegerType(),
+                            new \PHPStan\Type\FloatType(),
                             new \PHPStan\Type\IntegerType(),
                             new \PHPStan\Type\FloatType(),
                         ]),

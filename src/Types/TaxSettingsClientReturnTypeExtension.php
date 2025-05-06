@@ -232,6 +232,7 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('georgiaAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('greeceAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('indiaAdditionalInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('indonesiaAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('israelAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('italyAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('kenyaAdditionalInfo'),
@@ -243,6 +244,7 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('spainAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('turkeyAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('ukraineAdditionalInfo'),
+                        new \PHPStan\Type\Constant\ConstantStringType('uzbekistanAdditionalInfo'),
                         new \PHPStan\Type\Constant\ConstantStringType('vietnamAdditionalInfo'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -293,6 +295,20 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('pan'),
                         ], [
                             new \PHPStan\Type\StringType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('decisionNumber'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ppnExceptionDesignationCode'),
+                            new \PHPStan\Type\Constant\ConstantStringType('taxRegistrationNumberType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NIK'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PassportNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NPWP'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NITKU'),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('customerType'),
@@ -407,6 +423,16 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('Business'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Individual'),
                             ]),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('taxRegistrationNumberType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('vatRegistrationNumber'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Business'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Individual'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('electronicTransactionCodeNumber'),
@@ -680,6 +706,7 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('georgiaAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('greeceAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('indiaAdditionalInfo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('indonesiaAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('israelAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('italyAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('kenyaAdditionalInfo'),
@@ -691,6 +718,7 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('spainAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('turkeyAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('ukraineAdditionalInfo'),
+                            new \PHPStan\Type\Constant\ConstantStringType('uzbekistanAdditionalInfo'),
                             new \PHPStan\Type\Constant\ConstantStringType('vietnamAdditionalInfo'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -741,6 +769,20 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                 new \PHPStan\Type\Constant\ConstantStringType('pan'),
                             ], [
                                 new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('decisionNumber'),
+                                new \PHPStan\Type\Constant\ConstantStringType('ppnExceptionDesignationCode'),
+                                new \PHPStan\Type\Constant\ConstantStringType('taxRegistrationNumberType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('NIK'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('PassportNumber'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NPWP'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NITKU'),
+                                ]),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('customerType'),
@@ -855,6 +897,16 @@ final class TaxSettingsClientReturnTypeExtension implements \PHPStan\Type\Dynami
                                     new \PHPStan\Type\Constant\ConstantStringType('Business'),
                                     new \PHPStan\Type\Constant\ConstantStringType('Individual'),
                                 ]),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('taxRegistrationNumberType'),
+                                new \PHPStan\Type\Constant\ConstantStringType('vatRegistrationNumber'),
+                            ], [
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Business'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Individual'),
+                                ]),
+                                new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('electronicTransactionCodeNumber'),

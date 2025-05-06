@@ -857,6 +857,7 @@ final class CloudFormationClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\Constant\ConstantStringType('ResourceTypes'),
                 new \PHPStan\Type\Constant\ConstantStringType('ResourcesScanned'),
                 new \PHPStan\Type\Constant\ConstantStringType('ResourcesRead'),
+                new \PHPStan\Type\Constant\ConstantStringType('ScanFilters'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
@@ -872,6 +873,11 @@ final class CloudFormationClientReturnTypeExtension implements \PHPStan\Type\Dyn
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 new \PHPStan\Type\IntegerType(),
                 new \PHPStan\Type\IntegerType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('Types'),
+                ], [
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                ])),
             ]),
         ]);
     }
@@ -2274,6 +2280,7 @@ final class CloudFormationClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\Constant\ConstantStringType('StartTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('EndTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('PercentageCompleted'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ScanType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
@@ -2286,6 +2293,10 @@ final class CloudFormationClientReturnTypeExtension implements \PHPStan\Type\Dyn
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\FloatType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('FULL'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PARTIAL'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),

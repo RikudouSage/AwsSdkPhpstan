@@ -555,6 +555,7 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('datasetMetricConfigs'),
                         new \PHPStan\Type\Constant\ConstantStringType('evaluatorModelConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('customMetricConfig'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('taskType'),
@@ -589,6 +590,45 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             ], [
                                 new \PHPStan\Type\StringType(),
                             ])),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('customMetrics'),
+                            new \PHPStan\Type\Constant\ConstantStringType('evaluatorModelConfig'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('customMetricDefinition'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('instructions'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ratingScale'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                        new \PHPStan\Type\Constant\ConstantStringType('definition'),
+                                        new \PHPStan\Type\Constant\ConstantStringType('value'),
+                                    ], [
+                                        new \PHPStan\Type\StringType(),
+                                        new \PHPStan\Type\Constant\ConstantArrayType([
+                                            new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                            new \PHPStan\Type\Constant\ConstantStringType('floatValue'),
+                                        ], [
+                                            new \PHPStan\Type\StringType(),
+                                            new \PHPStan\Type\FloatType(),
+                                        ]),
+                                    ])),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('bedrockEvaluatorModels'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('modelIdentifier'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                            ]),
                         ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
@@ -645,6 +685,7 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('bedrockModel'),
+                        new \PHPStan\Type\Constant\ConstantStringType('precomputedInferenceSource'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('modelIdentifier'),
@@ -662,9 +703,15 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('inferenceSourceIdentifier'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                        ]),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('knowledgeBaseConfig'),
+                        new \PHPStan\Type\Constant\ConstantStringType('precomputedRagSourceConfig'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('retrieveConfig'),
@@ -1031,6 +1078,21 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                                 ]),
                             ]),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('retrieveSourceConfig'),
+                            new \PHPStan\Type\Constant\ConstantStringType('retrieveAndGenerateSourceConfig'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ragSourceIdentifier'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('ragSourceIdentifier'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                            ]),
+                        ]),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1142,11 +1204,25 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('definition'),
                         new \PHPStan\Type\Constant\ConstantStringType('examples'),
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                         new \PHPStan\Type\Constant\ConstantStringType('DENY'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1158,6 +1234,10 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('outputStrength'),
                         new \PHPStan\Type\Constant\ConstantStringType('inputModalities'),
                         new \PHPStan\Type\Constant\ConstantStringType('outputModalities'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('SEXUAL'),
@@ -1187,6 +1267,16 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                             new \PHPStan\Type\Constant\ConstantStringType('TEXT'),
                             new \PHPStan\Type\Constant\ConstantStringType('IMAGE'),
                         ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1195,13 +1285,41 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('text'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantStringType('PROFANITY'),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1211,6 +1329,10 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('ADDRESS'),
@@ -1248,13 +1370,30 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
                             new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('name'),
                         new \PHPStan\Type\Constant\ConstantStringType('description'),
                         new \PHPStan\Type\Constant\ConstantStringType('pattern'),
                         new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputAction'),
+                        new \PHPStan\Type\Constant\ConstantStringType('inputEnabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outputEnabled'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
@@ -1262,7 +1401,20 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
                             new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
                         ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ANONYMIZE'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1271,12 +1423,19 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('type'),
                         new \PHPStan\Type\Constant\ConstantStringType('threshold'),
+                        new \PHPStan\Type\Constant\ConstantStringType('action'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('GROUNDING'),
                             new \PHPStan\Type\Constant\ConstantStringType('RELEVANCE'),
                         ]),
                         new \PHPStan\Type\FloatType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('BLOCK'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NONE'),
+                        ]),
+                        new \PHPStan\Type\BooleanType(),
                     ])),
                 ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1302,6 +1461,7 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('modelArchitecture'),
                 new \PHPStan\Type\Constant\ConstantStringType('modelKmsKeyArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('instructSupported'),
+                new \PHPStan\Type\Constant\ConstantStringType('customModelUnits'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -1320,6 +1480,13 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('customModelUnitsPerModelCopy'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customModelUnitsVersion'),
+                ], [
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }
@@ -1463,6 +1630,7 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                 new \PHPStan\Type\Constant\ConstantStringType('status'),
                 new \PHPStan\Type\Constant\ConstantStringType('failureMessage'),
+                new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
                 new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('endTime'),
@@ -1492,6 +1660,60 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('validationDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dataProcessingDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('trainingDetails'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('status'),
+                        new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                        new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                        ]),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    ]),
+                ]),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
@@ -1903,6 +2125,8 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('modelIdentifiers'),
                     new \PHPStan\Type\Constant\ConstantStringType('ragIdentifiers'),
                     new \PHPStan\Type\Constant\ConstantStringType('evaluatorModelIdentifiers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('customMetricsEvaluatorModelIdentifiers'),
+                    new \PHPStan\Type\Constant\ConstantStringType('inferenceConfigSummary'),
                     new \PHPStan\Type\Constant\ConstantStringType('applicationType'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -1930,6 +2154,26 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('modelConfigSummary'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ragConfigSummary'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bedrockModelIdentifiers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('precomputedInferenceSourceIdentifiers'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bedrockKnowledgeBaseIdentifiers'),
+                            new \PHPStan\Type\Constant\ConstantStringType('precomputedRagSourceIdentifiers'),
+                        ], [
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('ModelEvaluation'),
                         new \PHPStan\Type\Constant\ConstantStringType('RagEvaluation'),
@@ -2181,6 +2425,7 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                     new \PHPStan\Type\Constant\ConstantStringType('jobName'),
                     new \PHPStan\Type\Constant\ConstantStringType('status'),
                     new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('statusDetails'),
                     new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('endTime'),
                     new \PHPStan\Type\Constant\ConstantStringType('customModelArn'),
@@ -2198,6 +2443,60 @@ final class BedrockClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                         new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
                     ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('validationDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dataProcessingDetails'),
+                        new \PHPStan\Type\Constant\ConstantStringType('trainingDetails'),
+                    ], [
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('status'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creationTime'),
+                            new \PHPStan\Type\Constant\ConstantStringType('lastModifiedTime'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('InProgress'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Completed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopping'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Stopped'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Failed'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NotStarted'),
+                            ]),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                            new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                        ]),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
                     new \PHPStan\Type\StringType(),

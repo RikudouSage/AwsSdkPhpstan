@@ -59,6 +59,7 @@ final class SSOOIDCClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\Constant\ConstantStringType('idToken'),
                 new \PHPStan\Type\Constant\ConstantStringType('issuedTokenType'),
                 new \PHPStan\Type\Constant\ConstantStringType('scope'),
+                new \PHPStan\Type\Constant\ConstantStringType('awsAdditionalDetails'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -67,6 +68,11 @@ final class SSOOIDCClientReturnTypeExtension implements \PHPStan\Type\DynamicMet
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('identityContext'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }

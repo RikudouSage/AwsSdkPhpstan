@@ -19,6 +19,7 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
             'deleteCluster',
             'deleteMultiRegionClusters',
             'getCluster',
+            'getVpcEndpointServiceName',
             'listClusters',
             'listTagsForResource',
             'tagResource',
@@ -35,6 +36,7 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
             'deleteCluster' => $this->deleteCluster(),
             'deleteMultiRegionClusters' => $this->deleteMultiRegionClusters(),
             'getCluster' => $this->getCluster(),
+            'getVpcEndpointServiceName' => $this->getVpcEndpointServiceName(),
             'listClusters' => $this->listClusters(),
             'listTagsForResource' => $this->listTagsForResource(),
             'tagResource' => $this->tagResource(),
@@ -134,6 +136,16 @@ final class DSQLClientReturnTypeExtension implements \PHPStan\Type\DynamicMethod
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+            ]),
+        ]);
+    }
+    private function getVpcEndpointServiceName(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('serviceName'),
+            ], [
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }

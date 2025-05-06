@@ -106,6 +106,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OperationName'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricDataQueries'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -182,6 +183,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -202,6 +210,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('TotalRequestCountMetric'),
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoredRequestCountMetric'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -420,6 +429,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\IntegerType(),
                                     new \PHPStan\Type\StringType(),
                                 ])),
+                            ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
                             ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
@@ -521,6 +537,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
                     new \PHPStan\Type\Constant\ConstantStringType('Goal'),
                     new \PHPStan\Type\Constant\ConstantStringType('BurnRateConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSourceType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -537,6 +554,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OperationName'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricDataQueries'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -613,6 +631,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -633,6 +658,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('TotalRequestCountMetric'),
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoredRequestCountMetric'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -852,6 +878,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -909,6 +942,11 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceOperation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetric'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceDependency'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -980,6 +1018,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
                     new \PHPStan\Type\Constant\ConstantStringType('Goal'),
                     new \PHPStan\Type\Constant\ConstantStringType('BurnRateConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSourceType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -996,6 +1035,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OperationName'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricDataQueries'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -1072,6 +1112,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -1092,6 +1139,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('TotalRequestCountMetric'),
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoredRequestCountMetric'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -1311,6 +1359,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -1368,6 +1423,11 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceOperation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetric'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceDependency'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -1509,13 +1569,32 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('KeyAttributes'),
                     new \PHPStan\Type\Constant\ConstantStringType('OperationName'),
+                    new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                     new \PHPStan\Type\Constant\ConstantStringType('CreatedTime'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSourceType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                    ], [
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                        new \PHPStan\Type\StringType(),
+                    ]),
                     new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PeriodBased'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RequestBased'),
+                    ]),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceOperation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetric'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceDependency'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -1654,6 +1733,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     new \PHPStan\Type\Constant\ConstantStringType('EvaluationType'),
                     new \PHPStan\Type\Constant\ConstantStringType('Goal'),
                     new \PHPStan\Type\Constant\ConstantStringType('BurnRateConfigurations'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MetricSourceType'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1670,6 +1750,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('OperationName'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('MetricDataQueries'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -1746,6 +1827,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                 new \PHPStan\Type\IntegerType(),
                                 new \PHPStan\Type\StringType(),
                             ])),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -1766,6 +1854,7 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                             new \PHPStan\Type\Constant\ConstantStringType('MetricType'),
                             new \PHPStan\Type\Constant\ConstantStringType('TotalRequestCountMetric'),
                             new \PHPStan\Type\Constant\ConstantStringType('MonitoredRequestCountMetric'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DependencyConfig'),
                         ], [
                             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
                             new \PHPStan\Type\StringType(),
@@ -1985,6 +2074,13 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                                     new \PHPStan\Type\StringType(),
                                 ])),
                             ]),
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyKeyAttributes'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DependencyOperationName'),
+                            ], [
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\StringType()),
+                                new \PHPStan\Type\StringType(),
+                            ]),
                         ]),
                         new \PHPStan\Type\FloatType(),
                         new \PHPStan\Type\UnionType([
@@ -2042,6 +2138,11 @@ final class ApplicationSignalsClientReturnTypeExtension implements \PHPStan\Type
                     ], [
                         new \PHPStan\Type\IntegerType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceOperation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('CloudWatchMetric'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ServiceDependency'),
+                    ]),
                 ]),
             ]),
         ]);

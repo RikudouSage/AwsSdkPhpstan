@@ -180,6 +180,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                 new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                 new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                 new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -211,6 +212,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -323,6 +328,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('DomainNameStatusMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
                     new \PHPStan\Type\Constant\ConstantStringType('HostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('SecurityPolicy'),
                     new \PHPStan\Type\Constant\ConstantStringType('OwnershipVerificationCertificateArn'),
                 ], [
@@ -342,6 +348,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),
@@ -771,6 +781,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                 new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                 new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                 new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -802,6 +813,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -870,6 +885,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                     new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                     new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('Name'),
                     new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                     new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -901,6 +917,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -1074,6 +1094,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('DomainNameStatusMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
                     new \PHPStan\Type\Constant\ConstantStringType('HostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('SecurityPolicy'),
                     new \PHPStan\Type\Constant\ConstantStringType('OwnershipVerificationCertificateArn'),
                 ], [
@@ -1093,6 +1114,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),
@@ -1137,6 +1162,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('DomainNameStatusMessage'),
                         new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
                         new \PHPStan\Type\Constant\ConstantStringType('HostedZoneId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                         new \PHPStan\Type\Constant\ConstantStringType('SecurityPolicy'),
                         new \PHPStan\Type\Constant\ConstantStringType('OwnershipVerificationCertificateArn'),
                     ], [
@@ -1156,6 +1182,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                        ]),
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
                             new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),
@@ -1813,6 +1843,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                 new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                 new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                 new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -1844,6 +1875,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -1870,6 +1905,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                 new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                 new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                 new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -1901,6 +1937,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -1939,6 +1979,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\Constant\ConstantStringType('DisableSchemaValidation'),
                 new \PHPStan\Type\Constant\ConstantStringType('DisableExecuteApiEndpoint'),
                 new \PHPStan\Type\Constant\ConstantStringType('ImportInfo'),
+                new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                 new \PHPStan\Type\Constant\ConstantStringType('Name'),
                 new \PHPStan\Type\Constant\ConstantStringType('ProtocolType'),
                 new \PHPStan\Type\Constant\ConstantStringType('RouteSelectionExpression'),
@@ -1970,6 +2011,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\BooleanType(),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\UnionType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                    new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('WEBSOCKET'),
@@ -2082,6 +2127,7 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     new \PHPStan\Type\Constant\ConstantStringType('DomainNameStatusMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('EndpointType'),
                     new \PHPStan\Type\Constant\ConstantStringType('HostedZoneId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IpAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('SecurityPolicy'),
                     new \PHPStan\Type\Constant\ConstantStringType('OwnershipVerificationCertificateArn'),
                 ], [
@@ -2101,6 +2147,10 @@ final class ApiGatewayV2ClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                     ]),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_0'),
                         new \PHPStan\Type\Constant\ConstantStringType('TLS_1_2'),

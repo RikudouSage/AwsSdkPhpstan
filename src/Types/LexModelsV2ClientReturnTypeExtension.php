@@ -393,6 +393,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('testBotAliasTags'),
                 new \PHPStan\Type\Constant\ConstantStringType('botType'),
                 new \PHPStan\Type\Constant\ConstantStringType('botMembers'),
+                new \PHPStan\Type\Constant\ConstantStringType('errorLogSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -434,6 +435,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                ]),
             ]),
         ]);
     }
@@ -817,6 +823,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('creationDateTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('initialResponseSetting'),
                 new \PHPStan\Type\Constant\ConstantStringType('qnAIntentConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('qInConnectIntentConfiguration'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -7481,6 +7488,15 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('qInConnectAssistantConfiguration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -11062,6 +11078,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('botType'),
                 new \PHPStan\Type\Constant\ConstantStringType('botMembers'),
                 new \PHPStan\Type\Constant\ConstantStringType('failureReasons'),
+                new \PHPStan\Type\Constant\ConstantStringType('errorLogSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -11103,6 +11120,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                 ])),
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                ]),
             ]),
         ]);
     }
@@ -11734,6 +11756,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('botName'),
                         new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('dataPrivacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorLogSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('idleSessionTTLInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('botTags'),
                         new \PHPStan\Type\Constant\ConstantStringType('testBotAliasTags'),
@@ -11742,6 +11765,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('childDirected'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
@@ -11860,6 +11888,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDateTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('initialResponseSetting'),
                 new \PHPStan\Type\Constant\ConstantStringType('qnAIntentConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('qInConnectIntentConfiguration'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -18529,6 +18558,15 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('qInConnectAssistantConfiguration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),
@@ -24104,6 +24142,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('botName'),
                         new \PHPStan\Type\Constant\ConstantStringType('roleArn'),
                         new \PHPStan\Type\Constant\ConstantStringType('dataPrivacy'),
+                        new \PHPStan\Type\Constant\ConstantStringType('errorLogSettings'),
                         new \PHPStan\Type\Constant\ConstantStringType('idleSessionTTLInSeconds'),
                         new \PHPStan\Type\Constant\ConstantStringType('botTags'),
                         new \PHPStan\Type\Constant\ConstantStringType('testBotAliasTags'),
@@ -24112,6 +24151,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('childDirected'),
+                        ], [
+                            new \PHPStan\Type\BooleanType(),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('enabled'),
                         ], [
                             new \PHPStan\Type\BooleanType(),
                         ]),
@@ -24359,6 +24403,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDateTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('botType'),
                 new \PHPStan\Type\Constant\ConstantStringType('botMembers'),
+                new \PHPStan\Type\Constant\ConstantStringType('errorLogSettings'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -24399,6 +24444,11 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                 ])),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                ], [
+                    new \PHPStan\Type\BooleanType(),
+                ]),
             ]),
         ]);
     }
@@ -24814,6 +24864,7 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('lastUpdatedDateTime'),
                 new \PHPStan\Type\Constant\ConstantStringType('initialResponseSetting'),
                 new \PHPStan\Type\Constant\ConstantStringType('qnAIntentConfiguration'),
+                new \PHPStan\Type\Constant\ConstantStringType('qInConnectIntentConfiguration'),
             ], [
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -31483,6 +31534,15 @@ final class LexModelsV2ClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
                             new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
                         ]),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('qInConnectAssistantConfiguration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('assistantArn'),
+                    ], [
                         new \PHPStan\Type\StringType(),
                     ]),
                 ]),

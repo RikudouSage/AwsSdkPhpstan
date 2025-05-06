@@ -99,6 +99,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorReason'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaAppliedAtLevel'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -164,6 +165,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -269,6 +271,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorReason'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaAppliedAtLevel'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -334,6 +337,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ]),
             ]),
         ]);
@@ -389,6 +393,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorReason'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaAppliedAtLevel'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -454,6 +459,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);
@@ -649,6 +655,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                     new \PHPStan\Type\Constant\ConstantStringType('ErrorReason'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaAppliedAtLevel'),
                     new \PHPStan\Type\Constant\ConstantStringType('QuotaContext'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Description'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -714,6 +721,7 @@ final class ServiceQuotasClientReturnTypeExtension implements \PHPStan\Type\Dyna
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                    new \PHPStan\Type\StringType(),
                 ])),
             ]),
         ]);

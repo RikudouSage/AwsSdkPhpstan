@@ -672,6 +672,7 @@ final class imagebuilderClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('launchTemplateConfigurations'),
                         new \PHPStan\Type\Constant\ConstantStringType('s3ExportConfiguration'),
                         new \PHPStan\Type\Constant\ConstantStringType('fastLaunchConfigurations'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ssmParameterConfigurations'),
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -763,6 +764,18 @@ final class imagebuilderClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                 new \PHPStan\Type\StringType(),
                             ]),
                             new \PHPStan\Type\StringType(),
+                        ])),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('amiAccountId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('parameterName'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                        ], [
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                new \PHPStan\Type\Constant\ConstantStringType('aws:ec2:image'),
+                            ]),
                         ])),
                     ])),
                     new \PHPStan\Type\IntegerType(),
@@ -1130,6 +1143,7 @@ final class imagebuilderClientReturnTypeExtension implements \PHPStan\Type\Dynam
                             new \PHPStan\Type\Constant\ConstantStringType('launchTemplateConfigurations'),
                             new \PHPStan\Type\Constant\ConstantStringType('s3ExportConfiguration'),
                             new \PHPStan\Type\Constant\ConstantStringType('fastLaunchConfigurations'),
+                            new \PHPStan\Type\Constant\ConstantStringType('ssmParameterConfigurations'),
                         ], [
                             new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\Constant\ConstantArrayType([
@@ -1221,6 +1235,18 @@ final class imagebuilderClientReturnTypeExtension implements \PHPStan\Type\Dynam
                                     new \PHPStan\Type\StringType(),
                                 ]),
                                 new \PHPStan\Type\StringType(),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('amiAccountId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('parameterName'),
+                                new \PHPStan\Type\Constant\ConstantStringType('dataType'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('text'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('aws:ec2:image'),
+                                ]),
                             ])),
                         ])),
                         new \PHPStan\Type\IntegerType(),

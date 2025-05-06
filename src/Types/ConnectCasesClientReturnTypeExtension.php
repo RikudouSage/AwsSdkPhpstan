@@ -480,8 +480,10 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                     ], [
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('customEntity'),
                             new \PHPStan\Type\Constant\ConstantStringType('userArn'),
                         ], [
+                            new \PHPStan\Type\StringType(),
                             new \PHPStan\Type\StringType(),
                         ]),
                     ]),
@@ -490,6 +492,7 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('Contact'),
                         new \PHPStan\Type\Constant\ConstantStringType('Comment'),
                         new \PHPStan\Type\Constant\ConstantStringType('File'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sla'),
                     ]),
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('Case.Created'),
@@ -917,6 +920,7 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('comment'),
                         new \PHPStan\Type\Constant\ConstantStringType('contact'),
                         new \PHPStan\Type\Constant\ConstantStringType('file'),
+                        new \PHPStan\Type\Constant\ConstantStringType('sla'),
                     ], [
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('body'),
@@ -939,10 +943,50 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         ], [
                             new \PHPStan\Type\StringType(),
                         ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('slaConfiguration'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('completionTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('fieldId'),
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('status'),
+                                new \PHPStan\Type\Constant\ConstantStringType('targetFieldValues'),
+                                new \PHPStan\Type\Constant\ConstantStringType('targetTime'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Active'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Overdue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('Met'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('NotMet'),
+                                ]),
+                                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('booleanValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('doubleValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('emptyValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('stringValue'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('userArnValue'),
+                                ], [
+                                    new \PHPStan\Type\BooleanType(),
+                                    new \PHPStan\Type\FloatType(),
+                                    new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ])),
+                                new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CaseField'),
+                            ]),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('customEntity'),
                         new \PHPStan\Type\Constant\ConstantStringType('userArn'),
                     ], [
+                        new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -951,6 +995,7 @@ final class ConnectCasesClientReturnTypeExtension implements \PHPStan\Type\Dynam
                         new \PHPStan\Type\Constant\ConstantStringType('Contact'),
                         new \PHPStan\Type\Constant\ConstantStringType('Comment'),
                         new \PHPStan\Type\Constant\ConstantStringType('File'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Sla'),
                     ]),
                 ])),
             ]),

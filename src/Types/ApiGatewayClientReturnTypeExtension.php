@@ -459,6 +459,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -466,6 +467,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -694,6 +699,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -701,6 +707,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -1516,6 +1526,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -1523,6 +1534,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -1622,6 +1637,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('types'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -1629,6 +1645,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                             new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                         ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\UnionType([
@@ -2324,6 +2344,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -2331,6 +2352,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -2378,6 +2403,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('types'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                     ], [
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -2385,6 +2411,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                             new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                             new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                         ])),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                        ]),
                         new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     ]),
                     new \PHPStan\Type\StringType(),
@@ -2978,6 +3008,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -2985,6 +3016,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -3272,6 +3307,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -3279,6 +3315,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),
@@ -3579,6 +3619,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -3586,6 +3627,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\UnionType([
@@ -4041,6 +4086,7 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                 ]),
                 new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('types'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ipAddressType'),
                     new \PHPStan\Type\Constant\ConstantStringType('vpcEndpointIds'),
                 ], [
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\UnionType([
@@ -4048,6 +4094,10 @@ final class ApiGatewayClientReturnTypeExtension implements \PHPStan\Type\Dynamic
                         new \PHPStan\Type\Constant\ConstantStringType('EDGE'),
                         new \PHPStan\Type\Constant\ConstantStringType('PRIVATE'),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipv4'),
+                        new \PHPStan\Type\Constant\ConstantStringType('dualstack'),
+                    ]),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                 ]),
                 new \PHPStan\Type\StringType(),

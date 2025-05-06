@@ -19,6 +19,8 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'batchPutDocument',
             'cancelSubscription',
             'chatSync',
+            'checkDocumentAccess',
+            'createAnonymousWebExperienceUrl',
             'createApplication',
             'createDataAccessor',
             'createDataSource',
@@ -99,6 +101,8 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             'batchPutDocument' => $this->batchPutDocument(),
             'cancelSubscription' => $this->cancelSubscription(),
             'chatSync' => $this->chatSync(),
+            'checkDocumentAccess' => $this->checkDocumentAccess(),
+            'createAnonymousWebExperienceUrl' => $this->createAnonymousWebExperienceUrl(),
             'createApplication' => $this->createApplication(),
             'createDataAccessor' => $this->createDataAccessor(),
             'createDataSource' => $this->createDataSource(),
@@ -455,6 +459,132 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
             ]),
         ]);
     }
+    private function checkDocumentAccess(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('userGroups'),
+                new \PHPStan\Type\Constant\ConstantStringType('userAliases'),
+                new \PHPStan\Type\Constant\ConstantStringType('hasAccess'),
+                new \PHPStan\Type\Constant\ConstantStringType('documentAcl'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('name'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                    ]),
+                ])),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('id'),
+                    new \PHPStan\Type\Constant\ConstantStringType('type'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                    ]),
+                ])),
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('allowlist'),
+                    new \PHPStan\Type\Constant\ConstantStringType('denyList'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('memberRelation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('conditions'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('memberRelation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('users'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groups'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                                ]),
+                            ])),
+                        ])),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('memberRelation'),
+                        new \PHPStan\Type\Constant\ConstantStringType('conditions'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                            new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                        ]),
+                        new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('memberRelation'),
+                            new \PHPStan\Type\Constant\ConstantStringType('users'),
+                            new \PHPStan\Type\Constant\ConstantStringType('groups'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('AND'),
+                                new \PHPStan\Type\Constant\ConstantStringType('OR'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('id'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                                ]),
+                            ])),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('name'),
+                                new \PHPStan\Type\Constant\ConstantStringType('type'),
+                            ], [
+                                new \PHPStan\Type\StringType(),
+                                new \PHPStan\Type\UnionType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('INDEX'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('DATASOURCE'),
+                                ]),
+                            ])),
+                        ])),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function createAnonymousWebExperienceUrl(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('anonymousUrl'),
+            ], [
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function createApplication(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -697,6 +827,7 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM_IDP_OIDC'),
                     new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM_IDC'),
                     new \PHPStan\Type\Constant\ConstantStringType('AWS_QUICKSIGHT_IDP'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ANONYMOUS'),
                 ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
@@ -784,6 +915,7 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                 new \PHPStan\Type\Constant\ConstantStringType('topicConfigurations'),
                 new \PHPStan\Type\Constant\ConstantStringType('creatorModeConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('nextToken'),
+                new \PHPStan\Type\Constant\ConstantStringType('hallucinationReductionConfiguration'),
             ], [
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('ENTERPRISE_CONTENT_ONLY'),
@@ -869,6 +1001,14 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                     ]),
                 ]),
                 new \PHPStan\Type\StringType(),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('hallucinationReductionControl'),
+                ], [
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -1843,6 +1983,7 @@ final class QBusinessClientReturnTypeExtension implements \PHPStan\Type\DynamicM
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM_IDP_OIDC'),
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_IAM_IDC'),
                         new \PHPStan\Type\Constant\ConstantStringType('AWS_QUICKSIGHT_IDP'),
+                        new \PHPStan\Type\Constant\ConstantStringType('ANONYMOUS'),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('clientNamespace'),

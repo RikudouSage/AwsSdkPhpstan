@@ -40,6 +40,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'associateIpamByoasn',
             'associateIpamResourceDiscovery',
             'associateNatGatewayAddress',
+            'associateRouteServer',
             'associateRouteTable',
             'associateSecurityGroupVpc',
             'associateSubnetCidrBlock',
@@ -106,6 +107,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'createLocalGatewayRouteTable',
             'createLocalGatewayRouteTableVirtualInterfaceGroupAssociation',
             'createLocalGatewayRouteTableVpcAssociation',
+            'createLocalGatewayVirtualInterface',
+            'createLocalGatewayVirtualInterfaceGroup',
             'createManagedPrefixList',
             'createNatGateway',
             'createNetworkAcl',
@@ -120,6 +123,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'createReservedInstancesListing',
             'createRestoreImageTask',
             'createRoute',
+            'createRouteServer',
+            'createRouteServerEndpoint',
+            'createRouteServerPeer',
             'createRouteTable',
             'createSecurityGroup',
             'createSnapshot',
@@ -184,6 +190,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'deleteLocalGatewayRouteTable',
             'deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation',
             'deleteLocalGatewayRouteTableVpcAssociation',
+            'deleteLocalGatewayVirtualInterface',
+            'deleteLocalGatewayVirtualInterfaceGroup',
             'deleteManagedPrefixList',
             'deleteNatGateway',
             'deleteNetworkAcl',
@@ -198,6 +206,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'deletePublicIpv4Pool',
             'deleteQueuedReservedInstances',
             'deleteRoute',
+            'deleteRouteServer',
+            'deleteRouteServerEndpoint',
+            'deleteRouteServerPeer',
             'deleteRouteTable',
             'deleteSecurityGroup',
             'deleteSnapshot',
@@ -333,6 +344,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeNetworkInterfaceAttribute',
             'describeNetworkInterfacePermissions',
             'describeNetworkInterfaces',
+            'describeOutpostLags',
             'describePlacementGroups',
             'describePrefixLists',
             'describePrincipalIdFormat',
@@ -343,6 +355,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeReservedInstancesListings',
             'describeReservedInstancesModifications',
             'describeReservedInstancesOfferings',
+            'describeRouteServerEndpoints',
+            'describeRouteServerPeers',
+            'describeRouteServers',
             'describeRouteTables',
             'describeScheduledInstanceAvailability',
             'describeScheduledInstances',
@@ -350,6 +365,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeSecurityGroupRules',
             'describeSecurityGroupVpcAssociations',
             'describeSecurityGroups',
+            'describeServiceLinkVirtualInterfaces',
             'describeSnapshotAttribute',
             'describeSnapshotTierStatus',
             'describeSnapshots',
@@ -420,6 +436,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'disableImageDeprecation',
             'disableImageDeregistrationProtection',
             'disableIpamOrganizationAdminAccount',
+            'disableRouteServerPropagation',
             'disableSerialConsoleAccess',
             'disableSnapshotBlockPublicAccess',
             'disableTransitGatewayRouteTablePropagation',
@@ -435,6 +452,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'disassociateIpamByoasn',
             'disassociateIpamResourceDiscovery',
             'disassociateNatGatewayAddress',
+            'disassociateRouteServer',
             'disassociateRouteTable',
             'disassociateSecurityGroupVpc',
             'disassociateSubnetCidrBlock',
@@ -455,6 +473,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'enableImageDeregistrationProtection',
             'enableIpamOrganizationAdminAccount',
             'enableReachabilityAnalyzerOrganizationSharing',
+            'enableRouteServerPropagation',
             'enableSerialConsoleAccess',
             'enableSnapshotBlockPublicAccess',
             'enableTransitGatewayRouteTablePropagation',
@@ -501,6 +520,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'getNetworkInsightsAccessScopeContent',
             'getPasswordData',
             'getReservedInstancesExchangeQuote',
+            'getRouteServerAssociations',
+            'getRouteServerPropagations',
+            'getRouteServerRoutingDatabase',
             'getSecurityGroupsForVpc',
             'getSerialConsoleAccessStatus',
             'getSnapshotBlockPublicAccessState',
@@ -563,6 +585,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'modifyNetworkInterfaceAttribute',
             'modifyPrivateDnsNameOptions',
             'modifyReservedInstances',
+            'modifyRouteServer',
             'modifySecurityGroupRules',
             'modifySnapshotAttribute',
             'modifySnapshotTier',
@@ -704,6 +727,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'associateIpamByoasn' => $this->associateIpamByoasn(),
             'associateIpamResourceDiscovery' => $this->associateIpamResourceDiscovery(),
             'associateNatGatewayAddress' => $this->associateNatGatewayAddress(),
+            'associateRouteServer' => $this->associateRouteServer(),
             'associateRouteTable' => $this->associateRouteTable(),
             'associateSecurityGroupVpc' => $this->associateSecurityGroupVpc(),
             'associateSubnetCidrBlock' => $this->associateSubnetCidrBlock(),
@@ -770,6 +794,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'createLocalGatewayRouteTable' => $this->createLocalGatewayRouteTable(),
             'createLocalGatewayRouteTableVirtualInterfaceGroupAssociation' => $this->createLocalGatewayRouteTableVirtualInterfaceGroupAssociation(),
             'createLocalGatewayRouteTableVpcAssociation' => $this->createLocalGatewayRouteTableVpcAssociation(),
+            'createLocalGatewayVirtualInterface' => $this->createLocalGatewayVirtualInterface(),
+            'createLocalGatewayVirtualInterfaceGroup' => $this->createLocalGatewayVirtualInterfaceGroup(),
             'createManagedPrefixList' => $this->createManagedPrefixList(),
             'createNatGateway' => $this->createNatGateway(),
             'createNetworkAcl' => $this->createNetworkAcl(),
@@ -784,6 +810,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'createReservedInstancesListing' => $this->createReservedInstancesListing(),
             'createRestoreImageTask' => $this->createRestoreImageTask(),
             'createRoute' => $this->createRoute(),
+            'createRouteServer' => $this->createRouteServer(),
+            'createRouteServerEndpoint' => $this->createRouteServerEndpoint(),
+            'createRouteServerPeer' => $this->createRouteServerPeer(),
             'createRouteTable' => $this->createRouteTable(),
             'createSecurityGroup' => $this->createSecurityGroup(),
             'createSnapshot' => $this->createSnapshot(),
@@ -848,6 +877,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'deleteLocalGatewayRouteTable' => $this->deleteLocalGatewayRouteTable(),
             'deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation' => $this->deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation(),
             'deleteLocalGatewayRouteTableVpcAssociation' => $this->deleteLocalGatewayRouteTableVpcAssociation(),
+            'deleteLocalGatewayVirtualInterface' => $this->deleteLocalGatewayVirtualInterface(),
+            'deleteLocalGatewayVirtualInterfaceGroup' => $this->deleteLocalGatewayVirtualInterfaceGroup(),
             'deleteManagedPrefixList' => $this->deleteManagedPrefixList(),
             'deleteNatGateway' => $this->deleteNatGateway(),
             'deleteNetworkAcl' => $this->deleteNetworkAcl(),
@@ -862,6 +893,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'deletePublicIpv4Pool' => $this->deletePublicIpv4Pool(),
             'deleteQueuedReservedInstances' => $this->deleteQueuedReservedInstances(),
             'deleteRoute' => $this->deleteRoute(),
+            'deleteRouteServer' => $this->deleteRouteServer(),
+            'deleteRouteServerEndpoint' => $this->deleteRouteServerEndpoint(),
+            'deleteRouteServerPeer' => $this->deleteRouteServerPeer(),
             'deleteRouteTable' => $this->deleteRouteTable(),
             'deleteSecurityGroup' => $this->deleteSecurityGroup(),
             'deleteSnapshot' => $this->deleteSnapshot(),
@@ -997,6 +1031,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeNetworkInterfaceAttribute' => $this->describeNetworkInterfaceAttribute(),
             'describeNetworkInterfacePermissions' => $this->describeNetworkInterfacePermissions(),
             'describeNetworkInterfaces' => $this->describeNetworkInterfaces(),
+            'describeOutpostLags' => $this->describeOutpostLags(),
             'describePlacementGroups' => $this->describePlacementGroups(),
             'describePrefixLists' => $this->describePrefixLists(),
             'describePrincipalIdFormat' => $this->describePrincipalIdFormat(),
@@ -1007,6 +1042,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeReservedInstancesListings' => $this->describeReservedInstancesListings(),
             'describeReservedInstancesModifications' => $this->describeReservedInstancesModifications(),
             'describeReservedInstancesOfferings' => $this->describeReservedInstancesOfferings(),
+            'describeRouteServerEndpoints' => $this->describeRouteServerEndpoints(),
+            'describeRouteServerPeers' => $this->describeRouteServerPeers(),
+            'describeRouteServers' => $this->describeRouteServers(),
             'describeRouteTables' => $this->describeRouteTables(),
             'describeScheduledInstanceAvailability' => $this->describeScheduledInstanceAvailability(),
             'describeScheduledInstances' => $this->describeScheduledInstances(),
@@ -1014,6 +1052,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'describeSecurityGroupRules' => $this->describeSecurityGroupRules(),
             'describeSecurityGroupVpcAssociations' => $this->describeSecurityGroupVpcAssociations(),
             'describeSecurityGroups' => $this->describeSecurityGroups(),
+            'describeServiceLinkVirtualInterfaces' => $this->describeServiceLinkVirtualInterfaces(),
             'describeSnapshotAttribute' => $this->describeSnapshotAttribute(),
             'describeSnapshotTierStatus' => $this->describeSnapshotTierStatus(),
             'describeSnapshots' => $this->describeSnapshots(),
@@ -1084,6 +1123,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'disableImageDeprecation' => $this->disableImageDeprecation(),
             'disableImageDeregistrationProtection' => $this->disableImageDeregistrationProtection(),
             'disableIpamOrganizationAdminAccount' => $this->disableIpamOrganizationAdminAccount(),
+            'disableRouteServerPropagation' => $this->disableRouteServerPropagation(),
             'disableSerialConsoleAccess' => $this->disableSerialConsoleAccess(),
             'disableSnapshotBlockPublicAccess' => $this->disableSnapshotBlockPublicAccess(),
             'disableTransitGatewayRouteTablePropagation' => $this->disableTransitGatewayRouteTablePropagation(),
@@ -1099,6 +1139,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'disassociateIpamByoasn' => $this->disassociateIpamByoasn(),
             'disassociateIpamResourceDiscovery' => $this->disassociateIpamResourceDiscovery(),
             'disassociateNatGatewayAddress' => $this->disassociateNatGatewayAddress(),
+            'disassociateRouteServer' => $this->disassociateRouteServer(),
             'disassociateRouteTable' => $this->disassociateRouteTable(),
             'disassociateSecurityGroupVpc' => $this->disassociateSecurityGroupVpc(),
             'disassociateSubnetCidrBlock' => $this->disassociateSubnetCidrBlock(),
@@ -1119,6 +1160,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'enableImageDeregistrationProtection' => $this->enableImageDeregistrationProtection(),
             'enableIpamOrganizationAdminAccount' => $this->enableIpamOrganizationAdminAccount(),
             'enableReachabilityAnalyzerOrganizationSharing' => $this->enableReachabilityAnalyzerOrganizationSharing(),
+            'enableRouteServerPropagation' => $this->enableRouteServerPropagation(),
             'enableSerialConsoleAccess' => $this->enableSerialConsoleAccess(),
             'enableSnapshotBlockPublicAccess' => $this->enableSnapshotBlockPublicAccess(),
             'enableTransitGatewayRouteTablePropagation' => $this->enableTransitGatewayRouteTablePropagation(),
@@ -1165,6 +1207,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'getNetworkInsightsAccessScopeContent' => $this->getNetworkInsightsAccessScopeContent(),
             'getPasswordData' => $this->getPasswordData(),
             'getReservedInstancesExchangeQuote' => $this->getReservedInstancesExchangeQuote(),
+            'getRouteServerAssociations' => $this->getRouteServerAssociations(),
+            'getRouteServerPropagations' => $this->getRouteServerPropagations(),
+            'getRouteServerRoutingDatabase' => $this->getRouteServerRoutingDatabase(),
             'getSecurityGroupsForVpc' => $this->getSecurityGroupsForVpc(),
             'getSerialConsoleAccessStatus' => $this->getSerialConsoleAccessStatus(),
             'getSnapshotBlockPublicAccessState' => $this->getSnapshotBlockPublicAccessState(),
@@ -1227,6 +1272,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             'modifyNetworkInterfaceAttribute' => $this->modifyNetworkInterfaceAttribute(),
             'modifyPrivateDnsNameOptions' => $this->modifyPrivateDnsNameOptions(),
             'modifyReservedInstances' => $this->modifyReservedInstances(),
+            'modifyRouteServer' => $this->modifyRouteServer(),
             'modifySecurityGroupRules' => $this->modifySecurityGroupRules(),
             'modifySnapshotAttribute' => $this->modifySnapshotAttribute(),
             'modifySnapshotTier' => $this->modifySnapshotTier(),
@@ -2209,6 +2255,28 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('failed'),
                     ]),
                 ])),
+            ]),
+        ]);
+    }
+    private function associateRouteServer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerAssociation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('associating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disassociating'),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -5071,6 +5139,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('deleting'),
                             new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                             new \PHPStan\Type\Constant\ConstantStringType('available'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                            new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -8748,6 +8818,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('StateMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tier'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePrivateGua'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MeteredAccount'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -8792,6 +8863,10 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('advanced'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipam-owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource-owner'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -10310,6 +10385,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                                 new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                                 new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -10317,6 +10393,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                                new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                                 new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -10352,6 +10429,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                                 new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -10865,6 +10945,99 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function createLocalGatewayVirtualInterface(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterface'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostLagId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Vlan'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsnExtended'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function createLocalGatewayVirtualInterfaceGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroup'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsnExtended'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('incomplete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -11812,6 +11985,173 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('Return'),
             ], [
                 new \PHPStan\Type\BooleanType(),
+            ]),
+        ]);
+    }
+    private function createRouteServer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServer'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonSideAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesDuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsNotificationsEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function createRouteServerEndpoint(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpoint'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function createRouteServerPeer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeer'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpOptions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BfdStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerLivenessDetection'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bfd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bgp-keepalive'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
             ]),
         ]);
     }
@@ -13740,6 +14080,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('deleting'),
                             new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                             new \PHPStan\Type\Constant\ConstantStringType('available'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                            new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -14845,6 +15187,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('StateMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tier'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePrivateGua'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MeteredAccount'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -14889,6 +15232,10 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('advanced'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipam-owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource-owner'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -15413,6 +15760,99 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function deleteLocalGatewayVirtualInterface(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterface'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostLagId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Vlan'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsnExtended'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
+    private function deleteLocalGatewayVirtualInterfaceGroup(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroup'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsnExtended'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('incomplete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function deleteManagedPrefixList(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -15594,6 +16034,173 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
             new \PHPStan\Type\ArrayType(new \PHPStan\Type\StringType(), new \PHPStan\Type\NullType()),
+        ]);
+    }
+    private function deleteRouteServer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServer'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonSideAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesDuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsNotificationsEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
+            ]),
+        ]);
+    }
+    private function deleteRouteServerEndpoint(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpoint'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+            ]),
+        ]);
+    }
+    private function deleteRouteServerPeer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeer'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpOptions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BfdStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerLivenessDetection'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bfd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bgp-keepalive'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ]),
+            ]),
         ]);
     }
     private function deleteRouteTable(): ?\PHPStan\Type\Type
@@ -17142,6 +17749,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\UnionType([
                         new \PHPStan\Type\Constant\ConstantStringType('alb'),
                         new \PHPStan\Type\Constant\ConstantStringType('nlb'),
+                        new \PHPStan\Type\Constant\ConstantStringType('rnat'),
                     ]),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -18877,6 +19485,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('ClientConnectOptions'),
                     new \PHPStan\Type\Constant\ConstantStringType('SessionTimeoutHours'),
                     new \PHPStan\Type\Constant\ConstantStringType('ClientLoginBannerOptions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ClientRouteEnforcementOptions'),
                     new \PHPStan\Type\Constant\ConstantStringType('DisconnectOnSessionTimeout'),
                 ], [
                     new \PHPStan\Type\StringType(),
@@ -18986,6 +19595,11 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     ], [
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Enforced'),
+                    ], [
+                        new \PHPStan\Type\BooleanType(),
                     ]),
                     new \PHPStan\Type\BooleanType(),
                 ])),
@@ -30576,6 +31190,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('StateMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tier'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePrivateGua'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MeteredAccount'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -30620,6 +31235,10 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('advanced'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipam-owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource-owner'),
+                    ]),
                 ])),
             ]),
         ]);
@@ -31860,6 +32479,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                                 new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                                 new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -31867,6 +32487,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                                new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                                 new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -31902,6 +32523,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                                 new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -32426,11 +33050,18 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceIds'),
                     new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
                     new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsnExtended'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupArn'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('Key'),
@@ -32439,6 +33070,13 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('incomplete'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -32454,19 +33092,28 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                     new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceId'),
                     new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceGroupId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostLagId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Vlan'),
                     new \PHPStan\Type\Constant\ConstantStringType('LocalAddress'),
                     new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
                     new \PHPStan\Type\Constant\ConstantStringType('LocalBgpAsn'),
                     new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsnExtended'),
                     new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
                 ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\IntegerType(),
                     new \PHPStan\Type\StringType(),
@@ -32477,6 +33124,12 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\StringType(),
                     ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -35615,6 +36268,40 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\BooleanType(),
                         new \PHPStan\Type\StringType(),
                     ]),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeOutpostLags(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('OutpostLags'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostLagId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalGatewayVirtualInterfaceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceLinkVirtualInterfaceIds'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
                 ])),
                 new \PHPStan\Type\StringType(),
             ]),
@@ -38780,6 +39467,179 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function describeRouteServerEndpoints(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpoints'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                        new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeRouteServerPeers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeers'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SubnetId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('FailureReason'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('EndpointEniAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpOptions'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BgpStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('BfdStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failing'),
+                        new \PHPStan\Type\Constant\ConstantStringType('failed'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerAsn'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PeerLivenessDetection'),
+                    ], [
+                        new \PHPStan\Type\IntegerType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('bfd'),
+                            new \PHPStan\Type\Constant\ConstantStringType('bgp-keepalive'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Status'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('up'),
+                            new \PHPStan\Type\Constant\ConstantStringType('down'),
+                        ]),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function describeRouteServers(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServers'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonSideAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesDuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsNotificationsEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function describeRouteTables(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -39239,6 +40099,55 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         ])),
                     ])),
                 ])),
+            ]),
+        ]);
+    }
+    private function describeServiceLinkVirtualInterfaces(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('ServiceLinkVirtualInterfaces'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceLinkVirtualInterfaceId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ServiceLinkVirtualInterfaceArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostArn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OwnerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('LocalAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerAddress'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PeerBgpAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Vlan'),
+                    new \PHPStan\Type\Constant\ConstantStringType('OutpostLagId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ConfigurationState'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                ])),
+                new \PHPStan\Type\StringType(),
             ]),
         ]);
     }
@@ -40716,6 +41625,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                                     new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                                     new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                                     new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                                     new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                                     new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -40723,6 +41633,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                                     new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                                     new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                                     new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                                     new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                                     new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -40758,6 +41669,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                     new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                                     new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                                     new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                                     new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                                     new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -42127,6 +43041,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                                 new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                                 new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                                 new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -42134,6 +43049,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                                 new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                                new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                                 new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                                 new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -42169,6 +43085,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                                 new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                                 new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                                new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                                 new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                                 new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -44581,6 +45500,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                         new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                         new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                        new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                         new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                         new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                         new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -44588,6 +45508,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                         new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                         new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                        new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                         new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                         new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                         new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -44623,6 +45544,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                         new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                        new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                        new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                        new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                         new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                         new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                         new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -47173,6 +48097,8 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('deleting'),
                             new \PHPStan\Type\Constant\ConstantStringType('deleted'),
                             new \PHPStan\Type\Constant\ConstantStringType('available'),
+                            new \PHPStan\Type\Constant\ConstantStringType('creating'),
+                            new \PHPStan\Type\Constant\ConstantStringType('delete-failed'),
                         ]),
                         new \PHPStan\Type\StringType(),
                         new \PHPStan\Type\Constant\ConstantArrayType([
@@ -47946,6 +48872,28 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function disableRouteServerPropagation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPropagation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteTableId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                    ]),
+                ]),
+            ]),
+        ]);
+    }
     private function disableSerialConsoleAccess(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -48306,6 +49254,28 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('failed'),
                     ]),
                 ])),
+            ]),
+        ]);
+    }
+    private function disassociateRouteServer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerAssociation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('associating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disassociating'),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -48795,6 +49765,28 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ReturnValue'),
             ], [
                 new \PHPStan\Type\BooleanType(),
+            ]),
+        ]);
+    }
+    private function enableRouteServerPropagation(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPropagation'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteTableId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -51028,6 +52020,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('network-insights-path'),
                             new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope'),
                             new \PHPStan\Type\Constant\ConstantStringType('network-insights-access-scope-analysis'),
+                            new \PHPStan\Type\Constant\ConstantStringType('outpost-lag'),
                             new \PHPStan\Type\Constant\ConstantStringType('placement-group'),
                             new \PHPStan\Type\Constant\ConstantStringType('prefix-list'),
                             new \PHPStan\Type\Constant\ConstantStringType('replace-root-volume-task'),
@@ -51035,6 +52028,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('route-table'),
                             new \PHPStan\Type\Constant\ConstantStringType('security-group'),
                             new \PHPStan\Type\Constant\ConstantStringType('security-group-rule'),
+                            new \PHPStan\Type\Constant\ConstantStringType('service-link-virtual-interface'),
                             new \PHPStan\Type\Constant\ConstantStringType('snapshot'),
                             new \PHPStan\Type\Constant\ConstantStringType('spot-fleet-request'),
                             new \PHPStan\Type\Constant\ConstantStringType('spot-instances-request'),
@@ -51070,6 +52064,9 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                             new \PHPStan\Type\Constant\ConstantStringType('verified-access-trust-provider'),
                             new \PHPStan\Type\Constant\ConstantStringType('vpn-connection-device-type'),
                             new \PHPStan\Type\Constant\ConstantStringType('vpc-block-public-access-exclusion'),
+                            new \PHPStan\Type\Constant\ConstantStringType('route-server'),
+                            new \PHPStan\Type\Constant\ConstantStringType('route-server-endpoint'),
+                            new \PHPStan\Type\Constant\ConstantStringType('route-server-peer'),
                             new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery'),
                             new \PHPStan\Type\Constant\ConstantStringType('ipam-resource-discovery-association'),
                             new \PHPStan\Type\Constant\ConstantStringType('instance-connect-endpoint'),
@@ -52620,6 +53617,96 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
             ]),
         ]);
     }
+    private function getRouteServerAssociations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerAssociations'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('VpcId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('associating'),
+                        new \PHPStan\Type\Constant\ConstantStringType('associated'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disassociating'),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function getRouteServerPropagations(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServerPropagations'),
+            ], [
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteTableId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                    ]),
+                ])),
+            ]),
+        ]);
+    }
+    private function getRouteServerRoutingDatabase(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AreRoutesPersisted'),
+                new \PHPStan\Type\Constant\ConstantStringType('Routes'),
+                new \PHPStan\Type\Constant\ConstantStringType('NextToken'),
+            ], [
+                new \PHPStan\Type\BooleanType(),
+                new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerEndpointId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerPeerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteInstallationDetails'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteStatus'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Prefix'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AsPaths'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Med'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NextHopIp'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteTableId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteInstallationStatus'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RouteInstallationStatusReason'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('installed'),
+                            new \PHPStan\Type\Constant\ConstantStringType('rejected'),
+                        ]),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('in-rib'),
+                        new \PHPStan\Type\Constant\ConstantStringType('in-fib'),
+                    ]),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                ])),
+                new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
     private function getSecurityGroupsForVpc(): ?\PHPStan\Type\Type
     {
         return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
@@ -54075,6 +55162,7 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                     new \PHPStan\Type\Constant\ConstantStringType('StateMessage'),
                     new \PHPStan\Type\Constant\ConstantStringType('Tier'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePrivateGua'),
+                    new \PHPStan\Type\Constant\ConstantStringType('MeteredAccount'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -54119,6 +55207,10 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                         new \PHPStan\Type\Constant\ConstantStringType('advanced'),
                     ]),
                     new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('ipam-owner'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resource-owner'),
+                    ]),
                 ]),
             ]),
         ]);
@@ -54569,6 +55661,53 @@ final class Ec2ClientReturnTypeExtension implements \PHPStan\Type\DynamicMethodR
                 new \PHPStan\Type\Constant\ConstantStringType('ReservedInstancesModificationId'),
             ], [
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function modifyRouteServer(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('RouteServer'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('RouteServerId'),
+                    new \PHPStan\Type\Constant\ConstantStringType('AmazonSideAsn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('State'),
+                    new \PHPStan\Type\Constant\ConstantStringType('Tags'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesState'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PersistRoutesDuration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsNotificationsEnabled'),
+                    new \PHPStan\Type\Constant\ConstantStringType('SnsTopicArn'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('pending'),
+                        new \PHPStan\Type\Constant\ConstantStringType('available'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('deleted'),
+                    ]),
+                    new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Key'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Value'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ])),
+                    new \PHPStan\Type\UnionType([
+                        new \PHPStan\Type\Constant\ConstantStringType('enabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('enabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('resetting'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabling'),
+                        new \PHPStan\Type\Constant\ConstantStringType('disabled'),
+                        new \PHPStan\Type\Constant\ConstantStringType('modifying'),
+                    ]),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\BooleanType(),
+                    new \PHPStan\Type\StringType(),
+                ]),
             ]),
         ]);
     }

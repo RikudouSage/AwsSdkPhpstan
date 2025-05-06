@@ -813,6 +813,7 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\Constant\ConstantStringType('IngressPointId'),
                 new \PHPStan\Type\Constant\ConstantStringType('IngressPointName'),
                 new \PHPStan\Type\Constant\ConstantStringType('LastUpdatedTimestamp'),
+                new \PHPStan\Type\Constant\ConstantStringType('NetworkConfiguration'),
                 new \PHPStan\Type\Constant\ConstantStringType('RuleSetId'),
                 new \PHPStan\Type\Constant\ConstantStringType('Status'),
                 new \PHPStan\Type\Constant\ConstantStringType('TrafficPolicyId'),
@@ -839,6 +840,24 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\ObjectType('DateTimeInterface'),
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('PrivateNetworkConfiguration'),
+                    new \PHPStan\Type\Constant\ConstantStringType('PublicNetworkConfiguration'),
+                ], [
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('VpcEndpointId'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('IpType'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('IPV4'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DUAL_STACK'),
+                        ]),
+                    ]),
+                ]),
                 new \PHPStan\Type\StringType(),
                 new \PHPStan\Type\UnionType([
                     new \PHPStan\Type\Constant\ConstantStringType('PROVISIONING'),
@@ -926,6 +945,7 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                         new \PHPStan\Type\Constant\ConstantStringType('DeliverToMailbox'),
                         new \PHPStan\Type\Constant\ConstantStringType('DeliverToQBusiness'),
                         new \PHPStan\Type\Constant\ConstantStringType('Drop'),
+                        new \PHPStan\Type\Constant\ConstantStringType('PublishToSns'),
                         new \PHPStan\Type\Constant\ConstantStringType('Relay'),
                         new \PHPStan\Type\Constant\ConstantStringType('ReplaceRecipient'),
                         new \PHPStan\Type\Constant\ConstantStringType('Send'),
@@ -975,6 +995,28 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\StringType(),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([], []),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ActionFailurePolicy'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Encoding'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PayloadType'),
+                            new \PHPStan\Type\Constant\ConstantStringType('RoleArn'),
+                            new \PHPStan\Type\Constant\ConstantStringType('TopicArn'),
+                        ], [
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTINUE'),
+                                new \PHPStan\Type\Constant\ConstantStringType('DROP'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('UTF-8'),
+                                new \PHPStan\Type\Constant\ConstantStringType('BASE64'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('HEADERS'),
+                                new \PHPStan\Type\Constant\ConstantStringType('CONTENT'),
+                            ]),
+                            new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\StringType(),
+                        ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('ActionFailurePolicy'),
                             new \PHPStan\Type\Constant\ConstantStringType('MailFrom'),
@@ -1035,9 +1077,17 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('Operator'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Analysis'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
                                 new \PHPStan\Type\Constant\ConstantStringType('IsInAddressList'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Analyzer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResultField'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('READ_RECEIPT_REQUESTED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('TLS'),
@@ -1119,9 +1169,17 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Analysis'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MimeHeaderAttribute'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Analyzer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResultField'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MAIL_FROM'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HELO'),
@@ -1190,9 +1248,17 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('Operator'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Analysis'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
                                 new \PHPStan\Type\Constant\ConstantStringType('IsInAddressList'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Analyzer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResultField'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('READ_RECEIPT_REQUESTED'),
                                     new \PHPStan\Type\Constant\ConstantStringType('TLS'),
@@ -1274,9 +1340,17 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantStringType('Values'),
                         ], [
                             new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Analysis'),
                                 new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
                                 new \PHPStan\Type\Constant\ConstantStringType('MimeHeaderAttribute'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Analyzer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResultField'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                                 new \PHPStan\Type\UnionType([
                                     new \PHPStan\Type\Constant\ConstantStringType('MAIL_FROM'),
                                     new \PHPStan\Type\Constant\ConstantStringType('HELO'),
@@ -1366,6 +1440,7 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                     new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('BooleanExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('IpExpression'),
+                        new \PHPStan\Type\Constant\ConstantStringType('Ipv6Expression'),
                         new \PHPStan\Type\Constant\ConstantStringType('StringExpression'),
                         new \PHPStan\Type\Constant\ConstantStringType('TlsExpression'),
                     ], [
@@ -1421,6 +1496,30 @@ final class MailManagerClientReturnTypeExtension implements \PHPStan\Type\Dynami
                             new \PHPStan\Type\Constant\ConstantArrayType([
                                 new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
                             ], [
+                                new \PHPStan\Type\Constant\ConstantStringType('SENDER_IPV6'),
+                            ]),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('CIDR_MATCHES'),
+                                new \PHPStan\Type\Constant\ConstantStringType('NOT_CIDR_MATCHES'),
+                            ]),
+                            new \PHPStan\Type\ArrayType(new \PHPStan\Type\IntegerType(), new \PHPStan\Type\StringType()),
+                        ]),
+                        new \PHPStan\Type\Constant\ConstantArrayType([
+                            new \PHPStan\Type\Constant\ConstantStringType('Evaluate'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Operator'),
+                            new \PHPStan\Type\Constant\ConstantStringType('Values'),
+                        ], [
+                            new \PHPStan\Type\Constant\ConstantArrayType([
+                                new \PHPStan\Type\Constant\ConstantStringType('Analysis'),
+                                new \PHPStan\Type\Constant\ConstantStringType('Attribute'),
+                            ], [
+                                new \PHPStan\Type\Constant\ConstantArrayType([
+                                    new \PHPStan\Type\Constant\ConstantStringType('Analyzer'),
+                                    new \PHPStan\Type\Constant\ConstantStringType('ResultField'),
+                                ], [
+                                    new \PHPStan\Type\StringType(),
+                                    new \PHPStan\Type\StringType(),
+                                ]),
                                 new \PHPStan\Type\Constant\ConstantStringType('RECIPIENT'),
                             ]),
                             new \PHPStan\Type\UnionType([

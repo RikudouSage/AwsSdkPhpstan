@@ -82,6 +82,7 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
             'getIdentityProviderByIdentifier',
             'getLogDeliveryConfiguration',
             'getSigningCertificate',
+            'getTokensFromRefreshToken',
             'getUICustomization',
             'getUser',
             'getUserAttributeVerificationCode',
@@ -201,6 +202,7 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
             'getIdentityProviderByIdentifier' => $this->getIdentityProviderByIdentifier(),
             'getLogDeliveryConfiguration' => $this->getLogDeliveryConfiguration(),
             'getSigningCertificate' => $this->getSigningCertificate(),
+            'getTokensFromRefreshToken' => $this->getTokensFromRefreshToken(),
             'getUICustomization' => $this->getUICustomization(),
             'getUser' => $this->getUser(),
             'getUserAttributeVerificationCode' => $this->getUserAttributeVerificationCode(),
@@ -1372,6 +1374,7 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('EnableTokenRevocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePropagateAdditionalUserContextData'),
                     new \PHPStan\Type\Constant\ConstantStringType('AuthSessionValidity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RefreshTokenRotation'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -1450,6 +1453,16 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryGracePeriodSeconds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -2258,6 +2271,7 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('EnableTokenRevocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePropagateAdditionalUserContextData'),
                     new \PHPStan\Type\Constant\ConstantStringType('AuthSessionValidity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RefreshTokenRotation'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -2336,6 +2350,16 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryGracePeriodSeconds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
                 ]),
             ]),
         ]);
@@ -2561,6 +2585,36 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                 new \PHPStan\Type\Constant\ConstantStringType('Certificate'),
             ], [
                 new \PHPStan\Type\StringType(),
+            ]),
+        ]);
+    }
+    private function getTokensFromRefreshToken(): ?\PHPStan\Type\Type
+    {
+        return new \PHPStan\Type\Generic\GenericObjectType('Aws\Result', [
+            new \PHPStan\Type\Constant\ConstantArrayType([
+                new \PHPStan\Type\Constant\ConstantStringType('AuthenticationResult'),
+            ], [
+                new \PHPStan\Type\Constant\ConstantArrayType([
+                    new \PHPStan\Type\Constant\ConstantStringType('AccessToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('ExpiresIn'),
+                    new \PHPStan\Type\Constant\ConstantStringType('TokenType'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RefreshToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('IdToken'),
+                    new \PHPStan\Type\Constant\ConstantStringType('NewDeviceMetadata'),
+                ], [
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\StringType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceKey'),
+                        new \PHPStan\Type\Constant\ConstantStringType('DeviceGroupKey'),
+                    ], [
+                        new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\StringType(),
+                    ]),
+                ]),
             ]),
         ]);
     }
@@ -3923,6 +3977,7 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\Constant\ConstantStringType('EnableTokenRevocation'),
                     new \PHPStan\Type\Constant\ConstantStringType('EnablePropagateAdditionalUserContextData'),
                     new \PHPStan\Type\Constant\ConstantStringType('AuthSessionValidity'),
+                    new \PHPStan\Type\Constant\ConstantStringType('RefreshTokenRotation'),
                 ], [
                     new \PHPStan\Type\StringType(),
                     new \PHPStan\Type\StringType(),
@@ -4001,6 +4056,16 @@ final class CognitoIdentityProviderClientReturnTypeExtension implements \PHPStan
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\BooleanType(),
                     new \PHPStan\Type\IntegerType(),
+                    new \PHPStan\Type\Constant\ConstantArrayType([
+                        new \PHPStan\Type\Constant\ConstantStringType('Feature'),
+                        new \PHPStan\Type\Constant\ConstantStringType('RetryGracePeriodSeconds'),
+                    ], [
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('ENABLED'),
+                            new \PHPStan\Type\Constant\ConstantStringType('DISABLED'),
+                        ]),
+                        new \PHPStan\Type\IntegerType(),
+                    ]),
                 ]),
             ]),
         ]);

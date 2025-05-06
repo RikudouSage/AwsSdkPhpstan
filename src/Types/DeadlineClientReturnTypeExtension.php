@@ -971,6 +971,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                         new \PHPStan\Type\Constant\ConstantStringType('mode'),
                         new \PHPStan\Type\Constant\ConstantStringType('workerCapabilities'),
                         new \PHPStan\Type\Constant\ConstantStringType('storageProfileId'),
+                        new \PHPStan\Type\Constant\ConstantStringType('tagPropagationMode'),
                     ], [
                         new \PHPStan\Type\UnionType([
                             new \PHPStan\Type\Constant\ConstantStringType('NO_SCALING'),
@@ -1043,6 +1044,10 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             ])),
                         ]),
                         new \PHPStan\Type\StringType(),
+                        new \PHPStan\Type\UnionType([
+                            new \PHPStan\Type\Constant\ConstantStringType('NO_PROPAGATION'),
+                            new \PHPStan\Type\Constant\ConstantStringType('PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH'),
+                        ]),
                     ]),
                     new \PHPStan\Type\Constant\ConstantArrayType([
                         new \PHPStan\Type\Constant\ConstantStringType('instanceCapabilities'),
@@ -2327,6 +2332,7 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                             new \PHPStan\Type\Constant\ConstantStringType('mode'),
                             new \PHPStan\Type\Constant\ConstantStringType('workerCapabilities'),
                             new \PHPStan\Type\Constant\ConstantStringType('storageProfileId'),
+                            new \PHPStan\Type\Constant\ConstantStringType('tagPropagationMode'),
                         ], [
                             new \PHPStan\Type\UnionType([
                                 new \PHPStan\Type\Constant\ConstantStringType('NO_SCALING'),
@@ -2399,6 +2405,10 @@ final class DeadlineClientReturnTypeExtension implements \PHPStan\Type\DynamicMe
                                 ])),
                             ]),
                             new \PHPStan\Type\StringType(),
+                            new \PHPStan\Type\UnionType([
+                                new \PHPStan\Type\Constant\ConstantStringType('NO_PROPAGATION'),
+                                new \PHPStan\Type\Constant\ConstantStringType('PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH'),
+                            ]),
                         ]),
                         new \PHPStan\Type\Constant\ConstantArrayType([
                             new \PHPStan\Type\Constant\ConstantStringType('instanceCapabilities'),
